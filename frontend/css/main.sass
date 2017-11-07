@@ -13,13 +13,23 @@ background
 
 .portfolio
   background: $alt-background
-  padding: 6em 0
+  padding: 10em 0
+
+  .segment.basic.description
+    padding-top: 1.5em
+    background-color: lighten($alt-background, 80)
+    color: black
+    height: 340px
+
+    .item
+      text-transform: uppercase
 
 .tech
-  padding: 8em 0
+  padding: 10em 0 14em
 
   .midlead
     margin-bottom: 1em
+
 
 .contact
   background: $alt-background
@@ -42,7 +52,7 @@ background
 
 
 .ui.logo.header
-  font-size: 3em
+  font-size: 4.0em
 
 p.lead
   font-size: 1.8em
@@ -68,3 +78,10 @@ p.midlead
   display: inline-block
   bottom: -4px
   cursor: help
+  transition: all 200ms ease-in
+  transform: scale(1)
+
+  &:hover
+    transition: all 200ms ease-in
+    transform: scale(1.5)
+
