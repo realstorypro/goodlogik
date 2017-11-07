@@ -100,27 +100,53 @@
 
 .contact
   = container
-    = grid
-      = row 'internally celled'
-        = column size: 6
-          = h3 text: 'EMAIL'
-          = h4 class: 'light', text: 'SUPPORT@LEONID.IO', url: 'mailto:support@leonid.io'
-          = h3 text: 'VOICE MAIL'
-          = h4 class: 'light',text: '520.248.7963'
-          = h3 text: 'TIME ZONE'
-          = h4 class: 'light',text: '(UTC -8) PACIFIC'
-        = column size: 8
-          = h3 'dividing'
+    = grid 'centered'
+      = row
+        = column size: 10, class: 'offset four'
+          = h3 'dividing inverted'
             | START
             = header 'sub'
               | New Project
+          = text 'midlead'
+            | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel
+          form.ui.form.inverted
+            .field
+              .two.fields
+                .field
+                  input type="text" placeholder="First name"
+                .field
+                  input type="text" placeholder="Last name"
+              .two.fields
+                .field
+                  input type="text" placeholder="Email"
+                .field
+                  input type="text" placeholder="Phone"
+            .field
+              textarea rows="8" placeholder="Project Description"
+            .field.required
+              = button class: 'fluid right labeled icon large grey'
+                = icon 'send'
+                | Send
+            br
+            br
+
+.footer
+  = container
+    = grid
       = row
-        = column size: 14
-          = divider
-          = segment 'left floated basic footer'
-            span &copy; 2012 - 2017, Leonid Medovyy Consulting
-          = segment 'right floated basic footer'
-            = icon 'linkedin circular inverted'
-            = icon 'twitter circular inverted'
-            = icon 'instagram circular inverted'
-            = icon 'github circular inverted'
+        = column size: 16
+          = grid 'internally celled'
+            = row 'four column'
+              = column class: 'center aligned'
+                = h3 text: 'EMAIL'
+                = h4 class: 'light', text: 'SUPPORT@LEONID.IO', url: 'mailto:support@leonid.io', tag: :div
+              = column class: 'center aligned'
+                = h3 text: 'VOICE MAIL'
+                = h4 class: 'light',text: '520.248.7963'
+              = column class: 'center aligned'
+                = h3 text: 'TIME ZONE'
+                = h4 class: 'light',text: '(UTC -8) PACIFIC'
+              = column class: 'center aligned'
+                = h3 text: 'SOCIAL'
+                = icon 'linkedin circular inverted'
+                = icon 'github circular inverted'
