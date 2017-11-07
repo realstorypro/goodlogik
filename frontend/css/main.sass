@@ -1,8 +1,18 @@
+$alt-background: #222
+
 background
   color: #eee
 
+.hero
+  margin: 8em 0 12em
+
+  .ui.header
+
+    & + p
+      margin-top: 0.8em
+
 .portfolio
-  background: #222
+  background: $alt-background
   padding: 6em 0
 
 .tech
@@ -12,7 +22,7 @@ background
     margin-bottom: 1em
 
 .contact
-  background: #222
+  background: $alt-background
   padding: 7em 0 3em 0
   color: white
 
@@ -29,8 +39,7 @@ background
     color: white
 
 
-.main.container
-  margin: 4em 0
+
 
 .ui.logo.header
   font-size: 3em
@@ -52,3 +61,10 @@ p.midlead
 .footer
   padding: 4em
 
+.more.info
+  color: black
+  font-weight: 800
+  font-size: 33.2px
+  display: inline-block
+  bottom: -4px
+  cursor: help

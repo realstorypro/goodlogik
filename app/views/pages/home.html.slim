@@ -1,11 +1,14 @@
-= container 'main'
-  = grid
-    = row
-      = column size: 14
-        = h1 'logo'
-          | leonid.io
-        = text 'lead'
-          | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Sed porttitor lectus nibh.
+.hero
+  = container
+    = grid
+      = row
+        = column size: 14
+          = h1 'logo'
+            | leonid.io
+          = text 'lead'
+            | My name is Leonid Medovyy, and I am a mixture of a business analyst, ui designer and a developer
+            span.more.info data-content="Full stack web & mobile application developer." data-variation="inverted"*
+            |. I specialize in application architecture, user experience and ui design.
 
 
 .portfolio
@@ -17,7 +20,7 @@
             = content
               | DEVELOPMENT
               = header 'sub'
-                | Projects
+                | Recent Projects
       = row
         = column size: 4
           = card
@@ -72,9 +75,9 @@
       = row
         = column size: 14
           = h3 'dividing'
-            | FAVORITE
+            | TECHNOLOGIES
             = header 'sub'
-              | Technologies
+              | My Stack
           = text 'midlead'
             | Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
 
@@ -100,15 +103,47 @@
 
 .contact
   = container
-    = grid 'centered'
+    = grid ''
       = row
+        = column size: 6
+          = h3 'inverted dividing'
+            | MY PROCESS
+            = header 'sub'
+              | How I work
+          = list 'inverted divided'
+            = item
+              = content
+                br
+                = header text: 'PLANNING'
+                | Define the deliverables and know where the project is going with a realstic roadmap.
+                br
+                br
+            = item
+              br
+              = content
+              = header text: 'UI/UX'
+              | Increase satisfaction and reduce the churn by focusing on usability first.
+              br
+              br
+            = item
+              br
+              = content
+              = header text: 'DESIGN'
+              | Make a memorable impression with a design that stands out.
+              br
+              br
+            = item
+              br
+              = content
+              = header text: 'AGILE DEVELOPMENT'
+              | Scrums when needed. The features are released bi-weekly.
+              br
+              br
         = column size: 10, class: 'offset four'
           = h3 'dividing inverted'
             | START
             = header 'sub'
               | New Project
-          = text 'midlead'
-            | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel
           form.ui.form.inverted
             .field
               .two.fields
@@ -124,9 +159,9 @@
             .field
               textarea rows="8" placeholder="Project Description"
             .field.required
-              = button class: 'fluid right labeled icon large grey'
-                = icon 'send'
-                | Send
+              = button class: 'fluid right labeled icon large blue'
+                = icon 'right double angle'
+                | Request Consultation
             br
             br
 
@@ -150,3 +185,5 @@
                 = h3 text: 'SOCIAL'
                 = icon 'linkedin circular inverted'
                 = icon 'github circular inverted'
+                = icon 'twitter circular inverted'
+                = icon 'instagram circular inverted'
