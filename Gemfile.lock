@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/leonid-io/dc-ui.git
+  revision: c55219143bb3ee555696df4f941f8b065e859b73
+  branch: master
+  specs:
+    dc_ui (2.5.1)
+      hashie
+      rails (~> 5.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,6 +65,7 @@ GEM
     ffi (1.9.18)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    hashie (3.5.6)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -78,6 +88,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    pg (0.21.0)
     puma (3.10.0)
     rack (2.0.3)
     rack-proxy (0.6.2)
@@ -123,6 +134,13 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    slim (3.0.8)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 1.3.3, < 2.1)
+    slim-rails (3.1.3)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      slim (~> 3.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -135,7 +153,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
+    temple (0.8.0)
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -165,14 +183,16 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
+  dc_ui!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  pg (~> 0.18)
   puma (~> 3.7)
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
+  slim-rails
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
