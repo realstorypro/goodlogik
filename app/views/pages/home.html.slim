@@ -6,9 +6,9 @@
           = h1 'logo'
             | leonid.io
           = text 'lead'
-            | My name is Leonid Medovyy, and I am a hybrid of a business analyst, ui designer and a developer
-            span.more.info data-content="Full stack web & mobile application developer." data-variation="inverted"*
-            |. I specialize in application architecture, user experience and ui design.
+            | I casually blend the skills of business consulting, software engineering, design and coaching into a death ray of forward momentum.
+          = text 'lead'
+            | My name is Leonid Medovyy and this is my story.
 
 
 .portfolio
@@ -21,16 +21,18 @@
               | DEVELOPMENT
               = header 'sub'
                 | Recent Projects
+          = text 'midlead'
+            | A reveal plugin is a nice trick that can make the pages feel engaging. Hover over the logos to reveal the tech used for the project.
       = row
         = column size: 5
           = card 'link'
-            .ui.move.down.reveal
+            .ui.move.left.reveal
               = content 'hidden'
                 = segment 'basic description'
                   = h3
-                    | CONTENT PUBLISHING
+                    | GENESIS
                     br
-                    | PLATFORM
+                    | CONTENT PUBLISHING
                   = list 'bulleted'
                     = item text: 'Ruby on Rails 5'
                     = item text: 'CoffeScript 2'
@@ -38,16 +40,11 @@
                     = item text: 'Slim'
                     = item text: 'Sass'
                     = item text: 'Semantic Ui'
-                    = item text: 'DC-UI'
                     = item text: 'Postgres'
                     = item text: 'Heroku'
               = content 'visible'
                 = image
                   = image_tag 'radiant9.jpg'
-            = content
-              = header
-                | GENESIS
-                = header class: 'sub', text: 'Radiant9'
 
         = column size: 5
           = card 'link'
@@ -55,9 +52,9 @@
               = content 'hidden'
                 = segment 'basic description'
                   = h3
-                    | MOBILE
+                    | BQUANTIFIED
                     br
-                    | HEALTH TRACKING
+                    | MOBILE HEALTH TRACKING
                   = list 'bulleted'
                     = item text: 'Ruby on Rails 4'
                     = item text: 'CoffeScript 1'
@@ -70,14 +67,10 @@
               = content 'visible'
                 = image
                   = image_tag 'bquantified.jpg'
-            = content
-              = header
-                | BQUANTIFIED
-                = header class: 'sub', text: 'Rradiant9'
 
         = column size: 5
           = card 'link'
-            .ui.move.down.reveal
+            .ui.move.right.reveal
               = content 'hidden'
                 = segment 'basic description'
                   = h3
@@ -95,10 +88,6 @@
               = content 'visible'
                 = image
                   = image_tag 'emobus.jpg'
-            = content
-              = header
-                | EMM
-                = header class: 'sub', text: 'eMobus'
 
 
 .tech
@@ -108,39 +97,23 @@
       = row
         = column size: 14
           = h3 'dividing'
-            | TECHNOLOGIES
+            | ON LIFE AND SOFTWARE
             = header 'sub'
-              | The Tools I Use
+              | My Philosophy
           = text 'midlead'
-            | Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-          = text 'midlead'
-            | Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-
-      = row
-        = column size: 4
-          = h2 class: 'tech', text: 'Languages'
-          = list 'bulleted tech'
-            = item text: 'Ruby'
-            = item text: 'CoffeScript 2'
-
-        = column size: 4
-          = h2 class: 'tech', text: 'Frameworks'
-          = list 'bulleted tech'
-            = item text: 'Ruby on Rails'
-            = item text: 'Vue.js'
-
-        = column size: 4
-          = h2 class: 'tech', text: 'CSS & Templating'
-          = list 'bulleted tech'
-            = item text: 'DC-UI'
-            = item text: 'Semantic UI'
+            | Life can teach us a lot about good software development and vice verse.
+          = list 'bulleted big'
+            = item
+              | Even the best of plans change. Stay flexible. It's better to have more options then less.
+            = item
+              | People rarely enjoy paying back technical debt. It's better not to borrow.
 
 
 .contact
   = container
     = grid ''
       = row
-        = column size: 6
+        = column size: 7
           = h3 'inverted dividing'
             | MY PROCESS
             = header 'sub'
@@ -174,7 +147,7 @@
               | Scrums when needed. The features are released bi-weekly.
               br
               br
-        = column size: 10, class: 'offset four'
+        = column size: 9, class: 'offset four'
           = h3 'dividing inverted'
             | START
             = header 'sub'
@@ -194,8 +167,8 @@
             .field
               textarea rows="8" placeholder="Project Description"
             .field.required
-              = button class: 'fluid right labeled icon large blue'
-                = icon 'right double angle'
+              = button class: 'fluid right labeled icon large black'
+                = icon 'send'
                 | Request Consultation
             br
             br
