@@ -90,23 +90,18 @@
                   = image_tag 'emobus.jpg'
 
 
-.tech
+/.tech
   = container
     = grid
 
       = row
         = column size: 14
           = h3 'dividing'
-            | ON LIFE AND SOFTWARE
+            | MY PHILOSOPHY
             = header 'sub'
-              | My Philosophy
+              | Learn About Me
           = text 'midlead'
             | Life can teach us a lot about good software development and vice verse.
-          = list 'bulleted big'
-            = item
-              | Even the best of plans change. Stay flexible. It's better to have more options then less.
-            = item
-              | People rarely enjoy paying back technical debt. It's better not to borrow.
 
 
 .contact
@@ -143,8 +138,8 @@
             = item
               br
               = content
-              = header text: 'AGILE DEVELOPMENT'
-              | Scrums when needed. The features are released bi-weekly.
+              = header text: 'DEVELOPMENT'
+              | Agile development with bi-weekly releases.
               br
               br
         = column size: 9, class: 'offset four'
@@ -152,26 +147,27 @@
             | START
             = header 'sub'
               | New Project
-          form.ui.form.inverted
-            .field
-              .two.fields
-                .field
-                  input type="text" placeholder="First name"
-                .field
-                  input type="text" placeholder="Last name"
-              .two.fields
-                .field
-                  input type="text" placeholder="Email"
-                .field
-                  input type="text" placeholder="Phone"
-            .field
-              textarea rows="8" placeholder="Project Description"
-            .field.required
-              = button class: 'fluid right labeled icon large black'
-                = icon 'send'
-                | Request Consultation
-            br
-            br
+          #contact
+            form.ui.form.inverted @submit.prevent='send($event)' v-if="!successMessage"
+              .field
+                .two.fields
+                  .field
+                    input type='text' name='first_name' v-model='first_name' required="true" placeholder="First name"
+                  .field
+                    input type="text" placeholder="Last name" required="true" name='last_name' v-model='last_name'
+                .two.fields
+                  .field
+                    input type="email" required="true" placeholder="Email" name='email' v-model='email'
+                  .field
+                    input type="tel" required="true" placeholder="Phone" name='phone' v-model='phone'
+              .field
+                textarea rows="8" placeholder="Project Description" name='description' v-model='description' required="true"
+              .field
+                = button class: 'fluid right labeled icon large black'
+                  = icon 'send'
+                  | Request Consultation
+            h1.ui.header.inverted v-if="successMessage" transition="fade"
+              | {{ successMessage }}
 
 .footer
   = container
@@ -179,16 +175,10 @@
       = row
         = column size: 16
           = grid 'internally celled'
-            = row 'four column'
+            = row 'two column'
               = column class: 'center aligned'
                 = h3 text: 'EMAIL'
                 = h4 class: 'light', text: 'SUPPORT@LEONID.IO', url: 'mailto:support@leonid.io', tag: :div
-              = column class: 'center aligned'
-                = h3 text: 'VOICE MAIL'
-                = h4 class: 'light',text: '520.248.7963'
-              = column class: 'center aligned'
-                = h3 text: 'TIME ZONE'
-                = h4 class: 'light',text: '(UTC -8) PACIFIC'
               = column class: 'center aligned'
                 = h3 text: 'SOCIAL'
                 = icon 'linkedin circular inverted'
