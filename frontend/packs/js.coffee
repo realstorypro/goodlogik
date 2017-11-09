@@ -1,6 +1,6 @@
 import 'jquery'
 import '../semantic_ui/dist/semantic.js'
-import Vue from 'vue/dist/vue.esm'
+import Vue from 'vue/dist/vue.min'
 
 $ ->
   $('.more.info').popup
@@ -20,7 +20,7 @@ $ ->
       last_name: ''
       email: ''
       phone: ''
-      description: ''
+      description: 'asd'
       errorMessage: null
       successMessage: null
 
