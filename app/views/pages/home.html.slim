@@ -2,7 +2,7 @@
   = container
     = grid
       = row
-        = column size: 14
+        = column computer: 14, tablet: 16, mobile: 16
           = h1 'logo'
             | leonid.io
           = text 'lead'
@@ -15,7 +15,7 @@
   = container
     = grid
       = row
-        = column size: 12
+        = column computer: 12, tablet: 16, mobile: 16
           = h3 'inverted'
             = content
               | DEVELOPMENT
@@ -24,7 +24,7 @@
           = text 'midlead'
             | A reveal plugin is a nice trick that can make the pages feel engaging. Hover over the logos to reveal the tech used for the project.
       = row
-        = column size: 5
+        = column computer: 5, tablet: 16, mobile: 16
           = card 'link transition hidden'
             .ui.move.up.reveal
               = content 'hidden'
@@ -46,7 +46,7 @@
                 = image
                   = image_tag 'radiant9.jpg'
 
-        = column size: 5
+        = column computer: 5, tablet: 16, mobile: 16
           = card 'link transition hidden'
             .ui.move.up.reveal
               = content 'hidden'
@@ -68,7 +68,7 @@
                 = image
                   = image_tag 'bquantified.jpg'
 
-        = column size: 5
+        = column computer: 5, tablet: 16, mobile: 16
           = card 'link transition hidden'
             .ui.move.up.reveal
               = content 'hidden'
@@ -95,7 +95,7 @@
     = grid
 
       = row
-        = column size: 14
+        = column computer: 14, tablet: 16, mobile: 16
           = h3 'dividing'
             | MY PHILOSOPHY
             = header 'sub'
@@ -108,7 +108,7 @@
   = container
     = grid ''
       = row
-        = column size: 7
+        = column computer: 7, tablet: 16, mobile: 16
           = h3 'inverted dividing'
             | MY PROCESS
             = header 'sub'
@@ -142,7 +142,7 @@
               | Agile development with bi-weekly releases.
               br
               br
-        = column size: 9, class: 'offset four'
+        = column computer: 9, tablet: 16, mobile: 16
           = h3 'dividing inverted'
             | START
             = header 'sub'
@@ -171,21 +171,18 @@
 
 .footer
   = container
-    = grid
+    = grid 'internally celled'
       = row
-        = column size: 16
-          = grid 'internally celled'
-            = row 'two column'
-              = column class: 'center aligned'
-                = h3 text: 'EMAIL'
-                = h4 class: 'light', text: 'SUPPORT@LEONID.IO', url: 'mailto:support@leonid.io', tag: :div
-              = column class: 'center aligned'
-                = h3 text: 'SOCIAL'
-                = link_to 'https://www.linkedin.com/in/leonid-io/', target: '_blank'
-                  = icon 'linkedin circular inverted'
-                = link_to 'https://github.com/leouofa/', target: '_blank'
-                  = icon 'github circular inverted'
-                = link_to 'https://twitter.com/leonid_io', target: '_blank'
-                  = icon 'twitter circular inverted'
-                = link_to 'https://www.instagram.com/leonid.io/', target: '_blank'
-                  = icon 'instagram circular inverted'
+        = column computer: 8, tablet: 16, mobile: 16, class: 'center aligned'
+          = h3 text: 'EMAIL'
+          = h4 class: 'light', text: 'SUPPORT@LEONID.IO', url: 'mailto:support@leonid.io', tag: :div
+        = column computer: 8, tablet: 16, mobile: 16, class: 'center aligned'
+          = h3 text: 'SOCIAL'
+          = link_to 'https://www.linkedin.com/in/leonid-io/', target: '_blank'
+            = icon 'linkedin circular inverted'
+          = link_to 'https://github.com/leouofa/', target: '_blank'
+            = icon 'github circular inverted'
+          = link_to 'https://twitter.com/leonid_io', target: '_blank'
+            = icon 'twitter circular inverted'
+          = link_to 'https://www.instagram.com/leonid.io/', target: '_blank'
+            = icon 'instagram circular inverted'

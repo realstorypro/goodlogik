@@ -1,16 +1,17 @@
-import 'jquery'
 import '../semantic_ui/dist/semantic.js'
 import Vue from 'vue/dist/vue.min'
+
 
 $ ->
   $('.more.info').popup
     hoverable: true
 
-  $('.hero').visibility
+  $('.hero h1').visibility
     onBottomPassed:  ->
       $('.card').transition
-        animation: 'slide up'
-        interval: 300
+        animation: 'fade in'
+        duration: 1000
+        interval: 100
 
   $('.tech').visibility
     onTopPassed: ->
