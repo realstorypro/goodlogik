@@ -6,103 +6,138 @@
           = h1 'logo'
             | leonid.io
           = text 'lead'
-            | I casually blend the skills of business consulting, software engineering, design and coaching into a death ray of forward momentum.
+            | Casually, I  blend the super powers of software engineering, usability design, managerial consulting and music into a death ray of forward momentum.
           = text 'lead'
-            | My name is Leonid Medovyy and this is my story.
+            | My name is Leonid. This my story.
+          br
+          = text 'lead'
+            | It's also my website. Just so you know.
 
+
+.about
+  = container
+    = grid
+      = row
+        = column computer: 16, tablet: 16, mobile: 16
+          = h1 'slim inverted'
+            | ABOUT ME
+      = row
+        = column computer: 14, tablet: 16, mobile: 16
+          = text 'midlead'
+            | Yes, I know. You really do care about my childhood and yes, I am going to take it there.
+          = text 'midlead'
+            | There's a distinct possiblity that the way I grew had profound impact on the way I view life.
+            |  You see I spend the majority of my childhood either programming, playing video games or battling wild bears. Yes bears. No, I will not go into detail.
+          = text 'midlead'
+            | I see life as a video game. A massive multi-player, open world, open ended video game.
+            |  I think that we're all playing it whether we're conscious of it or not.
+            |  Either conciously or not, we choose who we want to become and then become it.
+          = text 'midlead'
+            | This is what my skill tree currently looks like.
+      = row
+        = column computer: 4, tablet: 16, mobile: 16
+          = h1 class: 'inverted skill category dividing', text: 'Engineering'
+          = h2 class:'inverted skill sub'
+            | Computer
+            br
+            | Languages
+          = list 'divided inverted skill'
+            = item
+              = header text: 'RUBY'
+              .ui.star.small.rating data-rating='4'
+            = item
+              = header text: 'COFFEESCRIPT'
+              .ui.star.small.rating data-rating="3"
+            = item
+              = header text: 'JAVASCRIPT'
+              .ui.star.small.rating data-rating="3"
+            = item
+              = header text: 'COLDFUSION'
+              .ui.star.small.rating data-rating="2"
+            = item
+              = header text: 'VISUAL BASIC'
+              .ui.star.small.rating data-rating="2"
+            = item
+              = header text: 'JAVA'
+              .ui.star.small.rating data-rating="1"
+        = column computer: 4, tablet: 16, mobile: 16
+          = h2 class:'inverted skill', text: 'Programming Frameworks'
+          = list 'divided inverted skill'
+            = item
+              = header text: 'RUBY ON RAILS'
+              .ui.star.small.rating data-rating='4'
+            = item
+              = header text: 'VUE'
+              .ui.star.small.rating data-rating='3'
+            = item
+              = header text: 'BACKBONE'
+              .ui.star.small.rating data-rating='3'
+            = item
+              = header text: 'JQUERY'
+              .ui.star.small.rating data-rating='4'
+        = column computer: 4, tablet: 16, mobile: 16
+          = h2 class:'inverted skill'
+            | Analytics
+            br
+            | Packages
+          = list 'divided inverted skill'
+            = item
+              = header text: 'GOOGLE ANALYTICS'
+              .ui.star.small.rating data-rating='3'
+          = list 'divided inverted skill'
+            = item
+              = header text: 'MIXPANEL'
+              .ui.star.small.rating data-rating='3'
+          = list 'divided inverted skill'
+            = item
+              = header text: 'CRAZYEGG'
+              .ui.star.small.rating data-rating='2'
 
 .portfolio
   = container
     = grid
       = row
         = column computer: 12, tablet: 16, mobile: 16
-          = h3 'inverted'
+          = h2 'dividing'
             = content
-              | DEVELOPMENT
+              | MY "CURRENT PROJECTS"
               = header 'sub'
-                | Recent Projects
+                | WHAT I'M WORKING ON
           = text 'midlead'
             | A reveal plugin is a nice trick that can make the pages feel engaging. Hover over the logos to reveal the tech used for the project.
       = row
-        = column computer: 5, tablet: 16, mobile: 16
-          = card 'link transition hidden'
-            .ui.move.up.reveal
-              = content 'hidden'
-                = segment 'basic description'
-                  = h3
-                    | GENESIS
-                    br
-                    | CONTENT PUBLISHING
-                  = list 'bulleted'
-                    = item text: 'Ruby on Rails 5'
-                    = item text: 'CoffeScript 2'
-                    = item text: 'Vue.js'
-                    = item text: 'Slim'
-                    = item text: 'Sass'
-                    = item text: 'Semantic Ui'
-                    = item text: 'Postgres'
-                    = item text: 'Heroku'
-              = content 'visible'
-                = image
-                  = image_tag 'radiant9.jpg'
+        = column computer: 8, tablet: 16, mobile: 16
+          = segment 'green description transition hidden'
+            = h3
+              | RADIANCE
+              = header 'sub'
+                | For Radiant9
+            = text
+              | A built & architected a social publishing platform for thought leadership and social entrepreneurs.
+            = h4 text: 'TECH'
+            = list 'bulleted'
+              = item text: 'Ruby on Rails 5'
+              = item text: 'CoffeScript 2'
+              = item text: 'Vue.js'
+              = item text: 'Semantic Ui'
+              = item text: 'Postgres'
+              = item text: 'Heroku'
 
-        = column computer: 5, tablet: 16, mobile: 16
-          = card 'link transition hidden'
-            .ui.move.up.reveal
-              = content 'hidden'
-                = segment 'basic description'
-                  = h3
-                    | BQUANTIFIED
-                    br
-                    | MOBILE HEALTH TRACKING
-                  = list 'bulleted'
-                    = item text: 'Ruby on Rails 4'
-                    = item text: 'CoffeScript 1'
-                    = item text: 'Ionic'
-                    = item text: 'Angular'
-                    = item text: 'Cordova'
-                    = item text: 'Haml'
-                    = item text: 'Sass'
-                    = item text: 'Firebase'
-              = content 'visible'
-                = image
-                  = image_tag 'bquantified.jpg'
-
-        = column computer: 5, tablet: 16, mobile: 16
-          = card 'link transition hidden'
-            .ui.move.up.reveal
-              = content 'hidden'
-                = segment 'basic description'
-                  = h3
-                    | ENTERPRISE
-                    br
-                    | MOBILITY MANAGEMENT
-                  = list 'bulleted'
-                    = item text: 'Ruby on Rails 3'
-                    = item text: 'JavaScript'
-                    = item text: 'jQuery'
-                    = item text: 'Twitter Bootstrap'
-                    = item text: 'Less'
-                    = item text: 'Postgres'
-                    = item text: 'AWS'
-              = content 'visible'
-                = image
-                  = image_tag 'emobus.jpg'
-
-
-.tech
-  = container
-    = grid
-
-      = row
-        = column computer: 14, tablet: 16, mobile: 16
-          = h3 'dividing'
-            | MY PHILOSOPHY
-            = header 'sub'
-              | Learn About Me
-          = text 'midlead'
-            | I am a firm believer that the actions we take define who become.
-
+        = column computer: 8, tablet: 16, mobile: 16
+          = segment 'red description transition hidden'
+            = h3
+              | BQUANTIFIED
+              = header 'sub'
+                | For Radiant9
+            = list 'bulleted'
+              = item text: 'Ruby on Rails 4'
+              = item text: 'CoffeScript 1'
+              = item text: 'Ionic'
+              = item text: 'Angular'
+              = item text: 'Cordova'
+              = item text: 'Haml'
+              = item text: 'Sass'
+              = item text: 'Firebase'
 
 .contact
   = container

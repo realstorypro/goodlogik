@@ -8,4 +8,5 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import '../semantic_ui/dist/semantic.css'
+import '../css/utilities.scss'
 import '../css/main.sass'

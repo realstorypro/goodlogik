@@ -1,24 +1,50 @@
+@import 'utilities'
+
+/// Colors ///
 $alt-background: #298fff
 $alt-background2: #222
 
 body
   background: #f6f7fa
 
+
+header.slim
+  font-weight: 400
+
+  span.bolded
+    font-weight: 800
+
+/// HERO SECTION ///
+
 .hero
   margin: 8em 0 12em
+
+  @include media("<desktop")
+    margin: 4em 0
 
   .ui.header
 
     & + p
       margin-top: 0.8em
 
+/// PORTFOLIO SECTION ///
+
 .portfolio
-  background: $alt-background2
   padding: 10em 0
-  color: white
   min-height: 703px
 
-  .segment.basic.description
+  @include media("<desktop")
+    padding: 5em 0
+    min-height: 800px
+
+    .midlead
+      margin-bottom: 1.5em
+
+    .ui.card
+      margin-bottom: 3em
+
+
+  .segment.description
     padding-top: 1.5em
     padding-left: 1.5em
     padding-right: 1.5em
@@ -29,12 +55,45 @@ body
     .item
       text-transform: uppercase
 
-.tech
+/// ABOUT SECTION ///
+
+.about
+  background: $alt-background2
+  color: white
   padding: 10em 0 14em
 
   .midlead
     margin-bottom: 1em
 
+
+  .skill.header
+    text-transform: uppercase
+    font-size: 2.2em
+
+  .skill.sub.header
+    text-transform: uppercase
+    font-size: 1.4em
+    font-weight: 400
+
+  .skill.list
+
+    .item
+      display: flex
+      font-weight: 400
+
+      .header
+        font-size: 1.2em
+        font-weight: 400
+
+      .ui.rating
+        margin-left: auto
+        align-self: center
+
+  @include media("<desktop")
+    padding: 5em 0
+
+    .midlead
+      margin-bottom: 0
 
 .contact
   background: $alt-background
@@ -45,13 +104,6 @@ body
   .light
     font-weight: 400
 
-.copyright
-  background: #111
-  padding: 2.5em 0
-
-  h4.header
-    font-weight: 400
-    color: white
 
 
 
