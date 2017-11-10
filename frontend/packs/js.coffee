@@ -6,12 +6,20 @@ $ ->
   $('.more.info').popup
     hoverable: true
 
-  startup_transition = $('.card').transition
-    animation: 'pulse'
-    reverse: 'auto'
-    interval: 200
+  $('.hero').visibility
+    onBottomPassed:  ->
+      $('.card').transition
+        animation: 'slide up'
+        interval: 300
 
-  # VUE
+  $('.tech').visibility
+    onTopPassed: ->
+      $('.contact .item').transition
+        animation: 'horizontal flip'
+        reverse: 'auto'
+        interval: 400
+
+  # Vue Contact Form
   new Vue
     el: '#contact'
 
@@ -20,13 +28,14 @@ $ ->
       last_name: ''
       email: ''
       phone: ''
-      description: 'asd'
+      description: ''
       errorMessage: null
       successMessage: null
 
     methods:
       send: (e) ->
         params = $(e.currentTarget).serialize()
+        $(e.currentTarget).find('button').addClass 'loading'
 
         $.ajax
           url: 'https://hooks.zapier.com/hooks/catch/23488/s3ilfh/'
