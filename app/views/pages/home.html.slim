@@ -9,9 +9,8 @@
             | Casually, I  blend the super powers of software engineering, usability design, managerial consulting and music into a death ray of forward momentum.
           = text 'lead'
             | My name is Leonid. This my story.
-          br
           = text 'lead'
-            | It's also my website. Just so you know.
+            | It's also my website.
 
 
 .about
@@ -33,14 +32,11 @@
             |  I think that we're all playing it whether we're conscious of it or not.
             |  Either conciously or not, we choose who we want to become and then become it.
           = text 'midlead'
-            | This is what my skill tree currently looks like.
+            | With that said, this is what my current skill tree currently looks like.
       = row
         = column computer: 4, tablet: 16, mobile: 16
-          = h1 class: 'inverted skill category dividing', text: 'Engineering'
-          = h2 class:'inverted skill sub'
-            | Computer
-            br
-            | Languages
+          = h1 class: 'inverted skill category', text: 'Engineering'
+          = h2 class:'inverted sub skill', text: 'Computer Languages'
           = list 'divided inverted skill'
             = item
               = header text: 'RUBY'
@@ -52,16 +48,12 @@
               = header text: 'JAVASCRIPT'
               .ui.star.small.rating data-rating="3"
             = item
+              = header text: 'PHP'
+              .ui.star.small.rating data-rating="2"
+            = item
               = header text: 'COLDFUSION'
               .ui.star.small.rating data-rating="2"
-            = item
-              = header text: 'VISUAL BASIC'
-              .ui.star.small.rating data-rating="2"
-            = item
-              = header text: 'JAVA'
-              .ui.star.small.rating data-rating="1"
-        = column computer: 4, tablet: 16, mobile: 16
-          = h2 class:'inverted skill', text: 'Programming Frameworks'
+          = h2 class:'inverted sub skill', text: 'Frameworks'
           = list 'divided inverted skill'
             = item
               = header text: 'RUBY ON RAILS'
@@ -76,22 +68,83 @@
               = header text: 'JQUERY'
               .ui.star.small.rating data-rating='4'
         = column computer: 4, tablet: 16, mobile: 16
-          = h2 class:'inverted skill'
-            | Analytics
-            br
-            | Packages
+          = h1 class: 'inverted skill category', text: 'Usability'
+          = h2 class:'inverted sub skill'
+            | Design
           = list 'divided inverted skill'
             = item
-              = header text: 'GOOGLE ANALYTICS'
+              = header text: 'WIREFRAMING'
+              .ui.star.small.rating data-rating='4'
+            = item
+              = header text: 'TYPOGRAPHY'
               .ui.star.small.rating data-rating='3'
-          = list 'divided inverted skill'
             = item
-              = header text: 'MIXPANEL'
-              .ui.star.small.rating data-rating='3'
-          = list 'divided inverted skill'
-            = item
-              = header text: 'CRAZYEGG'
+              = header text: 'GRAPHIC'
               .ui.star.small.rating data-rating='2'
+            = item
+              = header text: 'PROTOTYPING'
+              .ui.star.small.rating data-rating='4'
+          = h2 class:'inverted sub skill'
+            | Analytics
+          = list 'divided inverted skill'
+            = item
+              = header text: 'AGGREGATE'
+              .ui.star.small.rating data-rating='3'
+            = item
+              = header text: 'EVENTS'
+              .ui.star.small.rating data-rating='4'
+            = item
+              = header text: 'FUNNELS'
+              .ui.star.small.rating data-rating='3'
+            = item
+              = header text: 'HEATMAPS'
+              .ui.star.small.rating data-rating='3'
+            = item
+              = header text: 'RECORDINGS'
+              .ui.star.small.rating data-rating='2'
+        = column computer: 4, tablet: 16, mobile: 16
+          = h1 class: 'inverted skill category'
+            | Business
+          = h2 class:'inverted sub skill'
+            | Communication
+          = list 'divided inverted skill'
+            = item
+              = header text: 'ORAL'
+              .ui.star.small.rating data-rating='4'
+            = item
+              = header text: 'WRITTEN'
+              .ui.star.small.rating data-rating='3'
+            = item
+              = header text: 'PRESENTATIONS'
+              .ui.star.small.rating data-rating='4'
+        = column computer: 4, tablet: 16, mobile: 16
+          = h2 class:'inverted sub skill'
+            | Human Languages
+          = list 'divided inverted skill'
+            = item
+              = header text: 'ENGLISH'
+              .ui.star.small.rating data-rating='4'
+            = item
+              = header text: 'RUSSIAN'
+              .ui.star.small.rating data-rating='4'
+            = item
+              = header text: 'PORTUGESE'
+              .ui.star.small.rating data-rating='2'
+            = item
+              = header text: 'SPANISH'
+              .ui.star.small.rating data-rating='2'
+          = h2 class:'inverted sub skill'
+            | Music Instruments
+          = list 'divided inverted skill'
+            = item
+              = header text: 'SHAKER'
+              .ui.heart.small.rating data-rating='2'
+            = item
+              = header text: 'UKELELE'
+              .ui.heart.small.rating data-rating='2'
+            = item
+              = header text: 'DJEMBE'
+              .ui.heart.small.rating data-rating='1'
 
 .portfolio
   = container
