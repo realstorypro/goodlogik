@@ -15,12 +15,12 @@ $ ->
         duration: 1000
         interval: 100
 
-  $('.tech').visibility
-    onTopPassed: ->
-      $('.contact .item').transition
-        animation: 'horizontal flip'
-        reverse: 'auto'
-        interval: 400
+  ##$('.tech').visibility
+  #  onTopPassed: ->
+  #    $('.contact .item').transition
+  #      animation: 'horizontal flip'
+  #      reverse: 'auto'
+  #      interval: 400
 
   # Vue Contact Form
   new Vue

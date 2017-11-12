@@ -18,26 +18,18 @@
     = grid
       = row
         = column computer: 16, tablet: 16, mobile: 16
-          = h1 'slim inverted'
+          = h1 'slim inverted dividing'
             | ABOUT ME
             = header 'sub'
               | My Philosophy
       = row
         = column computer: 14, tablet: 16, mobile: 16
           = text 'midlead'
-            | Yes, I know. You really do care about my childhood and yes, I am going to take it there.
+            | I see life as a video game. An epic, multi-player, open-world, open-ended, choose your own adventure. 
+            | As humans we are all capable of developing abilities amazing. All we have to do is practice.
           = text 'midlead'
-            | There's a distinct possiblity that the way I grew had profound impact on the way I view life.
-            |  You see I spend the majority of my childhood either programming, playing video games or battling wild bears. Yes bears. No, I will not go into detail.
-          = text 'midlead'
-            | I see life as a video game. A massive multi-player, open world, open ended video game.
-            |  I think that we're all playing it whether we're conscious of it or not.
-            |  Either conciously or not, we choose who we want to become and then become it.
-          = text 'midlead'
-            | With that said, this is what my current skill tree currently looks like.
-.skill.tree
-  = container
-    = grid
+            | My ever expanding list of interests includes programming, psychology, robotics, digital arts, photography, linguistics, dance, nutrition, fitness and martial arts.
+
       = row
         = column computer: 7, tablet: 16, mobile: 16
           = h1 class: 'inverted skill category'
@@ -70,9 +62,6 @@
             = item
               = header text: 'BACKBONE'
               .ui.star.small.rating data-rating='3'
-            = item
-              = header text: 'JQUERY'
-              .ui.star.small.rating data-rating='4'
         = column computer: 2, tablet: 16, mobile: 16
         = column computer: 7, tablet: 16, mobile: 16
           = h1 class: 'inverted skill category'
@@ -107,44 +96,6 @@
             = item
               = header text: 'HEATMAPS'
               .ui.star.small.rating data-rating='3'
-      = row
-        = column computer: 16, tablet: 16, mobile: 16
-          = grid
-            = row
-              = column size: 16
-                = h1 class: 'inverted skill expression'
-                  | Expression
-            = row
-              = column computer: 7, tablet: 16, mobile: 16
-                = h2 class:'inverted sub skill'
-                  | Languages
-                = list 'divided inverted skill'
-                  = item
-                    = header text: 'ENGLISH'
-                    .ui.star.small.rating data-rating='4'
-                  = item
-                    = header text: 'RUSSIAN'
-                    .ui.star.small.rating data-rating='4'
-                  = item
-                    = header text: 'PORTUGESE'
-                    .ui.star.small.rating data-rating='2'
-                  = item
-                    = header text: 'SPANISH'
-                    .ui.star.small.rating data-rating='2'
-                = h2 class:'inverted sub skill'
-                  | Music Instruments
-                = list 'divided inverted skill'
-                  = item
-                    = header text: 'UKELELE'
-                    .ui.star.small.rating data-rating='2'
-                  = item
-                    = header text: 'SHAKER'
-                    .ui.star.small.rating data-rating='2'
-                  = item
-                    = header text: 'DJEMBE'
-                    .ui.star.small.rating data-rating='1'
-              = column computer: 8, tablet: 16, mobile: 16
-
 .portfolio
   = container
     = grid
@@ -152,44 +103,54 @@
         = column computer: 12, tablet: 16, mobile: 16
           = h2 'dividing'
             = content
-              | MY "CURRENT PROJECTS"
+              | MY PROJECTS
               = header 'sub'
-                | WHAT I'M WORKING ON
+                | Work & Hobbies
           = text 'midlead'
             | A reveal plugin is a nice trick that can make the pages feel engaging. Hover over the logos to reveal the tech used for the project.
+          br
       = row
-        = column computer: 8, tablet: 16, mobile: 16
-          = segment 'green description transition hidden'
-            = h3
+
+        = column computer: 5, tablet: 16, mobile: 16
+          = segment 'red description transition'
+            = header
               | RADIANCE
               = header 'sub'
-                | For Radiant9
+                | FOR RADIANT9
             = text
-              | A built & architected a social publishing platform for thought leadership and social entrepreneurs.
+              | Community publishing platform for thought leaders and social entrepreneurs.
             = h4 text: 'TECH'
             = list 'bulleted'
               = item text: 'Ruby on Rails 5'
               = item text: 'CoffeScript 2'
               = item text: 'Vue.js'
-              = item text: 'Semantic Ui'
-              = item text: 'Postgres'
-              = item text: 'Heroku'
 
-        = column computer: 8, tablet: 16, mobile: 16
-          = segment 'red description transition hidden'
-            = h3
-              | BQUANTIFIED
-              = header 'sub'
-                | For Radiant9
+        = column computer: 5, tablet: 16, mobile: 16
+          = segment'green description transition'
+            = header
+              | DC-UI 
+              = header 'sub' 
+                | OPEN SOURCE
+            = text
+              | The DSL framework for building front ends in Ruby. Loosly coupled with semantic-ui.
+            = h4 text: 'TECH'
             = list 'bulleted'
-              = item text: 'Ruby on Rails 4'
-              = item text: 'CoffeScript 1'
-              = item text: 'Ionic'
-              = item text: 'Angular'
-              = item text: 'Cordova'
-              = item text: 'Haml'
-              = item text: 'Sass'
-              = item text: 'Firebase'
+              = item text: 'Ruby on Rails 5'
+              = item text: 'Semantic UI'
+              = item text: 'Slim'
+
+        = column computer: 5, tablet: 16, mobile: 16
+          = segment'blue description transition'
+            = header
+              | SNAIL-STRETCH
+              = header 'sub' 
+                | OPEN SOURCE
+            = text
+              | A robot that helps you lengthen your ilopsoas through ultra-slow stretching.
+            = h4 text: 'TECH'
+            = list 'bulleted'
+              = item text: 'Arduino'
+              = item text: 'Artoo'
 
 .contact
   = container
@@ -201,28 +162,28 @@
             = header 'sub'
               | How I work
           = list 'inverted divided'
-            = item 'transition hidden'
+            = item
               = content
                 br
                 = header text: 'PLANNING'
                 | Define the deliverables and know where the project is going with a realstic roadmap.
                 br
                 br
-            = item 'transition hidden'
+            = item
               br
               = content
               = header text: 'UI/UX'
               | Increase satisfaction and reduce the churn by focusing on usability first.
               br
               br
-            = item 'transition hidden'
+            = item
               br
               = content
               = header text: 'DESIGN'
               | Make a memorable impression with a design that stands out.
               br
               br
-            = item 'transition hidden'
+            = item
               br
               = content
               = header text: 'DEVELOPMENT'
@@ -231,9 +192,9 @@
               br
         = column computer: 9, tablet: 16, mobile: 16
           = h3 'dividing inverted'
-            | START
+            | REQUEST
             = header 'sub'
-              | New Project
+              | CONSULTATION
           #contact
             form.ui.form.inverted @submit.prevent='send($event)' v-if="!successMessage"
               .field
@@ -252,7 +213,7 @@
               .field
                 = button class: 'fluid right labeled icon large black'
                   = icon 'send'
-                  | Request Consultation
+                  | Send Request
             h1.ui.header.inverted v-if="successMessage" transition="fade"
               | {{ successMessage }}
 
