@@ -112,7 +112,7 @@ p.midlead
       text-transform: uppercase
 
   @include media("<desktop")
-    padding: 5em 0
+    padding: 5em 0 3em
 
     .midlead
       margin-bottom: 1.5em
@@ -129,6 +129,21 @@ p.midlead
   color: white
   padding: 7em 0 3em 0
 
+  @include media("<desktop")
+    padding: 5em 0 4em
+
+    h2.ui.header
+      font-size: 2em
+
+    .ui.grid > .row > .column.second
+      margin-top: 3em
+
+    #contact
+      margin-top: 2.5em
+
+      button
+        margin-top: 2em
+        height: 3.0em
 
 // FOOTER SECTION ///
 
@@ -140,15 +155,9 @@ p.midlead
   .light
     font-weight: 400
 
+  @include media("<desktop")
+    .ui.celled.grid > .row > .column
+      box-shadow: none
 
-
-
-
-
-.ui.tech.header
-  font-size: 1.4em
-  text-transform: uppercase
-
-.bulleted.tech
-  font-size: 1.2em
-
+      &:first-child
+        margin-bottom: 2.5em

@@ -157,7 +157,7 @@
     = grid ''
       = row
         = column computer: 7, tablet: 16, mobile: 16
-          = h3 'inverted dividing'
+          = h2 'inverted dividing'
             | MY SERVICES
             = header 'sub'
               | Things I can help with
@@ -190,24 +190,23 @@
               | Optimize your internal processes and do more with less resources.
               br
               br
-        = column computer: 9, tablet: 16, mobile: 16
-          = h3 'dividing inverted'
+        = column computer: 9, tablet: 16, mobile: 16, class: 'second'
+          = h2 'dividing inverted'
             | REQUEST
             = header 'sub'
               | CONSULTATION
           #contact
             form.ui.form.inverted @submit.prevent='send($event)' v-if="!successMessage"
-              .field
-                .two.fields
-                  .field
-                    input type='text' name='first_name' v-model='first_name' required="true" placeholder="First name"
-                  .field
-                    input type="text" placeholder="Last name" required="true" name='last_name' v-model='last_name'
-                .two.fields
-                  .field
-                    input type="email" required="true" placeholder="Email" name='email' v-model='email'
-                  .field
-                    input type="tel" required="true" placeholder="Phone" name='phone' v-model='phone'
+              .two.fields
+                .field
+                  input type='text' name='first_name' v-model='first_name' required="true" placeholder="First name"
+                .field
+                  input type="text" placeholder="Last name" required="true" name='last_name' v-model='last_name'
+              .two.fields
+                .field
+                  input type="email" required="true" placeholder="Email" name='email' v-model='email'
+                .field
+                  input type="tel" required="true" placeholder="Phone" name='phone' v-model='phone'
               .field
                 textarea rows="8" placeholder="How can I help you?" name='description' v-model='description' required="true"
               .field
