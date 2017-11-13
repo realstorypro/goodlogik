@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="44f161f5-d202-434f-9640-543bf53164e9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.slim" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.slim" afterPath="$PROJECT_DIR$/app/views/pages/home.html.slim" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -381,12 +380,12 @@
       <workItem from="1510010667215" duration="53516000" />
       <workItem from="1510193424491" duration="39538000" />
       <workItem from="1510592894176" duration="466000" />
-      <workItem from="1510600327666" duration="207000" />
+      <workItem from="1510600327666" duration="866000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93727000" />
+    <option name="totallyTimeSpent" value="94386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
