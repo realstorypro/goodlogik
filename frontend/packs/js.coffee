@@ -8,12 +8,12 @@ $ ->
 
   $('.ui.rating').rating().rating('disable', true)
 
-  $('.hero h1').visibility
-    onBottomPassed:  ->
-      $('.segment').transition
-        animation: 'fade in'
-        duration: 1000
-        interval: 100
+  #$('.hero h1').visibility
+  #  onBottomPassed:  ->
+  #    $('.segment').transition
+  #      animation: 'fade in'
+  #      duration: 1000
+  #      interval: 100
 
   ##$('.tech').visibility
   #  onTopPassed: ->
