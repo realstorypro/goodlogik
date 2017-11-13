@@ -6,7 +6,7 @@
           = h1 'logo'
             | leonid.io
           = text 'lead'
-            | Casually, I  blend the super powers of software engineering, usability design, managerial consulting and music into a death ray of forward momentum.
+            | I  casually blend the super powers of software engineering, information architecture, consulting and music into a death ray of forward momentum.
           = text 'lead'
             | My name is Leonid. This my story.
 
@@ -22,13 +22,9 @@
       = row
         = column computer: 14, tablet: 16, mobile: 16
           = text 'midlead'
-            | I see life as a video game. An epic, multi-player, open-world, open-ended adventure. 
-            | As humans we are all capable of developing amazing skills &amp; abilities. All that is required is practice.
+            | I firmly believe that cross training is more important then narrow specialization. Having a broad range of skills gives our creativity the fuels it needs to come up with new inventions.
           = text 'midlead'
-            | My ever expanding list of interests includes programming, math, music, travel, psychology, robotics, digital arts, linguistics, dance, nutrition, fitness and martial arts.
-          = text 'midlead'
-            | Business wise my skillset can be split into two different categories 
-            | Engineering &amp; User Experience.
+            | From a business standpoint by skills can be split in two areas Engineering and User Experience.
 
   = container 'skills'
     = grid
@@ -102,18 +98,35 @@
     = grid
       = row
         = column computer: 12, tablet: 16, mobile: 16
-          = h2 'dividing'
+          = h1 'dividing'
             = content
               | MY PROJECTS
               = header 'sub'
-                | Work & Hobbies
-          = text 'midlead'
-            | A reveal plugin is a nice trick that can make the pages feel engaging. Hover over the logos to reveal the tech used for the project.
+                | CURRENT & UPCOMING
+          = text 'midlead intro'
+            | The project I am the most exctied about is the Sanil-Stretch. For two of the following reasons:
+          = text 'midlead reasons'
+            | 1. It will be my first robot.
+            br
+            | 2. It will cost under $400 to build and will help in fixng a myrad of issues caused by tight hip-flexors.
           br
       = row
 
         = column computer: 5, tablet: 16, mobile: 16
-          = segment 'red description transition'
+          = segment'blue description transition'
+            = header
+              | SNAIL-STRETCH
+              = header 'sub' 
+                | COMING SOON
+            = text
+              | A robot that helps you lengthen your hip flexors hrough ultra-slow stretching.
+            = h4 text: 'TECH'
+            = list 'bulleted'
+              = item text: 'Arduino'
+              = item text: 'Artoo'
+
+        = column computer: 5, tablet: 16, mobile: 16
+          = segment 'blue description transition'
             = header
               | RADIANCE
               = header 'sub'
@@ -127,7 +140,7 @@
               = item text: 'Vue.js'
 
         = column computer: 5, tablet: 16, mobile: 16
-          = segment'green description transition'
+          = segment'blue description transition'
             = header
               | DC-UI 
               = header 'sub' 
@@ -140,18 +153,6 @@
               = item text: 'Semantic UI'
               = item text: 'Slim'
 
-        = column computer: 5, tablet: 16, mobile: 16
-          = segment'blue description transition'
-            = header
-              | SNAIL-STRETCH
-              = header 'sub' 
-                | OPEN SOURCE
-            = text
-              | A robot that helps you lengthen your ilopsoas through ultra-slow stretching.
-            = h4 text: 'TECH'
-            = list 'bulleted'
-              = item text: 'Arduino'
-              = item text: 'Artoo'
 
 .contact
   = container
