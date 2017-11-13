@@ -9,46 +9,44 @@ body
   background: #f6f7fa
 
 
-
-/// TYPOGRAPHY ///
-
-header.slim
-  font-weight: 400
-
-  span.bolded
-    font-weight: 800
-
-p.lead
-  font-size: 1.8em
-
 p.midlead
   font-size: 1.4em
 
 /// HERO SECTION ///
 
 .hero
-  margin: 8em 0 12em
+  padding: 8em 0 12em
 
   .ui.logo.header
-    font-size: 4.0em
+    font-size: 4em
+    margin-bottom: 0.9em
+
+  p.lead
+    font-size: 1.8em
 
   @include media("<desktop")
-    margin: 4em 0
+    padding: 5em 0 7em
 
-  .ui.header
+    .ui.logo.header
+      margin-bottom: 0.5em
 
-    & + p
-      margin-top: 0.8em
+    p.lead
+      font-size: 1.5em
+      line-height: 1.5em
+
 
 /// ABOUT SECTION ///
 
 .about
   background: $alt-background2
   color: white
-  padding: 10em 0 10em
+  padding: 10em 0
 
   .midlead
     margin-bottom: 1em
+
+    &.first
+      margin-top: 1em
 
   .skills 
     margin-top: 2em
@@ -81,8 +79,11 @@ p.midlead
   @include media("<desktop")
     padding: 5em 0
 
-    .midlead
-      margin-bottom: 0
+    .skill.header
+      font-size: 2.5em
+
+    .ui.grid > .row > .column.second
+      margin-top: 4em
 
 /// PORTFOLIO SECTION ///
 
@@ -94,32 +95,32 @@ p.midlead
   .ui.huge.header
     margin-bottom: 1em
 
-  .midlead.intro
-    margin-bottom: 0.5em
+  .midlead
 
-  .midlead.reasons
-    line-height: 1.5em
+    &.first
+      margin-top: 2em
 
-  @include media("<desktop")
-    padding: 5em 0
-    min-height: 800px
-
-
-    .midlead
-      margin-bottom: 1.5em
-
-    .ui.card
-      margin-bottom: 3em
+    &.last
+      margin-bottom: 0.5em
 
 
   .description
     padding-top: 1.5em
-    background-color: lighten($alt-background, 85)
-    color: black
     height: 260px
 
     .item
       text-transform: uppercase
+
+  @include media("<desktop")
+    padding: 5em 0
+
+    .midlead
+      margin-bottom: 1.5em
+
+    .ui.segment
+      margin-bottom: 2.5em
+
+
 
 // CONTACT SECTION //
 
