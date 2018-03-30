@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/leonid-io/dc-ui.git
-  revision: c55219143bb3ee555696df4f941f8b065e859b73
+  revision: a03f40f6e98d7a187882ae98fbafa55ba3323ba2
   branch: master
   specs:
-    dc_ui (2.5.1)
+    dc_ui (2.5.5)
       hashie
       rails (~> 5.1.0)
 
@@ -65,7 +65,7 @@ GEM
     ffi (1.9.18)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    hashie (3.5.6)
+    hashie (3.5.7)
     heroku-deflater (0.6.3)
       rack (>= 1.4.5)
     i18n (0.9.1)
