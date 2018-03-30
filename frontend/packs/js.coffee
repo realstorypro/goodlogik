@@ -3,24 +3,6 @@ import Vue from 'vue/dist/vue.min'
 
 
 $ ->
-  $('.more.info').popup
-    hoverable: true
-
-  $('.ui.rating').rating().rating('disable', true)
-
-  #$('.hero h1').visibility
-  #  onBottomPassed:  ->
-  #    $('.segment').transition
-  #      animation: 'fade in'
-  #      duration: 1000
-  #      interval: 100
-
-  ##$('.tech').visibility
-  #  onTopPassed: ->
-  #    $('.contact .item').transition
-  #      animation: 'horizontal flip'
-  #      reverse: 'auto'
-  #      interval: 400
 
   # Vue Contact Form
   new Vue

@@ -1,31 +1,26 @@
 @import 'utilities'
 
 /// Colors ///
-$alt-background: #298fff
-$alt-background2: #222222
-$alt-background3: #FFA317
-
 body
   background: #f6f7fa
 
-
-p.midlead
-  font-size: 1.4em
+a
+  text-decoration: underline
 
 /// HERO SECTION ///
 
 .hero
-  padding: 8em 0 12em
+  padding: 4em 0
 
-  .ui.logo.header
-    font-size: 4em
-    margin-bottom: 0.9em
+  .logo
+    margin-bottom: 2.0em
+    width: 180px
 
   p.lead
     font-size: 1.8em
 
   @include media("<desktop")
-    padding: 5em 0 7em
+    padding: 3em 0
 
     .ui.logo.header
       margin-bottom: 0.5em
@@ -33,131 +28,3 @@ p.midlead
     p.lead
       font-size: 1.5em
       line-height: 1.5em
-
-
-/// ABOUT SECTION ///
-
-.about
-  background: $alt-background2
-  color: white
-  padding: 10em 0
-
-  .midlead
-    margin-bottom: 1em
-
-    &.first
-      margin-top: 1em
-
-  .skills 
-    margin-top: 2em
-
-  .skill.header
-    text-transform: uppercase
-    font-size: 1.7em
-
-  .skill.sub.header
-    text-transform: uppercase
-    font-size: 1.4em
-
-  .skill.header.expression
-    margin-top: 2em
-
-  .skill.list
-
-    .item
-      display: flex
-      font-weight: 400
-
-      .header
-        font-size: 1.2em
-        font-weight: 400
-
-      .ui.rating
-        margin-left: auto
-        align-self: center
-
-  @include media("<desktop")
-    padding: 5em 0
-
-    .skill.header
-      font-size: 2.5em
-
-    .ui.grid > .row > .column.second
-      margin-top: 4em
-
-/// PORTFOLIO SECTION ///
-
-.portfolio
-  padding: 10em 0
-  min-height: 703px
-
-
-  .ui.huge.header
-    margin-bottom: 1em
-
-  .midlead
-
-    &.first
-      margin-top: 2em
-
-    &.last
-      margin-bottom: 0.5em
-
-
-  .description
-    padding-top: 1.5em
-    height: 260px
-
-    .item
-      text-transform: uppercase
-
-  @include media("<desktop")
-    padding: 5em 0 3em
-
-    .midlead
-      margin-bottom: 1.5em
-
-    .ui.segment
-      margin-bottom: 2.5em
-
-
-
-// CONTACT SECTION //
-
-.contact
-  background: $alt-background
-  color: white
-  padding: 7em 0 3em 0
-
-  @include media("<desktop")
-    padding: 5em 0 4em
-
-    h2.ui.header
-      font-size: 2em
-
-    .ui.grid > .row > .column.second
-      margin-top: 3em
-
-    #contact
-      margin-top: 2.5em
-
-      button
-        margin-top: 2em
-        height: 3.0em
-
-// FOOTER SECTION ///
-
-
-.footer
-  background: white
-  padding: 4em
-
-  .light
-    font-weight: 400
-
-  @include media("<desktop")
-    .ui.celled.grid > .row > .column
-      box-shadow: none
-
-      &:first-child
-        margin-bottom: 2.5em
