@@ -1,6 +1,6 @@
 import '../semantic_ui/dist/semantic.js'
 import Vue from 'vue/dist/vue.min'
-
+import vue_slider from 'vue-slider-component'
 
 $ ->
 
