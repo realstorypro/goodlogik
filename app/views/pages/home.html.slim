@@ -22,26 +22,30 @@
               | Everything You Need. Nothing You Don't.
             = text 'lead'
               | Whether it’s for downloads, signups, or sales, our products empower advertisers and marketers to connect the dots between ad campaigns and lead nurturing.
-        = row 'four column'
-          = cards ' four'
-            = card
+        = row
+          = column size: 16
+            = cards ' four'
+              = card
+                = content
+                  = h2
+                    | Easy Publishing
+                  = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
+              = card
+                = content
+                  = h2
+                    | Optimize Everything
+                  = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
+              = card
+                = content
+                  = h2
+                    | Native Advertising
+                  = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
+              = card
+                = content
+                  = h2
+                    | Built-In Analytics
+                  = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
 
-          = column
-            = h2
-              | Easy Publishing
-            = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
-          = column
-            = h2
-              | Optimize Everything
-            = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
-          = column
-            = h2
-              | Native Advertising
-            = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
-          = column
-            = h2
-              | Built-In Analytics
-            = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
 
   = fragment 'abilities'
     = grid
