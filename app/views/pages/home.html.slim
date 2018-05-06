@@ -23,6 +23,9 @@
             = text 'lead'
               | Whether it’s for downloads, signups, or sales, our products empower advertisers and marketers to connect the dots between ad campaigns and lead nurturing.
         = row 'four column'
+          = cards ' four'
+            = card
+
           = column
             = h2
               | Easy Publishing
@@ -182,3 +185,13 @@
                     | Curabitur aliquet quam id dui posuere
                   = text
                     | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
+
+= segment 'inverted vertical footer'
+  = container
+    = grid 'stackable inverted equal height stackable'
+      = column computer: 6, tablet: 16, mobile: 16
+        = h2 class: 'inverted', text: 'About Us'
+      = column computer: 5, tablet: 16, mobile: 16
+        = h2 class: 'inverted', text: 'Contact Us'
+      = column computer: 5, tablet: 16, mobile: 16
+        = h2 class: 'inverted', text: 'Get Our Updates'
