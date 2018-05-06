@@ -2,91 +2,158 @@
   = segment 'inverted vertical masthead center aligned segment'
     = fragment 'hero'
       = container
-        = grid
-          = row 'centered'
-            = column computer: 16, tablet: 16, mobile: 16
-              = image_tag 'logo-inverted.png', class: 'ui image logo'
-              = h1 'center aligned inverted'
-                | Introducing Gravity
+        = menu class: 'large secondary inverted pointing', ui: :on
+          = item 'brand'
+            = image_tag 'logo-inverted.png', class: 'ui image logo'
+          = item 'right'
+            = button 'orange inverted'
+              | Request Demo
+      = container 'text'
+        = h1 'center aligned inverted'
+          | Grow &amp; Monetize Your Organic Traffic
+        = h2 'inverted'
+          | Coded from the ground-up with speed, performance, and SEO in mind, this is the fastest platform on the web.
   = fragment 'features'
     = container
       = grid
-        = row 'three column'
-          = column
-            = h2
-              | Lorem
-          = column
-            = h2
-              | Ipsum
-          = column
-            = h2
-              | Dolores
-  = fragment 'abilities'
-    = container
-      = grid
-        = row 'centered'
-          = column computer: 16, tablet: 16, mobile: 16
-            = h1
-              | Abilities CTA
-            = text 'lead'
-              | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
         = row
-          = column computer: 6, tablet: 16, mobile: 16, class: 'centered'
-            = image_tag 'https://wwwimages2.adobe.com/content/dam/acom/en/solutions/aem/images/54658.en.amc.aem.mobcm.feature.responsive-sites.461x461.jpg'
-          = column computer: 10, tablet: 16, mobile: 16
-            | Introducing Gravity
+          = column computer: 16, tablet: 16, mobile: 16, class: 'centered'
+            = h1 'center aligned'
+              | Everything You Need to Grow Organic Traffic
+            = text 'lead'
+              | Whether it’s for downloads, signups, or sales, our products empower advertisers and marketers to connect the dots between ad campaigns and lead nurturing.
+        = row 'four column'
+          = column
+            = h2
+              | Easy Publishing
+            = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
+          = column
+            = h2
+              | Optimize Everything
+            = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
+          = column
+            = h2
+              | Native Advertising
+            = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
+          = column
+            = h2
+              | Built-In Analytics
+            = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
+
+  = fragment 'abilities'
+    = grid
+      = row 'separated'
+        = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
+          = h1
+            | Enagement Made Easy
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+        = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
+          = image_tag 'https://instapage.com/wp-content/uploads/2018/01/5@2x.jpg'
+
+      = row 'separated'
+        = column computer: 9, tablet: 16, mobile: 16, class: 'left aligned image'
+          = image_tag 'https://instapage.com/wp-content/uploads/2018/01/6@2x.jpg'
+        = column computer: 7, tablet: 16, mobile: 16, class: 'right text'
+          = h1
+            | Optimized Everything
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+
+      = row 'separated'
+        = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
+          = h1
+            | Monetize with Ease
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+        = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
+          = image_tag 'https://instapage.com/wp-content/uploads/2018/01/image-x2.png'
+
+
+      = row 'separated'
+        = column computer: 9, tablet: 16, mobile: 16, class: 'left aligned image'
+          = image_tag 'https://instapage.com/wp-content/uploads/2018/01/6@2x.jpg'
+        = column computer: 7, tablet: 16, mobile: 16, class: 'right text'
+          = h1
+            | Enterprise Grade Analytics
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+
+      = row 'separated'
+        = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
+          = h1
+            | Integrate with your marketing stack
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+          = text 'lead'
+            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+        = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
+          = image_tag 'https://instapage.com/wp-content/uploads/2018/01/3@2x.jpg'
+
   = fragment 'pricing'
     = container
       = grid
-        = row 'centered'
-          = column computer: 16, tablet: 16, mobile: 16, class: 'centered'
-            = cards 'three'
-              = card 'business'
-                = content
-                  = h2
-                    | Starter
-                    = header 'sub'
-                      | $1,500/mo
-                  = h3 'dividing'
-                    | Overview
-              = card 'business'
-                = content
-                  = h2
-                    | Business
-                    = header 'sub'
-                      | $3,000/mo
-                  = h3 'dividing'
-                    | Overview
-                  = text text: 'dightial media platform used by tech development'
-                  = h3 'dividing'
-                    | Features
-                  = list 'bulleted'
-                    = item text: 'Mailchimp Inegration'
-                  = h3 'dividing'
-                    | Training
-                  = list 'bulleted'
-                    = item text: '10 hour on-boarding process'
-                    = item text: 'weekly skill training'
-                  = h3 'dividing'
-                    | Limitations
-                  = list 'bulleted'
-                    = item text: 'Up to 10,000 users'
-                    = item text: 'No Salesforce Integration'
-                  = button 'large primary padded fluid'
-                    | Sign Up
-              = card 'business'
-                = content
-                  = h1
-                    | Enterprise
-                    = header 'sub'
-                      | $5,000/mo
-                  = h3 'dividing'
-                    | Features
-                  = h3 'dividing'
-                    | Services
-                  = list 'bulleted'
-                    = item text: '40 Hour On-Boarding'
-                    = item text: 'Mailchimp Integration'
-                    = divider
-                    = item text: 'Data Import'
-                    = item text: 'Salesforce Integration'
+        = row
+          = column computer: 16, tablet: 16, mobile: 16
+            = h1 'center aligned'
+              | Straight Forward Pricing
+        = row
+          = column computer: 8, tablet: 8, mobile: 16
+            = items
+              = item
+                = image 'mini top aligned'
+                  = image_tag 'question.png'
+                = content 'top aligned '
+                  = header
+                    | Curabitur aliquet quam id dui posuere
+                  = text
+                    | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
+          = column computer: 8, tablet: 8, mobile: 16
+            = items
+              = item
+                = image 'mini top aligned'
+                  = image_tag 'question.png'
+                = content 'top aligned '
+                  = header
+                    | Curabitur aliquet quam id dui posuere
+                  = text
+                    | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
+        = row
+          = column computer: 8, tablet: 8, mobile: 16
+            = items
+              = item
+                = image 'mini top aligned'
+                  = image_tag 'question.png'
+                = content 'top aligned '
+                  = header
+                    | Curabitur aliquet quam id dui posuere
+                  = text
+                    | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
+          = column computer: 8, tablet: 8, mobile: 16
+            = items
+              = item
+                = image 'mini top aligned'
+                  = image_tag 'question.png'
+                = content 'top aligned '
+                  = header
+                    | Curabitur aliquet quam id dui posuere
+                  = text
+                    | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.

@@ -7,15 +7,32 @@ body
 a
   text-decoration: underline
 
+p
+  font-size: 1.3em
+
 /// HERO SECTION ///
 
-.hero
-  .logo
-    margin-bottom: 2.0em
-    max-height: 50px
+.masthead
+  min-height: 650px
 
-  p.lead
-    font-size: 1.8em
+  .item.brand
+    padding-bottom: 5px !important
+
+  .logo
+    max-height: 40px
+
+  .text.container
+    max-width: 730px !important
+
+  h1.ui.header
+    font-size: 2.1em
+    margin-top: 5em
+    margin-bottom: 0
+    text-transform: uppercase
+
+  h2.ui.header
+    font-weight: normal
+
 
   @include media("<desktop")
     padding: 3em 0
@@ -27,6 +44,40 @@ a
       font-size: 1.5em
       line-height: 1.5em
 
+// Features Segment
+.features.fragment
+  padding-top: 7em
+  padding-bottom: 7em
+
+  p.lead
+    max-width: 70%
+    margin: 0 auto 2em
+
+// Abilities Fragment
+.abilities.fragment
+  padding: 8em 0
+  background: white
+
+  p.lead
+    margin: 0 auto 2em
+
+  .row.separated
+    padding-bottom: 5em
+
+  .column.left.text
+    padding-top: 3em
+    padding-left: 5em !important
+
+  .column.right.text
+    padding-top: 3em
+    padding-right: 5em !important
+
+  .right.image img
+    margin-right: -110px
+
+  .left.image img
+    margin-left: -110px
+
 
 // Pricing Fragmnent //
 .pricing.fragment
@@ -34,3 +85,12 @@ a
   background: white
   border-top: 1px solid #ccc
   border-bottom: 1px solid #ccc
+
+  .question
+    .left.middle.aligned
+      width: 5%
+      float: left
+
+    .content
+      float: left
+
