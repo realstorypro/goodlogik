@@ -6,13 +6,36 @@ class Pricing
     @app = new Vue
       el: '#pricing_component'
       components: { 'vue-slider': VueSlider }
+      mounted: ->
+        $('.ui.checkbox').checkbox()
       filters:
         visitor_filter: (value) ->
           "#{value / 1000}k"
 
+      methods:
+        calculate_price: (visitors) ->
+          price = 850
+          price += 250 if @two_factor
+          visit_price = 0.03
+          included_visits = 100000
+
+          if visitors > included_visits
+            return_price = price + (visitors * visit_price) - (included_visits * visit_price)
+          else
+            return_price = price
+
+          return_price = return_price * 0.85 if @annual
+
+          return_price += 0.0361 * visitors if @two_factor
+
+
+          return_price
+
       data: ->
         {
           visitors: 100000
+          annual: true
+          two_factor: false
           options:
             eventType: 'auto'
             width: 'auto'
@@ -22,7 +45,7 @@ class Pricing
             dotWidth: null
             min: 100000
             max: 1000000
-            interval: 1000
+            interval: 50000
             show: true
             speed: 0.5
             disabled: false
@@ -37,8 +60,11 @@ class Pricing
             realTime: false
             lazy: false
             formatter: (value) ->
-              val_in_k = value/1000
-              val_in_k + 'K Signins'
+              if value < 1000000
+                val_in_k = value/1000
+                return val_in_k + 'K Signins'
+              else
+                return 'Enterprise'
             bgStyle: null
             sliderStyle: null
             processStyle: null

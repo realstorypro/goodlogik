@@ -8824,6 +8824,10 @@ vue-typer@^1.2.0:
   dependencies:
     lodash.split "^4.4.2"
 
+vue2-filters@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/vue2-filters/-/vue2-filters-0.3.0.tgz#3d6b71169fb14b32a2ddbfa45f94d9a0fdee1094"
+
 vue@^2.5.3:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.3.tgz#e1a3b1f49b6e93e574ce040b95cbc873912fecc1"
