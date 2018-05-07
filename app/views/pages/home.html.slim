@@ -1,18 +1,21 @@
 .pusher
   = segment 'inverted vertical masthead center aligned segment'
     = fragment 'hero'
-      = container
-        = menu class: 'large secondary inverted pointing', ui: :on
-          = item 'brand'
-            = image_tag 'logo-inverted.png', class: 'ui image logo'
-          = item 'right'
-            = button 'orange inverted'
-              | Request Demo
-      = container 'text'
-        = h1 'center aligned inverted'
-          | Grow Your Organic Traffic
-        = h2 'inverted'
-          | Coded from the ground-up with speed, performance, and SEO in mind, this is the fastest platform on the web.
+      = video_tag 'background', class: 'video', autoplay: true, muted: true, loop: true, playsinline: true, width: 'x', height: 'y'
+      .overlay
+      = menu class: 'huge secondary inverted pointing', ui: :on
+        = item 'brand'
+          = image_tag 'logo-inverted.png', class: 'ui image logo'
+        = item 'right'
+          = button 'tiny white compact inverted'
+            | Request Demo
+      .content-holder
+        = container 'text'
+          = h1 'center aligned inverted'
+            | Introducing Aquarius1
+          #typing_header
+            = h2 'inverted'
+              vue-typer caret-animation='phase' :text='["Get More Organic Traffic", "Reduce Visitor Bounce Rate", "Multiply Your Conversion Rate"]'
   = fragment 'features'
     = container
       = grid
@@ -194,8 +197,29 @@
   = container
     = grid 'stackable inverted equal height stackable'
       = column computer: 6, tablet: 16, mobile: 16
-        = h2 class: 'inverted', text: 'About Us'
+        = h3 class: 'inverted', text: 'About Us'
+        = text
+          | Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+        = text
+          | Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
       = column computer: 5, tablet: 16, mobile: 16
-        = h2 class: 'inverted', text: 'Contact Us'
+        = h3 class: 'inverted', text: 'Contact Us'
+        = list 'very relaxed divided link inverted'
+          = item
+            = icon 'phone'
+            = content
+              | 520.370.9242
+          = item
+            = icon 'mail'
+            = content
+              = mail_to 'support@idealogic.io', 'support@idealogic.io'
+          = item
+            = icon 'map'
+            = content
+              | 2702 E. Edgewood Ave.
+              br
+              | Tucson, AZ
+              br
+              | United States
       = column computer: 5, tablet: 16, mobile: 16
-        = h2 class: 'inverted', text: 'Get Our Updates'
+        = h3 class: 'inverted', text: 'Get Our Updates'

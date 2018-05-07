@@ -2,7 +2,12 @@ import '../semantic_ui/dist/semantic.js'
 import Vue from 'vue/dist/vue.min'
 import vue_slider from 'vue-slider-component'
 
+import Typer from '../js/typer'
+
+typer = new Typer
+
 $ ->
+  typer.setup()
 
   # Vue Contact Form
   new Vue
