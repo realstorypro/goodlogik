@@ -10,7 +10,7 @@
               | Request Demo
       = container 'text'
         = h1 'center aligned inverted'
-          | Grow &amp; Monetize Your Organic Traffic
+          | Grow Your Organic Traffic
         = h2 'inverted'
           | Coded from the ground-up with speed, performance, and SEO in mind, this is the fastest platform on the web.
   = fragment 'features'
@@ -26,24 +26,24 @@
           = column size: 16
             = cards ' four'
               = card
-                = content
-                  = h2
-                    | Easy Publishing
+                = content 'centered'
+                  = image_tag 'https://instapage.com/wp-content/themes/instapagev3/v5/assets/images/icon-builder.svg', class: 'ui centered image'
+                  = header text: 'Easy Publishing'
+                  = description text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
+              = card
+                = content 'centered'
+                  = image_tag 'https://instapage.com/wp-content/themes/instapagev3/v5/assets/images/icon-collaborations.svg', class: 'ui centered image'
+                  = header text: 'High Performance'
                   = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
               = card
-                = content
-                  = h2
-                    | Optimize Everything
+                = content 'centered'
+                  = image_tag 'https://instapage.com/wp-content/themes/instapagev3/v5/assets/images/icon-optimization.svg', class: 'ui centered image'
+                  = header text: 'Native Advertising'
                   = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
               = card
-                = content
-                  = h2
-                    | Native Advertising
-                  = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
-              = card
-                = content
-                  = h2
-                    | Built-In Analytics
+                = content 'centered'
+                  = image_tag 'https://instapage.com/wp-content/themes/instapagev3/v5/assets/images/icon-enterprise.svg', class: 'ui centered image'
+                  = header text: 'Built-In Analytics'
                   = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
 
 
@@ -78,7 +78,7 @@
       = row 'separated'
         = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
           = h1
-            | Monetize with Ease
+            | Increase Conversion
           = text 'lead'
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
           = text 'lead'
@@ -93,7 +93,7 @@
         = column computer: 9, tablet: 16, mobile: 16, class: 'left aligned image'
           = image_tag 'https://instapage.com/wp-content/uploads/2018/01/6@2x.jpg'
         = column computer: 7, tablet: 16, mobile: 16, class: 'right text'
-          = h1
+          = h2
             | Enterprise Grade Analytics
           = text 'lead'
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
@@ -104,8 +104,8 @@
 
       = row 'separated'
         = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
-          = h1
-            | Integrate with your marketing stack
+          = h2
+            | Integrates with your stack
           = text 'lead'
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
           = text 'lead'
@@ -124,7 +124,7 @@
               | Straight Forward Pricing
         = row
           = column computer: 16, tablet: 16, mobile: 16
-            = h1 'center aligned'
+            = h2 'center aligned'
               | Common Questions
         = row
           = column computer: 8, tablet: 8, mobile: 16

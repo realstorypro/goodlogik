@@ -1,17 +1,7 @@
 @import 'utilities'
 
-/// Colors ///
-body
-  background: #f6f7fa
 
-a
-  text-decoration: underline
-
-p
-  font-size: 1.3em
-
-/// HERO SECTION ///
-
+/// Masthead Segment ///
 .masthead
   min-height: 650px
 
@@ -32,6 +22,8 @@ p
 
   h2.ui.header
     font-weight: normal
+    font-size: 1.5em
+    text-transform: none
 
 
   @include media("<desktop")
@@ -50,8 +42,15 @@ p
   padding-bottom: 7em
 
   p.lead
+    font-size: 1.25em
     max-width: 70%
     margin: 0 auto 2em
+
+  .content.centered
+    text-align: center
+
+    .description
+      text-align: justify
 
 // Abilities Fragment
 .abilities.fragment

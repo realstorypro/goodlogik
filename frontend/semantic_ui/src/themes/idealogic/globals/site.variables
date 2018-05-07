@@ -25,10 +25,10 @@
 --------------------*/
 
 /* This is the single variable that controls them all */
-@emSize   : 14px;
+@emSize   : 15px;
 
 /* The size of page text  */
-@fontSize : 14px;
+@fontSize : 17px;
 
 
 /*-------------------
@@ -38,8 +38,8 @@
 /* See Power-user section below
    for explanation of @px variables
 */
-@relativeBorderRadius: @relative4px;
-@absoluteBorderRadius: @4px;
+@relativeBorderRadius: 0;
+@absoluteBorderRadius: 0;
 
 @defaultBorderRadius: @absoluteBorderRadius;
 
@@ -117,7 +117,7 @@
         Page
 --------------------*/
 
-@pageBackground      : #FFFFFF;
+@pageBackground      : #f6f7fa;
 @pageOverflowX       : hidden;
 
 @lineHeight          : 1.4285em;
