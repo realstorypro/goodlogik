@@ -56,11 +56,11 @@
         = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
           = h1
             | Enagement Made Easy
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
         = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
           = image_tag 'https://instapage.com/wp-content/uploads/2018/01/5@2x.jpg'
@@ -71,22 +71,22 @@
         = column computer: 7, tablet: 16, mobile: 16, class: 'right text'
           = h1
             | Optimized Everything
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
 
       = row 'separated'
         = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
           = h1
             | Increase Conversion
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
         = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
           = image_tag 'https://instapage.com/wp-content/uploads/2018/01/image-x2.png'
@@ -98,37 +98,118 @@
         = column computer: 7, tablet: 16, mobile: 16, class: 'right text'
           = h2
             | Enterprise Grade Analytics
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
 
       = row 'separated'
         = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
           = h2
             | Integrates with your stack
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text 'lead'
+          = text
             | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
         = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
           = image_tag 'https://instapage.com/wp-content/uploads/2018/01/3@2x.jpg'
 
   = fragment 'pricing'
     = container
-      = grid
+      = grid id: 'pricing_component'
         = row
           = column computer: 16, tablet: 16, mobile: 16
             = h1 'center aligned'
               | Straight Forward Pricing
-            #pricing_component
-              vue-slider ref='slider' v-model='visitors' v-bind='options'
-              = h2
-                | {{visitors | visitor_filter}}
+            = text 'lead'
+              | Whether it’s for downloads, signups, or sales, our products empower advertisers and marketers to connect the dots between ad campaigns and lead nurturing.
+            br
+            vue-slider ref='slider' v-model='visitors' v-bind='options'
+            br
+            br
+        = row
+          = column computer: 7, tablet: 16, mobile: 16, class: 'centered'
+            = segment 'price box'
+              .two_factor_toggle
+                = h5 class: 'centered', text: 'Authenication Options'
+                = text
+                  | Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula.
+                .toggle
+                  label.monthly Standard
+                  = checkbox 'toggle'
+                    input type="checkbox" v-model='two_factor'
+                    label
+                      | 2 Factor
+                      br
+                      .span.extra.info
+                        | + $250/mo
+                        br
+                        | + $0.0361/verification
+
+              = h1 'centered price'
+                div v-if='visitors < 1000000'
+                  | {{ calculate_price(visitors) | currency('$',0)}}/mo
+                div v-if='visitors >= 1000000'
+                  | Contact Sales
+
+              .monthly_annual_toggle
+                = h5 class: 'centered', text: 'Agreement'
+                = text
+                  | Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula.
+                .toggle
+                  label.monthly Month to Month
+                  = checkbox 'toggle'
+                    input type="checkbox" v-model='annual'
+                    label
+                      | Annual Contract
+                      br
+                      .span.extra.info
+                        | (Save 15%)
+
+
+              = table 'very basic'
+                tr
+                  th colspan="3"
+                    | Platform Usage
+                tr
+                  td Users
+                  td Unlimited
+                tr
+                  td Included Monthly Signins
+                  td 100,000
+                tr
+                  td
+                    | Additional Signins
+                    br
+                    strong @ $0.005/signin
+                  td v-if=' visitors < 1000000'
+                    | {{ (visitors - 100000) | currency('',0) }}
+                  td v-if='visitors >= 1000000'
+                    | -
+                tr
+                  th colspan="3"
+                    br
+                    | Publishing Tools
+                tr
+                  td Articles
+                  td= icon 'check green'
+                tr
+                  td Videos
+                  td= icon 'check green'
+                tr
+                  td Discussions
+                  td= icon 'check green'
+                tr
+                  td Podcasts
+                  td Coming Soon
+
+              = divider
+              = button 'fluid large orange'
+                | REQUEST DEMO
         = row
           = column computer: 16, tablet: 16, mobile: 16
             = h2 'center aligned'
@@ -141,7 +222,7 @@
                   = image_tag 'question.png'
                 = content 'top aligned '
                   = header
-                    | Curabitur aliquet quam id dui posuere
+                    | Do you offer yearly plans?
                   = text
                     | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
           = column computer: 8, tablet: 8, mobile: 16
@@ -151,7 +232,7 @@
                   = image_tag 'question.png'
                 = content 'top aligned '
                   = header
-                    | Curabitur aliquet quam id dui posuere
+                    | What is a signin?
                   = text
                     | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
         = row

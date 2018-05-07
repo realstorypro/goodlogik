@@ -5,6 +5,7 @@
     "@rails/webpacker": "4.0.0-pre.2",
     "coffee-loader": "^0.9.0",
     "coffeescript": "^2.0.2",
+    "css-loader": "^0.28.11",
     "jquery": "^3.2.1",
     "postcss-smart-import": "^0.7.6",
     "semantic-ui": "^2.2.13",
@@ -14,6 +15,7 @@
     "vue-slider-component": "^2.6.2",
     "vue-template-compiler": "^2.5.3",
     "vue-typer": "^1.2.0",
+    "vue2-filters": "^0.3.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
