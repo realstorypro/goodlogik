@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44f161f5-d202-434f-9640-543bf53164e9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/elements/header.variables" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/views/card.variables" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/css/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/card.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/card.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/header.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/header.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/src/theme.config" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/src/theme.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/globals/site.variables" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/globals/site.variables" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -69,8 +55,8 @@
           <file leaf-file-name="main.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+                <state relative-caret-position="75">
+                  <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -148,8 +134,8 @@
         <option value="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/elements/header.variables" />
         <option value="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/views/card.variables" />
         <option value="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/globals/site.variables" />
-        <option value="$PROJECT_DIR$/frontend/css/main.sass" />
         <option value="$PROJECT_DIR$/app/views/pages/home.html.slim" />
+        <option value="$PROJECT_DIR$/frontend/css/main.sass" />
       </list>
     </option>
   </component>
@@ -532,12 +518,12 @@
       <workItem from="1522422383562" duration="4503000" />
       <workItem from="1523054251291" duration="5393000" />
       <workItem from="1525559499670" duration="352000" />
-      <workItem from="1525559891183" duration="14394000" />
+      <workItem from="1525559891183" duration="14597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120986000" />
+    <option name="totallyTimeSpent" value="121189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -808,17 +794,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="87" column="2" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
