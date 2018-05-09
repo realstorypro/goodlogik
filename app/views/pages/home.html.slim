@@ -132,29 +132,8 @@
             br
             br
         = row
-          = column computer: 7, tablet: 16, mobile: 16, class: 'centered'
+          = column computer: 6, tablet: 16, mobile: 16
             = segment 'price box'
-              .two_factor_toggle
-                = h5 class: 'centered', text: 'Authenication Options'
-                = text
-                  | Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula.
-                .toggle
-                  label.monthly Standard
-                  = checkbox 'toggle'
-                    input type="checkbox" v-model='two_factor'
-                    label
-                      | 2 Factor
-                      br
-                      .span.extra.info
-                        | + $250/mo
-                        br
-                        | + $0.0361/verification
-
-              = h1 'centered price'
-                div v-if='visitors < 1000000'
-                  | {{ calculate_price(visitors) | currency('$',0)}}/mo
-                div v-if='visitors >= 1000000'
-                  | Contact Sales
 
               .monthly_annual_toggle
                 = h5 class: 'centered', text: 'Agreement'
@@ -170,9 +149,15 @@
                       .span.extra.info
                         | (Save 15%)
 
+              = h1 'centered price'
+                div v-if='visitors < enteprirse_cap'
+                  | {{ calculate_price(visitors, visit_price) | currency('$',0)}}/mo
+                div v-if='visitors >= enteprirse_cap'
+                  | Talk to Us
 
+              = divider
               = table 'very basic'
-                tr
+                /tr
                   th colspan="3"
                     | Platform Usage
                 tr
@@ -185,32 +170,43 @@
                   td
                     | Additional Signins
                     br
-                    strong @ $0.005/signin
+                    strong @ {{visit_price | currency}}/signin
                   td v-if=' visitors < 1000000'
                     | {{ (visitors - 100000) | currency('',0) }}
-                  td v-if='visitors >= 1000000'
+                  td v-if='visitors >= enteprirse_cap'
                     | -
-                tr
+                /tr
                   th colspan="3"
                     br
                     | Publishing Tools
-                tr
+                /tr
                   td Articles
                   td= icon 'check green'
-                tr
+                /tr
                   td Videos
                   td= icon 'check green'
-                tr
+                /tr
                   td Discussions
                   td= icon 'check green'
-                tr
+                /tr
                   td Podcasts
                   td Coming Soon
 
               = divider
               = button 'fluid large orange'
-                | REQUEST DEMO
-        = row
+                | Contact Sales
+          = column computer: 1, tablet: 16, mobile: 16
+          = column computer: 9, tablet: 16, mobile: 16
+            = h3 text: 'Advanced Publishing Tools'
+            = text
+              | Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.
+            = h3 text: 'Analytics You Need'
+            = text
+              | Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.
+            = h3 text: 'Enterprise Grade BI'
+            = text
+              | Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.
+        = row 'questions'
           = column computer: 16, tablet: 16, mobile: 16
             = h2 'center aligned'
               | Common Questions

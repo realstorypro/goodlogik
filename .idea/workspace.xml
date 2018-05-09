@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/css/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/main.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/js/pricing.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/pricing.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/packs/js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/packs/js.coffee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -24,19 +23,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.6223176">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="home.html.slim" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="317">
-                  <caret line="132" column="12" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
+                <state relative-caret-position="185">
+                  <caret line="202" column="42" selection-start-line="202" selection-start-column="42" selection-end-line="202" selection-end-column="42" />
                   <folding>
-                    <element signature="e#10#820#0" />
-                    <element signature="e#3859#4688#0" />
-                    <element signature="e#8962#9793#0" />
-                    <element signature="e#10102#10536#0" />
+                    <element signature="e#8303#10476#0" />
                   </folding>
                 </state>
               </provider>
@@ -72,49 +68,31 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.45360824">
-          <split-first>
-            <leaf>
-              <file leaf-file-name="pricing.coffee" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="112">
-                      <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file leaf-file-name="main.sass" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="90">
-                      <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="pricing.coffee" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="90">
-                      <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="main.sass" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="595">
+                  <caret line="151" column="19" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pricing.coffee" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="262">
+                  <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-second>
     </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>jk</find>
       <find>jj</find>
       <find>uuuuuu</find>
       <find>ww</find>
@@ -144,6 +122,7 @@
       <find>tooltip</find>
       <find>formatter</find>
       <find>lead</find>
+      <find>calc</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -169,9 +148,9 @@
         <option value="$PROJECT_DIR$/frontend/js/typer.coffee" />
         <option value="$PROJECT_DIR$/frontend/js/slider.coffee" />
         <option value="$PROJECT_DIR$/frontend/packs/js.coffee" />
-        <option value="$PROJECT_DIR$/frontend/css/main.sass" />
-        <option value="$PROJECT_DIR$/app/views/pages/home.html.slim" />
         <option value="$PROJECT_DIR$/frontend/js/pricing.coffee" />
+        <option value="$PROJECT_DIR$/app/views/pages/home.html.slim" />
+        <option value="$PROJECT_DIR$/frontend/css/main.sass" />
       </list>
     </option>
   </component>
@@ -424,12 +403,13 @@
       <workItem from="1522422383562" duration="4503000" />
       <workItem from="1523054251291" duration="5393000" />
       <workItem from="1525559499670" duration="352000" />
-      <workItem from="1525559891183" duration="31911000" />
+      <workItem from="1525559891183" duration="33046000" />
+      <workItem from="1525792936367" duration="1883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138503000" />
+    <option name="totallyTimeSpent" value="141521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -471,6 +451,44 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+          <folding>
+            <element signature="e#8303#10476#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/packs/js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/js/typer.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2220">
+          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -483,10 +501,7 @@
         <state relative-caret-position="315">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#10#820#0" />
-            <element signature="e#3859#4688#0" />
-            <element signature="e#8962#9793#0" />
-            <element signature="e#10102#10536#0" />
+            <element signature="e#8303#10476#0" />
           </folding>
         </state>
       </provider>
@@ -620,12 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/site/globals/site.overrides">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/site/globals/site.variables">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -647,23 +656,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/pages.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/pages.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/pages.scss" />
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/pages.coffee" />
     <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/theme.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -684,9 +678,6 @@
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack/loaders/coffee.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/elements/header.variables">
       <provider selected="true" editor-type-id="text-editor">
@@ -716,30 +707,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="595">
+          <caret line="151" column="19" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="132" column="12" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
+        <state relative-caret-position="185">
+          <caret line="202" column="42" selection-start-line="202" selection-start-column="42" selection-end-line="202" selection-end-column="42" />
           <folding>
-            <element signature="e#10#820#0" />
-            <element signature="e#3859#4688#0" />
-            <element signature="e#8962#9793#0" />
-            <element signature="e#10102#10536#0" />
+            <element signature="e#8303#10476#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
         </state>
       </provider>
     </entry>
