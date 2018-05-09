@@ -26,27 +26,12 @@
         = row
           = column size: 16
             = cards ' four'
-              = card
-                = content 'centered'
-                  = image_tag 'https://instapage.com/wp-content/themes/instapagev3/v5/assets/images/icon-builder.svg', class: 'ui centered image'
-                  = header text: 'Easy Publishing'
-                  = description text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
-              = card
-                = content 'centered'
-                  = image_tag 'https://instapage.com/wp-content/themes/instapagev3/v5/assets/images/icon-collaborations.svg', class: 'ui centered image'
-                  = header text: 'High Performance'
-                  = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
-              = card
-                = content 'centered'
-                  = image_tag 'https://instapage.com/wp-content/themes/instapagev3/v5/assets/images/icon-optimization.svg', class: 'ui centered image'
-                  = header text: 'Native Advertising'
-                  = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
-              = card
-                = content 'centered'
-                  = image_tag 'https://instapage.com/wp-content/themes/instapagev3/v5/assets/images/icon-enterprise.svg', class: 'ui centered image'
-                  = header text: 'Built-In Analytics'
-                  = text text: 'Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
-
+              - @homepage[0].benefits.each do |benefit|
+                = card
+                  = content 'centered'
+                    = image_tag benefit.image.file.url, class: 'ui centered image'
+                    = header text: benefit.header
+                    = description text: benefit.description
 
   = fragment 'abilities'
     = grid
