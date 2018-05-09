@@ -157,9 +157,6 @@
 
               = divider
               = table 'very basic'
-                /tr
-                  th colspan="3"
-                    | Platform Usage
                 tr
                   td Users
                   td Unlimited
@@ -171,27 +168,10 @@
                     | Additional Signins
                     br
                     strong @ {{visit_price | currency}}/signin
-                  td v-if=' visitors < 1000000'
+                  td v-if=' visitors < enteprirse_cap && visitors > included_visits'
                     | {{ (visitors - 100000) | currency('',0) }}
-                  td v-if='visitors >= enteprirse_cap'
+                  td v-if='visitors >= enteprirse_cap || visitors <= included_visits'
                     | -
-                /tr
-                  th colspan="3"
-                    br
-                    | Publishing Tools
-                /tr
-                  td Articles
-                  td= icon 'check green'
-                /tr
-                  td Videos
-                  td= icon 'check green'
-                /tr
-                  td Discussions
-                  td= icon 'check green'
-                /tr
-                  td Podcasts
-                  td Coming Soon
-
               = divider
               = button 'fluid large orange'
                 | Contact Sales

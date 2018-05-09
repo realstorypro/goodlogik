@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44f161f5-d202-434f-9640-543bf53164e9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/css/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/js/pricing.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/pricing.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -29,11 +24,8 @@
           <file leaf-file-name="home.html.slim" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="185">
-                  <caret line="202" column="42" selection-start-line="202" selection-start-column="42" selection-end-line="202" selection-end-column="42" />
-                  <folding>
-                    <element signature="e#8303#10476#0" />
-                  </folding>
+                <state relative-caret-position="330">
+                  <caret line="172" column="67" selection-start-line="172" selection-start-column="67" selection-end-line="172" selection-end-column="67" />
                 </state>
               </provider>
             </entry>
@@ -69,7 +61,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="main.sass" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="595">
@@ -78,10 +70,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="pricing.coffee" pinned="false" current-in-tab="false">
+          <file leaf-file-name="pricing.coffee" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="262">
+                <state relative-caret-position="76">
                   <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
                 </state>
               </provider>
@@ -149,8 +141,8 @@
         <option value="$PROJECT_DIR$/frontend/js/slider.coffee" />
         <option value="$PROJECT_DIR$/frontend/packs/js.coffee" />
         <option value="$PROJECT_DIR$/frontend/js/pricing.coffee" />
-        <option value="$PROJECT_DIR$/app/views/pages/home.html.slim" />
         <option value="$PROJECT_DIR$/frontend/css/main.sass" />
+        <option value="$PROJECT_DIR$/app/views/pages/home.html.slim" />
       </list>
     </option>
   </component>
@@ -404,12 +396,12 @@
       <workItem from="1523054251291" duration="5393000" />
       <workItem from="1525559499670" duration="352000" />
       <workItem from="1525559891183" duration="33046000" />
-      <workItem from="1525792936367" duration="1883000" />
+      <workItem from="1525792936367" duration="2037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141521000" />
+    <option name="totallyTimeSpent" value="141675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -455,9 +447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
-          <folding>
-            <element signature="e#8303#10476#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -500,9 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="e#8303#10476#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -707,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -721,13 +700,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="202" column="42" selection-start-line="202" selection-start-column="42" selection-end-line="202" selection-end-column="42" />
-          <folding>
-            <element signature="e#8303#10476#0" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="172" column="67" selection-start-line="172" selection-start-column="67" selection-end-line="172" selection-end-column="67" />
         </state>
       </provider>
     </entry>
