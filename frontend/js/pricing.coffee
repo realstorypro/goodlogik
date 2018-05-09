@@ -14,28 +14,25 @@ class Pricing
 
       methods:
         calculate_price: (visitors) ->
-          price = 850
-          price += 250 if @two_factor
-          visit_price = 0.03
-          included_visits = 100000
 
-          if visitors > included_visits
-            return_price = price + (visitors * visit_price) - (included_visits * visit_price)
+          if visitors > @included_visits
+            return_price = @price + @visit_price * (visitors - @included_visits)
           else
-            return_price = price
+            return_price = @price
 
           return_price = return_price * 0.85 if @annual
-
-          return_price += 0.0361 * visitors if @two_factor
-
 
           return_price
 
       data: ->
         {
           visitors: 100000
+          enteprirse_cap: 500000
+          price: 850
+          visit_price: 0.01
+          included_visits: 100000
+
           annual: true
-          two_factor: false
           options:
             eventType: 'auto'
             width: 'auto'
@@ -43,8 +40,8 @@ class Pricing
             dotSize: 16
             dotHeight: null
             dotWidth: null
-            min: 100000
-            max: 1000000
+            min: 0
+            max: 500000
             interval: 50000
             show: true
             speed: 0.5
@@ -59,8 +56,8 @@ class Pricing
             clickable: true
             realTime: false
             lazy: false
-            formatter: (value) ->
-              if value < 1000000
+            formatter: (value) =>
+              if value < @enteprirse_cap
                 val_in_k = value/1000
                 return val_in_k + 'K Signins'
               else
