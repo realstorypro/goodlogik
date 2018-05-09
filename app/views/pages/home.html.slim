@@ -11,20 +11,18 @@
             | Request Demo
       .content-holder
         = container 'text'
-          = h1 'center aligned inverted'
-            | Introducing Aquarius1
+          = h1 class: 'center aligned inverted', text: @homepage[0].master_header
           #typing_header
             = h2 'inverted'
-              vue-typer caret-animation='phase' :text='["Get More Organic Traffic", "Reduce Visitor Bounce Rate", "Multiply Your Conversion Rate"]'
+              - subheadings = @homepage[0].master_subheadings.map{|item| "\"#{item}\""}.join(',')
+              vue-typer caret-animation='phase' :text='[#{subheadings}]'
   = fragment 'features'
     = container
       = grid
         = row
           = column computer: 16, tablet: 16, mobile: 16, class: 'centered'
-            = h1 'center aligned'
-              | Everything You Need. Nothing You Don't.
-            = text 'lead'
-              | Whether it’s for downloads, signups, or sales, our products empower advertisers and marketers to connect the dots between ad campaigns and lead nurturing.
+            = h1 class: 'center aligned', text: @homepage[0].benefits_header
+            = text class: 'lead', text: @homepage[0].benefits_subheader
         = row
           = column size: 16
             = cards ' four'
@@ -123,10 +121,8 @@
       = grid id: 'pricing_component'
         = row
           = column computer: 16, tablet: 16, mobile: 16
-            = h1 'center aligned'
-              | Straight Forward Pricing
-            = text 'lead'
-              | Whether it’s for downloads, signups, or sales, our products empower advertisers and marketers to connect the dots between ad campaigns and lead nurturing.
+            = h1 class: 'center aligned', text: @homepage[0].pricing_header
+            = text class: 'lead', text: @homepage[0].pricing_subheader
             br
             vue-slider ref='slider' v-model='visitors' v-bind='options'
             br
@@ -177,82 +173,32 @@
                 | Contact Sales
           = column computer: 1, tablet: 16, mobile: 16
           = column computer: 9, tablet: 16, mobile: 16
-            = h3 text: 'Advanced Publishing Tools'
-            = text
-              | Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.
-            = h3 text: 'Analytics You Need'
-            = text
-              | Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.
-            = h3 text: 'Enterprise Grade BI'
-            = text
-              | Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.
+            - @homepage[0].pricing_benefits.each do |benefit|
+              = h3 text: benefit.heading
+              = text text: benefit.description
+
         = row 'questions'
           = column computer: 16, tablet: 16, mobile: 16
             = h2 'center aligned'
               | Common Questions
-        = row
-          = column computer: 8, tablet: 8, mobile: 16
-            = items
-              = item
-                = image 'mini top aligned'
-                  = image_tag 'question.png'
-                = content 'top aligned '
-                  = header
-                    | Do you offer yearly plans?
-                  = text
-                    | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
-          = column computer: 8, tablet: 8, mobile: 16
-            = items
-              = item
-                = image 'mini top aligned'
-                  = image_tag 'question.png'
-                = content 'top aligned '
-                  = header
-                    | What is a signin?
-                  = text
-                    | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
-        = row
-          = column computer: 8, tablet: 8, mobile: 16
-            = items
-              = item
-                = image 'mini top aligned'
-                  = image_tag 'question.png'
-                = content 'top aligned '
-                  = header
-                    | Curabitur aliquet quam id dui posuere
-                  = text
-                    | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
-          = column computer: 8, tablet: 8, mobile: 16
-            = items
-              = item
-                = image 'mini top aligned'
-                  = image_tag 'question.png'
-                = content 'top aligned '
-                  = header
-                    | Curabitur aliquet quam id dui posuere
-                  = text
-                    | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
-        = row
-          = column computer: 8, tablet: 8, mobile: 16
-            = items
-              = item
-                = image 'mini top aligned'
-                  = image_tag 'question.png'
-                = content 'top aligned '
-                  = header
-                    | Curabitur aliquet quam id dui posuere
-                  = text
-                    | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
-          = column computer: 8, tablet: 8, mobile: 16
-            = items
-              = item
-                = image 'mini top aligned'
-                  = image_tag 'question.png'
-                = content 'top aligned '
-                  = header
-                    | Curabitur aliquet quam id dui posuere
-                  = text
-                    | Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit.
+        - @homepage[0].common_questions.each_slice(2) do |question|
+          = row
+            = column computer: 8, tablet: 8, mobile: 16
+              = items
+                = item
+                  = image 'mini top aligned'
+                    = image_tag 'question.png'
+                  = content 'top aligned '
+                    = header text: question[0].question
+                    = text text: question[0].answer
+            = column computer: 8, tablet: 8, mobile: 16
+              = items
+                = item
+                  = image 'mini top aligned'
+                    = image_tag 'question.png'
+                  = content 'top aligned '
+                    = header text: question[1].question
+                    = text text: question[1].answer
 
 = segment 'inverted vertical footer'
   = container
@@ -260,10 +206,7 @@
       = row
         = column computer: 6, tablet: 16, mobile: 16
           = h3 class: 'inverted', text: 'About Us'
-          = text
-            | Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-          = text
-            | Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+          = markdown(@homepage[0].about.html_safe)
         = column computer: 5, tablet: 16, mobile: 16
           = h3 class: 'inverted', text: 'Contact Us'
           = list 'very relaxed divided link inverted'
