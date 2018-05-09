@@ -17,6 +17,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'webpacker'
 gem 'contentful'
 gem 'dc_ui', github: 'leonid-io/dc-ui', branch: 'master'
+gem 'redcarpet'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
@@ -25,7 +26,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'heroku-deflater', :group => :production
 
 group :development, :test do
+  gem 'rb-readline'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails'
 end
 
 group :development do
