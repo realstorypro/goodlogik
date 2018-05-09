@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="44f161f5-d202-434f-9640-543bf53164e9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/css/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/main.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -19,11 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.html.slim" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.sass" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="121" column="17" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="482">
+              <caret line="119" selection-start-line="119" selection-end-line="119" />
               <folding>
                 <element signature="e#3138#7901#0" />
               </folding>
@@ -108,12 +118,12 @@
         <option value="$PROJECT_DIR$/frontend/js/slider.coffee" />
         <option value="$PROJECT_DIR$/frontend/packs/js.coffee" />
         <option value="$PROJECT_DIR$/frontend/js/pricing.coffee" />
-        <option value="$PROJECT_DIR$/frontend/css/main.sass" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/pages/home.html.slim" />
+        <option value="$PROJECT_DIR$/frontend/css/main.sass" />
       </list>
     </option>
   </component>
@@ -367,12 +377,12 @@
       <workItem from="1523054251291" duration="5393000" />
       <workItem from="1525559499670" duration="352000" />
       <workItem from="1525559891183" duration="33046000" />
-      <workItem from="1525792936367" duration="9133000" />
+      <workItem from="1525792936367" duration="9236000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148771000" />
+    <option name="totallyTimeSpent" value="148874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -656,13 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="151" column="19" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -710,11 +713,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="482">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
           <folding>
             <element signature="e#3138#7901#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="121" column="17" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
         </state>
       </provider>
     </entry>
