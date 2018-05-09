@@ -35,71 +35,21 @@
 
   = fragment 'abilities'
     = grid
-      = row 'separated'
-        = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
-          = h1
-            | Enagement Made Easy
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-        = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
-          = image_tag 'https://instapage.com/wp-content/uploads/2018/01/5@2x.jpg'
+      - @homepage[0].features.each_with_index do |feature, index|
+        = row 'separated'
+          - if index % 2 == 0
+            = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
+              = h1 text: feature.header
+              = markdown(feature.description)
+            = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
+              = image_tag feature.image.file.url
+          - else
+            = column computer: 9, tablet: 16, mobile: 16, class: 'left aligned image'
+              = image_tag feature.image.file.url
+            = column computer: 7, tablet: 16, mobile: 16, class: 'right text'
+              = h1 text: feature.header
+              = markdown(feature.description)
 
-      = row 'separated'
-        = column computer: 9, tablet: 16, mobile: 16, class: 'left aligned image'
-          = image_tag 'https://instapage.com/wp-content/uploads/2018/01/6@2x.jpg'
-        = column computer: 7, tablet: 16, mobile: 16, class: 'right text'
-          = h1
-            | Optimized Everything
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-
-      = row 'separated'
-        = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
-          = h1
-            | Increase Conversion
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-        = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
-          = image_tag 'https://instapage.com/wp-content/uploads/2018/01/image-x2.png'
-
-
-      = row 'separated'
-        = column computer: 9, tablet: 16, mobile: 16, class: 'left aligned image'
-          = image_tag 'https://instapage.com/wp-content/uploads/2018/01/6@2x.jpg'
-        = column computer: 7, tablet: 16, mobile: 16, class: 'right text'
-          = h2
-            | Enterprise Grade Analytics
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-
-      = row 'separated'
-        = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
-          = h2
-            | Integrates with your stack
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          = text
-            | Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-        = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
-          = image_tag 'https://instapage.com/wp-content/uploads/2018/01/3@2x.jpg'
 
   = fragment 'pricing'
     = container
