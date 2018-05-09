@@ -23,8 +23,8 @@
       <file leaf-file-name="main.sass" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="121" column="17" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
+            <state relative-caret-position="114">
+              <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -32,11 +32,8 @@
       <file leaf-file-name="home.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="119" selection-start-line="119" selection-end-line="119" />
-              <folding>
-                <element signature="e#3138#7901#0" />
-              </folding>
+            <state relative-caret-position="1902">
+              <caret line="157" column="43" selection-start-line="157" selection-start-column="35" selection-end-line="157" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -63,7 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>jj</find>
       <find>uuuuuu</find>
       <find>ww</find>
       <find>form</find>
@@ -93,6 +89,7 @@
       <find>formatter</find>
       <find>lead</find>
       <find>calc</find>
+      <find>benefits</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -377,12 +374,12 @@
       <workItem from="1523054251291" duration="5393000" />
       <workItem from="1525559499670" duration="352000" />
       <workItem from="1525559891183" duration="33046000" />
-      <workItem from="1525792936367" duration="9236000" />
+      <workItem from="1525792936367" duration="9338000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148874000" />
+    <option name="totallyTimeSpent" value="148976000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -420,7 +417,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -428,9 +425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
-          <folding>
-            <element signature="e#3138#7901#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -473,9 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="e#3138#7901#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -713,18 +704,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
-          <folding>
-            <element signature="e#3138#7901#0" />
-          </folding>
+        <state relative-caret-position="1902">
+          <caret line="157" column="43" selection-start-line="157" selection-start-column="35" selection-end-line="157" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="121" column="17" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
+        <state relative-caret-position="114">
+          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
         </state>
       </provider>
     </entry>
