@@ -25,7 +25,7 @@
             = text class: 'lead', text: @homepage[0].benefits_subheader
         = row
           = column size: 16
-            = cards ' four'
+            = cards @homepage[0].benefits.count.to_words
               - @homepage[0].benefits.each do |benefit|
                 = card
                   = content 'centered'
