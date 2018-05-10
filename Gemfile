@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2.0'
 gem 'slim-rails'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
@@ -15,7 +15,9 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'sass-rails', '~> 5.0'
 gem 'webpacker'
+gem 'contentful'
 gem 'dc_ui', github: 'leonid-io/dc-ui', branch: 'master'
+gem 'redcarpet'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
@@ -24,7 +26,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'heroku-deflater', :group => :production
 
 group :development, :test do
+  gem 'rb-readline'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails'
 end
 
 group :development do

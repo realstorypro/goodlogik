@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails leonid-io: development" uuid="aa0f6ffb-529d-41ab-8dee-0b61d6881390">
+      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <introspection-schemas>leonidio_development:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails leonid-io: production" uuid="7b8ce4fa-781e-455a-bbb2-b20062dba6c0">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>leonidio</user-name>
+    </data-source>
+    <data-source name="Rails leonid-io: test" uuid="406f3077-b3da-422c-92a3-6033bab17cc6">
+      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <introspection-schemas>leonidio_test:public</introspection-schemas>
+    </data-source>
+  </component>
+</project>

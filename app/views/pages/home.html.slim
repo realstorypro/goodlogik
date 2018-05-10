@@ -1,12 +1,165 @@
-.hero
-  = container
+.pusher
+  = segment 'inverted vertical masthead center aligned segment'
+    = fragment 'hero'
+      = video_tag 'background', class: 'video', autoplay: true, muted: true, loop: true, playsinline: true, width: 'x', height: 'y'
+      .overlay
+      = menu class: 'huge secondary inverted pointing', ui: :on
+        = item 'brand'
+          = image_tag 'logo-inverted.png', class: 'ui image logo'
+        = item 'right'
+          = button 'tiny white compact inverted'
+            | Request Demo
+      .content-holder
+        = container 'text'
+          = h1 class: 'center aligned inverted', text: @homepage[0].master_header
+          #typing_header
+            = h2 'inverted'
+              - subheadings = @homepage[0].master_subheadings.map{|item| "\"#{item}\""}.join(',')
+              vue-typer caret-animation='phase' :text='[#{subheadings}]'
+  = fragment 'benefits'
+    = container
+      = grid
+        = row
+          = column computer: 16, tablet: 16, mobile: 16, class: 'centered'
+            = h1 class: 'center aligned', text: @homepage[0].benefits_header
+            = text class: 'lead', text: @homepage[0].benefits_subheader
+        = row
+          = column size: 16
+            = cards ' four'
+              - @homepage[0].benefits.each do |benefit|
+                = card
+                  = content 'centered'
+                    = image_tag benefit.image.file.url, class: 'ui centered image'
+                    = header text: benefit.header
+                    = description text: benefit.description
+
+  = fragment 'abilities'
     = grid
+      - @homepage[0].features.each_with_index do |feature, index|
+        = row 'separated'
+          - if index % 2 == 0
+            = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
+              = h1 text: feature.header
+              = markdown(feature.description)
+            = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
+              = image_tag feature.image.file.url
+          - else
+            = column computer: 9, tablet: 16, mobile: 16, class: 'left aligned image'
+              = image_tag feature.image.file.url
+            = column computer: 7, tablet: 16, mobile: 16, class: 'right text'
+              = h1 text: feature.header
+              = markdown(feature.description)
+
+
+  = fragment 'pricing'
+    = container
+      = grid id: 'pricing_component'
+        = row
+          = column computer: 16, tablet: 16, mobile: 16
+            = h1 class: 'center aligned', text: @homepage[0].pricing_header
+            = text class: 'lead', text: @homepage[0].pricing_subheader
+            br
+            vue-slider ref='slider' v-model='visitors' v-bind='options'
+            br
+            br
+        = row
+          = column computer: 6, tablet: 16, mobile: 16
+            = segment 'price box'
+
+              .monthly_annual_toggle
+                .toggle
+                  label.monthly Month to Month
+                  = checkbox 'toggle'
+                    input type="checkbox" v-model='annual'
+                    label
+                      | Annual Contract
+                      br
+                      .span.extra.info
+                        | (Save 15%)
+
+              = h1 'centered price'
+                div v-if='visitors < enteprirse_cap'
+                  | {{ calculate_price(visitors, visit_price) | currency('$',0)}}/mo
+                div v-if='visitors >= enteprirse_cap'
+                  | Talk to Us
+
+              = divider
+              = table 'very basic'
+                tr
+                  td Users
+                  td Unlimited
+                tr
+                  td Included Monthly Signins
+                  td 100,000
+                tr
+                  td
+                    | Additional Signins
+                    br
+                    strong @ {{visit_price | currency}}/signin
+                  td v-if=' visitors < enteprirse_cap && visitors > included_visits'
+                    | {{ (visitors - 100000) | currency('',0) }}
+                  td v-if='visitors >= enteprirse_cap || visitors <= included_visits'
+                    | -
+              = divider
+              = button 'fluid large orange'
+                | Contact Sales
+          = column computer: 1, tablet: 16, mobile: 16
+          = column computer: 9, tablet: 16, mobile: 16
+            - @homepage[0].pricing_benefits.each do |benefit|
+              = h3 text: benefit.heading
+              = text text: benefit.description
+
+        = row 'questions'
+          = column computer: 16, tablet: 16, mobile: 16
+            = h2 'center aligned'
+              | Common Questions
+        - @homepage[0].common_questions.each_slice(2) do |question|
+          = row
+            = column computer: 8, tablet: 8, mobile: 16
+              = items
+                = item
+                  = image 'mini top aligned'
+                    = image_tag 'question.png'
+                  = content 'top aligned '
+                    = header text: question[0].question
+                    = text text: question[0].answer
+            = column computer: 8, tablet: 8, mobile: 16
+              = items
+                = item
+                  = image 'mini top aligned'
+                    = image_tag 'question.png'
+                  = content 'top aligned '
+                    = header text: question[1].question
+                    = text text: question[1].answer
+
+= segment 'inverted vertical footer'
+  = container
+    = grid 'stackable inverted equal height stackable'
       = row
-        = column computer: 11, tablet: 16, mobile: 16, class: 'centered'
-          = image_tag 'logo.png', class: 'ui image logo'
-          = text 'lead'
-            | Imagine a conscious media company armed with revolutionary technology making the world a better place one website at a time.
-          = text 'lead'
-            | Don’t worry, none of that is happening here. We are also not launching our first brand on June 1, 2018.
-          = text 'lead'
-            = "If you insist, you can #{link_to('follow us on twitter', 'https://twitter.com/idealogic_io')}, but be warned, we won’t follow you back.".html_safe
+        = column computer: 6, tablet: 16, mobile: 16
+          = h3 class: 'inverted', text: 'About Us'
+          = markdown(@homepage[0].about.html_safe)
+        = column computer: 5, tablet: 16, mobile: 16
+          = h3 class: 'inverted', text: 'Contact Us'
+          = list 'very relaxed divided link inverted'
+            = item
+              = icon 'phone'
+              = content
+                | 520.370.9242
+            = item
+              = icon 'mail'
+              = content
+                = mail_to 'support@idealogic.io', 'support@idealogic.io'
+            = item
+              = icon 'map'
+              = content
+                | 2702 E. Edgewood Ave.
+                br
+                | Tucson, AZ
+                br
+                | United States
+        = column computer: 5, tablet: 16, mobile: 16
+          = h3 class: 'inverted', text: 'Get Our Updates'
+      = row
+        = column computer: 16, tablet: 16, mobile: 16
+          = divider
