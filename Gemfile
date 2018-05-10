@@ -18,6 +18,7 @@ gem 'webpacker'
 gem 'contentful'
 gem 'dc_ui', github: 'leonid-io/dc-ui', branch: 'master'
 gem 'redcarpet'
+gem 'numbers_and_words'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
