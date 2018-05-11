@@ -25,7 +25,7 @@
             = text class: 'lead', text: @homepage[0].benefits_subheader
         = row
           = column size: 16
-            = cards ' four'
+            = cards @homepage[0].benefits.count.to_words
               - @homepage[0].benefits.each do |benefit|
                 = card
                   = content 'centered'
@@ -51,9 +51,33 @@
               = markdown(feature.description)
 
 
-  = fragment 'pricing'
+  = fragment class: 'pricing', id: 'pricing_component'
+    modal name="pricing_modal" :adaptive="true" height="auto" width="450"
+      = header 'dividing'
+        | Contact Info
+      form.ui.form
+        .field
+          label Name
+          input type="text" name="name" placeholder="Name"
+        .field
+          label Job Title
+          input type="text" name="job_title" placeholder="CEO"
+        .field
+          label Phone
+          input type="tel" name="phone" placeholder="6184581122"
+        .field
+          label Email
+          input type="text" name="email" placeholder="bruce@waynecorp.com"
+        .field
+          label Company Name
+          input type="text" name="company" placeholder="WayneCorp"
+        .field
+          label Website URL
+          input type="text" name="company_url" placeholder="www.waynecorp.com"
+        .field
+          button.ui.button.orange.large.fluid Contact Me
     = container
-      = grid id: 'pricing_component'
+      = grid
         = row
           = column computer: 16, tablet: 16, mobile: 16
             = h1 class: 'center aligned', text: @homepage[0].pricing_header
@@ -101,7 +125,7 @@
                   td v-if='visitors >= enteprirse_cap || visitors <= included_visits'
                     | -
               = divider
-              = button 'fluid large orange'
+              = button class: 'fluid large orange', v: {'on:click': 'show_pricing_modal()'}
                 | Contact Sales
           = column computer: 1, tablet: 16, mobile: 16
           = column computer: 9, tablet: 16, mobile: 16
@@ -163,3 +187,4 @@
       = row
         = column computer: 16, tablet: 16, mobile: 16
           = divider
+

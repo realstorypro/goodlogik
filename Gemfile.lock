@@ -117,6 +117,8 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    numbers_and_words (0.11.5)
+      i18n
     pg (0.21.0)
     public_suffix (3.0.2)
     puma (3.11.4)
@@ -225,6 +227,7 @@ DEPENDENCIES
   heroku-deflater
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  numbers_and_words
   pg (~> 0.18)
   puma (~> 3.7)
   rails (~> 5.2.0)
