@@ -24,6 +24,10 @@ class Pricing
 
           return_price
 
+        show_pricing_modal: () ->
+          this.$modal.show 'pricing_modal',
+            title: 'Demo Request'
+
       data: ->
         {
           visitors: 100000
