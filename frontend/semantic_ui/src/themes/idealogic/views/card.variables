@@ -209,7 +209,7 @@
 @tenCardOffset: -@tenCardSpacing;
 
 /* Stackable */
-@stackableRowSpacing: 1em;
+@stackableRowSpacing: 2.0em;
 @stackableCardSpacing: 1em;
 @stackableMargin: ~"calc("@oneColumn~" - "(@stackableCardSpacing * 2)~")";
 

@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.2.13 - Item
+ * # Semantic UI 2.3.1 - Item
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -970,7 +970,7 @@ a.ui.card:hover,
   .ui.stackable.cards > .card {
     display: block !important;
     height: auto !important;
-    margin: 1em 1em;
+    margin: 2em 1em;
     padding: 0 !important;
     width: calc( 100%  -  2em ) !important;
   }
