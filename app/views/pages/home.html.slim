@@ -5,7 +5,8 @@
       .overlay
       = menu class: 'huge secondary inverted pointing', ui: :on
         = item 'brand'
-          = image_tag 'logo-inverted.png', class: 'ui image logo'
+          = link_to root_path
+            = image_tag 'logo-inverted.png', class: 'ui image logo'
         = item 'right'
           = button 'tiny white compact inverted'
             | Request Demo
@@ -83,17 +84,6 @@
         = row
           = column computer: 6, tablet: 16, mobile: 16
             = segment 'price box'
-
-              /.monthly_annual_toggle
-                .toggle
-                  label.monthly Month to Month
-                  = checkbox 'toggle'
-                    input type="checkbox" v-model='annual'
-                    label
-                      | Annual Contract
-                      br
-                      .span.extra.info
-                        | (Save 15%)
 
               = h1 'centered price'
                 div v-if='visitors < enteprirse_cap'

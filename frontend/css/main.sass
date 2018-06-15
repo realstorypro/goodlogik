@@ -16,7 +16,12 @@ p.lead
 
   .menu
     margin-top: -5px
-
+    position: absolute
+    top: 15px
+    width: 100%
+    border-top: 0 !important
+    border-bottom: 0 !important
+    z-index: 100
 
   .item.brand
     padding-bottom: 5px !important
@@ -32,6 +37,9 @@ p.lead
     min-height: 100%
     width: auto
     height: auto
+
+    @include media("<tablet")
+      display: none
 
   .overlay
     position: absolute
