@@ -8,7 +8,7 @@
           = link_to root_path
             = image_tag 'logo-inverted.png', class: 'ui image logo'
         = item 'right'
-          = button 'tiny white compact inverted'
+          = button 'small white inverted'
             | Request Demo
       .content-holder
         = container 'text'
@@ -26,7 +26,7 @@
             = text class: 'lead', text: @homepage[0].benefits_subheader
         = row
           = column size: 16
-            = cards @homepage[0].benefits.count.to_words
+            = cards "stackable #{@homepage[0].benefits.count.to_words}"
               - @homepage[0].benefits.each do |benefit|
                 = card
                   = content 'centered'
@@ -39,7 +39,8 @@
       - @homepage[0].features.each_with_index do |feature, index|
         = row 'separated'
           - if index % 2 == 0
-            = column computer: 7, tablet: 16, mobile: 16, class: 'left text'
+            = column computer: 7, tablet: 16, mobile: 16, class: 'left text top aligned'
+              = image_tag feature.image.file.url, class: 'mobile only'
               = h1 text: feature.header
               = markdown(feature.description)
             = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
@@ -47,7 +48,8 @@
           - else
             = column computer: 9, tablet: 16, mobile: 16, class: 'left aligned image'
               = image_tag feature.image.file.url
-            = column computer: 7, tablet: 16, mobile: 16, class: 'right text'
+            = column computer: 7, tablet: 16, mobile: 16, class: 'right text top aligned'
+              = image_tag feature.image.file.url, class: 'mobile only'
               = h1 text: feature.header
               = markdown(feature.description)
 
@@ -59,16 +61,16 @@
       form.ui.form
         .field
           label Name
-          input type="text" name="name" placeholder="Name"
+          input type="text" name="name" placeholder="" autocomplete='name'
         .field
           label Job Title
-          input type="text" name="job_title" placeholder="CEO"
+          input type="text" name="job_title" placeholder=""
         .field
           label Phone
-          input type="tel" name="phone" placeholder="6184581122"
+          input type="tel" name="phone" placeholder="" autocomplete='tel'
         .field
           label Work Email
-          input type="text" name="email" placeholder="bruce@waynecorp.com"
+          input type="text" name="email" placeholder="" autocomplete='email'
         .field
           button.ui.button.orange.large.fluid Request Demo
     = container
