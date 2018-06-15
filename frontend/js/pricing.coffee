@@ -30,11 +30,11 @@ class Pricing
 
       data: ->
         {
-          visitors: 100000
-          enteprirse_cap: 500000
-          price: 850
-          visit_price: 0.01
-          included_visits: 100000
+          visitors: 0
+          enteprirse_cap: 10000
+          price: 350
+          visit_price: 0.05
+          included_visits: 1000
 
           annual: true
           options:
@@ -44,9 +44,9 @@ class Pricing
             dotSize: 16
             dotHeight: null
             dotWidth: null
-            min: 0
-            max: 500000
-            interval: 50000
+            min: 1000
+            max: 10000
+            interval: 1000
             show: true
             speed: 0.5
             disabled: false

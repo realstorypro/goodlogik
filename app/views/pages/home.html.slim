@@ -54,7 +54,7 @@
   = fragment class: 'pricing', id: 'pricing_component'
     modal name="pricing_modal" :adaptive="true" height="auto" width="450"
       = header 'dividing'
-        | Contact Info
+        | Little about yourself
       form.ui.form
         .field
           label Name
@@ -66,16 +66,10 @@
           label Phone
           input type="tel" name="phone" placeholder="6184581122"
         .field
-          label Email
+          label Work Email
           input type="text" name="email" placeholder="bruce@waynecorp.com"
         .field
-          label Company Name
-          input type="text" name="company" placeholder="WayneCorp"
-        .field
-          label Website URL
-          input type="text" name="company_url" placeholder="www.waynecorp.com"
-        .field
-          button.ui.button.orange.large.fluid Contact Me
+          button.ui.button.orange.large.fluid Request Demo
     = container
       = grid
         = row
@@ -113,20 +107,21 @@
                   td Users
                   td Unlimited
                 tr
-                  td Included Monthly Signins
-                  td 100,000
+                  td Included Members
+                  td
+                    | {{ included_visits | currency('',0) }}
                 tr
                   td
-                    | Additional Signins
+                    | Additional Members
                     br
-                    strong @ {{visit_price | currency}}/signin
+                    strong @ {{visit_price | currency}}/member
                   td v-if=' visitors < enteprirse_cap && visitors > included_visits'
-                    | {{ (visitors - 100000) | currency('',0) }}
+                    | {{ (visitors - included_visits) | currency('',0) }}
                   td v-if='visitors >= enteprirse_cap || visitors <= included_visits'
                     | -
               = divider
               = button class: 'fluid large orange', v: {'on:click': 'show_pricing_modal()'}
-                | Contact Sales
+                | Request Demo
           = column computer: 1, tablet: 16, mobile: 16
           = column computer: 9, tablet: 16, mobile: 16
             - @homepage[0].pricing_benefits.each do |benefit|
