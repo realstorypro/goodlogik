@@ -1,9 +1,22 @@
 @import 'utilities'
 
+$mobile-h1: 1.9em
+$mobile-padding: 4em
+
+/// Shared Styles ///
+
+h1.ui.header
+  @include media("<tablet")
+    font-size: 1.9em !important
+
 p.lead
   font-size: 1.25em
   max-width: 70%
   margin: 0 auto 2em
+
+  @include media("<tablet")
+    max-width: 100%
+    margin: 0 auto 1em
 
 /// Masthead Segment ///
 .masthead
@@ -12,7 +25,7 @@ p.lead
   margin-top: 1px
 
   @include media("<tablet")
-    min-height: 65vh
+    min-height: 55vh
 
   .menu
     margin-top: -5px
@@ -48,7 +61,6 @@ p.lead
     width: 100%
     height: 100%
     background: rgba(0, 184, 255, 0.9098)
-
 
   .content-holder
     z-index: 99
@@ -94,6 +106,9 @@ p.lead
   padding-top: 7em
   padding-bottom: 7em
 
+  @include media("<tablet")
+    padding-top: $mobile-padding
+    padding-bottom: $mobile-padding
 
   .content.centered
     text-align: center
@@ -106,25 +121,60 @@ p.lead
   padding: 8em 0
   background: white
 
-  p.lead
-    margin: 0 auto 2em
+  @include media("<tablet")
+    padding-top: $mobile-padding
+    padding-bottom: $mobile-padding
+
+  h1.ui.header
+    @include media("<tablet")
+      text-align: center
 
   .row.separated
     padding-bottom: 5em
 
+    &:last-child
+      padding-bottom: 0
+
+    @include media("<tablet")
+      padding-bottom: 2em
+
   .column.left.text
-    padding-top: 3em
     padding-left: 5em !important
 
+    @include media(">large")
+      padding-top: 3em
+
+    @include media("<tablet")
+      padding-left: 2em !important
+      padding-right: 2em !important
+      margin-bottom: 2em
+
   .column.right.text
-    padding-top: 3em
     padding-right: 5em !important
+
+    @include media(">large")
+      padding-top: 3em
+
+    @include media("<tablet")
+      padding-left: 2em !important
+      padding-right: 2em !important
+      margin-bottom: 2em
+
+  img.mobile.only
+    display: none
+
+    @include media("<tablet")
+      display: block
 
   .right.image img
     margin-right: -110px
+    @include media("<tablet")
+      display: none
 
   .left.image img
     margin-left: -110px
+    @include media("<tablet")
+      display: none
 
 
 // Pricing Fragmnent //
