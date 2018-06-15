@@ -36,7 +36,7 @@ class Pricing
           visit_price: 0.05
           included_visits: 1000
 
-          annual: true
+          annual: false
           options:
             eventType: 'auto'
             width: 'auto'
@@ -44,7 +44,7 @@ class Pricing
             dotSize: 16
             dotHeight: null
             dotWidth: null
-            min: 1000
+            min: 0
             max: 10000
             interval: 1000
             show: true
