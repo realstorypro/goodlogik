@@ -143,16 +143,16 @@
                     = header text: question[1].question
                     = text text: question[1].answer
 
-= segment 'inverted vertical footer'
+= segment 'inverted blue vertical footer'
   = container
     = grid 'stackable inverted equal height stackable'
       = row
-        = column computer: 6, tablet: 16, mobile: 16
+        = column computer: 6, tablet: 16, mobile: 16, class: 'about'
           = h3 class: 'inverted', text: 'About Us'
           = markdown(@homepage[0].about.html_safe)
         = column computer: 5, tablet: 16, mobile: 16
           = h3 class: 'inverted', text: 'Contact Us'
-          = list 'very relaxed divided link inverted'
+          = list 'contact very relaxed divided link inverted'
             = item
               = icon 'phone'
               = content
@@ -161,17 +161,45 @@
               = icon 'mail'
               = content
                 = mail_to 'support@idealogic.io', 'support@idealogic.io'
-            = item
+            = item 'address'
               = icon 'map'
               = content
-                | 2702 E. Edgewood Ave.
+                | 2 E. Congress St.
                 br
-                | Tucson, AZ
+                | Suite 900
+                br
+                | Tucson, AZ 85701
                 br
                 | United States
         = column computer: 5, tablet: 16, mobile: 16
-          = h3 class: 'inverted', text: 'Get Our Updates'
-      = row
-        = column computer: 16, tablet: 16, mobile: 16
-          = divider
+          = h3 class: 'inverted', text: 'Resources'
+          = list 'very relaxed divided link inverted'
+            = item
+              = link_to 'Our Content Hub', 'https://hub.idealogic.io'
+            = item
+              = link_to 'Help & Support', 'https://idealogic.freshdesk.com/support/home'
+            = item
+              = link_to 'Terms of Service', '#'
+            = item
+              = link_to 'Privacy Policy', '#'
+            = item 'social'
+              = link_to 'https://www.facebook.com/theidealogic', target: '_blank'
+                = icon 'large facebook inverted'
+              = link_to 'https://twitter.com/the_idealogic', target: '_blank'
+                = icon 'large twitter inverted'
+              = link_to 'https://www.instagram.com/the_idealogic/', target: '_blank'
+                = icon 'large instagram inverted'
+              = link_to 'https://www.youtube.com/channel/UC-p4Sbc6-ylNbCO5G3X2u7g', target: '_blank'
+                = icon 'large youtube inverted'
+              = link_to 'https://medium.com/the-idealogic', target: '_blank'
+                = icon 'large medium inverted'
+              = link_to 'https://www.pinterest.com/the_idealogic/', target: '_blank'
+                = icon 'large pinterest inverted'
 
+      = row
+        = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
+          = divider 'inverted'
+          = image_tag 'icon.png', class: 'ui image mini centered'
+          = list  'horizontal small divided link list inverted copyright'
+            = item
+              | &copy; 2017 - 2018 IdeaLogic. All Rights Reserved.
