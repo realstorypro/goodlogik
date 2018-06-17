@@ -147,7 +147,7 @@
   = container
     = grid 'stackable inverted equal height stackable'
       = row
-        = column computer: 6, tablet: 16, mobile: 16
+        = column computer: 6, tablet: 16, mobile: 16, class: 'about'
           = h3 class: 'inverted', text: 'About Us'
           = markdown(@homepage[0].about.html_safe)
         = column computer: 5, tablet: 16, mobile: 16
@@ -174,7 +174,7 @@
         = column computer: 5, tablet: 16, mobile: 16
           = h3 class: 'inverted', text: 'Resources'
           = list 'very relaxed divided link inverted'
-            = item 
+            = item
               = link_to 'Our Content Hub', 'https://hub.idealogic.io'
             = item
               = link_to 'Help & Support', 'https://idealogic.freshdesk.com/support/home'
@@ -183,15 +183,15 @@
             = item
               = link_to 'Privacy Policy', '#'
             = item 'social'
-              = link_to 'www.facebook.com'
+              = link_to 'https://www.facebook.com/theidealogic', target: '_blank'
                 = icon 'large facebook inverted'
-              = link_to 'www.facebook.com'
+              = link_to 'https://twitter.com/the_idealogic', target: '_blank'
                 = icon 'large twitter inverted'
-              = link_to 'www.facebook.com'
+              = link_to 'https://www.instagram.com/the_idealogic/', target: '_blank'
                 = icon 'large instagram inverted'
-              = link_to 'www.facebook.com'
+              = link_to 'https://medium.com/the-idealogic', target: '_blank'
                 = icon 'large medium inverted'
-              = link_to 'www.facebook.com'
+              = link_to 'https://www.pinterest.com/the_idealogic/', target: '_blank'
                 = icon 'large pinterest inverted'
 
       = row
