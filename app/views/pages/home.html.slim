@@ -170,8 +170,22 @@
                 br
                 | United States
         = column computer: 5, tablet: 16, mobile: 16
-          = h3 class: 'inverted', text: 'Get Our Updates'
-      = row
-        = column computer: 16, tablet: 16, mobile: 16
-          = divider
+          = h3 class: 'inverted', text: 'Helpful Links'
+          = list 'relaxed divided link inverted'
+            = item
+              = link_to 'Our Content Hub', 'https://hub.idealogic.io'
+            = item
+              = link_to 'Help & Support', 'https://hub.idealogic.io'
+            = item
+              = link_to 'Referral Program', 'https://hub.idealogic.io'
+            = item
+              = link_to 'Terms of Service', '#'
+            = item
+              = link_to 'Privacy Policy', '#'
 
+      = row
+        = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
+          = divider
+          = list  'copyright horizontal mini divided link list inverted'
+            = item
+              | &copy; 2017 - 2018 IdeaLogic. All Rights Reserved.
