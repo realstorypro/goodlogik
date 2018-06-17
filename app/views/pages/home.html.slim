@@ -143,7 +143,7 @@
                     = header text: question[1].question
                     = text text: question[1].answer
 
-= segment 'inverted vertical footer'
+= segment 'inverted blue vertical footer'
   = container
     = grid 'stackable inverted equal height stackable'
       = row
@@ -152,7 +152,7 @@
           = markdown(@homepage[0].about.html_safe)
         = column computer: 5, tablet: 16, mobile: 16
           = h3 class: 'inverted', text: 'Contact Us'
-          = list 'very relaxed divided link inverted'
+          = list 'contact very relaxed divided link inverted'
             = item
               = icon 'phone'
               = content
@@ -161,31 +161,43 @@
               = icon 'mail'
               = content
                 = mail_to 'support@idealogic.io', 'support@idealogic.io'
-            = item
+            = item 'address'
               = icon 'map'
               = content
-                | 2702 E. Edgewood Ave.
+                | 2 E. Congress St.
                 br
-                | Tucson, AZ
+                | Suite 900
+                br
+                | Tucson, AZ 85701
                 br
                 | United States
         = column computer: 5, tablet: 16, mobile: 16
-          = h3 class: 'inverted', text: 'Helpful Links'
-          = list 'relaxed divided link inverted'
-            = item
+          = h3 class: 'inverted', text: 'Resources'
+          = list 'very relaxed divided link inverted'
+            = item 
               = link_to 'Our Content Hub', 'https://hub.idealogic.io'
             = item
-              = link_to 'Help & Support', 'https://hub.idealogic.io'
-            = item
-              = link_to 'Referral Program', 'https://hub.idealogic.io'
+              = link_to 'Help & Support', 'https://idealogic.freshdesk.com/support/home'
             = item
               = link_to 'Terms of Service', '#'
             = item
               = link_to 'Privacy Policy', '#'
+            = item 'social'
+              = link_to 'www.facebook.com'
+                = icon 'large facebook inverted'
+              = link_to 'www.facebook.com'
+                = icon 'large twitter inverted'
+              = link_to 'www.facebook.com'
+                = icon 'large instagram inverted'
+              = link_to 'www.facebook.com'
+                = icon 'large medium inverted'
+              = link_to 'www.facebook.com'
+                = icon 'large pinterest inverted'
 
       = row
         = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
-          = divider
-          = list  'copyright horizontal mini divided link list inverted'
+          = divider 'inverted'
+          = image_tag 'icon.png', class: 'ui image mini centered'
+          = list  'horizontal small divided link list inverted copyright'
             = item
               | &copy; 2017 - 2018 IdeaLogic. All Rights Reserved.
