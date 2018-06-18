@@ -40,8 +40,12 @@ defaults:
     css_class: 'header small'
 
   h5:
-    tag: h4
-    css_class: 'header tiny'
+    tag: h5
+    css_class: 'header'
+
+  h6:
+    tag: h6
+    css_class: 'header'
 
 
   text:
