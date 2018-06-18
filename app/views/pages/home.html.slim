@@ -84,7 +84,7 @@
             br
             br
         = row
-          = column computer: 6, tablet: 16, mobile: 16
+          = column computer: 5, tablet: 16, mobile: 16
             = segment 'price box'
 
               = h1 'centered price'
@@ -94,7 +94,7 @@
                   | Talk to Us
 
               = divider
-              = table 'very basic'
+              = table 'very basic unstackable'
                 tr
                   td Users
                   td Unlimited
@@ -114,11 +114,29 @@
               = divider
               = button class: 'fluid large orange', v: {'on:click': 'show_pricing_modal()'}
                 | Request Demo
-          = column computer: 1, tablet: 16, mobile: 16
-          = column computer: 9, tablet: 16, mobile: 16
+          = column computer: 10, tablet: 16, mobile: 16
             - @homepage[0].pricing_benefits.each do |benefit|
               = h3 text: benefit.heading
               = text text: benefit.description
+            = h4 'functions dividing'
+              | Features
+            = grid 'stackable'
+              - @homepage[0].functions.each_slice(3) do |function|
+                = row 'three column'
+                  = column
+                    = h5
+                      = icon 'green check'
+                      = function[0].name
+                  - unless function[1].nil?
+                    = column
+                      = h5
+                        = icon 'green check'
+                        = function[1].name
+                  - unless function[2].nil?
+                    = column
+                      = h5
+                        = icon 'green check'
+                        = function[2].name
 
         = row 'questions'
           = column computer: 16, tablet: 16, mobile: 16
