@@ -60,7 +60,8 @@ p.lead
     left: 0
     width: 100%
     height: 100%
-    background: rgba(0, 184, 255, 0.9098)
+    background: rgba(34, 132, 209, 0.92)
+    //background: rgba(0, 184, 255, 0.9098)
 
   .content-holder
     z-index: 99
@@ -187,8 +188,7 @@ p.lead
     padding-top: 2.5em
 
   .price.box
-    margin-top: 4em
-    margin-bottom: 2em
+    margin-bottom: 5em
 
   .monthly_annual_toggle
     margin-top: -50px
@@ -216,12 +216,37 @@ p.lead
 
   .questions
     padding-top: 4em
+    @include media("<tablet")
+      padding-top: 2em
 
-    h2
-      padding-bottom: 1em
+    h2.question.header
+      margin-bottom:  1em
+      padding-bottom:  0.5em
+      @include media("<tablet")
+        text-align: left !important
+        margin-bottom:  0
+
+  .question.row
+    @include media("<tablet")
+      margin-top: 0 !important
+      margin-bottom: 0 !important
+      padding-top: 0 !important
+      padding-bottom: 0 !important
+
 
   .items .item
     margin-bottom: 1em
+
+    @include media("<tablet")
+      margin-top: 0
+
+    .image
+      @include media("<tablet")
+        display: none
+
+    .header
+      @include media("<tablet")
+        font-size: 1em
 
 // Modal
 .v--modal-box.v--modal
