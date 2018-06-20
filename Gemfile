@@ -20,6 +20,8 @@ gem 'dc_ui', github: 'leonid-io/dc-ui', branch: 'master'
 gem 'redcarpet'
 gem 'numbers_and_words'
 gem 'meta-tags'
+gem 'rack-cors', require: 'rack/cors'
+gem 'httparty'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'

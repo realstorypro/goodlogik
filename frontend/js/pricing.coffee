@@ -1,5 +1,7 @@
 import Vue from 'vue/dist/vue.min'
 import VueSlider from 'vue-slider-component'
+import axios from 'axios'
+
 
 class Pricing
   setup : () ->
@@ -7,7 +9,10 @@ class Pricing
       el: '#pricing_component'
       components: { 'vue-slider': VueSlider }
       mounted: ->
-        $('.ui.checkbox').checkbox()
+        token = document.getElementsByName('csrf-token')[0].content
+        axios.defaults.headers.common['X-CSRF-Token'] = token
+        axios.defaults.headers.common['Accept'] = 'application/json'
+
       filters:
         visitor_filter: (value) ->
           "#{value / 1000}k"
@@ -28,6 +33,13 @@ class Pricing
           this.$modal.show 'pricing_modal',
             title: 'Demo Request'
 
+        request_demo: () ->
+          axios.post '/demo/send_request',
+            name: @name
+            job_title: @job_title
+            phone: @phone
+            email: @email
+
       data: ->
         {
           visitors: 0
@@ -35,6 +47,10 @@ class Pricing
           price: 350
           visit_price: 0.05
           included_visits: 1000
+          name: ''
+          job_title: ''
+          phone: ''
+          email: ''
 
           annual: false
           options:
@@ -62,8 +78,8 @@ class Pricing
             lazy: false
             formatter: (value) =>
               if value < @enteprirse_cap
-                val_in_k = value/1000
-                return val_in_k + 'K Signins'
+                val_in_k = value
+                return val_in_k + ' members'
               else
                 return 'Enterprise'
             bgStyle: null
