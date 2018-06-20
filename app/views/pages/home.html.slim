@@ -61,18 +61,18 @@
       form.ui.form
         .field
           label Name
-          input type="text" name="name" placeholder="" autocomplete='name'
+          input type="text" name="name" placeholder="Bruce Wayne" v-model="name" autocomplete='name'
         .field
           label Job Title
-          input type="text" name="job_title" placeholder=""
+          input type="text" name="job_title" placeholder="CEO" v-model="job_title"
         .field
           label Phone
-          input type="tel" name="phone" placeholder="" autocomplete='tel'
+          input type="tel" name="phone" placeholder="602.789.1214" autocomplete='tel' v-model="phone"
         .field
           label Work Email
-          input type="text" name="email" placeholder="" autocomplete='email'
+          input type="text" name="email" placeholder="bruce@waynecorp.com" autocomplete='email' v-model="email"
         .field
-          button.ui.button.orange.large.fluid Request Demo
+          button.ui.button.fluid.large.orange type="submit" v-on:click.prevent="request_demo()" Request Demo
     = container
       = grid
         = row
@@ -124,17 +124,17 @@
               - @homepage[0].functions.each_slice(3) do |function|
                 = row 'three column'
                   = column
-                    = h5
+                    = h5 'function'
                       = icon 'green check'
                       = function[0].name
                   - unless function[1].nil?
                     = column
-                      = h5
+                      = h5 'function'
                         = icon 'green check'
                         = function[1].name
                   - unless function[2].nil?
                     = column
-                      = h5
+                      = h5 'function'
                         = icon 'green check'
                         = function[2].name
 
