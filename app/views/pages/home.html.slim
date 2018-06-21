@@ -76,10 +76,8 @@
           = column computer: 16, tablet: 16, mobile: 16
             = h1 class: 'center aligned', text: @homepage[0].pricing_header
             = text class: 'lead', text: @homepage[0].pricing_subheader
-            br
-            vue-slider ref='slider' v-model='visitors' v-bind='options'
-            br
-            br
+            .slider.container
+              vue-slider ref='slider' v-model='visitors' v-bind='options'
         = row
           = column computer: 5, tablet: 16, mobile: 16
             = segment 'price box'

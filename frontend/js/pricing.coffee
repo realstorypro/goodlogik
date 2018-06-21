@@ -64,7 +64,7 @@ class Pricing
           options:
             eventType: 'auto'
             width: 'auto'
-            height: 6
+            height: 15
             dotSize: 16
             dotHeight: null
             dotWidth: null
@@ -86,8 +86,8 @@ class Pricing
             lazy: false
             formatter: (value) =>
               if value < @enteprirse_cap
-                val_in_k = value
-                return val_in_k + ' members'
+                val_in_k = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                return val_in_k + ' Members'
               else
                 return 'Enterprise'
             bgStyle: null
