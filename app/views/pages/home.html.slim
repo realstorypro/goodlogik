@@ -17,7 +17,7 @@
             = h2 'inverted'
               - subheadings = @homepage[0].master_subheadings.map{|item| "\"#{item}\""}.join(',')
               vue-typer caret-animation='phase' :text='[#{subheadings}]'
-  = fragment 'benefits'
+  /= fragment 'benefits'
     = container
       = grid
         = row
