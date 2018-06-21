@@ -40,6 +40,12 @@ class Pricing
               phone: @phone
               email: @email
             }
+          ).then( (rsp) =>
+            this.$modal.hide 'pricing_modal'
+            this.$modal.show 'thank_you_modal'
+          ).catch( (err) =>
+            this.$modal.hide 'pricing_modal'
+            this.$modal.show 'error_modal'
           )
 
       data: ->

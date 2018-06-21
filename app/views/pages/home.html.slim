@@ -7,9 +7,10 @@
         = item 'brand'
           = link_to root_path
             = image_tag 'logo-inverted.png', class: 'ui image logo'
-        = item 'right'
-          = button 'small white inverted'
-            | Request Demo
+        = item 'right hublink'
+          = link_to 'https://hub.idealogic.io', target: "_blank"
+            = button 'inverted white'
+              | Our Hub
       .content-holder
         = container 'text'
           = h1 class: 'center aligned inverted', text: @homepage[0].master_header
@@ -17,22 +18,6 @@
             = h2 'inverted'
               - subheadings = @homepage[0].master_subheadings.map{|item| "\"#{item}\""}.join(',')
               vue-typer caret-animation='phase' :text='[#{subheadings}]'
-  /= fragment 'benefits'
-    = container
-      = grid
-        = row
-          = column computer: 16, tablet: 16, mobile: 16, class: 'centered'
-            = h1 class: 'center aligned', text: @homepage[0].benefits_header
-            = text class: 'lead', text: @homepage[0].benefits_subheader
-        = row
-          = column size: 16
-            = cards "stackable #{@homepage[0].benefits.count.to_words}"
-              - @homepage[0].benefits.each do |benefit|
-                = card
-                  = content 'centered'
-                    = image_tag benefit.image.file.url, class: 'ui centered image'
-                    = header text: benefit.header
-                    = description text: benefit.description
 
   = fragment 'abilities'
     = grid
@@ -58,21 +43,33 @@
     modal name="pricing_modal" :adaptive="true" height="auto" width="450"
       = header 'dividing'
         | Little about yourself
-      form.ui.form
-        .field
+      form.ui.form @submit.prevent="request_demo()"
+        .field.required
           label Name
-          input type="text" name="name" placeholder="Bruce Wayne" v-model="name" autocomplete='name'
+          input type="text" name="name" placeholder="Bruce Wayne" v-model="name" autocomplete='name' required=true
         .field
           label Job Title
           input type="text" name="job_title" placeholder="CEO" v-model="job_title"
-        .field
+        .field.required
           label Phone
-          input type="tel" name="phone" placeholder="602.789.1214" autocomplete='tel' v-model="phone"
-        .field
+          input type="tel" name="phone" placeholder="602.789.1214" autocomplete='tel' v-model="phone" required=true
+        .field.required
           label Work Email
-          input type="text" name="email" placeholder="bruce@waynecorp.com" autocomplete='email' v-model="email"
+          input type="text" name="email" placeholder="bruce@waynecorp.com" autocomplete='email' v-model="email" required=true
         .field
-          button.ui.button.fluid.large.orange type="submit" v-on:click.prevent="request_demo()" Request Demo
+          button.ui.button.fluid.large.orange type="submit" Request Demo
+
+    modal name="thank_you_modal" :adaptive="true" height="auto" width="450"
+      = header 'dividing'
+        | Thank You!
+      = text
+        | We have received your request for a demo and will be in touch shortly.
+    modal name="error_modal" :adaptive="true" height="auto" width="450"
+      = header 'dividing'
+        | Oh no!
+      = text
+        | We had an error processing your request. Please try again later.
+
     = container
       = grid
         = row
