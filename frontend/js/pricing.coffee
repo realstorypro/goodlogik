@@ -34,11 +34,13 @@ class Pricing
             title: 'Demo Request'
 
         request_demo: () ->
-          axios.post '/demo/send_request',
-            name: @name
-            job_title: @job_title
-            phone: @phone
-            email: @email
+          axios.post('/demo/send_request',{
+              name: @name
+              job_title: @job_title
+              phone: @phone
+              email: @email
+            }
+          )
 
       data: ->
         {
