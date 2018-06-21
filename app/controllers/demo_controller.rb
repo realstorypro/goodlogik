@@ -8,6 +8,6 @@ class DemoController < ApplicationController
       Zapier::DemoRequest.new(demo_requester).post_to_zapier
       return head 200
     end
-    head 200
+    head 500
   end
 end
