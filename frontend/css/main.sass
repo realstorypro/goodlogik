@@ -110,6 +110,11 @@ p.lead
     padding-top: $mobile-padding
     padding-bottom: $mobile-padding
 
+  .grid
+    @include media("<tablet")
+      margin-left: 0
+      margin-right: 0
+
   h1.ui.header
     @include media("<tablet")
       text-align: center
