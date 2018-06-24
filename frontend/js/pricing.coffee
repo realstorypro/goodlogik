@@ -30,6 +30,10 @@ class Pricing
           return_price
 
         show_pricing_modal: () ->
+          window.analytics.track "Demo Modal Opened",
+            visitors: @visitors
+            price: @calculate_price(@visitors, @visit_price)
+
           this.$modal.show 'pricing_modal',
             title: 'Demo Request'
 
@@ -41,9 +45,15 @@ class Pricing
               email: @email
             }
           ).then( (rsp) =>
+            window.analytics.track "Demo Request Sent",
+              visitors: @visitors
+              price: @calculate_price(@visitors, @visit_price)
+
             this.$modal.hide 'pricing_modal'
             this.$modal.show 'thank_you_modal'
           ).catch( (err) =>
+            window.analytics.track "Demo Request Error"
+
             this.$modal.hide 'pricing_modal'
             this.$modal.show 'error_modal'
           )
