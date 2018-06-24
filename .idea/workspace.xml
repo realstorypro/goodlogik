@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44f161f5-d202-434f-9640-543bf53164e9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/css/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/content_security_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/content_security_policy.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/js/pricing.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/pricing.coffee" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -18,7 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.6623748">
       <split-first>
         <leaf>
           <file leaf-file-name="demo_request.rb" pinned="false" current-in-tab="false">
@@ -57,16 +59,16 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="pricing.coffee" pinned="false" current-in-tab="false">
+          <file leaf-file-name="pricing.coffee" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="385">
-                  <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+                <state relative-caret-position="434">
+                  <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="application.html.slim" pinned="false" current-in-tab="true">
+          <file leaf-file-name="application.html.slim" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.slim">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="150">
@@ -79,7 +81,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="main.sass" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="306">
@@ -88,7 +90,16 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="js.coffee" pinned="false" current-in-tab="false">
+          <file leaf-file-name="content_security_policy.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/initializers/content_security_policy.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="js.coffee" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/frontend/packs/js.coffee">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="150">
@@ -180,7 +191,6 @@
         <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
         <option value="$PROJECT_DIR$/config/ui.yml" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/content_security_policy.rb" />
         <option value="$PROJECT_DIR$/app/services/zapier/newsletter_subscription.rb" />
         <option value="$PROJECT_DIR$/app/services/zapier/base.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
@@ -188,12 +198,13 @@
         <option value="$PROJECT_DIR$/app/services/zapier/demo_request.rb" />
         <option value="$PROJECT_DIR$/app/models/demo_requester.rb" />
         <option value="$PROJECT_DIR$/app/controllers/demo_controller.rb" />
-        <option value="$PROJECT_DIR$/frontend/js/pricing.coffee" />
         <option value="$PROJECT_DIR$/frontend/packs/js.coffee" />
         <option value="$PROJECT_DIR$/frontend/js/header_video.coffee" />
         <option value="$PROJECT_DIR$/app/views/pages/home.html.slim" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
         <option value="$PROJECT_DIR$/frontend/css/main.sass" />
+        <option value="$PROJECT_DIR$/config/initializers/content_security_policy.rb" />
+        <option value="$PROJECT_DIR$/frontend/js/pricing.coffee" />
       </list>
     </option>
   </component>
@@ -445,7 +456,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193922000" />
+    <option name="totallyTimeSpent" value="194738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -707,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/content_security_policy.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -770,20 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/packs/js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/js/typer.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -816,6 +806,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="192" column="23" selection-start-line="192" selection-start-column="23" selection-end-line="192" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/content_security_policy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/packs/js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
         </state>
       </provider>
     </entry>
