@@ -8,12 +8,15 @@ Vue.use(Vue2Filters)
 Vue.use(VModal)
 
 
+import HeaderVideo from '../js/header_video'
 import Typer from '../js/typer'
 import Pricing from '../js/pricing'
 
+header_video = new HeaderVideo
 typer = new Typer
 pricing = new Pricing
 
 $ ->
+  header_video.setup()
   typer.setup()
   pricing.setup()
