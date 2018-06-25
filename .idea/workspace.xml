@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44f161f5-d202-434f-9640-543bf53164e9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/js/pricing.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/pricing.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/css/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/main.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -79,11 +79,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="main.sass" pinned="false" current-in-tab="false">
+          <file leaf-file-name="main.sass" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="192" column="23" selection-start-line="192" selection-start-column="23" selection-end-line="192" selection-end-column="23" />
+                <state relative-caret-position="619">
+                  <caret line="149" column="24" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -97,7 +97,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="js.coffee" pinned="false" current-in-tab="true">
+          <file leaf-file-name="js.coffee" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/frontend/packs/js.coffee">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="150">
@@ -200,9 +200,9 @@
         <option value="$PROJECT_DIR$/frontend/js/header_video.coffee" />
         <option value="$PROJECT_DIR$/app/views/pages/home.html.slim" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
-        <option value="$PROJECT_DIR$/frontend/css/main.sass" />
         <option value="$PROJECT_DIR$/config/initializers/content_security_policy.rb" />
         <option value="$PROJECT_DIR$/frontend/js/pricing.coffee" />
+        <option value="$PROJECT_DIR$/frontend/css/main.sass" />
       </list>
     </option>
   </component>
@@ -454,7 +454,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195070000" />
+    <option name="totallyTimeSpent" value="195860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -793,13 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="192" column="23" selection-start-line="192" selection-start-column="23" selection-end-line="192" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/content_security_policy.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -825,6 +818,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
           <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="149" column="24" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
         </state>
       </provider>
     </entry>
