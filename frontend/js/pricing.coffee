@@ -80,7 +80,7 @@ class Pricing
             dotWidth: null
             min: 0
             max: 10000
-            interval: 1000
+            interval: 2000
             show: true
             speed: 0.5
             disabled: false
