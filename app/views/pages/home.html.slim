@@ -19,6 +19,23 @@
               - subheadings = @homepage[0].master_subheadings.map{|item| "\"#{item}\""}.join(',')
               vue-typer caret-animation='phase' :text='[#{subheadings}]'
 
+  = fragment 'benefits'
+      = container
+        = grid
+          = row
+            = column computer: 16, tablet: 16, mobile: 16, class: 'centered'
+              = h1 class: 'center aligned', text: @homepage[0].benefits_header
+              = text class: 'lead', text: @homepage[0].benefits_subheader
+          = row
+            = column size: 16
+              = cards "stackable #{@homepage[0].benefits.count.to_words}"
+                - @homepage[0].benefits.each do |benefit|
+                  = card
+                    = content 'centered'
+                      = image_tag benefit.image.file.url, class: 'ui centered image'
+                      = header text: benefit.header
+                      = description text: benefit.description
+
   = fragment 'abilities'
     = grid
       - @homepage[0].features.each_with_index do |feature, index|
@@ -37,6 +54,7 @@
               = image_tag feature.image.file.url, class: 'mobile only'
               = h1 text: feature.header
               = markdown(feature.description)
+
 
 
   = fragment class: 'pricing', id: 'pricing_component'
