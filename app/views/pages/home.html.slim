@@ -10,14 +10,15 @@
         = item 'right hublink'
           = link_to 'https://hub.idealogic.io', target: "_blank"
             = button 'inverted white'
-              | Our Hub
+              | Start Conversation
       .content-holder
         = container 'text'
           = h1 class: 'center aligned inverted', text: @homepage[0].master_header
           #typing_header
             = h2 'inverted'
-              - subheadings = @homepage[0].master_subheadings.map{|item| "\"#{item}\""}.join(',')
-              vue-typer caret-animation='phase' :text='[#{subheadings}]'
+              = @homepage[0].master_subheadings.first
+              /- subheadings = @homepage[0].master_subheadings.map{|item| "\"#{item}\""}.join(',')
+              /vue-typer caret-animation='phase' :text='[#{subheadings}]'
 
   = fragment 'benefits'
       = container
@@ -57,7 +58,7 @@
 
 
 
-  = fragment class: 'pricing', id: 'pricing_component'
+  /= fragment class: 'pricing', id: 'pricing_component'
     modal name="pricing_modal" :adaptive="true" height="auto" width="450"
       = header 'dividing'
         | Little about yourself
