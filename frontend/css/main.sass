@@ -27,7 +27,7 @@ p.lead
   @include media("<tablet")
     min-height: 55vh
 
-  .menu
+  .ui.menu
     margin-top: -5px
     position: absolute
     top: 15px
@@ -36,8 +36,12 @@ p.lead
     border-bottom: 0 !important
     z-index: 100
 
-  .item.brand, .item.hublink
+    .menu a.item
+      color: #ffffff !important
+
+  .item.brand
     padding-bottom: 5px !important
+
 
   .logo
     max-height: 40px
@@ -60,7 +64,7 @@ p.lead
     left: 0
     width: 100%
     height: 100%
-    background: rgba(34, 132, 209, 0.92)
+    background: rgba(0,0,0,0.85)
 
   .content-holder
     z-index: 99
@@ -71,40 +75,52 @@ p.lead
     display: flex
     align-items: center
 
-  .text.container
-    max-width: 800px !important
-
   h1.ui.header
     font-size: 3.0em
-    margin-bottom: 0.5em
     text-transform: uppercase
-    border-bottom: 2px solid #ffffff5c
 
     @include media("<tablet")
       font-size: 1.7em
 
+    &:after
+      content: ""
+      display: block
+      margin: 0 auto
+      width: 95%
+      padding-top: 0.1em
+      border-bottom: 2px solid #ffffff5c
+
+
   h2.ui.header
-    font-size: 1.8em
+    font-size: 1.65em
+    padding-bottom: 0.3em
+    margin-top: 0.3em
 
     @include media("<tablet")
       font-size: 1.2em
 
-    .vue-typer
-      color: white
+  .ctas
+    margin-top: 3em
 
-      .custom.char
-        color: white
+    .button:first-child
+      margin-right: 2em
 
-      .custom.caret
-        background-color: white
-        width: 3px
-        margin-left: 3px
 
+// Bounce Fragment
+.bounce.fragment
+  padding-top: 7em
+  padding-bottom: 7em
+
+  @include media("<tablet")
+    padding-top: $mobile-padding
+    padding-bottom: $mobile-padding
 
 // Benefit Segment
 .benefits.fragment
   padding-top: 7em
   padding-bottom: 7em
+  background: #1b1b1b
+  color: #fff
 
   @include media("<tablet")
     padding-top: $mobile-padding
@@ -182,31 +198,36 @@ p.lead
       display: none
 
 
+
+// CTAs Fragmnent //
+.cta.fragment
+  padding: 4em 0
+  border-top: 1px solid #ccc
+  border-bottom: 1px solid #ccc
+  background: black
+
+  .ui.segment.inverted.black.basic
+    background: black !important
+    font-size: 1.15em
+
+    .text
+      font-size: 1.15em
+      max-width: 80%
+      margin: 1.3em auto 1.2em
+
+
+    .ctas
+      margin:  auto
+      text-align: center
+
+      .button:first-child
+        margin-right: 2em
+
 // Pricing Fragmnent //
 .pricing.fragment
   padding: 4em 0
   border-top: 1px solid #ccc
   border-bottom: 1px solid #ccc
-
-  #pricing_component
-    padding-top: 2.5em
-
-  .price.box
-    margin-bottom: 5em
-    margin-right: 1em
-    @include media("<tablet")
-      margin-right: 0em
-
-  h1.header.price
-    font-size: 3em
-    margin-top: 1.0em
-    margin-bottom: 1.0em
-
-  .slider.container
-    padding: 0 0 1.5em
-    @include media("<tablet")
-      padding: 3.5em 1.5em 1em
-
 
   // Pricing Segment -- Functions
   h4.header.functions
@@ -251,17 +272,11 @@ p.lead
       @include media("<tablet")
         font-size: 1em
 
-// Modal
-.v--modal-box.v--modal
-  padding: 1.5em 1em
-
-.v--modal-overlay
-  background: rgba(0,0,0,0.9) !important
-
 // Footer Segment
 
-.footer.segment
+.footer.segment.black.inverted
   padding: 5em 0 2em
+  background-color: #1b1b1b !important
 
   .about p
     font-size: 1.1em
@@ -282,12 +297,12 @@ p.lead
   .ui.inverted.list .item a, a
     color: white !important
     text-transform: uppercase
-    opacity: 0.8
+    opacity: 1
     transition: all 0.5s
 
     &:hover
       color: white !important
-      opacity: 1
+      opacity: 0.9
 
   .copyright
     text-transform: uppercase

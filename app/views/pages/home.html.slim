@@ -3,34 +3,45 @@
     = fragment 'hero'
       = video_tag 'background.mp4', id: 'homepage_header_video', class: 'video', autoplay: false, muted: true, loop: true, playsinline: true, width: 'x', height: 'y'
       .overlay
-      = menu class: 'huge secondary inverted pointing', ui: :on
+      = menu class: 'huge secondary inverted', ui: :on
         = item 'brand'
           = link_to root_path
             = image_tag 'logo-inverted.png', class: 'ui image logo'
-        = item 'right hublink'
-          = link_to 'https://hub.idealogic.io', target: "_blank"
-            = button 'inverted white'
-              | Our Hub
+        = menu 'right'
+          = item
+            = icon 'volume up'
       .content-holder
         = container 'text'
           = h1 class: 'center aligned inverted', text: @homepage[0].master_header
-          #typing_header
-            = h2 'inverted'
-              - subheadings = @homepage[0].master_subheadings.map{|item| "\"#{item}\""}.join(',')
-              vue-typer caret-animation='phase' :text='[#{subheadings}]'
+          = h2 'inverted'
+            = @homepage[0].master_subheadings.first
+          .ctas
+            .button.ui.large.red
+              | SCHEDULE DEMO
+            .button.ui.large.inverted.black
+              = icon 'play circle'
+              | HOW IT WORKS
+
+  = fragment 'bounce'
+    = container
+      = grid
+        = row
+          = column computer: 16, tablet: 16, mobile: 16, class: 'centered'
+            = h1 class: 'center aligned', text: @homepage[0].bounce_header
+            = text class: 'lead', text: @homepage[0].bounce_subheader
 
   = fragment 'benefits'
       = container
         = grid
           = row
             = column computer: 16, tablet: 16, mobile: 16, class: 'centered'
-              = h1 class: 'center aligned', text: @homepage[0].benefits_header
+              = h1 class: 'center aligned inverted', text: @homepage[0].benefits_header
               = text class: 'lead', text: @homepage[0].benefits_subheader
           = row
             = column size: 16
               = cards "stackable #{@homepage[0].benefits.count.to_words}"
                 - @homepage[0].benefits.each do |benefit|
-                  = card
+                  = card 'inverted'
                     = content 'centered'
                       = image_tag benefit.image.file.url, class: 'ui centered image'
                       = header text: benefit.header
@@ -57,100 +68,23 @@
 
 
 
-  = fragment class: 'pricing', id: 'pricing_component'
-    modal name="pricing_modal" :adaptive="true" height="auto" width="450"
-      = header 'dividing'
-        | Little about yourself
-      form.ui.form @submit.prevent="request_demo()"
-        .field.required
-          label Name
-          input type="text" name="name" placeholder="Bruce Wayne" v-model="name" autocomplete='name' required=true
-        .field
-          label Job Title
-          input type="text" name="job_title" placeholder="CEO" v-model="job_title"
-        .field.required
-          label Phone
-          input type="tel" name="phone" placeholder="602.789.1214" autocomplete='tel' v-model="phone" required=true
-        .field.required
-          label Work Email
-          input type="text" name="email" placeholder="bruce@waynecorp.com" autocomplete='email' v-model="email" required=true
-        .field
-          button.ui.button.fluid.large.orange type="submit" Request Demo
-
-    modal name="thank_you_modal" :adaptive="true" height="auto" width="450"
-      = header 'dividing'
-        | Thank You!
-      = text
-        | We have received your request for a demo and will be in touch shortly.
-    modal name="error_modal" :adaptive="true" height="auto" width="450"
-      = header 'dividing'
-        | Oh no!
-      = text
-        | We had an error processing your request. Please try again later.
-
+  = fragment 'cta'
     = container
       = grid
         = row
           = column computer: 16, tablet: 16, mobile: 16
-            = h1 class: 'center aligned', text: @homepage[0].pricing_header
-            = text class: 'lead', text: @homepage[0].pricing_subheader
-            .slider.container
-              vue-slider ref='slider' v-model='visitors' v-bind='options'
-        = row
-          = column computer: 5, tablet: 16, mobile: 16
-            = segment 'price box'
-
-              = h1 'centered price'
-                div v-if='visitors < enteprirse_cap'
-                  | {{ calculate_price(visitors, visit_price) | currency('$',0)}}/mo
-                div v-if='visitors >= enteprirse_cap'
-                  | Talk to Us
-
-              = divider
-              = table 'very basic unstackable'
-                tr
-                  td Users
-                  td Unlimited
-                tr
-                  td Included Members
-                  td
-                    | {{ included_visits | currency('',0) }}
-                tr
-                  td
-                    | Additional Members
-                    br
-                    strong @ {{visit_price | currency}}/member
-                  td v-if=' visitors < enteprirse_cap && visitors > included_visits'
-                    | {{ (visitors - included_visits) | currency('',0) }}
-                  td v-if='visitors >= enteprirse_cap || visitors <= included_visits'
-                    | -
-              = divider
-              = button class: 'fluid large orange', v: {'on:click': 'show_pricing_modal()'}
-                | Request Demo
-          = column computer: 10, tablet: 16, mobile: 16
-            - @homepage[0].pricing_benefits.each do |benefit|
-              = h3 text: benefit.heading
-              = text text: benefit.description
-            = h4 'functions dividing'
-              | Features
-            = grid 'stackable'
-              - @homepage[0].functions.each_slice(3) do |function|
-                = row 'three column'
-                  = column
-                    = h5 'function'
-                      = icon 'green check'
-                      = function[0].name
-                  - unless function[1].nil?
-                    = column
-                      = h5 'function'
-                        = icon 'green check'
-                        = function[1].name
-                  - unless function[2].nil?
-                    = column
-                      = h5 'function'
-                        = icon 'green check'
-                        = function[2].name
-
+            = segment 'basic inverted black'
+              = h1 class: 'center aligned', text: @homepage[0].pricing_header
+              = text text: @homepage[0].pricing_subheader
+              .ctas
+                .button.ui.large.red
+                  | SCHEDULE DEMO
+                .button.ui.large.inverted.black
+                  = icon 'play circle'
+                  | HOW IT WORKS
+  = fragment class: 'pricing', id: 'pricing_component'
+    = container
+      = grid 'centered'
         = row 'questions'
           = column computer: 16, tablet: 16, mobile: 16
             = h2 'center aligned question dividing'
@@ -174,7 +108,7 @@
                     = header text: question[1].question
                     = text text: question[1].answer
 
-= segment 'inverted blue vertical footer'
+= segment 'inverted black vertical footer'
   = container
     = grid 'stackable inverted equal height stackable'
       = row
@@ -197,18 +131,10 @@
               = content
                 | 2 E. Congress St.
                 br
-                | Suite 900
-                br
                 | Tucson, AZ 85701
-                br
-                | United States
         = column computer: 5, tablet: 16, mobile: 16
           = h3 class: 'inverted', text: 'Resources'
           = list 'very relaxed divided link inverted'
-            = item
-              = link_to 'Our Content Hub', 'https://hub.idealogic.io'
-            = item
-              = link_to 'Help & Support', 'https://idealogic.freshdesk.com/support/home'
             = item
               = link_to 'Terms of Service', '#'
             = item
@@ -216,18 +142,12 @@
             = item 'social'
               = link_to 'https://www.linkedin.com/company/the-idealogic/', target: '_blank'
                 = icon 'large linkedin inverted'
-              = link_to 'https://www.facebook.com/theidealogic', target: '_blank'
-                = icon 'large facebook inverted'
               = link_to 'https://twitter.com/the_idealogic', target: '_blank'
                 = icon 'large twitter inverted'
-              = link_to 'https://www.instagram.com/the_idealogic/', target: '_blank'
-                = icon 'large instagram inverted'
               = link_to 'https://www.youtube.com/channel/UC-p4Sbc6-ylNbCO5G3X2u7g', target: '_blank'
                 = icon 'large youtube inverted'
               = link_to 'https://medium.com/the-idealogic', target: '_blank'
                 = icon 'large medium inverted'
-              = link_to 'https://www.pinterest.com/the_idealogic/', target: '_blank'
-                = icon 'large pinterest inverted'
 
       = row
         = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'

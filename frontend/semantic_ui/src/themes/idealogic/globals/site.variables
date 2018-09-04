@@ -117,11 +117,11 @@
         Page
 --------------------*/
 
-@pageBackground      : #f6f7fa;
+@pageBackground      : #ffffff;
 @pageOverflowX       : hidden;
 
 @lineHeight          : 1.4285em;
-@textColor           : rgba(0, 0, 0, 0.87);
+@textColor           : rgba(0, 0, 0, 1.00);
 
 /*-------------------
       Paragraph
@@ -227,7 +227,7 @@
 @pink             : #E03997;
 @brown            : #A5673F;
 @grey             : #767676;
-@black            : #1B1C1D;
+@black            : #000000;
 
 /*---  Light Colors  ---*/
 @lightRed         : #FF695E;
