@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44f161f5-d202-434f-9640-543bf53164e9" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/assets/videos/background.mp4" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> master
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -63,6 +67,7 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.6623748">
       <split-first>
+<<<<<<< HEAD
         <splitter split-orientation="vertical" split-proportion="0.5">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -180,11 +185,137 @@
             </leaf>
           </split-second>
         </splitter>
+=======
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="demo_request.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/services/zapier/demo_request.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" selection-start-line="5" selection-end-line="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="home.html.slim" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="86" column="60" selection-start-line="86" selection-start-column="60" selection-end-line="86" selection-end-column="60" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="demo_controller.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/demo_controller.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="demo_requester.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/models/demo_requester.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pricing.coffee" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1230">
+                  <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="application.html.slim" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.slim">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="main.sass" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="149" column="24" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="content_security_policy.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/initializers/content_security_policy.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="js.coffee" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/packs/js.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header_video.coffee" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/js/header_video.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="typer.coffee" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/js/typer.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+>>>>>>> master
       </split-second>
     </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
+=======
+      <find>tooltip</find>
+      <find>formatter</find>
+      <find>calc</find>
+      <find>tablet</find>
+      <find>100vh</find>
+      <find>annual</find>
+      <find>z-index</find>
+      <find>benefits</find>
+      <find>lead</find>
+      <find>margin</find>
+      <find>stackable</find>
+      <find>tel</find>
+      <find>mobile</find>
+      <find>stripe</find>
+      <find>strip</find>
+      <find>card</find>
+>>>>>>> master
       <find>description</find>
       <find>overlay</find>
       <find>submit</find>
@@ -199,6 +330,7 @@
       <find>abiliti</find>
       <find>question</find>
       <find>slider</find>
+<<<<<<< HEAD
       <find>hero</find>
       <find>masthead</find>
       <find>start</find>
@@ -215,6 +347,8 @@
       <find>benefits</find>
       <find>font</find>
       <find>Color</find>
+=======
+>>>>>>> master
     </findStrings>
     <replaceStrings>
       <replace />
@@ -232,6 +366,7 @@
         <option value="$PROJECT_DIR$/config/webpack/environment.js" />
         <option value="$PROJECT_DIR$/frontend/semantic_ui/src/theme.config" />
         <option value="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/elements/header.variables" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/frontend/js/typer.coffee" />
         <option value="$PROJECT_DIR$/frontend/js/slider.coffee" />
         <option value="$PROJECT_DIR$/.env" />
@@ -258,6 +393,34 @@
         <option value="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/views/card.variables" />
         <option value="$PROJECT_DIR$/frontend/css/main.sass" />
         <option value="$PROJECT_DIR$/app/views/pages/home.html.slim" />
+=======
+        <option value="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/globals/site.variables" />
+        <option value="$PROJECT_DIR$/frontend/js/typer.coffee" />
+        <option value="$PROJECT_DIR$/frontend/js/slider.coffee" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/0_settings.rb" />
+        <option value="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/views/card.variables" />
+        <option value="$PROJECT_DIR$/frontend/css/utilities.scss" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
+        <option value="$PROJECT_DIR$/config/ui.yml" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/app/services/zapier/newsletter_subscription.rb" />
+        <option value="$PROJECT_DIR$/app/services/zapier/base.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/services/zapier/demo_request.rb" />
+        <option value="$PROJECT_DIR$/app/models/demo_requester.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/demo_controller.rb" />
+        <option value="$PROJECT_DIR$/frontend/packs/js.coffee" />
+        <option value="$PROJECT_DIR$/frontend/js/header_video.coffee" />
+        <option value="$PROJECT_DIR$/app/views/pages/home.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
+        <option value="$PROJECT_DIR$/config/initializers/content_security_policy.rb" />
+        <option value="$PROJECT_DIR$/frontend/css/main.sass" />
+        <option value="$PROJECT_DIR$/frontend/js/pricing.coffee" />
+>>>>>>> master
       </list>
     </option>
   </component>
@@ -320,11 +483,16 @@
               <item name="ideaLogic" type="b2602c69:ProjectViewProjectNode" />
               <item name="ideaLogic" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+>>>>>>> master
             </path>
             <path>
               <item name="ideaLogic" type="b2602c69:ProjectViewProjectNode" />
               <item name="ideaLogic" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -342,17 +510,24 @@
               <item name="ideaLogic" type="b2602c69:ProjectViewProjectNode" />
               <item name="ideaLogic" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+>>>>>>> master
             </path>
             <path>
               <item name="ideaLogic" type="b2602c69:ProjectViewProjectNode" />
               <item name="ideaLogic" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="js" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> master
             </path>
             <path>
               <item name="ideaLogic" type="b2602c69:ProjectViewProjectNode" />
               <item name="ideaLogic" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="semantic_ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -428,6 +603,27 @@
               <item name="idealogic" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="leonid-io" type="cbb8eebc:String" user="leonid-io" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="leonid-io" type="cbb8eebc:String" user="leonid-io" />
+              <item name="frontend" type="cbb8eebc:String" user="frontend" />
+            </path>
+>>>>>>> master
             <path>
               <item name="ideaLogic" type="b2602c69:ProjectViewProjectNode" />
               <item name="ideaLogic" type="462c0819:PsiDirectoryNode" />
@@ -445,6 +641,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+<<<<<<< HEAD
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/elements" />
       <recent name="$PROJECT_DIR$/app/assets/images" />
@@ -455,6 +652,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/assets/videos" />
       <recent name="$PROJECT_DIR$/app/assets/images" />
+=======
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+      <recent name="$PROJECT_DIR$/app/assets/videos" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/js" />
+      <recent name="$PROJECT_DIR$/app/models" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+      <recent name="$PROJECT_DIR$/public" />
+>>>>>>> master
     </key>
   </component>
   <component name="RunDashboard">
@@ -600,17 +809,36 @@
       <workItem from="1529271318087" duration="5929000" />
       <workItem from="1529957223152" duration="6000" />
       <workItem from="1530293338455" duration="8000" />
+<<<<<<< HEAD
       <workItem from="1530382705927" duration="580000" />
+=======
+      <workItem from="1530382705927" duration="573000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="197407000" />
+=======
+    <option name="totallyTimeSpent" value="197400000" />
+>>>>>>> master
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2601271" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+>>>>>>> master
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -641,6 +869,7 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/frontend/packs/admin_css.js" />
     <entry file="file://$PROJECT_DIR$/frontend/app.vue" />
@@ -717,6 +946,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+=======
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
@@ -820,6 +1058,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/lib/symbol_extension.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -862,11 +1101,90 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+=======
+    <entry file="file://$PROJECT_DIR$/frontend/packs/hello_vue.js" />
+    <entry file="file://$PROJECT_DIR$/config/webpack/environment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/default/globals/site.variables">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/pages.scss" />
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/pages.coffee" />
+    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/elements/header.variables">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/globals/site.variables">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="119" column="23" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/0_settings.rb" />
+    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/vue2-filters/dist/vue2-filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2270" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/definitions/views/card.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="1043" column="22" selection-start-line="1043" selection-start-column="13" selection-end-line="1043" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/views/card.variables">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="211" column="24" selection-start-line="211" selection-start-column="24" selection-end-line="211" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/css/utilities.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+>>>>>>> master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/elements/segment.variables">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="421">
           <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
         </state>
@@ -900,11 +1218,128 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="121" column="20" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+=======
+        <state relative-caret-position="718">
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/meta_tags.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/ui.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="3" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/zapier/base.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/demo_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/zapier/demo_request.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/demo_requester.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/js/typer.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/js/header_video.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/content_security_policy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/packs/js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/js/pricing.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+>>>>>>> master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="330">
           <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
         </state>
@@ -914,6 +1349,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+=======
+        <state relative-caret-position="15">
+          <caret line="86" column="60" selection-start-line="86" selection-start-column="60" selection-end-line="86" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/logo-inverted.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="149" column="24" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
+>>>>>>> master
         </state>
       </provider>
     </entry>
