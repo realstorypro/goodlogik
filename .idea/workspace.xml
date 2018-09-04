@@ -2,133 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44f161f5-d202-434f-9640-543bf53164e9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/dashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/elements/segment.variables" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leonid-io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leonid-io.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/videos/background.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/videos/background.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/css/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/accordion.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/accordion.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/accordion.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/accordion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/accordion.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/accordion.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/accordion.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/accordion.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/ad.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/ad.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/ad.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/ad.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/api.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/api.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/breadcrumb.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/breadcrumb.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/breadcrumb.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/breadcrumb.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/button.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/button.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/card.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/card.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/card.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/checkbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/checkbox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/checkbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/checkbox.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/checkbox.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/checkbox.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/checkbox.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/comment.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/comment.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/comment.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/comment.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/container.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/container.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/container.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/container.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dimmer.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dimmer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dimmer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dimmer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dimmer.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dimmer.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dimmer.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dimmer.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/divider.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/divider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/divider.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/divider.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dropdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dropdown.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dropdown.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dropdown.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dropdown.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/dropdown.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/embed.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/embed.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/embed.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/embed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/embed.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/embed.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/feed.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/feed.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/feed.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/feed.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/flag.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/flag.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/flag.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/flag.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/form.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/form.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/grid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/header.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/header.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/icon.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/icon.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/image.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/image.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/image.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/image.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/input.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/input.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/input.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/item.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/item.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/item.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/item.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/label.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/label.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/label.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/label.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/list.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/list.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/list.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/loader.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/loader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/loader.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/loader.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/message.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/message.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/message.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/message.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/modal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/modal.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/modal.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/nag.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/nag.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/nag.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/nag.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/nag.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/nag.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/popup.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/popup.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/progress.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/progress.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/progress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/progress.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/progress.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/rail.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/rail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/rail.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/rail.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/rating.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/rating.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/rating.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/rating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/rating.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/rating.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/reset.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/reset.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/reveal.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/reveal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/reveal.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/reveal.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/search.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/search.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/search.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/search.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/search.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/segment.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/segment.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/segment.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/segment.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/shape.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/shape.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/shape.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/shape.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/shape.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/shape.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sidebar.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sidebar.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/site.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/statistic.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/statistic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/statistic.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/statistic.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/step.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/step.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/step.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/step.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sticky.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sticky.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sticky.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sticky.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sticky.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/sticky.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/tab.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/tab.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/tab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/tab.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/tab.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/table.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/table.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/table.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/transition.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/transition.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/transition.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/transition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/transition.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/transition.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/visibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/components/visibility.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/dist/semantic.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/globals/site.variables" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/globals/site.variables" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/views/card.variables" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/views/card.variables" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -156,13 +37,13 @@
           <entry key="rb" value="3" />
           <entry key="sass" value="1" />
           <entry key="slim" value="1" />
-          <entry key="variables" value="3" />
+          <entry key="variables" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PLAIN_TEXT" value="7" />
           <entry key="Ruby" value="3" />
           <entry key="Sass" value="1" />
           <entry key="Slim" value="1" />
@@ -171,17 +52,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="24" />
-          <entry key="sass" value="2026" />
-          <entry key="slim" value="2895" />
-          <entry key="variables" value="42" />
+          <entry key="sass" value="2086" />
+          <entry key="slim" value="2973" />
+          <entry key="variables" value="200" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="24" />
-          <entry key="PLAIN_TEXT" value="42" />
-          <entry key="Sass" value="2026" />
-          <entry key="Slim" value="2895" />
+          <entry key="PLAIN_TEXT" value="200" />
+          <entry key="Sass" value="2086" />
+          <entry key="Slim" value="2973" />
         </counts>
       </usages-collector>
     </session>
@@ -204,8 +85,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="165">
-                      <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+                    <state relative-caret-position="255">
+                      <caret line="132" column="12" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
                     </state>
                   </provider>
                 </entry>
@@ -214,13 +95,23 @@
           </split-first>
           <split-second>
             <leaf>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="510">
-                      <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+                    <state relative-caret-position="330">
+                      <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
                     </state>
                   </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/basic/views/card.variables">
+                  <provider selected="true" editor-type-id="text-editor" />
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/classic/views/card.variables">
+                  <provider selected="true" editor-type-id="text-editor" />
                 </entry>
               </file>
             </leaf>
@@ -233,7 +124,11 @@
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
-                  <provider selected="true" editor-type-id="text-editor" />
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="105">
+                      <caret line="121" column="20" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+                    </state>
+                  </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
@@ -279,8 +174,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="573">
-                      <caret line="305" column="27" selection-start-line="305" selection-start-column="27" selection-end-line="305" selection-end-column="27" />
+                    <state relative-caret-position="377">
+                      <caret line="278" column="27" selection-start-line="278" selection-start-column="27" selection-end-line="278" selection-end-column="27" />
                     </state>
                   </provider>
                 </entry>
@@ -293,8 +188,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>strip</find>
-      <find>card</find>
       <find>description</find>
       <find>overlay</find>
       <find>submit</find>
@@ -314,7 +207,6 @@
       <find>start</find>
       <find>hublink</find>
       <find>800px</find>
-      <find>benefits</find>
       <find>f6f</find>
       <find>bb</find>
       <find>@black</find>
@@ -323,6 +215,9 @@
       <find>ctas</find>
       <find>lead</find>
       <find>capture</find>
+      <find>benefits</find>
+      <find>font</find>
+      <find>Color</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -345,7 +240,6 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
         <option value="$PROJECT_DIR$/config/initializers/0_settings.rb" />
-        <option value="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/views/card.variables" />
         <option value="$PROJECT_DIR$/frontend/css/utilities.scss" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
@@ -364,6 +258,7 @@
         <option value="$PROJECT_DIR$/config/initializers/content_security_policy.rb" />
         <option value="$PROJECT_DIR$/frontend/js/pricing.coffee" />
         <option value="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/globals/site.variables" />
+        <option value="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/views/card.variables" />
         <option value="$PROJECT_DIR$/app/views/pages/home.html.slim" />
         <option value="$PROJECT_DIR$/frontend/css/main.sass" />
       </list>
@@ -532,6 +427,16 @@
               <item name="themes" type="462c0819:PsiDirectoryNode" />
               <item name="idealogic" type="462c0819:PsiDirectoryNode" />
               <item name="globals" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ideaLogic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ideaLogic" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="semantic_ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="idealogic" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ideaLogic" type="b2602c69:ProjectViewProjectNode" />
@@ -716,7 +621,7 @@
     <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2601271" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2601271" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -812,13 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="1043" column="22" selection-start-line="1043" selection-start-column="13" selection-end-line="1043" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/views/card.variables">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="211" column="24" selection-start-line="211" selection-start-column="24" selection-end-line="211" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -992,13 +890,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
+    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/basic/views/card.variables">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="132" column="12" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/views/card.variables">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/default/views/card.variables">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/semantic_ui/src/themes/classic/views/card.variables">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/css/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="278" column="27" selection-start-line="278" selection-start-column="27" selection-end-line="278" selection-end-column="27" />
         </state>
       </provider>
     </entry>

@@ -35,13 +35,13 @@
         = grid
           = row
             = column computer: 16, tablet: 16, mobile: 16, class: 'centered'
-              = h1 class: 'center aligned', text: @homepage[0].benefits_header
+              = h1 class: 'center aligned inverted', text: @homepage[0].benefits_header
               = text class: 'lead', text: @homepage[0].benefits_subheader
           = row
             = column size: 16
               = cards "stackable #{@homepage[0].benefits.count.to_words}"
                 - @homepage[0].benefits.each do |benefit|
-                  = card
+                  = card 'inverted'
                     = content 'centered'
                       = image_tag benefit.image.file.url, class: 'ui centered image'
                       = header text: benefit.header
@@ -131,11 +131,7 @@
               = content
                 | 2 E. Congress St.
                 br
-                | Suite 900
-                br
                 | Tucson, AZ 85701
-                br
-                | United States
         = column computer: 5, tablet: 16, mobile: 16
           = h3 class: 'inverted', text: 'Resources'
           = list 'very relaxed divided link inverted'
