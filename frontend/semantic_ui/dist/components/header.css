@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.3.1 - Header
+ * # Semantic UI 2.3.3 - Header
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -23,7 +23,7 @@
   font-weight: bold;
   line-height: 1.28571429em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.87);
+  color: #000000;
 }
 .ui.header:first-child {
   margin-top: -0.14285714em;
