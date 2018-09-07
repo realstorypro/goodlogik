@@ -11,5 +11,10 @@
           .ctas
             a.button.ui.large.typeform-share href=@homepage[0].typeform_url class=@homepage[0].typeform_cta_color.downcase data-mode="popup"
               = @homepage[0].typeform_cta
+            .wistia_embed class=("popover=true popoverContent=html wistia_async_#{@homepage[0].video_id}") style="display:inline;position:relative"
+              .button.ui.large.inverted class=@homepage[0].video_cta_color.downcase
+                = icon 'play'
+                = @homepage[0].video_cta
+
           javascript:
             (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()
