@@ -22,6 +22,7 @@ class Popuper
     window.addEventListener 'resize', @resize
 
   resize: () ->
+    $.magnificPopup.close()
     screen_height = document.documentElement.clientHeight
     $('#typeform iframe').attr('height', screen_height - 45)
 
