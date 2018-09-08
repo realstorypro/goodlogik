@@ -16,8 +16,6 @@ class Popuper
       iframe.frameBorder = 0
       $('#typeform').append(iframe)
 
-      console.log document.documentElement.clientHeight
-
       $('#modal-trigger').magnificPopup
         type: 'inline'
         midClick: true
