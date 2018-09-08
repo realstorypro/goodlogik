@@ -10,3 +10,4 @@
 import '../semantic_ui/dist/semantic.css'
 import '../css/utilities.scss'
 import '../css/main.sass'
+import 'magnific-popup/dist/magnific-popup.css'

@@ -7,7 +7,7 @@ html
     script async="" src="https://fast.wistia.com/embed/medias/m1m92bu4gz.jsonp"
     script async="" src="https://fast.wistia.com/assets/external/E-v1.js"
     = stylesheet_pack_tag 'css'
-    = javascript_pack_tag 'js'
+    = javascript_pack_tag 'js', async: true
     = csrf_meta_tags
   body
     =yield

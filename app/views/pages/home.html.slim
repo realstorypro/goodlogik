@@ -1,20 +1,22 @@
-.pusher
-  = segment 'inverted vertical masthead center aligned segment'
-    = fragment 'hero'
-      video.video src=@homepage[0].overlay_video.url id='homepage_header_video' autoplay=false muted=true loop=true playsinline=true width='x' height='y'
-      .overlay style="background-color: #{@homepage[0].overlay_color}"
-      .content-holder
-        = container 'text'
-          = h1 class: 'center aligned inverted', text: @homepage[0].master_header
-          = h2 'inverted'
-            = @homepage[0].master_subheadings.first
-          .ctas
-            a.button.ui.large.typeform-share href=@homepage[0].typeform_url class=@homepage[0].typeform_cta_color.downcase data-mode="popup"
-              = @homepage[0].typeform_cta
-            .wistia_embed class=("popover=true popoverContent=html wistia_async_#{@homepage[0].video_id}") style="display:inline;position:relative"
-              .button.ui.large.inverted class=@homepage[0].video_cta_color.downcase
-                = icon 'play'
-                = @homepage[0].video_cta
+= segment 'inverted vertical masthead center aligned segment'
+  = fragment 'hero'
+    video.video src=@homepage[0].overlay_video.url id='homepage_header_video' autoplay=false muted=true loop=true playsinline=true width='x' height='y'
+    .overlay style="background-color: #{@homepage[0].overlay_color}"
+    .content-holder
+      = container 'text'
+        = h1 class: 'center aligned inverted', text: @homepage[0].master_header
+        = h2 'inverted'
+          = @homepage[0].master_subheadings.first
+        .ctas
+          a.button.ui.large#modal-trigger class=@homepage[0].typeform_cta_color.downcase data-mfp-src="#typeform"
+            = @homepage[0].typeform_cta
+          .wistia_embed class=("popover=true popoverContent=html wistia_async_#{@homepage[0].video_id}") style="display:inline;position:relative"
+            .button.ui.large.inverted class=@homepage[0].video_cta_color.downcase
+              = icon 'play'
+              = @homepage[0].video_cta
 
-          javascript:
-            (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()
+.white-popup.mfp-hide#typeform
+  .typeform-widget data-url=@homepage[0].typeform_url
+
+javascript:
+  (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()
