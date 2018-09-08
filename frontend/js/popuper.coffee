@@ -1,10 +1,9 @@
 import popup from 'magnific-popup'
-console.log popup
 
 class Popuper
   setup : () ->
 
-    $(document).ready ->
+    $(document).ready =>
       popup_el = $('.white-popup')
       screen_height = document.documentElement.clientHeight
 
@@ -19,6 +18,12 @@ class Popuper
       $('#modal-trigger').magnificPopup
         type: 'inline'
         midClick: true
+
+    window.addEventListener 'resize', @resize
+
+  resize: () ->
+    screen_height = document.documentElement.clientHeight
+    $('#typeform iframe').attr('height', screen_height - 45)
 
 
 
