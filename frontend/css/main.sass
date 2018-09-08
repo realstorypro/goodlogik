@@ -3,6 +3,9 @@
 $mobile-h1: 1.9em
 $mobile-padding: 4em
 
+body, html
+  overflow: hidden
+
 /// Shared Styles ///
 
 h1.ui.header
@@ -99,14 +102,34 @@ p.lead
     .wistia_embed
       margin-left: 0.75em
 
+      @include media("<tablet")
+        margin-left: 0
+        margin-top: 1em
+        display: block !important
+
+    .button
+      @include media("<tablet")
+        display: block !important
+
+
+.mfp-wrap
+  overflow: hidden !important
+
+.mfp-container
+  padding: 0 !important
+
 .mfp-content
-  height: 90%
+  height: 100%
+  width: 100% !important
 
 .white-popup
   position: relative
-  background: #FFF
-  padding: 20px
+  background: #000
+  padding: 40px 0 0
   width: auto
   max-width: 100%
   min-height: 100%
   margin: 0px auto
+
+.mfp-close-btn-in .mfp-close
+  color: #fff !important
