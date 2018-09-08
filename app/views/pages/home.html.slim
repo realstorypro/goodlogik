@@ -10,7 +10,7 @@
         .ctas
           a.button.ui.large#modal-trigger class=@homepage[0].typeform_cta_color.downcase data-mfp-src="#typeform"
             = @homepage[0].typeform_cta
-          .wistia_embed class=("popover=true popoverContent=html wistia_async_#{@homepage[0].video_id}") style="display:inline;position:relative"
+          .wistia_embed class=("popover=true popoverContent=html popoverOverlayOpacity=0.98 popoverOverlayColor=000000 wistia_async_#{@homepage[0].video_id}") style="display:inline;position:relative"
             .button.ui.large.inverted class=@homepage[0].video_cta_color.downcase
               = icon 'play'
               = @homepage[0].video_cta
