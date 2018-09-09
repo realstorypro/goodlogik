@@ -2,11 +2,11 @@ class PagesController < ApplicationController
   before_action :set_icon
 
   def home
-    @homepage = contentful.entries(content_type: 'simpleHomepage', include: 1)
+    @homepage = contentful.entry(ENV['CONTENTFUL_ENTRY_ID'])
 
-    @page_title = @homepage[0].page_title
-    @page_description = @homepage[0].page_description
-    set_meta_tags og: {title: @homepage[0].page_title}
+    @page_title = @homepage.page_title
+    @page_description = @homepage.page_description
+    set_meta_tags og: {title: @homepage.page_title}
   end
 
   protected
