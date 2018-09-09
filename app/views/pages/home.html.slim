@@ -1,18 +1,18 @@
 = segment 'inverted vertical masthead center aligned segment'
   = fragment 'hero'
-    video.video src=@homepage[0].overlay_video.url id='homepage_header_video' autoplay=false muted=true loop=true playsinline=true width='x' height='y'
-    .overlay style="background-color: #{@homepage[0].overlay_color}"
+    video.video src=@homepage.overlay_video.url id='homepage_header_video' autoplay=false muted=true loop=true playsinline=true width='x' height='y'
+    .overlay style="background-color: #{@homepage.overlay_color}"
     .content-holder
       = container 'text'
-        = h1 class: 'center aligned inverted', text: @homepage[0].master_header
+        = h1 class: 'center aligned inverted', text: @homepage.master_header
         = h2 'inverted'
-          = @homepage[0].master_subheadings.first
+          = @homepage.master_subheadings.first
         .ctas
-          a.button.ui.large#modal-trigger class=@homepage[0].typeform_cta_color.downcase data-mfp-src="#typeform"
-            = @homepage[0].typeform_cta
-          .wistia_embed class=("popover=true popoverContent=html popoverOverlayOpacity=0.98 popoverOverlayColor=000000 wistia_async_#{@homepage[0].video_id}") style="display:inline;position:relative"
-            .button.ui.large.inverted class=@homepage[0].video_cta_color.downcase
+          a.button.ui.large#modal-trigger class=@homepage.typeform_cta_color.downcase data-mfp-src="#typeform"
+            = @homepage.typeform_cta
+          .wistia_embed class=("popover=true popoverContent=html popoverOverlayOpacity=0.98 popoverOverlayColor=000000 wistia_async_#{@homepage.video_id}") style="display:inline;position:relative"
+            .button.ui.large.inverted class=@homepage.video_cta_color.downcase
               = icon 'play'
-              = @homepage[0].video_cta
+              = @homepage.video_cta
 
-.white-popup.mfp-hide#typeform data-source=@homepage[0].typeform_url
+.white-popup.mfp-hide#typeform data-source=@homepage.typeform_url
