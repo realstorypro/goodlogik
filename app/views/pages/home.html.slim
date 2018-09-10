@@ -8,11 +8,11 @@
         = h2 'inverted'
           = @homepage.master_subheadings.first
         .ctas
-          a.button.ui.large#modal-trigger class=@homepage.typeform_cta_color.downcase data-mfp-src="#typeform"
-            = @homepage.typeform_cta
           .wistia_embed class=("popover=true popoverContent=html popoverOverlayOpacity=0.98 popoverOverlayColor=000000 wistia_async_#{@homepage.video_id}") style="display:inline;position:relative"
             .button.ui.large.inverted class=@homepage.video_cta_color.downcase
               = icon 'play'
               = @homepage.video_cta
+          a.button.ui.large#modal-trigger class=@homepage.typeform_cta_color.downcase data-mfp-src="#typeform"
+            = @homepage.typeform_cta
 
 .white-popup.mfp-hide#typeform data-source=@homepage.typeform_url
