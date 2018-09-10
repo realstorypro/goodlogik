@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0db3a7a4-11cb-4a7d-8ce1-23df65b7cd84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/js/header_video.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/header_video.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -29,7 +29,7 @@
           <entry key="coffee" value="3" />
           <entry key="env" value="1" />
           <entry key="js" value="1" />
-          <entry key="rb" value="1" />
+          <entry key="rb" value="2" />
           <entry key="sass" value="1" />
           <entry key="scss" value="1" />
           <entry key="slim" value="1" />
@@ -40,7 +40,7 @@
           <entry key=".env file" value="1" />
           <entry key="CoffeeScript" value="3" />
           <entry key="JavaScript" value="1" />
-          <entry key="Ruby" value="1" />
+          <entry key="Ruby" value="2" />
           <entry key="SCSS" value="1" />
           <entry key="Sass" value="1" />
           <entry key="Slim" value="1" />
@@ -48,9 +48,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="coffee" value="1458" />
+          <entry key="coffee" value="1460" />
           <entry key="env" value="35" />
-          <entry key="rb" value="92" />
+          <entry key="rb" value="102" />
           <entry key="sass" value="565" />
           <entry key="slim" value="241" />
         </counts>
@@ -58,8 +58,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="35" />
-          <entry key="CoffeeScript" value="1458" />
-          <entry key="Ruby" value="92" />
+          <entry key="CoffeeScript" value="1460" />
+          <entry key="Ruby" value="102" />
           <entry key="Sass" value="565" />
           <entry key="Slim" value="241" />
         </counts>
@@ -95,11 +95,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/js/header_video.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <state relative-caret-position="165">
+              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -117,6 +126,7 @@
       <find>content</find>
       <find>conent</find>
       <find>[0]</find>
+      <find>force_ssl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,6 +141,7 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
         <option value="$PROJECT_DIR$/frontend/js/header_video.coffee" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -428,8 +439,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/js/header_video.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="165">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
         </state>
       </provider>
     </entry>
