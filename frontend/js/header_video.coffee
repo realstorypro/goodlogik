@@ -1,7 +1,11 @@
+import MobileDetect from 'mobile-detect'
+
 class HeaderVideo
   setup : () ->
-    video = document.querySelector('video#homepage_header_video')
-    video.play()
+    md = new MobileDetect(window.navigator.userAgent)
+    unless md.mobile()
+      video = document.querySelector('video#homepage_header_video')
+      video.play()
 
 
 
