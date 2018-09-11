@@ -6,7 +6,8 @@ class PagesController < ApplicationController
 
     @page_title = @homepage.page_title
     @page_description = @homepage.page_description
-    set_meta_tags og: {title: @homepage.page_title}
+    set_meta_tags og: {title: @homepage.page_title }
+    set_meta_tags icon: @homepage.fav_icon.url, type: 'image/png'
   end
 
   protected
