@@ -8,10 +8,11 @@
         = h2 'inverted'
           = @homepage.master_subheadings.first
         .ctas
-          .wistia_embed class=("popover=true popoverContent=html popoverOverlayOpacity=0.98 popoverOverlayColor=000000 wistia_async_#{@homepage.video_id}") style="display:inline;position:relative"
-            .button.ui.large.inverted class=@homepage.video_cta_color.downcase
-              = icon 'play'
-              = @homepage.video_cta
+          - if @homepage.respond_to?(:video_id)
+            .wistia_embed class=("popover=true popoverContent=html popoverOverlayOpacity=0.98 popoverOverlayColor=000000 wistia_async_#{@homepage.video_id}") style="display:inline;position:relative"
+              .button.ui.large.inverted class=@homepage.video_cta_color.downcase
+                = icon 'play'
+                = @homepage.video_cta
           - if request.env['HTTP_USER_AGENT'].downcase.match(/android/)
             a.button.ui.large.typeform-share.link class=@homepage.typeform_cta_color.downcase data-mode="popup" href=@homepage.typeform_url
               = @homepage.typeform_cta
