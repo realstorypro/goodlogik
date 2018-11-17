@@ -15,12 +15,62 @@
                 = @homepage.video_cta
           a.button.ui.large.typeform-share.link class=@homepage.typeform_cta_color.downcase data-mode="popup" href=@homepage.typeform_url
             = @homepage.typeform_cta
-= segment 'clearing'
+
+= segment 'basic'
  = fragment
   = cards 'three'
     = card ui: :off
       = content
-        = header text: 'hello'
+        = header text: 'First Diffirentiating Feature'
+        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
     = card ui: :off
       = content
-        = header text: 'hello'
+        = header text: 'Second Differentiating Feature'
+        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+    = card ui: :off
+      = content
+        = header text: 'Third Differentiating Feature'
+        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+
+= divider
+
+= segment 'basic'
+  = grid 'internally celled'
+    = row
+     = column size: 8
+      = h2 text: 'First Pain'
+     = column size: 8
+    = row
+     = column size: 8
+     = column size: 8
+      = h2 text: 'Second Pain'
+    = row
+     = column size: 8
+      = h2 text: 'Third Pain'
+     = column size: 8
+    = row
+     = column size: 8
+     = column size: 8
+      = h2 text: 'Fourth Pain'
+
+= divider
+
+= segment 'inverted basic huge'
+  = h1 text: 'Next Steps', class: 'centered'
+  = text text: 'Suspendisse porta maximus velit. Nulla pharetra tempus neque, tempor tincidunt orci efficitur ut. Vivamus blandit neque eget libero placerat, ac feugiat nibh facilisis. Duis faucibus, lorem rutrum posuere mattis, lacus massa auctor leo, a lacinia dolor felis suscipit dolor.'
+
+= segment 'basic'
+ = fragment
+  = cards 'four'
+    = card ui: :off
+      = content
+        = header text: 'First News Feature'
+    = card ui: :off
+      = content
+        = header text: 'Second News Feature'
+    = card ui: :off
+      = content
+        = header text: 'Third News Feature'
+    = card ui: :off
+      = content
+        = header text: 'Fourth Feature'
