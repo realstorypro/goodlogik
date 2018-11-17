@@ -1,5 +1,5 @@
  /*
- * # Semantic UI - 2.3.3
+ * # Semantic UI - 2.4.2
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
  *
@@ -9,7 +9,7 @@
  *
  */
 /*!
- * # Semantic UI 2.3.3 - Site
+ * # Semantic UI 2.4.2 - Site
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -1206,7 +1206,7 @@ $.fn.state.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.3.3 - Visibility
+ * # Semantic UI 2.4.2 - Visibility
  * http://github.com/semantic-org/semantic-ui/
  *
  *
