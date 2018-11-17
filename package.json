@@ -35,7 +35,6 @@
     "gulp-util": "latest"
   },
   "scripts": {
-    "gulp": "gulp",
     "build": "cd frontend/semantic_ui && gulp build"
   }
 }
