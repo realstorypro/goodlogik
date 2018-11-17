@@ -19,5 +19,5 @@
   "autoInstall": true,
   "rtl": false,
   "version": "2.3.3",
-  "components": ["reset", "site", "button", "container", "divider", "header", "icon", "image", "segment", "grid", "menu", "item", "state", "visibility"]
+  "components": ["reset", "site", "button", "container", "card","divider", "header", "icon", "image", "segment", "grid", "menu", "item", "state", "visibility"]
 }
