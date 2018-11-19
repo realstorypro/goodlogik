@@ -62,20 +62,28 @@
   = grid
     = column size: 4
       = menu class: 'vertical fluid', ui: :on
-        = item tag: :a
+        = item class: 'active', tag: :a, data: {tab: 'ngo'}
           span.plan Non Profit (503c)
           span.price $250/mo
           span.term Billed Annually
-        = item tag: :a
+        = item tag: :a, data: {tab: 'business'}
           span.plan Business
           span.price $1,250/mo
           span.term Billed Annually
-        = item tag: :a
+        = item tag: :a, data: {tab: 'enterprise'}
           span.plan Enterprise
           span.price $4,500/mo
           span.term Billed Annually
     = column size: 12, class: 'stretched'
-      = text text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. Aliquam tincidunt massa id ultrices tincidunt. Duis tempus ante non orci euismod pellentesque. Donec in ullamcorper metus. Sed sem tellus, efficitur sit amet erat eget, congue blandit odio. Ut gravida eleifend velit. Nunc ornare, enim blandit aliquet posuere, tellus libero malesuada sem, ut posuere nunc nibh vel sapien.'
+      .ui.tab.active data-tab='ngo'
+        = h3 class: 'inverted', text: 'Non Profits'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. Aliquam tincidunt massa id ultrices tincidunt. Duis tempus ante non orci euismod pellentesque. Donec in ullamcorper metus. Sed sem tellus, efficitur sit amet erat eget, congue blandit odio. Ut gravida eleifend velit. Nunc ornare, enim blandit aliquet posuere, tellus libero malesuada sem, ut posuere nunc nibh vel sapien.'
+      .ui.tab data-tab='business'
+        = h3 class: 'inverted', text: 'Business'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. Aliquam tincidunt massa id ultrices tincidunt. Duis tempus ante non orci euismod pellentesque. Donec in ullamcorper metus. Sed sem tellus, efficitur sit amet erat eget, congue blandit odio. Ut gravida eleifend velit. Nunc ornare, enim blandit aliquet posuere, tellus libero malesuada sem, ut posuere nunc nibh vel sapien.'
+      .ui.tab data-tab='enterprise'
+        = h3 class: 'inverted', text: 'Enterprise'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. Aliquam tincidunt massa id ultrices tincidunt. Duis tempus ante non orci euismod pellentesque. Donec in ullamcorper metus. Sed sem tellus, efficitur sit amet erat eget, congue blandit odio. Ut gravida eleifend velit. Nunc ornare, enim blandit aliquet posuere, tellus libero malesuada sem, ut posuere nunc nibh vel sapien.'
 
 = segment 'basic news'
  = fragment
