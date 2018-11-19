@@ -95,3 +95,70 @@ body, html
       @include media("<tablet")
         display: block !important
 
+// Pricing Segment
+.pricing.segment
+  padding: 4.5em 4em
+
+  p
+    font-size: 1.1em
+
+  span.plan, span.price, span.term
+    display: block
+
+  span.plan
+    font-size: 1.1em
+    font-weight: bold
+    text-transform: uppercase
+    margin-bottom: 0.6em
+
+  span.price
+    margin-bottom: 0.5em
+    text-transform: uppercase
+
+  span.term
+    color: #666
+    font-size: 0.7em
+    text-transform: uppercase
+
+// News Segment
+.news.segment
+  padding: 4.5em 4em
+
+  .cards .card
+    width: calc(25% - 1.8em)
+    margin-right: 1em
+
+// Footer Segment
+
+.footer.segment.black.inverted
+  padding: 5em 0 2em
+  background-color: #1b1b1b !important
+
+  .about p
+    font-size: 1.1em
+
+  .contact.list
+    .item.address
+      .content
+        text-transform: uppercase
+        line-height: 1.4em !important
+
+  .social.item
+    .icon
+      margin-right: 0.5em
+
+  .item
+    color: white !important
+
+  .ui.inverted.list .item a, a
+    color: white !important
+    text-transform: uppercase
+    opacity: 1
+    transition: all 0.5s
+
+    &:hover
+      color: white !important
+      opacity: 0.9
+
+  .copyright
+    text-transform: uppercase

@@ -4,17 +4,17 @@
     .overlay style="background-color: #{@homepage.overlay_color}"
     .content-holder
       = container 'text'
-        = h1 class: 'center aligned inverted', text: @homepage.master_header
+        = h1 class: 'center aligned inverted', text: @homepage.master_heading
         = h2 'inverted'
-          = @homepage.master_subheadings.first
+          = @homepage.master_subheading
         .ctas
           - if @homepage.respond_to?(:video_id)
             .wistia_embed class=("popover=true popoverContent=html popoverOverlayOpacity=0.98 popoverOverlayColor=000000 wistia_async_#{@homepage.video_id}") style="display:inline;position:relative"
-              .button.ui.large.inverted class=@homepage.video_cta_color.downcase
+              .button.ui.large.inverted
                 = icon 'play'
                 = @homepage.video_cta
-          a.button.ui.large.typeform-share.link class=@homepage.typeform_cta_color.downcase data-mode="popup" href=@homepage.typeform_url
-            = @homepage.typeform_cta
+          a.button.ui.large.typeform-share.link.red
+            | Request Demo
 
 = segment 'basic'
  = fragment
@@ -55,22 +55,91 @@
 
 = divider
 
-= segment 'inverted basic huge'
-  = h1 text: 'Next Steps', class: 'centered'
+= segment 'inverted basic pricing'
+  = h1 text: 'Transparent Pricing', class: 'centered'
   = text text: 'Suspendisse porta maximus velit. Nulla pharetra tempus neque, tempor tincidunt orci efficitur ut. Vivamus blandit neque eget libero placerat, ac feugiat nibh facilisis. Duis faucibus, lorem rutrum posuere mattis, lacus massa auctor leo, a lacinia dolor felis suscipit dolor.'
+  br
+  = grid
+    = column size: 4
+      = menu class: 'vertical fluid', ui: :on
+        = item tag: :a
+          span.plan Non Profit (503c)
+          span.price $250/mo
+          span.term Billed Annually
+        = item tag: :a
+          span.plan Business
+          span.price $1,250/mo
+          span.term Billed Annually
+        = item tag: :a
+          span.plan Enterprise
+          span.price $4,500/mo
+          span.term Billed Annually
+    = column size: 12, class: 'stretched'
+      = text text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. Aliquam tincidunt massa id ultrices tincidunt. Duis tempus ante non orci euismod pellentesque. Donec in ullamcorper metus. Sed sem tellus, efficitur sit amet erat eget, congue blandit odio. Ut gravida eleifend velit. Nunc ornare, enim blandit aliquet posuere, tellus libero malesuada sem, ut posuere nunc nibh vel sapien.'
 
-= segment 'basic'
+= segment 'basic news'
  = fragment
   = cards 'four'
     = card ui: :off
       = content
         = header text: 'First News Feature'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
     = card ui: :off
       = content
         = header text: 'Second News Feature'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
     = card ui: :off
       = content
         = header text: 'Third News Feature'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
     = card ui: :off
       = content
         = header text: 'Fourth Feature'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
+
+= segment 'inverted black vertical footer'
+  = container
+    = grid 'stackable inverted equal height stackable'
+      = row
+        = column computer: 6, tablet: 16, mobile: 16, class: 'about'
+          = h3 class: 'inverted', text: 'About Us'
+          = markdown(@homepage.about.html_safe)
+        = column computer: 5, tablet: 16, mobile: 16
+          = h3 class: 'inverted', text: 'Contact Us'
+          = list 'contact very relaxed divided link inverted'
+            = item
+              = icon 'phone'
+              = content
+                | 800.608.5963
+            = item
+              = icon 'mail'
+              = content
+                = mail_to 'support@logik.works', 'support@logik.works'
+            = item 'address'
+              = icon 'map'
+              = content
+                | 2 E. Congress St.
+                br
+                | Tucson, AZ 85701
+        = column computer: 5, tablet: 16, mobile: 16
+          = h3 class: 'inverted', text: 'Resources'
+          = list 'very relaxed divided link inverted'
+            = item
+              = link_to 'Terms of Service', '#'
+            = item
+              = link_to 'Privacy Policy', '#'
+            = item 'social'
+              = link_to 'https://www.linkedin.com/company/the-idealogic/', target: '_blank'
+                = icon 'large linkedin inverted'
+              = link_to 'https://twitter.com/the_idealogic', target: '_blank'
+                = icon 'large twitter inverted'
+              = link_to 'https://medium.com/the-idealogic', target: '_blank'
+                = icon 'large medium inverted'
+
+      = row
+        = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
+          = divider 'inverted'
+          = image_tag @homepage.fav_icon.url, class: 'ui image mini centered'
+          = list  'horizontal small divided link list inverted copyright'
+            = item
+              | &copy; 2017 - 2018 Logik. All Rights Reserved.
