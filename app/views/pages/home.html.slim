@@ -16,12 +16,50 @@
           a.button.ui.large.typeform-share.link.red
             | Request Demo
 
-= segment 'basic'
+= segment 'basic critical'
  = fragment
   = cards 'three'
     = card ui: :off
       = content
         = header text: 'First Diffirentiating Feature'
+        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+    = card ui: :off
+      = content
+        = header text: 'Second Differentiating Feature'
+        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+    = card ui: :off
+      = content
+        = header text: 'Third Differentiating Feature'
+        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+
+= segment 'basic functions inverted purple'
+ = fragment
+  = h1 class: 'inverted centered', text: 'With Logik You Can'
+  br
+  = cards 'four'
+    = card ui: :off
+      = content
+        = header text: 'First Diffirentiating Feature'
+        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+    = card ui: :off
+      = content
+        = header text: 'Second Differentiating Feature'
+        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+    = card ui: :off
+      = content
+        = header text: 'Third Differentiating Feature'
+        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+    = card ui: :off
+      = content
+        = header text: 'First Diffirentiating Feature'
+        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+    = card ui: :off
+      = content
+        = header text: 'Second Differentiating Feature'
+        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+    = card ui: :off
+      = content
+        = header text: 'Third Differentiating Feature'
         = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
     = card ui: :off
       = content
@@ -74,10 +112,30 @@
           span.plan Enterprise
           span.price $4,500/mo
           span.term Billed Annually
+    
+      = h3 class: 'inverted', text: 'Next Steps'
+      = text 
+        | Are you curious about Logik and want to learn more? Click the button below to request a demo.
+      = button class: 'red fluid'
+        | REQUEST DEMO
+
     = column size: 12, class: 'stretched'
       .ui.tab.active data-tab='ngo'
         = h3 class: 'inverted', text: 'Non Profits'
         = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. Aliquam tincidunt massa id ultrices tincidunt. Duis tempus ante non orci euismod pellentesque. Donec in ullamcorper metus. Sed sem tellus, efficitur sit amet erat eget, congue blandit odio. Ut gravida eleifend velit. Nunc ornare, enim blandit aliquet posuere, tellus libero malesuada sem, ut posuere nunc nibh vel sapien.'
+        = grid
+          = column size: 4
+            = icon 'circular checkmark green'
+            | Article Publishing
+          = column size: 4
+            = icon 'circular checkmark green'
+            | Video Publishing
+          = column size: 4
+            = icon 'circular checkmark green'
+            | Podcast Publishing
+          = column size: 4
+            = icon 'circular checkmark green'
+            | Discussion Publishing
       .ui.tab data-tab='business'
         = h3 class: 'inverted', text: 'Business'
         = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. Aliquam tincidunt massa id ultrices tincidunt. Duis tempus ante non orci euismod pellentesque. Donec in ullamcorper metus. Sed sem tellus, efficitur sit amet erat eget, congue blandit odio. Ut gravida eleifend velit. Nunc ornare, enim blandit aliquet posuere, tellus libero malesuada sem, ut posuere nunc nibh vel sapien.'
@@ -106,48 +164,47 @@
         = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
 
 = segment 'inverted black vertical footer'
-  = container
-    = grid 'stackable inverted equal height stackable'
-      = row
-        = column computer: 6, tablet: 16, mobile: 16, class: 'about'
-          = h3 class: 'inverted', text: 'About Us'
-          = markdown(@homepage.about.html_safe)
-        = column computer: 5, tablet: 16, mobile: 16
-          = h3 class: 'inverted', text: 'Contact Us'
-          = list 'contact very relaxed divided link inverted'
-            = item
-              = icon 'phone'
-              = content
-                | 800.608.5963
-            = item
-              = icon 'mail'
-              = content
-                = mail_to 'support@logik.works', 'support@logik.works'
-            = item 'address'
-              = icon 'map'
-              = content
-                | 2 E. Congress St.
-                br
-                | Tucson, AZ 85701
-        = column computer: 5, tablet: 16, mobile: 16
-          = h3 class: 'inverted', text: 'Resources'
-          = list 'very relaxed divided link inverted'
-            = item
-              = link_to 'Terms of Service', '#'
-            = item
-              = link_to 'Privacy Policy', '#'
-            = item 'social'
-              = link_to 'https://www.linkedin.com/company/the-idealogic/', target: '_blank'
-                = icon 'large linkedin inverted'
-              = link_to 'https://twitter.com/the_idealogic', target: '_blank'
-                = icon 'large twitter inverted'
-              = link_to 'https://medium.com/the-idealogic', target: '_blank'
-                = icon 'large medium inverted'
+  = grid 'stackable inverted equal height stackable'
+    = row
+      = column computer: 7, tablet: 16, mobile: 16, class: 'about'
+        = h3 class: 'inverted', text: 'About Us'
+        = markdown(@homepage.about.html_safe)
+      = column computer: 5, tablet: 16, mobile: 16
+        = h3 class: 'inverted', text: 'Contact Us'
+        = list 'contact very relaxed divided link inverted'
+          = item
+            = icon 'phone'
+            = content
+              | 800.608.5963
+          = item
+            = icon 'mail'
+            = content
+              = mail_to 'support@logik.works', 'support@logik.works'
+          = item 'address'
+            = icon 'map'
+            = content
+              | 2 E. Congress St.
+              br
+              | Tucson, AZ 85701
+      = column computer: 4, tablet: 16, mobile: 16
+        = h3 class: 'inverted', text: 'Resources'
+        = list 'very relaxed divided link inverted'
+          = item
+            = link_to 'Terms of Service', '#'
+          = item
+            = link_to 'Privacy Policy', '#'
+          = item 'social'
+            = link_to 'https://www.linkedin.com/company/the-idealogic/', target: '_blank'
+              = icon 'large linkedin inverted'
+            = link_to 'https://twitter.com/the_idealogic', target: '_blank'
+              = icon 'large twitter inverted'
+            = link_to 'https://medium.com/the-idealogic', target: '_blank'
+              = icon 'large medium inverted'
 
-      = row
-        = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
-          = divider 'inverted'
-          = image_tag @homepage.fav_icon.url, class: 'ui image mini centered'
-          = list  'horizontal small divided link list inverted copyright'
-            = item
-              | &copy; 2017 - 2018 Logik. All Rights Reserved.
+    = row
+      = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
+        = divider 'inverted'
+        = image_tag @homepage.fav_icon.url, class: 'ui image mini centered'
+        = list  'horizontal small divided link list inverted copyright'
+          = item
+            | &copy; 2017 - 2018 Logik. All Rights Reserved.
