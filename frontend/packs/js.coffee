@@ -1,10 +1,10 @@
 import HeaderVideo from '../js/header_video'
-import Popuper from '../js/popuper'
+import semantic_js from '../semantic_ui/dist/semantic.min'  
 
 header_video = new HeaderVideo
-popuper = new Popuper
 
 $ ->
-
   header_video.setup()
-  popuper.setup()
+
+  # Pricing Segment
+  $('.pricing.segment .menu .item').tab()

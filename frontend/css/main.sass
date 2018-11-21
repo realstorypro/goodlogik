@@ -1,7 +1,9 @@
 @import 'utilities'
+$mobile-h1: 1.9em
+$mobile-padding: 4em
 
 body, html
-  overflow: hidden
+  //overflow: hidden
 
 /// Masthead Segment ///
 .masthead
@@ -95,25 +97,158 @@ body, html
       @include media("<tablet")
         display: block !important
 
+// Critical Segment
+.critical.segment
+  padding: 4.5em 4em
 
-.mfp-wrap
-  overflow: hidden !important
+  .header
+    display: block
 
-.mfp-container
-  padding: 0 !important
+  p
+    font-size: 1.1em
 
-.mfp-content
-  height: 100%
-  width: 100% !important
+// Functions Segment
+.functions.segment
+  padding: 4.5em 4em
 
-.white-popup
-  position: relative
-  background: #000
-  padding: 40px 0 0
-  width: auto
-  max-width: 100%
-  min-height: 100%
-  margin: 0px auto
+  .function.segment
+    padding: 3em 1em
 
-.mfp-close-btn-in .mfp-close
-  color: #fff !important
+    .header .content
+      margin-top: 1.5em
+
+// Solutions Fragment
+.solutions.segment
+  padding: 8em 0
+  background: white
+
+  @include media("<tablet")
+    padding-top: $mobile-padding
+    padding-bottom: $mobile-padding
+
+  .grid
+    @include media("<tablet")
+      margin-left: 0
+      margin-right: 0
+
+  h1.ui.header
+    @include media("<tablet")
+      text-align: center
+
+  .row.separated
+    padding-bottom: 5em
+
+    &:last-child
+      padding-bottom: 0
+
+    @include media("<tablet")
+      padding-bottom: 2em
+
+  .column.left.text
+    padding-left: 5em !important
+
+    @include media(">large")
+      padding-top: 3em
+
+    @include media("<tablet")
+      padding-left: 15px !important
+      padding-right: 15px !important
+      margin-bottom: 2em
+
+  .column.right.text
+    padding-right: 5em !important
+
+    @include media(">large")
+      padding-top: 3em
+
+    @include media("<tablet")
+      padding-left: 15px !important
+      padding-right: 15px !important
+      margin-bottom: 2em
+
+  img.mobile.only
+    display: none
+
+    @include media("<tablet")
+      display: block
+
+  .right.image img
+    margin-right: -110px
+    @include media("<tablet")
+      display: none
+
+  .left.image img
+    margin-left: -110px
+    @include media("<tablet")
+      display: none      
+
+// Pricing Segment
+.pricing.segment
+  padding: 4.5em 4em
+
+  p
+    font-size: 1.1em
+
+  span.plan, span.price, span.term
+    display: block
+
+  span.plan
+    font-size: 1.1em
+    font-weight: bold
+    text-transform: uppercase
+    margin-bottom: 0.6em
+
+  span.price
+    margin-bottom: 0.5em
+    text-transform: uppercase
+
+  span.term
+    color: #666
+    font-size: 0.7em
+    text-transform: uppercase
+
+// News Segment
+.news.segment
+  padding: 4.5em 4em
+
+  .cards .card
+    width: calc(25% - 1.8em)
+    margin-right: 1em
+
+    p
+      font-size: 1.1em
+
+// Footer Segment
+
+.footer.segment.black.inverted
+  padding: 5em 4em 2em
+  background-color: #1b1b1b !important
+
+  .about p
+    font-size: 1.1em
+
+  .contact.list
+    .item.address
+      .content
+        text-transform: uppercase
+        line-height: 1.4em !important
+
+  .social.item
+    .icon
+      margin-right: 0.5em
+
+  .item
+    color: white !important
+
+  .ui.inverted.list .item a, a
+    color: white !important
+    text-transform: uppercase
+    opacity: 1
+    transition: all 0.5s
+
+    &:hover
+      color: white !important
+      opacity: 0.9
+
+  .copyright
+    text-transform: uppercase

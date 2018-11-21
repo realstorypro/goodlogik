@@ -1,35 +1,237 @@
-= segment 'inverted vertical masthead center aligned segment'
+= segment 'inverted vertical masthead center aligned segment clearing'
   = fragment 'hero'
     video.video src=@homepage.overlay_video.url id='homepage_header_video' autoplay=false muted=true loop=true playsinline=true width='x' height='y'
     .overlay style="background-color: #{@homepage.overlay_color}"
     .content-holder
       = container 'text'
-        = h1 class: 'center aligned inverted', text: @homepage.master_header
+        = h1 class: 'center aligned inverted', text: @homepage.master_heading
         = h2 'inverted'
-          = @homepage.master_subheadings.first
+          = @homepage.master_subheading
         .ctas
           - if @homepage.respond_to?(:video_id)
             .wistia_embed class=("popover=true popoverContent=html popoverOverlayOpacity=0.98 popoverOverlayColor=000000 wistia_async_#{@homepage.video_id}") style="display:inline;position:relative"
-              .button.ui.large.inverted class=@homepage.video_cta_color.downcase
+              .button.ui.large.inverted
                 = icon 'play'
                 = @homepage.video_cta
-          - if request.env['HTTP_USER_AGENT'].downcase.match(/android/)
-            a.button.ui.large.typeform-share.link class=@homepage.typeform_cta_color.downcase data-mode="popup" href=@homepage.typeform_url
-              = @homepage.typeform_cta
-            javascript:
-              (function () {
-                  var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement,
-                      gt = d.getElementsByTagName, id = "typef_orm_share", b = "https://embed.typeform.com/";
-                  if (!gi.call(d, id)) {
-                      js = ce.call(d, "script");
-                      js.id = id;
-                      js.src = b + "embed.js";
-                      q = gt.call(d, "script")[0];
-                      q.parentNode.insertBefore(js, q)
-                  }
-              })()
-          - else
-            a.button.ui.large#modal-trigger class=@homepage.typeform_cta_color.downcase data-mfp-src="#typeform"
-              = @homepage.typeform_cta
+          a.button.ui.large.typeform-share.link.red
+            | Request Demo
 
-.white-popup.mfp-hide#typeform data-source=@homepage.typeform_url
+= segment 'basic critical'
+ = fragment
+  = grid 'three column'
+    = row
+      = column
+        = header class: 'icon centered'
+          = icon 'dollar'
+          = content
+            | Conversion Optimized
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+      = column
+        = header class: 'icon centered'
+          = icon 'percent'
+          = content
+            | Second Critical Feature
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+      = column
+        = header class: 'icon centered'
+          = icon 'tag'
+          = content
+            | Third Critical Feature
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+
+= segment 'basic functions inverted red'
+ = fragment
+  = h1 'inverted centered'
+    | With Logik 
+    u You Can
+  br
+  = grid 'four column'
+    = row
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'tag'
+            = content
+              | Third Critical Feature
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'cart'
+            = content
+              | Third Critical Feature
+
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'clock'
+            = content
+              | Third Critical Feature
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'recycle'
+            = content
+              | Third Critical Feature
+    = row
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'tag'
+            = content
+              | Third Critical Feature
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'cart'
+            = content
+              | Third Critical Feature
+
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'clock'
+            = content
+              | Third Critical Feature
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'recycle'
+            = content
+              | Third Critical Feature
+
+= segment 'solutions basic'
+  = grid
+    - @homepage.solutions.each_with_index do |solution, index|
+      = row 'separated'
+        - if index % 2 == 0
+          = column computer: 7, tablet: 16, mobile: 16, class: 'left text top aligned'
+            = image_tag solution.image.file.url, class: 'mobile only'
+            = h1 text: solution.header
+            = markdown(solution.description)
+          = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
+            = image_tag solution.image.file.url
+        - else
+          = column computer: 9, tablet: 16, mobile: 16, class: 'left aligned image'
+            = image_tag solution.image.file.url
+          = column computer: 7, tablet: 16, mobile: 16, class: 'right text top aligned'
+            = image_tag solution.image.file.url, class: 'mobile only'
+            = h1 text: solution.header
+            = markdown(solution.description)
+
+= divider
+
+= segment 'inverted basic pricing'
+  = h1 text: 'Transparent Pricing', class: 'centered'
+  = text text: 'Suspendisse porta maximus velit. Nulla pharetra tempus neque, tempor tincidunt orci efficitur ut. Vivamus blandit neque eget libero placerat, ac feugiat nibh facilisis. Duis faucibus, lorem rutrum posuere mattis, lacus massa auctor leo, a lacinia dolor felis suscipit dolor.'
+  br
+  = grid
+    = column size: 4
+      = menu class: 'vertical fluid', ui: :on
+        = item class: 'active', tag: :a, data: {tab: 'ngo'}
+          span.plan Non Profit (503c)
+          span.price $250/mo
+          span.term Billed Annually
+        = item tag: :a, data: {tab: 'business'}
+          span.plan Business
+          span.price $1,250/mo
+          span.term Billed Annually
+        = item tag: :a, data: {tab: 'enterprise'}
+          span.plan Enterprise
+          span.price $4,500/mo
+          span.term Billed Annually
+    
+      = h3 class: 'inverted', text: 'Next Steps'
+      = text 
+        | Are you curious about Logik and want to learn more? Click the button below to request a demo.
+      = button class: 'red fluid'
+        | REQUEST DEMO
+
+    = column size: 12, class: 'stretched'
+      .ui.tab.active data-tab='ngo'
+        = h3 class: 'inverted', text: 'Non Profits'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. Aliquam tincidunt massa id ultrices tincidunt. Duis tempus ante non orci euismod pellentesque. Donec in ullamcorper metus. Sed sem tellus, efficitur sit amet erat eget, congue blandit odio. Ut gravida eleifend velit. Nunc ornare, enim blandit aliquet posuere, tellus libero malesuada sem, ut posuere nunc nibh vel sapien.'
+        = grid
+          = column size: 4
+            = icon 'circular checkmark green'
+            | Article Publishing
+          = column size: 4
+            = icon 'circular checkmark green'
+            | Video Publishing
+          = column size: 4
+            = icon 'circular checkmark green'
+            | Podcast Publishing
+          = column size: 4
+            = icon 'circular checkmark green'
+            | Discussion Publishing
+      .ui.tab data-tab='business'
+        = h3 class: 'inverted', text: 'Business'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. Aliquam tincidunt massa id ultrices tincidunt. Duis tempus ante non orci euismod pellentesque. Donec in ullamcorper metus. Sed sem tellus, efficitur sit amet erat eget, congue blandit odio. Ut gravida eleifend velit. Nunc ornare, enim blandit aliquet posuere, tellus libero malesuada sem, ut posuere nunc nibh vel sapien.'
+      .ui.tab data-tab='enterprise'
+        = h3 class: 'inverted', text: 'Enterprise'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. Aliquam tincidunt massa id ultrices tincidunt. Duis tempus ante non orci euismod pellentesque. Donec in ullamcorper metus. Sed sem tellus, efficitur sit amet erat eget, congue blandit odio. Ut gravida eleifend velit. Nunc ornare, enim blandit aliquet posuere, tellus libero malesuada sem, ut posuere nunc nibh vel sapien.'
+
+= segment 'basic news'
+ = fragment
+  = cards 'four'
+    = card ui: :off
+      = content
+        = header text: 'First News Feature'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
+    = card ui: :off
+      = content
+        = header text: 'Second News Feature'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
+    = card ui: :off
+      = content
+        = header text: 'Third News Feature'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
+    = card ui: :off
+      = content
+        = header text: 'Fourth Feature'
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
+
+= segment 'inverted black vertical footer'
+  = grid 'stackable inverted equal height stackable'
+    = row
+      = column computer: 7, tablet: 16, mobile: 16, class: 'about'
+        = h3 class: 'inverted', text: 'About Us'
+        = markdown(@homepage.about.html_safe)
+      = column computer: 5, tablet: 16, mobile: 16
+        = h3 class: 'inverted', text: 'Contact Us'
+        = list 'contact very relaxed divided link inverted'
+          = item
+            = icon 'phone'
+            = content
+              | 800.608.5963
+          = item
+            = icon 'mail'
+            = content
+              = mail_to 'support@logik.works', 'support@logik.works'
+          = item 'address'
+            = icon 'map'
+            = content
+              | 2 E. Congress St.
+              br
+              | Tucson, AZ 85701
+      = column computer: 4, tablet: 16, mobile: 16
+        = h3 class: 'inverted', text: 'Resources'
+        = list 'very relaxed divided link inverted'
+          = item
+            = link_to 'Terms of Service', '#'
+          = item
+            = link_to 'Privacy Policy', '#'
+          = item 'social'
+            = link_to 'https://www.linkedin.com/company/the-idealogic/', target: '_blank'
+              = icon 'large linkedin inverted'
+            = link_to 'https://twitter.com/the_idealogic', target: '_blank'
+              = icon 'large twitter inverted'
+            = link_to 'https://medium.com/the-idealogic', target: '_blank'
+              = icon 'large medium inverted'
+
+    = row
+      = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
+        = divider 'inverted'
+        = image_tag @homepage.fav_icon.url, class: 'ui image mini centered'
+        = list  'horizontal small divided link list inverted copyright'
+          = item
+            | &copy; 2017 - 2018 Logik. All Rights Reserved.
