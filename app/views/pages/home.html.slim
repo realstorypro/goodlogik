@@ -1,4 +1,18 @@
 = segment 'inverted vertical masthead center aligned segment clearing'
+  = menu ui: :on, class: 'secondary inverted'
+    = item url: root_path
+      = image_tag 'logo.png', class: 'ui image mini'
+    = menu 'right'
+      = item url: root_path, text: 'Home'
+      = item
+        | Agencies
+      = item
+        | About Us
+      = item
+        | Careers
+      = item
+        = button 'red'
+          | Request Demo
   = fragment 'hero'
     video.video src=@homepage.overlay_video.url id='homepage_header_video' autoplay=false muted=true loop=true playsinline=true width='x' height='y'
     .overlay style="background-color: #{@homepage.overlay_color}"
@@ -7,14 +21,6 @@
         = h1 class: 'center aligned inverted', text: @homepage.master_heading
         = h2 'inverted'
           = @homepage.master_subheading
-        .ctas
-          - if @homepage.respond_to?(:video_id)
-            .wistia_embed class=("popover=true popoverContent=html popoverOverlayOpacity=0.98 popoverOverlayColor=000000 wistia_async_#{@homepage.video_id}") style="display:inline;position:relative"
-              .button.ui.large.inverted
-                = icon 'play'
-                = @homepage.video_cta
-          a.button.ui.large.typeform-share.link.red
-            | Request Demo
 
 = segment 'basic critical'
  = fragment
