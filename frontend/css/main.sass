@@ -1,4 +1,6 @@
 @import 'utilities'
+$mobile-h1: 1.9em
+$mobile-padding: 4em
 
 body, html
   //overflow: hidden
@@ -97,11 +99,88 @@ body, html
 
 // Critical Segment
 .critical.segment
-  padding: 2.5em 4em
+  padding: 4.5em 4em
+
+  .header
+    display: block
+
+  p
+    font-size: 1.1em
 
 // Functions Segment
 .functions.segment
   padding: 4.5em 4em
+
+  .function.segment
+    padding: 3em 1em
+
+    .header .content
+      margin-top: 1.5em
+
+// Solutions Fragment
+.solutions.segment
+  padding: 8em 0
+  background: white
+
+  @include media("<tablet")
+    padding-top: $mobile-padding
+    padding-bottom: $mobile-padding
+
+  .grid
+    @include media("<tablet")
+      margin-left: 0
+      margin-right: 0
+
+  h1.ui.header
+    @include media("<tablet")
+      text-align: center
+
+  .row.separated
+    padding-bottom: 5em
+
+    &:last-child
+      padding-bottom: 0
+
+    @include media("<tablet")
+      padding-bottom: 2em
+
+  .column.left.text
+    padding-left: 5em !important
+
+    @include media(">large")
+      padding-top: 3em
+
+    @include media("<tablet")
+      padding-left: 15px !important
+      padding-right: 15px !important
+      margin-bottom: 2em
+
+  .column.right.text
+    padding-right: 5em !important
+
+    @include media(">large")
+      padding-top: 3em
+
+    @include media("<tablet")
+      padding-left: 15px !important
+      padding-right: 15px !important
+      margin-bottom: 2em
+
+  img.mobile.only
+    display: none
+
+    @include media("<tablet")
+      display: block
+
+  .right.image img
+    margin-right: -110px
+    @include media("<tablet")
+      display: none
+
+  .left.image img
+    margin-left: -110px
+    @include media("<tablet")
+      display: none      
 
 // Pricing Segment
 .pricing.segment

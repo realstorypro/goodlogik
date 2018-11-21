@@ -18,78 +18,105 @@
 
 = segment 'basic critical'
  = fragment
-  = cards 'three'
-    = card ui: :off
-      = content
-        = header text: 'First Diffirentiating Feature'
-        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
-    = card ui: :off
-      = content
-        = header text: 'Second Differentiating Feature'
-        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
-    = card ui: :off
-      = content
-        = header text: 'Third Differentiating Feature'
-        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+  = grid 'three column'
+    = row
+      = column
+        = header class: 'icon centered'
+          = icon 'dollar'
+          = content
+            | Conversion Optimized
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+      = column
+        = header class: 'icon centered'
+          = icon 'percent'
+          = content
+            | Second Critical Feature
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+      = column
+        = header class: 'icon centered'
+          = icon 'tag'
+          = content
+            | Third Critical Feature
+        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
 
-= segment 'basic functions inverted purple'
+= segment 'basic functions inverted red'
  = fragment
-  = h1 class: 'inverted centered', text: 'With Logik You Can'
+  = h1 'inverted centered'
+    | With Logik 
+    u You Can
   br
-  = cards 'four'
-    = card ui: :off
-      = content
-        = header text: 'First Diffirentiating Feature'
-        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
-    = card ui: :off
-      = content
-        = header text: 'Second Differentiating Feature'
-        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
-    = card ui: :off
-      = content
-        = header text: 'Third Differentiating Feature'
-        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
-    = card ui: :off
-      = content
-        = header text: 'First Diffirentiating Feature'
-        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
-    = card ui: :off
-      = content
-        = header text: 'Second Differentiating Feature'
-        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
-    = card ui: :off
-      = content
-        = header text: 'Third Differentiating Feature'
-        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
-    = card ui: :off
-      = content
-        = header text: 'Second Differentiating Feature'
-        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
-    = card ui: :off
-      = content
-        = header text: 'Third Differentiating Feature'
-        = description text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+  = grid 'four column'
+    = row
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'tag'
+            = content
+              | Third Critical Feature
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'cart'
+            = content
+              | Third Critical Feature
 
-= divider
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'clock'
+            = content
+              | Third Critical Feature
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'recycle'
+            = content
+              | Third Critical Feature
+    = row
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'tag'
+            = content
+              | Third Critical Feature
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'cart'
+            = content
+              | Third Critical Feature
 
-= segment 'basic'
-  = grid 'internally celled'
-    = row
-     = column size: 8
-      = h2 text: 'First Pain'
-     = column size: 8
-    = row
-     = column size: 8
-     = column size: 8
-      = h2 text: 'Second Pain'
-    = row
-     = column size: 8
-      = h2 text: 'Third Pain'
-     = column size: 8
-    = row
-     = column size: 8
-     = column size: 8
-      = h2 text: 'Fourth Pain'
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'clock'
+            = content
+              | Third Critical Feature
+      = column 'center aligned'
+        = segment 'basic inverted function'
+          = h5 'icon centered'
+            = icon 'recycle'
+            = content
+              | Third Critical Feature
+
+= segment 'solutions basic'
+  = grid
+    - @homepage.solutions.each_with_index do |solution, index|
+      = row 'separated'
+        - if index % 2 == 0
+          = column computer: 7, tablet: 16, mobile: 16, class: 'left text top aligned'
+            = image_tag solution.image.file.url, class: 'mobile only'
+            = h1 text: solution.header
+            = markdown(solution.description)
+          = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
+            = image_tag solution.image.file.url
+        - else
+          = column computer: 9, tablet: 16, mobile: 16, class: 'left aligned image'
+            = image_tag solution.image.file.url
+          = column computer: 7, tablet: 16, mobile: 16, class: 'right text top aligned'
+            = image_tag solution.image.file.url, class: 'mobile only'
+            = h1 text: solution.header
+            = markdown(solution.description)
 
 = divider
 
