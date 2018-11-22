@@ -35,7 +35,7 @@ html
                     analytics._loadOptions = e
                 };
                 analytics.SNIPPET_VERSION = "4.1.0";
-                analytics.load(ENV['SEGMENT']);
+                analytics.load('#{ENV['SEGMENT']}');
                 analytics.page();
             }
         }();
