@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   before_action :set_icon
 
   def home
-    @homepage = contentful.entry(ENV['CONTENTFUL_ENTRY_ID'])
+    @homepage = contentful.entry(ENV['CONTENTFUL_ENTRY_ID'], include: 2)
 
     @page_title = @homepage.page_title
     @page_description = @homepage.page_description
