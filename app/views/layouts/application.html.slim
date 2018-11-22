@@ -44,5 +44,19 @@ html
     = javascript_pack_tag 'js', async: true
     = csrf_meta_tags
   body
+    = segment 'inverted vertical masthead center aligned segment clearing'
+      = menu ui: :on, class: 'secondary inverted'
+        = item url: root_path
+          = image_tag 'logo.png', class: 'ui image mini'
+        = menu 'right'
+          = item url: root_path, text: 'Home'
+          = item url: agencies_path, text: 'Agencies'
+          = item url: about_path, text: 'About Us'
+          = item
+            | Careers
+          = item
+            = button 'red'
+              | Request Demo
+      = yield :hero
     =yield
 
