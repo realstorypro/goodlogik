@@ -1,18 +1,4 @@
-= segment 'inverted vertical masthead center aligned segment clearing'
-  = menu ui: :on, class: 'secondary inverted'
-    = item url: root_path
-      = image_tag 'logo.png', class: 'ui image mini'
-    = menu 'right'
-      = item url: root_path, text: 'Home'
-      = item
-        | Agencies
-      = item
-        | About Us
-      = item
-        | Careers
-      = item
-        = button 'red'
-          | Request Demo
+- content_for :hero
   = fragment 'hero'
     video.video src=@homepage.overlay_video.url id='homepage_header_video' autoplay=false muted=true loop=true playsinline=true width='x' height='y'
     .overlay style="background-color: #{@homepage.overlay_color}"
