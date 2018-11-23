@@ -55,23 +55,8 @@ html
           = item
             | Careers
           = item
-            = button class: 'red typeform-share link', data: {mode: 'popup'}, url: "https://leonidmedovyy1.typeform.com/to/SNKe5g"
+            = button class: 'red request demo'
               | Request Demo
       = yield :hero
     =yield
-
-    // a.button.ui.large.typeform-share.link class='red' data-mode="popup" href="https://leonidmedovyy1.typeform.com/to/SNKe5g"
-      | Request Demo
-    javascript:
-      (function () {
-          var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement,
-              gt = d.getElementsByTagName, id = "typef_orm_share", b = "https://embed.typeform.com/";
-          if (!gi.call(d, id)) {
-              js = ce.call(d, "script");
-              js.id = id;
-              js.src = b + "embed.js";
-              q = gt.call(d, "script")[0];
-              q.parentNode.insertBefore(js, q)
-          }
-      })()
-
+    script src="https://embed.typeform.com/embed.js"

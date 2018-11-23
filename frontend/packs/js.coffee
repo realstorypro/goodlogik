@@ -12,6 +12,16 @@ ready = ->
   # Pricing Segment
   $('.pricing.segment .menu .item').tab()
 
+  $('.request.demo').on 'click', (e) ->
+    e.preventDefault()
+
+    window.typeformEmbed.makePopup 'https://logik-works.typeform.com/to/SNKe5g',
+       mode: 'popup'
+       autoOpen: true
+       autoClose: 350
+       onSubmit: ->
+         console.log 'Typeform successfully submitted'
+
 # load on the initial page load
 $ ->
   ready()
