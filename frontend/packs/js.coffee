@@ -1,6 +1,5 @@
 import Turbolinks from 'turbolinks'
 import HeaderVideo from '../js/header_video'
-import typeformEmbed from '@typeform/embed'
 import semantic_js from '../semantic_ui/dist/semantic.min'  
 
 Turbolinks.start()
