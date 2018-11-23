@@ -78,6 +78,10 @@ defaults:
     tag: div
     css_class: 'dropdown'
 
+  sidebar :
+    tag: div
+    css_class: 'sidebar'
+
   menu:
     tag: div
     css_class: 'menu'
