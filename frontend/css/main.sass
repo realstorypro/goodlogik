@@ -118,6 +118,8 @@ body, html
 // Critical Segment
 .critical.segment
   padding: 4.5em 4em
+  @include media("<desktop")
+    padding: 4.5em 1em
 
   .header
     display: block
@@ -128,6 +130,8 @@ body, html
 // Functions Segment
 .functions.segment
   padding: 4.5em 4em
+  @include media("<desktop")
+    padding: 4.5em 1em
 
   .function.segment
     padding: 3em 1em
@@ -203,6 +207,8 @@ body, html
 // Pricing Segment
 .pricing.segment
   padding: 4.5em 4em
+  @include media("<desktop")
+    padding: 4.5em 1em
 
   p
     font-size: 1.1em
@@ -228,12 +234,10 @@ body, html
 // News Segment
 .news.segment
   padding: 4.5em 4em
+  @include media("<desktop")
+    padding: 4.5em 1em
 
-  .cards .card
-    width: calc(25% - 1.8em)
-    margin-right: 1em
-
-    p
+  .card p
       font-size: 1.1em
 
 // Footer Segment
@@ -241,6 +245,8 @@ body, html
 .footer.segment.black.inverted
   padding: 5em 4em 2em
   background-color: #1b1b1b !important
+  @include media("<desktop")
+    padding: 4.5em 1em
 
   .about p
     font-size: 1.1em
@@ -270,3 +276,8 @@ body, html
 
   .copyright
     text-transform: uppercase
+
+    .item 
+      @include media("<desktop")
+        font-size: 0.9em
+

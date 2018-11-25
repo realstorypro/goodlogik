@@ -10,7 +10,7 @@
 
 = segment 'basic critical'
  = fragment
-  = grid 'three column'
+  = grid 'three column stackable'
     = row
       = column
         = header class: 'icon centered'
@@ -37,7 +37,7 @@
     | With Logik 
     u You Can
   br
-  = grid 'four column'
+  = grid 'four column stackable'
     = row
       = column 'center aligned'
         = segment 'basic inverted function'
@@ -110,13 +110,11 @@
             = h1 text: solution.header
             = markdown(solution.description)
 
-= divider
-
 = segment 'inverted basic pricing'
   = h1 text: 'Transparent Pricing', class: 'centered'
   = text text: 'Suspendisse porta maximus velit. Nulla pharetra tempus neque, tempor tincidunt orci efficitur ut. Vivamus blandit neque eget libero placerat, ac feugiat nibh facilisis. Duis faucibus, lorem rutrum posuere mattis, lacus massa auctor leo, a lacinia dolor felis suscipit dolor.'
   br
-  = grid
+  = grid 'stackable'
     = column size: 4
       = menu class: 'vertical fluid', ui: :on
         - @homepage.plans.each_with_index do |plan, index|
@@ -136,29 +134,32 @@
         .ui.tab class="#{'active' if index == 0}" data-tab=plan.name.parameterize.underscore
           = h3 class: 'inverted', text: plan.name
           = text text: plan.description
-          = grid
+          = grid 'stackable'
             - plan.features.each do |feature|
               = column size: 4
                 = icon 'circular checkmark green'
                 = feature.name
 
 = segment 'basic news'
- = fragment
-  = cards 'four'
-    = card ui: :off
-      = content
-        = header text: 'First News Feature'
-        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
-    = card ui: :off
-      = content
-        = header text: 'Second News Feature'
-        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
-    = card ui: :off
-      = content
-        = header text: 'Third News Feature'
-        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
-    = card ui: :off
-      = content
-        = header text: 'Fourth Feature'
-        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
-
+  = grid 'four column stackable'
+    = row
+      = column 'stretching'
+        = card
+          = content
+            = header text: 'First News Feature'
+            = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
+      = column
+        = card
+          = content
+            = header text: 'Second News Feature'
+            = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
+      = column
+        = card
+          = content
+            = header text: 'Third News Feature'
+            = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
+      = column
+        = card
+          = content
+            = header text: 'Fourth News Feature'
+            = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
