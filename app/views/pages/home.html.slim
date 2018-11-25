@@ -12,24 +12,13 @@
  = fragment
   = grid 'three column stackable'
     = row
-      = column
-        = header class: 'icon centered'
-          = icon 'dollar'
-          = content
-            | Conversion Optimized
-        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
-      = column
-        = header class: 'icon centered'
-          = icon 'percent'
-          = content
-            | Second Critical Feature
-        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
-      = column
-        = header class: 'icon centered'
-          = icon 'tag'
-          = content
-            | Third Critical Feature
-        = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+      - @homepage.benefits.each do |benefit|
+        = column
+          = header class: 'icon centered'
+            = image_tag benefit.icon.file.url, class: 'ui image'
+            = content
+              = benefit.name
+          = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
 
 = segment 'basic functions inverted red'
  = fragment
