@@ -27,56 +27,11 @@
     u You Can
   br
   = grid 'four column stackable'
-    = row
+    - @homepage.functions.each do |function|
       = column 'center aligned'
         = segment 'basic inverted function'
           = h5 'icon centered'
-            = icon 'tag'
-            = content
-              | Third Critical Feature
-      = column 'center aligned'
-        = segment 'basic inverted function'
-          = h5 'icon centered'
-            = icon 'cart'
-            = content
-              | Third Critical Feature
-
-      = column 'center aligned'
-        = segment 'basic inverted function'
-          = h5 'icon centered'
-            = icon 'clock'
-            = content
-              | Third Critical Feature
-      = column 'center aligned'
-        = segment 'basic inverted function'
-          = h5 'icon centered'
-            = icon 'recycle'
-            = content
-              | Third Critical Feature
-    = row
-      = column 'center aligned'
-        = segment 'basic inverted function'
-          = h5 'icon centered'
-            = icon 'tag'
-            = content
-              | Third Critical Feature
-      = column 'center aligned'
-        = segment 'basic inverted function'
-          = h5 'icon centered'
-            = icon 'cart'
-            = content
-              | Third Critical Feature
-
-      = column 'center aligned'
-        = segment 'basic inverted function'
-          = h5 'icon centered'
-            = icon 'clock'
-            = content
-              | Third Critical Feature
-      = column 'center aligned'
-        = segment 'basic inverted function'
-          = h5 'icon centered'
-            = icon 'recycle'
+            = image_tag function.icon.file.url, class: 'ui image'
             = content
               | Third Critical Feature
 
