@@ -1,0 +1,59 @@
+- content_for :hero
+  = fragment 'hero'
+    video.video src=@page.overlay_video.url id='header_video' autoplay=false muted=true loop=true playsinline=true width='x' height='y' .overlay style="background-color: #{@page.overlay_color}"
+    .content-holder
+      = container 'text'
+        = h1 class: 'center aligned inverted', text: @page.master_heading
+        = h2 'inverted'
+          = @page.master_subheading
+
+= segment 'basic mission'
+  = grid
+    = row
+      = column computer: 12, mobile: 16, class: 'centered'
+        br
+        = h1 text: 'Our Mission', class: 'centered'
+        = markdown(@page.mission)
+        br
+        = divider
+
+= segment 'basic story'
+  = grid
+    = row
+      = column computer: 12, mobile: 16, class: 'centered stackable'
+        = grid
+          = row 'stackable'
+            = column size: 5, class: 'centered'
+              = h3 text: 'Address'
+              = text 'medium'
+                | 2 E. Congress
+                br
+                | Ste. 900
+                br
+                | Tucson, AZ 85701
+                br
+                | USA
+            = column size: 5, class: 'centered'
+              = h3 text: 'Sales'
+              = text 'medium'
+                strong PHONE
+                br
+                | 800.608.5963
+              = text 'medium'
+                strong EMAIL
+                br
+                = mail_to 'sales@logik.works'
+            = column size: 5, class: 'centered'
+              = h3 text: 'Customer Service'
+              = text 'medium'
+                strong PHONE
+                br
+                | 800.608.5963
+              = text 'medium'
+                strong EMAIL
+                br
+                = mail_to 'support@logik.works'
+
+br
+br
+br

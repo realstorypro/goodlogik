@@ -47,7 +47,6 @@ html
   body
     = sidebar 'ui vertical inverted menu right'
       = item url: root_path, text: 'Home'
-      = item url: agencies_path, text: 'Agencies'
       = item url: about_path, text: 'About Us'
       = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
         = icon 'external alternate'
@@ -66,7 +65,6 @@ html
               = icon 'large sidebar'
           = menu class: 'right', only: :desktop
             = item url: root_path, text: 'Home'
-            = item url: agencies_path, text: 'Agencies'
             = item url: about_path, text: 'About Us'
             = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
               = icon 'external alternate'
