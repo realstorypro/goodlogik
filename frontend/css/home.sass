@@ -29,7 +29,7 @@
       img
         margin-bottom: 1.5em !important
 
-// Solutions Fragment
+// Solutions Segment
 .solutions.segment
   padding: 8em 0
 
@@ -94,9 +94,13 @@
 
 // Pricing Segment
 .pricing.segment
-  padding: 4.5em 4em
+  padding: 7.5em 4em
   @include media("<desktop")
     padding: 4.5em 1em
+
+  .menu.fluid
+    @include media("<desktop")
+      margin-bottom: 1.5em
 
   p
     font-size: 1.1em
@@ -119,21 +123,13 @@
     font-size: 0.7em
     text-transform: uppercase
 
-// News Segment
-.news.segment
-  padding: 4.5em 4em
-  @include media("<desktop")
-    padding: 3.5em 1em
+// CTA Segment
+.cta.segment
+  padding: 4em 2em
+
+  h1
+    margin-bottom: 1em
 
   p
     font-size: 1.1em
-
-// Mission Segment
-.mission.segment
-  p 
-    font-size: 1.1em
-
-// Story Segment
-.story.segment
-  p 
-    font-size: 1.1em
+    margin-bottom: 0.7em
