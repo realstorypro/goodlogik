@@ -9,31 +9,35 @@
           = @homepage.master_subheading
 
 = segment 'basic critical'
- = fragment
-  = grid 'three column stackable'
+  = grid 'centered'
     = row
-      - @homepage.benefits.each do |benefit|
-        = column
-          = header class: 'icon centered'
-            = image_tag benefit.icon.file.url, class: 'ui image'
-            = content
-              = benefit.name
-          = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
+      = column computer: 12, mobile: 16
+        = grid 'two column stackable'
+          = row
+            - @homepage.benefits.each do |benefit|
+              = column
+                = header class: 'icon centered'
+                  = image_tag benefit.icon.file.url, class: 'ui image'
+                  = content
+                    = benefit.name
+                = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non dictum odio. Curabitur laoreet neque ut nisl rhoncus congue non at mauris.'
 
 = segment 'basic functions inverted red'
- = fragment
-  = h1 'inverted centered'
-    | With Logik 
-    u You Can
-  br
-  = grid 'four column stackable'
-    - @homepage.functions.each do |function|
-      = column 'center aligned'
-        = segment 'basic inverted function'
-          = h5 'icon centered'
-            = image_tag function.icon.file.url, class: 'ui image'
-            = content
-              | Third Critical Feature
+  = grid 'centered'
+    = row
+      = column computer: 14, mobile: 16
+        = h1 'inverted centered'
+          | With Logik 
+          u You Can
+        br
+        = grid 'three column stackable'
+          - @homepage.functions.each do |function|
+            = column 'center aligned'
+              = segment 'basic inverted function'
+                = h5 'icon centered'
+                  = image_tag function.icon.file.url, class: 'ui image'
+                  = content
+                    = function.name
 
 = segment 'solutions basic'
   = grid
@@ -67,11 +71,6 @@
             span.price= "$#{plan.price}/mo"
             span.term Billed Annually
     
-      = h3 class: 'inverted', text: 'Next Steps'
-      = text 
-        | Are you curious about Logik and want to learn more? Click the button below to request a demo.
-      = button class: 'red fluid request demo'
-        | REQUEST DEMO
 
     = column size: 12, class: 'stretched'
       - @homepage.plans.each_with_index do |plan, index|
@@ -83,23 +82,13 @@
               = column size: 4
                 = icon 'circular checkmark green'
                 = feature.name
-
-= segment 'basic news'
-  = grid 'four column stackable'
+= segment 'basic cta'
+  = grid 'centered'
     = row
-      = column 'stretching'
-        = segment
-          = header text: 'First News Feature'
-          = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
-      = column
-        = segment
-          = header text: 'Second News Feature'
-          = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
-      = column
-        = segment
-          = header text: 'Third News Feature'
-          = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
-      = column
-        = segment
-          = header text: 'Fourth News Feature'
-          = text text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus sed quam rutrum sagittis. Fusce semper tincidunt lobortis. Etiam varius quam sed leo vulputate tempus. '
+      = column computer: 11, mobile: 16
+        = h1 class: 'center aligned', text: @homepage.cta_heading
+        = text  class: 'center aligned', text: @homepage.cta_body
+    = row
+      = column computer: 3, mobile: 16, class: 'center aligned'
+        = button class: 'red request demo fluid large'
+          | REQUEST DEMO
