@@ -10,6 +10,11 @@ class PagesController < ApplicationController
     set_meta_tags icon: @homepage.fav_icon.url, type: 'image/png'
   end
 
+  def about
+    @page = contentful.entry(ENV['CONTENTFUL_ABOUT_ID'], include: 2)
+
+  end
+
   protected
   def set_icon
   end
