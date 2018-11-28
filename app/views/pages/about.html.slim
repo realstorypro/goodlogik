@@ -14,17 +14,32 @@
         br
         = h1 text: 'Our Mission', class: 'centered'
         = markdown(@page.mission)
-        br
-        = divider
 
-= segment 'basic story'
+= segment 'basic values inverted green'
   = grid
+    = row
+      = column computer: 12, mobile: 16, class: 'centered stackable'
+        = h1 text: 'We Value', class: 'centered inverted'
+        = grid 'three column stackable'
+          - @page.values.each do |value|
+            = column 'center aligned'
+              = segment 'value'
+                = h3 'icon centered'
+                  = image_tag value.icon.file.url, class: 'ui image'
+                  = content
+                    = value.name
+
+= segment 'basic contact'
+  = grid
+    = row
+      = column computer: 12, mobile: 16, class: 'centered stackable'
+        = h1 text: 'Contact Info', class: 'centered'
     = row
       = column computer: 12, mobile: 16, class: 'centered stackable'
         = grid
           = row 'stackable'
             = column size: 5, class: 'centered'
-              = h3 text: 'Address'
+              = h3 text: 'Office'
               = text 'medium'
                 | 2 E. Congress
                 br
@@ -53,7 +68,3 @@
                 strong EMAIL
                 br
                 = mail_to 'support@logik.works'
-
-br
-br
-br
