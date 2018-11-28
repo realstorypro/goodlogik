@@ -18,7 +18,7 @@
   = grid
     = row
       = column computer: 12, mobile: 16, class: 'centered stackable'
-        = h1 text: 'We Value', class: 'centered inverted'
+        = h1 text: 'We Stand For', class: 'centered inverted'
         = grid 'three column stackable'
           - @page.values.each do |value|
             = column
@@ -46,7 +46,7 @@
                 br
                 | USA
             = column size: 5, class: 'centered'
-              = h2 text: 'Sales'
+              = h2 text: 'Sales Inquiries'
               = text
                 strong PHONE
                 br
@@ -56,7 +56,7 @@
                 br
                 = mail_to 'sales@logik.works'
             = column size: 5, class: 'centered'
-              = h2 text: 'Customer Service'
+              = h2 text: 'Customer Support'
               = text
                 strong PHONE
                 br
@@ -65,3 +65,8 @@
                 strong EMAIL
                 br
                 = mail_to 'support@logik.works'
+
+              = text
+                strong WEB
+                br
+                = link_to 'support.logik.works', 'http://support.logik.works'
