@@ -78,11 +78,7 @@ html
         = grid 'stackable inverted equal height stackable three column'
           = row
             = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
-              = list  'small link list inverted copyright'
-                = item url: root_path
-                  = image_tag 'logo.png', class: 'ui image tiny'
-                = item
-                  | &copy; 2017 - 2018. All Rights Reserved.
+              = list  'link list divided inverted copyright huge'
                 = item 'social'
                   = link_to 'https://medium.com/know-fractal/'
                     = icon 'medium large'
@@ -90,4 +86,9 @@ html
                     = icon 'twitter large'
                   = link_to 'https://www.linkedin.com/company/logikworks', target: '_blank'
                     = icon 'linkedin large'
+                = item
+                  = image_tag 'icon.png', class: 'ui image tiny'
+                = item
+                  = text 
+                  | &copy; 2017 - 2018. All Rights Reserved.
     script src="https://embed.typeform.com/embed.js"
