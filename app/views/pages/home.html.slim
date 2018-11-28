@@ -35,7 +35,7 @@
             = column 'center aligned'
               = segment 'basic inverted function'
                 = h5 'icon centered'
-                  = image_tag function.icon.file.url, class: 'ui image'
+                  = image_tag function.icon.file.url, class: 'ui image' if function.respond_to? :icon
                   = content
                     = function.name
 
