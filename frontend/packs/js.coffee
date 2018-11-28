@@ -22,7 +22,7 @@ ready = ->
     e.preventDefault()
 
     window.typeformEmbed.makePopup 'https://logik-works.typeform.com/to/SNKe5g',
-       mode: 'popup'
+       mode: 'drawer_left'
        autoOpen: true
        autoClose: 350
        onSubmit: ->
