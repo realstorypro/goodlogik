@@ -12,7 +12,6 @@ class PagesController < ApplicationController
 
   def about
     @page = contentful.entry(ENV['CONTENTFUL_ABOUT_ID'], include: 2)
-
   end
 
   protected

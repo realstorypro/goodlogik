@@ -10,28 +10,29 @@
 = segment 'basic mission'
   = grid
     = row
-      = column size: 12 , class: 'centered'
+      = column computer: 12, mobile: 16, class: 'centered'
         br
         = h1 text: 'Our Mission', class: 'centered'
-        = text class: 'large'
-          = @page.mission
+        = markdown(@page.mission)
         br
         = divider
 
 = segment 'basic story'
   = grid
     = row
-      = column size: 12 , class: 'centered'
+      = column computer: 12, mobile: 16, class: 'centered stackable'
         = grid
-          = row
+          = row 'stackable'
             = column size: 5, class: 'centered'
-              = h3 text: 'Mailing'
+              = h3 text: 'Address'
               = text 'medium'
                 | 2 E. Congress
                 br
                 | Ste. 900
                 br
                 | Tucson, AZ 85701
+                br
+                | USA
             = column size: 5, class: 'centered'
               = h3 text: 'Sales'
               = text 'medium'
@@ -43,7 +44,7 @@
                 br
                 = mail_to 'sales@logik.works'
             = column size: 5, class: 'centered'
-              = h3 text: 'Support'
+              = h3 text: 'Customer Service'
               = text 'medium'
                 strong PHONE
                 br
