@@ -47,7 +47,7 @@ html
   body
     = sidebar 'ui vertical inverted menu right'
       = item url: root_path, text: 'Home'
-      = item url: about_path, text: 'About Us'
+      = item url: about_path, text: 'About'
       = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
         = icon 'external alternate'
         | Careers
@@ -65,7 +65,7 @@ html
               = icon 'large sidebar'
           = menu class: 'right', only: :desktop
             = item url: root_path, text: 'Home'
-            = item url: about_path, text: 'About Us'
+            = item url: about_path, text: 'About'
             = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
               = icon 'external alternate'
               | Careers
@@ -77,46 +77,10 @@ html
       = segment 'inverted black vertical footer'
         = grid 'stackable inverted equal height stackable three column'
           = row
-            = column computer: 6, tablet: 16, mobile: 16, class: 'about'
-              = h3 class: 'inverted', text: 'About Us'
-              = markdown(@global.about.html_safe)
-            = column computer: 5, tablet: 16, mobile: 16
-              = h3 class: 'inverted', text: 'Contact Us'
-              = list 'contact very relaxed divided link inverted'
-                = item
-                  = icon 'phone'
-                  = content
-                    | 800.608.5963
-                = item
-                  = icon 'mail'
-                  = content
-                    = mail_to 'support@logik.works', 'support@logik.works'
-                = item 'address'
-                  = icon 'map'
-                  = content
-                    | 2 E. Congress St.
-                    br
-                    | Tucson, AZ 85701
-            = column computer: 5, tablet: 16, mobile: 16
-              = h3 class: 'inverted', text: 'Resources'
-              = list 'very relaxed divided link inverted'
-                = item
-                  = link_to 'Terms of Service', '#'
-                = item
-                  = link_to 'Privacy Policy', '#'
-                = item 'social'
-                  = link_to 'https://www.linkedin.com/company/the-idealogic/', target: '_blank'
-                    = icon 'large linkedin inverted'
-                  = link_to 'https://twitter.com/the_idealogic', target: '_blank'
-                    = icon 'large twitter inverted'
-                  = link_to 'https://medium.com/the-idealogic', target: '_blank'
-                    = icon 'large medium inverted'
-
-          = row
             = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
-              = divider 'inverted'
-              = image_tag @global.icon.url, class: 'ui image mini centered'
-              = list  'horizontal small divided link list inverted copyright'
+              = list  'small link list inverted copyright'
+                = item url: root_path
+                  = image_tag 'logo.png', class: 'ui image tiny'
                 = item
-                  | &copy; 2017 - 2018 Logik. All Rights Reserved.
+                  | &copy; 2017 - 2018. All Rights Reserved.
     script src="https://embed.typeform.com/embed.js"
