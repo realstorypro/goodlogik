@@ -21,23 +21,7 @@
                   = content
                     = benefit.name
                 = text text: benefit.description
-
-= segment 'basic functions inverted red'
-  = grid 'centered'
-    = row
-      = column computer: 14, mobile: 16
-        = h1 'inverted centered'
-          | With Logik 
-          u You Can
-        br
-        = grid 'three column stackable'
-          - @homepage.functions.each do |function|
-            = column 'center aligned'
-              = segment 'basic inverted function'
-                = h5 'icon centered'
-                  = image_tag function.icon.file.url, class: 'ui image' if function.respond_to? :icon
-                  = content
-                    = function.name
+= divider
 
 = segment 'solutions basic'
   = grid
