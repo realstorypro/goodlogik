@@ -14,21 +14,6 @@
         = h1 text: 'Our Mission', class: 'centered'
         = markdown(@page.mission)
 
-= segment 'basic values inverted'
-  = grid
-    = row
-      = column computer: 12, mobile: 16, class: 'centered stackable'
-        = h1 text: 'We Stand For', class: 'centered inverted'
-        = grid 'three column stackable'
-          - @page.values.each do |value|
-            = column
-              = segment 'value inverted red'
-                = h2 'icon centered center aligned'
-                  = image_tag value.icon.file.url, class: 'ui image'
-                  = content
-                    = value.name
-                = text text: value.description
-
 = segment 'basic contact'
   = grid
     = row
