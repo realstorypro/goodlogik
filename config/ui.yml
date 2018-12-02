@@ -212,6 +212,10 @@ defaults:
     tag: div
     css_class: 'label'
 
+  form:
+    tag: div
+    css_class: 'form'
+
   field:
     tag: div
     css_class: 'input'

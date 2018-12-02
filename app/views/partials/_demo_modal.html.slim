@@ -1,0 +1,31 @@
+.ui.tiny.modal.demo
+  = icon 'close'
+  = header text: 'REQUEST DEMO'
+  = content
+    = description
+      = form
+        .field
+          label Name
+          .two.fields
+            .field
+              input type="text" name="name[first]" placeholder="First Name"
+            .field
+              input type="text" name="name[last]" placeholder="Last Name"
+        .field
+          label Work Email
+          input type="text" name="email" placeholder="john@acmeinc.com"
+        .field
+          label Phone Number
+          input type="tel" name="phone" placeholder="602.888.2272"
+        .field
+          label Company Name
+          input type="text" name="company" placeholder="Acme Inc"
+        .field
+          label Are you an Agency?
+          select.ui.fluid.dropdown
+            option value="0" No
+            option value="1" Yes
+  .actions
+    .button.ui.green.fluid.right.labeled.icon
+      | Submit Request
+      = icon 'double right angle'
