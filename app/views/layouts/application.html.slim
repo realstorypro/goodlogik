@@ -45,6 +45,8 @@ html
     = csrf_meta_tags
 
   body
+    = render 'partials/demo_modal'
+
     = sidebar 'ui vertical inverted menu right'
       = item url: root_path, text: 'Home'
       = item url: about_path, text: 'About'
@@ -89,4 +91,3 @@ html
                 = item
                   = text 
                   | &copy; 2017 - 2018. All Rights Reserved.
-    script src="https://embed.typeform.com/embed.js"

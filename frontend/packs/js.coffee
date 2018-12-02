@@ -20,13 +20,7 @@ ready = ->
   # Demo Request
   $('.request.demo').on 'click', (e) ->
     e.preventDefault()
-
-    window.typeformEmbed.makePopup 'https://logik-works.typeform.com/to/SNKe5g',
-       mode: 'drawer_left'
-       autoOpen: true
-       autoClose: 350
-       onSubmit: ->
-         console.log 'Typeform successfully submitted'
+    $('.demo.modal').modal('show')
 
 # load on the initial page load
 $ ->
