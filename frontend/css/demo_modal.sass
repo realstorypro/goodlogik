@@ -1,12 +1,9 @@
 .demo.modal
   .close.icon
-    padding-top: 7px
-
-  .header
-    border-bottom: 0
+    @include media("<desktop")
+      padding-top: 7px
 
   .content
-    padding-top: 0 !important
     padding-bottom: 10px !important
 
     .description
