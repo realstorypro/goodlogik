@@ -11,7 +11,7 @@
 = segment 'basic critical'
   = grid 'centered'
     = row
-      = column computer: 12, mobile: 16
+      = column computer: 15, mobile: 16
         = grid 'three column stackable'
           = row
             - @homepage.benefits.each do |benefit|
@@ -43,36 +43,40 @@
             = markdown(solution.description)
 
 = segment 'inverted basic pricing'
-  = h1 text: 'Transparent Pricing', class: 'centered'
-  = text text: 'Suspendisse porta maximus velit. Nulla pharetra tempus neque, tempor tincidunt orci efficitur ut. Vivamus blandit neque eget libero placerat, ac feugiat nibh facilisis. Duis faucibus, lorem rutrum posuere mattis, lacus massa auctor leo, a lacinia dolor felis suscipit dolor.'
-  br
-  = grid 'stackable'
-    = column size: 4
-      = menu class: 'vertical fluid', ui: :on
-        - @homepage.plans.each_with_index do |plan, index|
-          = item class: "#{'active' if index == 0}", tag: :a, data: {tab: plan.name.parameterize.underscore}
-            span.plan= plan.name
-            span.price= "$#{plan.price}/mo"
-            span.term Billed Annually
-    
-
-    = column size: 12, class: 'stretched'
-      - @homepage.plans.each_with_index do |plan, index|
-        .ui.tab class="#{'active' if index == 0}" data-tab=plan.name.parameterize.underscore
-          = h3 class: 'inverted', text: plan.name
-          = text text: plan.description
-          = grid 'stackable'
-            - plan.features.each do |feature|
-              = column size: 4
-                = icon 'circular checkmark green'
-                = feature.name
-= segment 'basic cta'
-  = grid 'centered'
+  = grid 'stackable centered'
     = row
-      = column computer: 11, mobile: 16
-        = h1 class: 'center aligned', text: @homepage.cta_heading
-        = text  class: 'center aligned', text: @homepage.cta_body
+      = column size: 12
+        = h1 text: @homepage.pricing_header, class: 'centered inverted'
+        = text text: @homepage.pricing_body
+        br
     = row
-      = column computer: 3, mobile: 16, class: 'center aligned'
+      = column size: 4
+        = menu class: 'vertical fluid', ui: :on
+          - @homepage.plans.each_with_index do |plan, index|
+            = item class: "#{'active' if index == 0}", tag: :a, data: {tab: plan.name.parameterize.underscore}
+              span.plan= plan.name
+              - if plan.price > 0
+                span.price= number_to_currency(plan.price, precision: 0)
+                span.term Billed Annually
+              - else
+                span.term Contact Us
+        br
         = button class: 'red request demo fluid large'
           | REQUEST DEMO
+
+      = column size: 10, class: 'stretched'
+        - @homepage.plans.each_with_index do |plan, index|
+          .ui.tab class="#{'active' if index == 0}" data-tab=plan.name.parameterize.underscore
+            /= h3 class: 'inverted', text: plan.name
+            = text text: plan.description
+            = grid 'stackable'
+              - plan.features.each do |feature|
+                = column size: 4
+                  = icon 'circular checkmark green'
+                  = feature.name
+
+= segment 'basic post'
+  = grid 'centered'
+    = row
+      = column computer: 16, mobile: 16
+        = h1 text: 'From The Post', class: 'centered'
