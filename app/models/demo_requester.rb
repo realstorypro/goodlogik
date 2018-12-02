@@ -3,10 +3,12 @@
 class DemoRequester
   include ActiveModel::Model
 
-  attr_accessor :name
-  attr_accessor :job_title
+  attr_accessor :fname
+  attr_accessor :lname
   attr_accessor :phone
   attr_accessor :email
+  attr_accessor :company
+  attr_accessor :agency
 
   def initialize(attributes = {})
     attributes.each do |name, value|
