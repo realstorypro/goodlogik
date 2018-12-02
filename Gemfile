@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'heroku-deflater', :group => :production
 
+gem 'feedjira'
+
 group :development, :test do
   gem 'rb-readline'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

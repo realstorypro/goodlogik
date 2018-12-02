@@ -67,7 +67,6 @@
       = column size: 10, class: 'stretched'
         - @homepage.plans.each_with_index do |plan, index|
           .ui.tab class="#{'active' if index == 0}" data-tab=plan.name.parameterize.underscore
-            /= h3 class: 'inverted', text: plan.name
             = text text: plan.description
             = grid 'stackable'
               - plan.features.each do |feature|
@@ -80,3 +79,13 @@
     = row
       = column computer: 16, mobile: 16
         = h1 text: 'From The Post', class: 'centered'
+    = row
+      - @feed = Feedjira::Feed.fetch_and_parse(ENV['RSS_FEED'])
+      - @feed.entries.first(4).each do |entry|
+        = column size: 4
+          = card
+            = content
+              = header 
+                = header class: 'small dividing sub', text: entry.categories.last
+                = entry.title
+              = text text: entry.summary
