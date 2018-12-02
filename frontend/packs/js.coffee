@@ -9,6 +9,9 @@ header_video = new HeaderVideo
 ready = ->
   header_video.setup()
 
+  # Dropdowns
+  $('.ui.dropdown').dropdown()
+
   # Menu
   $('.hamburger').on 'click', (e) ->
     e.preventDefault()
@@ -20,7 +23,20 @@ ready = ->
   # Demo Request
   $('.request.demo').on 'click', (e) ->
     e.preventDefault()
-    $('.demo.modal').modal('show')
+    $('.demo.modal')
+      .modal
+        closable: false
+        onApprove: ->
+
+          form = $('.demo.modal form')[0]
+          form.reportValidity()
+
+          if form.checkValidity()
+            console.log 'form is valid submitting'
+          else
+            false
+
+      .modal('show')
 
 # load on the initial page load
 $ ->

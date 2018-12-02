@@ -4,28 +4,32 @@
   = content
     = description
       = form
-        .field
+        .field.required
           label Name
           .two.fields
             .field
-              input type="text" name="name[first]" placeholder="First Name"
+              input type="text" name="name[first]" placeholder="First Name" required=""
+
             .field
-              input type="text" name="name[last]" placeholder="Last Name"
-        .field
+              input type="text" name="name[last]" placeholder="Last Name" required=""
+
+        .field.required
           label Work Email
-          input type="text" name="email" placeholder="john@acmeinc.com"
-        .field
+          input type="email" name="email" placeholder="john@acmeinc.com" required=""
+
+        .field.required
           label Phone Number
-          input type="tel" name="phone" placeholder="602.888.2272"
-        .field
+          input type="tel" name="phone" placeholder="602.888.2272" required=""
+
+        .field.required
           label Company Name
-          input type="text" name="company" placeholder="Acme Inc"
+          input type="text" name="company" placeholder="Acme Inc" required=""
         .field
           label Are you an Agency?
           select.ui.fluid.dropdown
             option value="0" No
             option value="1" Yes
   .actions
-    .button.ui.green.fluid.right.labeled.icon
-      | Submit Request
-      = icon 'double right angle'
+    .button.ui.approve.large.green.fluid.right.labeled.icon
+      | SEND
+      = icon 'mail'

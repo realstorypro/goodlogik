@@ -213,7 +213,7 @@ defaults:
     css_class: 'label'
 
   form:
-    tag: div
+    tag: form
     css_class: 'form'
 
   field:
