@@ -32,7 +32,12 @@ ready = ->
           form.reportValidity()
 
           if form.checkValidity()
-            console.log 'form is valid submitting'
+            $.ajax
+              type: 'POST'
+              headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
+              url: '/demo/send_request/'
+              data: $('.demo.modal form').serialize()
+              dataType: 'json'
           else
             false
 

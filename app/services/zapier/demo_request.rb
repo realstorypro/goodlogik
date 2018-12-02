@@ -3,15 +3,17 @@
 module Zapier
   class DemoRequest < Zapier::Base
     def call_operation
-      HTTParty.post('https://hooks.zapier.com/hooks/catch/3200901/w6dh8d/', body: params)
+      HTTParty.post(ENV['ZAPIER_WEBHOOK'], body: params)
     end
 
     def params
       {
-        name: resource.name,
-        job_title: resource.job_title,
+        fname: resource.fname,
+        lname: resource.lname,
         phone: resource.phone,
-        email: resource.email
+        email: resource.email,
+        company: resource.company,
+        agency: resource.agency
       }
     end
   end
