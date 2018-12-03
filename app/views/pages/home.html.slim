@@ -67,7 +67,6 @@
       = column size: 10, class: 'stretched'
         - @homepage.plans.each_with_index do |plan, index|
           .ui.tab class="#{'active' if index == 0}" data-tab=plan.name.parameterize.underscore
-            /= h3 class: 'inverted', text: plan.name
             = text text: plan.description
             = grid 'stackable'
               - plan.features.each do |feature|
@@ -78,5 +77,15 @@
 = segment 'basic post'
   = grid 'centered'
     = row
-      = column computer: 16, mobile: 16
-        = h1 text: 'From The Post', class: 'centered'
+      = column computer: 14, mobile: 16
+        = h1 text: 'From Cube', class: 'centered'
+    = row
+      = column computer: 14
+        = cards 'three fluid'
+          - @feed["entries"].first(3).each do |entry|
+            = card
+              = content
+                = header 
+                  = header class: "small dividing sub #{entry["color"]}", text: entry["category"]
+                  = entry["title"]
+                = description text: entry["description"]

@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
+  require 'net/http'
+
   before_action :set_icon
+  before_action :fetch_platform
 
   def home
     @homepage = contentful.entry(ENV['CONTENTFUL_ENTRY_ID'], include: 2)
@@ -17,4 +20,15 @@ class PagesController < ApplicationController
   protected
   def set_icon
   end
+
+  def fetch_platform
+    @feed= Rails.cache.fetch("feed", enxpires_in: 60.minutes) do
+      uri = URI.parse(ENV['RSS_FEED'])
+      http = Net::HTTP.new(uri.host, uri.port)
+      req = Net::HTTP::Get.new(ENV['RSS_FEED'])
+      resp = http.request(req)
+      JSON.parse(resp.body)
+    end
+  end
+
 end

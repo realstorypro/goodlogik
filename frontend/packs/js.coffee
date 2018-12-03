@@ -25,7 +25,7 @@ ready = ->
     e.preventDefault()
     $('.demo.modal')
       .modal
-        closable: false
+        closable: true
         onApprove: ->
 
           form = $('.demo.modal form')[0]

@@ -6,6 +6,7 @@ html
 
     script async="" src="https://fast.wistia.com/embed/medias/m1m92bu4gz.jsonp"
     script async="" src="https://fast.wistia.com/assets/external/E-v1.js"
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Lato|Roboto', media: 'none', onload: "if(media!='all')media='all'"
 
     javascript:
         !function () {
@@ -86,8 +87,10 @@ html
                     = icon 'twitter large'
                   = link_to 'https://www.linkedin.com/company/logikworks', target: '_blank'
                     = icon 'linkedin large'
+                  = link_to 'https://post.goodlogik.com'
+                    = image_tag 'icon-bw.png', class: 'ui image post'
                 = item
                   = image_tag 'icon.png', class: 'ui image tiny'
                 = item
                   = text 
-                  | &copy; 2017 - 2018. All Rights Reserved.
+                  | &copy; 2017 - 2018 Logik. All Rights Reserved.

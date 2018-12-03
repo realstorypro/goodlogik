@@ -73,6 +73,7 @@
     font-size: 3.0em
     text-transform: uppercase
 
+
     @include media("<tablet")
       font-size: 1.7em
 
@@ -84,11 +85,11 @@
       padding-top: 0.1em
       border-bottom: 2px solid #ffffff5c
 
-
   h2.ui.header
     font-size: 1.65em
     padding-bottom: 0.3em
     margin-top: 0.3em
+    font-weight: 500
 
     @include media("<tablet")
       font-size: 1.2em
@@ -134,10 +135,6 @@
   .copyright
     text-transform: uppercase
 
-    // .item 
-    //   @include media("<desktop")
-    //     font-size: 0.9em
-
     .item
       padding-top: 1em
 
@@ -147,3 +144,8 @@
 
         &:last-child
           margin-right: 0
+
+    .ui.image.post
+      display: inline
+      height: 28px
+      width: 28px

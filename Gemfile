@@ -12,6 +12,7 @@ gem 'rails', '~> 5.2.0'
 gem 'slim-rails'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
+gem 'dalli'
 
 gem 'uglifier', '>= 1.3.0'
 
@@ -30,6 +31,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'heroku-deflater', :group => :production
+
+gem 'feedjira'
 
 group :development, :test do
   gem 'rb-readline'
