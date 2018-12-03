@@ -22,24 +22,13 @@ class PagesController < ApplicationController
   end
 
   def fetch_platform
-    uri = URI.parse(ENV['RSS_FEED'])
-    http = Net::HTTP.new(uri.host, uri.port)
-    req = Net::HTTP::Get.new(ENV['RSS_FEED'])
-    resp = http.request(req)
-    @feed= JSON.parse(resp.body)
-    
-    # Rails.cache.fetch("platform_records", enxpires_in: 1.seconds) do
-    #   begin
-    #     uri = URI.parse(ENV['RSS_FEED'])
-    #     http = Net::HTTP.new(uri.host, uri.port)
-    #     req = Net::HTTP::Get.new(url)
-    #     resp = http.request(req)
-    #     @feed= JSON.parse(resp.body).to_json
-    #   rescue
-    #     @feed = [].to_json
-    #   end
-
-    # end
+    @feed= Rails.cache.fetch("feed", enxpires_in: 60.minutes) do
+      uri = URI.parse(ENV['RSS_FEED'])
+      http = Net::HTTP.new(uri.host, uri.port)
+      req = Net::HTTP::Get.new(ENV['RSS_FEED'])
+      resp = http.request(req)
+      JSON.parse(resp.body)
+    end
   end
 
 end

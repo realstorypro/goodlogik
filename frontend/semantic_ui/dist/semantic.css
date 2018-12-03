@@ -27790,7 +27790,7 @@ Floated Menu / Item
   width: 290px;
   min-height: 0px;
   background: #FFFFFF;
-  padding: 0em;
+  padding: 0.5em;
   border: none;
   border-radius: 0;
   -webkit-box-shadow: 0px 1px 3px 0px #D4D4D5, 0px 0px 0px 1px #D4D4D5;
@@ -28856,6 +28856,15 @@ a.ui.card:hover,
 
 .ui.cards > .card {
   font-size: 1em;
+}
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+.ui.cards > .card > .content > .header:not(.ui),
+.ui.card > .content > .header:not(.ui) {
+  text-transform: uppercase;
 }
 
 /*******************************
