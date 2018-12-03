@@ -142,7 +142,10 @@
     margin-left: 1em
     margin-right: 1em
 
-  .card
+  .ui .card
+    @include media("<desktop")
+      width: 100%
+
     .header
       font-size: 1.4em
       font-weight: bold
