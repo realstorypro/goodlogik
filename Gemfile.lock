@@ -69,6 +69,7 @@ GEM
       http (> 0.8, < 4.0)
       multi_json (~> 1)
     crass (1.0.4)
+    dalli (2.7.9)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.5.0)
@@ -243,6 +244,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   contentful
+  dalli
   dc_ui!
   dotenv-rails
   feedjira

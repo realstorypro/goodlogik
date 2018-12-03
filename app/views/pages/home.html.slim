@@ -80,12 +80,11 @@
       = column computer: 16, mobile: 16
         = h1 text: 'From The Post', class: 'centered'
     = row
-      - @feed = Feedjira::Feed.fetch_and_parse(ENV['RSS_FEED'])
-      - @feed.entries.first(4).each do |entry|
+      - @feed["entries"].first(4).each do |entry|
         = column size: 4
           = card
             = content
               = header 
-                = header class: 'small dividing sub', text: entry.categories.last
-                = entry.title
-              = text text: entry.summary
+                = header class: "small dividing sub #{entry["color"]}", text: entry["category"]
+                = entry["title"]
+              = text text: entry["description"]

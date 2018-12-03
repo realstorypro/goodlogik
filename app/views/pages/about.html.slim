@@ -14,6 +14,9 @@
         = h1 text: 'Our Mission', class: 'centered'
         = markdown(@page.mission)
 
+        br
+        = divider
+
 = segment 'basic contact'
   = grid
     = row
@@ -21,8 +24,10 @@
         = grid
           = row 'stackable'
             = column size: 5, class: 'centered'
-              = h2 text: 'Office'
+              = h2 text: 'Offices'
               = text
+                strong MAIN
+                br
                 | 2 E. Congress
                 br
                 | Ste. 900
@@ -39,7 +44,7 @@
               = text
                 strong EMAIL
                 br
-                = mail_to 'sales@logik.works'
+                = mail_to 'sales@goodlogik.com'
             = column size: 5, class: 'centered'
               = h2 text: 'Customer Support'
               = text
@@ -49,9 +54,4 @@
               = text
                 strong EMAIL
                 br
-                = mail_to 'support@logik.works'
-
-              = text
-                strong WEB
-                br
-                = link_to 'support.logik.works', 'http://support.logik.works'
+                = mail_to 'support@goodlogik.com'
