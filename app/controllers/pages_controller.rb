@@ -22,7 +22,7 @@ class PagesController < ApplicationController
   end
 
   def fetch_platform
-    @feed= Rails.cache.fetch("feed", enxpires_in: 0.minutes) do
+    @feed= Rails.cache.fetch("feed", :expires_in => 1.minutes) do
       uri = URI.parse(ENV['RSS_FEED'])
       Net::HTTP.start(uri.host, uri.port,
         :use_ssl => uri.scheme == 'https') do |http|
