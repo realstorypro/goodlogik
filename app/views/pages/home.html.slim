@@ -42,13 +42,12 @@
             = h1 text: solution.header
             = markdown(solution.description)
 
-= segment 'inverted basic pricing'
+= segment 'basic pricing secondary'
   = grid 'stackable centered'
     = row
       = column size: 12
-        = h1 text: @homepage.pricing_header, class: 'centered inverted'
-        = text text: @homepage.pricing_body
-        br
+        = h1 text: @homepage.pricing_header, class: 'centered'
+        = description text: @homepage.pricing_body
     = row
       = column size: 4
         = menu class: 'vertical fluid', ui: :on
@@ -60,25 +59,22 @@
                 span.term Billed Annually
               - else
                 span.term Contact Us
-        br
-        = button class: 'red request demo fluid large'
-          | REQUEST DEMO
 
       = column size: 10, class: 'stretched'
         - @homepage.plans.each_with_index do |plan, index|
           .ui.tab class="#{'active' if index == 0}" data-tab=plan.name.parameterize.underscore
-            = text text: plan.description
             = grid 'stackable'
               - plan.features.each do |feature|
                 = column size: 4
-                  = icon 'circular checkmark green'
-                  = feature.name
+                  .feature
+                    = icon 'bordered checkmark orange inverted'
+                    = feature.name
 
 = segment 'basic post'
   = grid 'centered'
     = row
       = column computer: 14, mobile: 16
-        = h1 text: 'From The Post', class: 'centered'
+        = h1 text: 'Latest Posts', class: 'centered'
     = row
       = column computer: 14
         = cards 'three fluid'
