@@ -98,19 +98,19 @@
       margin-bottom: 2em
 
   .right.image img
-    margin-right: -110px
+    margin-right: -40px
     @include media("<tablet")
       display: none
 
   .left.image img
-    margin-left: -110px
+    margin-left: -40px
     @include media("<tablet")
       display: none      
 
 // Pricing Segment
 .pricing.segment
-  background: url('../images/noise.png') !important
-  padding: 7.5em 4em 8.5em
+  background: #eee
+  padding: 6.5em 4em 6.5em
   @include media("<desktop")
     padding: 4.5em 1em
 
@@ -118,8 +118,14 @@
     @include media("<desktop")
       margin-bottom: 1.5em
 
-  p
-    font-size: 1.1em
+  h1.header
+    margin-bottom: 0.7em
+    @include media("<desktop")
+      text-align: left
+
+  .description
+    font-size: 1.3em
+    line-height: 1.5em
 
   span.plan, span.price, span.term
     display: block
@@ -139,16 +145,24 @@
     font-size: 0.7em
     text-transform: uppercase
 
+  .feature
+    font-size: 1.00em
+
+    .icon.orange.inverted
+      margin-right: 0.5em
+      background-color: #f2711ca6 !important
+
 // CTA Segment
 .post.segment
-  padding: 4em 2em 4em
+  padding: 3em 2em 4em
 
   h1.header.ui
-    margin-bottom: 0.4em
+    margin-bottom: 0.5em
 
   .ui.three.cards > .card
-    margin-left: 1em
-    margin-right: 1em
+    margin-left: 1.5em
+    margin-right: 1.5em
+    width: calc(33.33333% - 3em)
 
   .ui .card
     @include media("<desktop")
