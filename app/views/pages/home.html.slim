@@ -55,7 +55,7 @@
             = item class: "#{'active' if index == 0}", tag: :a, data: {tab: plan.name.parameterize.underscore}
               span.plan= plan.name
               - if plan.price > 0
-                span.price= number_to_currency(plan.price, precision: 0)
+                span.price= "Starting At #{number_to_currency(plan.price, precision: 0)}/mo"
                 span.term Billed Annually
               - else
                 span.term Contact Us
