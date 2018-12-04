@@ -107,6 +107,18 @@
     @include media("<tablet")
       display: none      
 
+  .right.image img,
+  .left.image img
+    transition: 0.5s all
+
+  .right.image img,
+    &:hover
+      transform: skewX(4deg)
+
+  .left.image img
+    &:hover
+      transform: skewX(-5deg)
+
 // Pricing Segment
 .pricing.segment
   background: #eee
