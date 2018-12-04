@@ -63,11 +63,11 @@
       = column size: 10, class: 'stretched'
         - @homepage.plans.each_with_index do |plan, index|
           .ui.tab class="#{'active' if index == 0}" data-tab=plan.name.parameterize.underscore
-            = grid 'stackable'
+            = grid 'stackable set'
               - plan.features.each do |feature|
-                = column size: 4
+                = column size: 5
                   .feature
-                    = icon 'bordered checkmark orange inverted'
+                    = icon "bordered #{feature.icon} orange inverted"
                     = feature.name
 
 = segment 'basic post'
