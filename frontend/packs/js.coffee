@@ -7,6 +7,9 @@ Turbolinks.start()
 header_video = new HeaderVideo
 
 ready = ->
+  console.log $('.demo.modal form input[name="email"]').val()
+
+  analytics.page()
   header_video.setup()
 
   # Dropdowns
@@ -23,6 +26,10 @@ ready = ->
   # Demo Request
   $('.request.demo').on 'click', (e) ->
     e.preventDefault()
+
+    analytics.track 'opened modal',
+      plan: $('.pricing .active span.plan').text()
+
     $('.demo.modal')
       .modal
         closable: true
@@ -32,6 +39,9 @@ ready = ->
           form.reportValidity()
 
           if form.checkValidity()
+            analytics.track 'requested demo',
+              email: $('.demo.modal form input[name="email"]').val()
+
             $.ajax
               type: 'POST'
               headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
