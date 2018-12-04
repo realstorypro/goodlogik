@@ -16,7 +16,7 @@
           = row
             - @homepage.benefits.each do |benefit|
               = column
-                = header class: 'icon centered'
+                = h2 class: 'icon centered'
                   = image_tag benefit.icon.file.url, class: 'ui image'
                   = content
                     = benefit.name
