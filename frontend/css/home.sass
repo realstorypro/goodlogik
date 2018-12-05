@@ -180,6 +180,11 @@
     margin-left: 1.5em
     margin-right: 1.5em
     width: calc(33.33333% - 3em)
+    @include media("<desktop")
+      width: 100%
+      margin-left: 0
+      margin-right: 0
+      margin-bottom: 1.5em
 
   .ui .card
     @include media("<desktop")
@@ -190,8 +195,10 @@
       font-weight: bold
       font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif !important
 
-    .header.sub
+    .header.sub.dividing
       font-size: 0.8em
+      padding-bottom: 3px
+      margin-bottom: 3px
 
     .description
       font-size: 1.1em
