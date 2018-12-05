@@ -7,8 +7,6 @@ Turbolinks.start()
 header_video = new HeaderVideo
 
 ready = ->
-  console.log $('.demo.modal form input[name="email"]').val()
-
   analytics.page()
   header_video.setup()
 
