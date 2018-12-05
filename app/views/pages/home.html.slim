@@ -1,6 +1,6 @@
 - content_for :hero
   = fragment 'hero'
-    video.video src=@homepage.overlay_video.url id='header_video' autoplay=false muted=true loop=true playsinline=true width='x' height='y'
+    video.video src=@homepage.overlay_video.url id='header_video' autoplay=true muted=true loop=true playsinline=true width='x' height='y'
     .overlay style="background-color: #{@homepage.overlay_color}"
     .content-holder
       = container 'text'
