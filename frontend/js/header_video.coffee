@@ -7,9 +7,4 @@ class HeaderVideo
       masthead = $('.masthead')
       masthead.css('min-height', masthead.outerHeight())
       
-      #video = document.querySelector('video#header_video')
-      #console.log video.offsetHeight
-      #video.play() if video 
-
-
 export {HeaderVideo as default}
