@@ -1,0 +1,43 @@
+- content_for :hero
+  = fragment 'hero'
+    video.video src=@homepage.overlay_video.url id='header_video' autoplay=true muted=true loop=true playsinline=true width='x' height='y'
+    .overlay style="background-color: #{@homepage.overlay_color}"
+    .content-holder
+      = container 'text'
+        = h1 class: 'center aligned inverted', text: @homepage.master_heading
+        = h2 'inverted'
+          = @homepage.master_subheading
+
+= segment 'basic critical'
+  = grid 'centered'
+    = row
+      = column computer: 15, mobile: 16
+        = grid 'three column stackable'
+          = row
+            - @homepage.benefits.each do |benefit|
+              = column
+                = h2 class: 'icon centered'
+                  = image_tag benefit.icon.file.url, class: 'ui image'
+                  = content
+                    = benefit.name
+                = text text: benefit.description
+= divider
+
+= segment 'solutions basic'
+  = grid
+    - @homepage.solutions.each_with_index do |solution, index|
+      = row 'separated'
+        - if index % 2 == 0
+          = column computer: 7, tablet: 16, mobile: 16, class: 'left text top aligned'
+            = image_tag solution.image.file.url, class: 'mobile only'
+            = h1 text: solution.header
+            = markdown(solution.description)
+          = column computer: 9, tablet: 16, mobile: 16, class: 'right aligned image'
+            = image_tag solution.image.file.url
+        - else
+          = column computer: 9, tablet: 16, mobile: 16, class: 'left aligned image'
+            = image_tag solution.image.file.url
+          = column computer: 7, tablet: 16, mobile: 16, class: 'right text top aligned'
+            = image_tag solution.image.file.url, class: 'mobile only'
+            = h1 text: solution.header
+            = markdown(solution.description)
