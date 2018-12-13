@@ -8,6 +8,6 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import '../semantic_ui/dist/semantic.css'
+import 'reveal.js/css/reveal.scss'
 import '../css/utilities.scss'
 import '../css/main.sass'
-import 'magnific-popup/dist/magnific-popup.css'
