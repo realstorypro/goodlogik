@@ -1,4 +1,5 @@
 import Turbolinks from 'turbolinks'
+import Reveal from 'reveal.js'
 import HeaderVideo from '../js/header_video'
 import semantic_js from '../semantic_ui/dist/semantic.min'  
 

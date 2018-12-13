@@ -7945,6 +7945,11 @@ ret@~0.1.10:
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
 
+reveal.js@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-3.7.0.tgz#7afaf72fd963000381289d58f3aa54c0c46b150c"
+  integrity sha512-HTOTNhF5mQAw6fcsptk4oql/DEEUwTG0YHk/LzTNNx0/3IgvOQZqKzvlK/zNpqqKMLlhn1gH9Nvp+FFoc/e5/w==
+
 rework-import@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/rework-import/-/rework-import-2.1.0.tgz#c26ed2b53159ac7be2ec60da223ef89603c1ef1f"

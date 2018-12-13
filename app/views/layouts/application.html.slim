@@ -104,6 +104,7 @@ html
 
     = sidebar 'ui vertical inverted menu right'
       = item url: root_path, text: 'Home'
+      = item url: features_path, text: 'Features'
       = item url: about_path, text: 'About'
       = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
         = icon 'external alternate'
@@ -122,6 +123,7 @@ html
               = icon 'large sidebar'
           = menu class: 'right', only: :desktop
             = item url: root_path, text: 'Home'
+            = item url: features_path, text: 'Features'
             = item url: about_path, text: 'About'
             = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
               = icon 'external alternate'
@@ -131,20 +133,21 @@ html
                 | Request Demo
         = yield :hero
       =yield
-      = segment 'inverted black vertical footer'
-        = grid 'stackable inverted equal height stackable three column'
-          = row
-            = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
-              = list  'link list divided inverted copyright huge'
-                = item 'social'
-                  = link_to 'https://twitter.com/LogikaLtruth', target: '_blank'
-                    = icon 'twitter large'
-                  = link_to 'https://www.linkedin.com/company/logikworks', target: '_blank'
-                    = icon 'linkedin large'
-                  = link_to 'https://post.goodlogik.com'
-                    = image_tag 'icon-bw.png', class: 'ui image post'
-                = item
-                  = image_tag 'icon.png', class: 'ui image tiny'
-                = item
-                  = text 
-                  | &copy; 2017 - 2018 Logik. All Rights Reserved.
+      - unless current_page?(root_url)
+        = segment 'inverted black vertical footer'
+          = grid 'stackable inverted equal height stackable three column'
+            = row
+              = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
+                = list  'link list divided inverted copyright huge'
+                  = item 'social'
+                    = link_to 'https://twitter.com/good_logik', target: '_blank'
+                      = icon 'twitter large'
+                    = link_to 'https://www.linkedin.com/company/logikworks', target: '_blank'
+                      = icon 'linkedin large'
+                    = link_to 'https://post.goodlogik.com'
+                      = image_tag 'icon-bw.png', class: 'ui image post'
+                  = item
+                    = image_tag 'icon.png', class: 'ui image tiny'
+                  = item
+                    = text 
+                    | &copy; 2017 - 2018 Logik. All Rights Reserved.
