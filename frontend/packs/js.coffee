@@ -8,6 +8,7 @@ Turbolinks.start()
 header_video = new HeaderVideo
 
 ready = ->
+  Reveal.initialize()
   analytics.page()
   header_video.setup()
 
