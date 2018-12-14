@@ -1,5 +1,5 @@
 import Turbolinks from 'turbolinks'
-import Reveal from 'reveal.js'
+import Reveal from '../js/reveal.js'
 import HeaderVideo from '../js/header_video'
 import semantic_js from '../semantic_ui/dist/semantic.min'  
 
@@ -8,9 +8,13 @@ Turbolinks.start()
 header_video = new HeaderVideo
 
 ready = ->
-  Reveal.initialize()
   analytics.page()
   header_video.setup()
+
+  # activating reveal if we're on the revealed page
+  if $('.reveal').length
+    window.initialized = false
+    Reveal.initialize()
 
   # Dropdowns
   $('.ui.dropdown').dropdown()
