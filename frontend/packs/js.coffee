@@ -11,7 +11,7 @@ ready = ->
   analytics.page()
   header_video.setup()
 
-  window.reveal = Reveal
+  # activating reveal if we're on the revealed page
   if $('.reveal').length
     window.initialized = false
     Reveal.initialize()
