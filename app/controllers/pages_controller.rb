@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   before_action :fetch_platform
 
   def home
+    @page= contentful.entry(ENV['CONTENTFUL_PRESENTATION_ID'], include: 3)
   end
 
   def features
