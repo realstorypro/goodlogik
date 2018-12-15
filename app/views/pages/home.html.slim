@@ -4,4 +4,5 @@
       - @page.decks.each do |deck|
         section
           - deck.slides.each do |slide|
-            section data-background-video="#{slide.video.url}"
+            = render_slide(slide) do
+              = slide.heading
