@@ -8,7 +8,7 @@ Turbolinks.start()
 header_video = new HeaderVideo
 
 ready = ->
-  analytics.page()
+  # analytics.page()
   header_video.setup()
 
   # activating reveal if we're on the revealed page
