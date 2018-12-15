@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   require 'net/http'
 
   before_action :set_icon
-  #before_action :fetch_platform
 
   def home
     @page= contentful.entry(ENV['CONTENTFUL_PRESENTATION_ID'], include: 3)
@@ -23,18 +22,6 @@ class PagesController < ApplicationController
 
   protected
   def set_icon
-  end
-
-  def fetch_platform
-    @feed= Rails.cache.fetch("feed", {:expires_in => 0}) do
-      uri = URI.parse(ENV['RSS_FEED'])
-      Net::HTTP.start(uri.host, uri.port,
-        :use_ssl => uri.scheme == 'https') do |http|
-        request = Net::HTTP::Get.new uri
-        response = http.request request # Net::HTTPResponse object
-        JSON.parse(response.body)
-      end
-    end
   end
 
 end
