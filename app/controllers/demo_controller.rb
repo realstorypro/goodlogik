@@ -5,6 +5,7 @@ class DemoController < ApplicationController
                                         phone: params[:phone],
                                         email: params[:email],
                                         company: params[:company],
+                                        budget: params[:budget],
                                         agency: params[:agency]
                                       )
 

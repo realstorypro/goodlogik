@@ -13,6 +13,7 @@ module Zapier
         phone: resource.phone,
         email: resource.email,
         company: resource.company,
+        budget: resource.budget,
         agency: resource.agency
       }
     end

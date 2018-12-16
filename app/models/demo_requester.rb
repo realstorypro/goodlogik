@@ -8,6 +8,7 @@ class DemoRequester
   attr_accessor :phone
   attr_accessor :email
   attr_accessor :company
+  attr_accessor :budget
   attr_accessor :agency
 
   def initialize(attributes = {})
