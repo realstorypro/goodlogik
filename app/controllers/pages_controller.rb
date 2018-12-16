@@ -20,6 +20,10 @@ class PagesController < ApplicationController
     @page = contentful.entry(ENV['CONTENTFUL_ABOUT_ID'], include: 2)
   end
 
+  def tos
+    @page = contentful.entry(ENV['CONTENTFUL_TOS_ID'], include: 2)
+  end
+
   protected
   def set_icon
   end
