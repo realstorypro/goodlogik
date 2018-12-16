@@ -16,8 +16,8 @@
         = markdown(@page.mission)
 
         br
-    /    = divider
-    /= row 'centered'
+        = divider
+    = row 'centered'
       = column computer: 6, mobile: 16
         = h2 text: 'Our Story'
         = markdown(@page.story)
@@ -44,7 +44,7 @@
                 br
                 | USA
             = column size: 5, class: 'centered'
-              = h2 text: 'Sales Inquiries'
+              = h2 text: 'Sales'
               = text
                 strong PHONE
                 br
@@ -54,7 +54,7 @@
                 br
                 = mail_to 'sales@goodlogik.com'
             = column size: 5, class: 'centered'
-              = h2 text: 'Customer Support'
+              = h2 text: 'Support'
               = text
                 strong PHONE
                 br
