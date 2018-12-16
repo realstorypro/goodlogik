@@ -7,28 +7,34 @@
           label Name
           .two.fields
             .field
-              input type="text" name="name[first]" placeholder="First Name" required=""
+              input type="text" name="name[first]" placeholder="First" required=""
 
             .field
-              input type="text" name="name[last]" placeholder="Last Name" required=""
+              input type="text" name="name[last]" placeholder="Last" required=""
 
         .field.required
           label Work Email
-          input type="email" name="email" placeholder="john@acmeinc.com" required=""
+          input type="email" name="email" required=""
 
         .field.required
           label Phone Number
-          input type="tel" name="phone" placeholder="602.888.2272" required=""
+          input type="tel" name="phone" required=""
 
         .field.required
           label Company Name
-          input type="text" name="company" placeholder="Acme Inc" required=""
+          input type="text" name="company" required=""
+        .field.required
+          label Monthly Budget for Web Services
+          select.ui.fluid.dropdown name="budget" required=""
+            option value="<10k" Less then 10k
+            option selected="" value="10k-25k" 10k - 25k
+            option value="25k-50k" 25k - 50k
+            option value="50k+" More then 50k
         .field
           label Are you an Agency?
           select.ui.fluid.dropdown name="agency"
             option value="No" No
             option value="Yes" Yes
   .actions
-    .button.ui.approve.large.red.fluid.right.labeled.icon
+    .button.ui.approve.large.blue.fluid.right
       | REQUEST DEMO
-      = icon 'mail'
