@@ -123,15 +123,16 @@ html
             = item 'hamburger'
               = icon 'large sidebar'
           = menu class: 'right', only: :desktop
-            = item url: root_path, text: 'Home'
-            = item url: features_path, text: 'Features'
-            = item url: about_path, text: 'About'
+            /= item url: root_path, text: 'Home'
+            /= item url: features_path, text: 'Features'
+            /= item url: about_path, text: 'About'
             = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
               = icon 'external alternate'
               | Careers
             = item
               = button class: 'red request demo'
-                | Request Demo
+                | Investment Info
+
         = yield :hero
       =yield
       - unless current_page?(root_url)

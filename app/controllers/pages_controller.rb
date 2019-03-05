@@ -7,8 +7,16 @@ class PagesController < ApplicationController
     @page= contentful.entry(ENV['CONTENTFUL_PRESENTATION_ID'], include: 3)
   end
 
+  def landing
+    @homepage = contentful.entry(ENV['CONTENTFUL_LANDING_ID'], include: 2)
+    @page_title = @homepage.page_title
+    @page_description = @homepage.page_description
+    set_meta_tags og: {title: @homepage.page_title }
+    set_meta_tags icon: @homepage.fav_icon.url, type: 'image/png'
+  end
+
   def features
-    @homepage = contentful.entry(ENV['CONTENTFUL_ENTRY_ID'], include: 2)
+    @homepage = contentful.entry(env['contentful_entry_id'], include: 2)
 
     @page_title = @homepage.page_title
     @page_description = @homepage.page_description
