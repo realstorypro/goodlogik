@@ -79,6 +79,13 @@ body
     @include media("<tablet")
       justify-content: center
 
+    &.left.aligned
+      text-align: left
+
+    .segment
+      @include media("<tablet")
+        padding: 2em inherit
+
   h1.ui.header
     font-size: 3.0em
     text-transform: uppercase
@@ -118,6 +125,15 @@ body
     .button
       @include media("<tablet")
         display: block !important
+
+  p
+    color: #fff
+    font-size: 1.4em
+    line-height: 1.5em
+    max-width: 60%
+    @include media("<tablet")
+      max-width: 100%
+      font-size: 1.1em
 
 // Footer Segment
 

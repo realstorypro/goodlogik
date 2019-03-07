@@ -13,17 +13,17 @@
               input type="text" name="name[last]" placeholder="Last" required=""
 
         .field.required
-          label Work Email
+          label Email
           input type="email" name="email" required=""
 
         .field.required
           label Phone Number
           input type="tel" name="phone" required=""
 
-        .field.required
+        /.field.required
           label Company Name
           input type="text" name="company" required=""
-        .field.required
+        /.field.required
           label Monthly Budget for Web Services
           select.ui.fluid.dropdown name="budget" required=""
             option value="<10k" Less then 10k
@@ -31,10 +31,10 @@
             option value="25k-50k" 25k - 50k
             option value="50k+" More then 50k
         .field
-          label Are you an Agency?
-          select.ui.fluid.dropdown name="agency"
+          label Are you an accredited investor?
+          select.ui.fluid.dropdown name="agency" required=""
             option value="No" No
-            option value="Yes" Yes
+            option value="Yes" selected="" Yes
   .actions
-    .button.ui.approve.large.blue.fluid.right
-      | REQUEST DEMO
+    .button.ui.approve.large.black.fluid.right
+      | Contact Me
