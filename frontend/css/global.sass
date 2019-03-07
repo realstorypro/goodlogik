@@ -82,6 +82,10 @@ body
     &.left.aligned
       text-align: left
 
+    .segment
+      @include media("<tablet")
+        padding: 2em inherit
+
   h1.ui.header
     font-size: 3.0em
     text-transform: uppercase
@@ -129,6 +133,7 @@ body
     max-width: 60%
     @include media("<tablet")
       max-width: 100%
+      font-size: 1.1em
 
 // Footer Segment
 

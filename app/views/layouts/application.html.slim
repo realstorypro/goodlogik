@@ -105,14 +105,14 @@ html
 
     = sidebar 'ui vertical inverted menu right'
       = item url: root_path, text: 'Home'
-      = item url: features_path, text: 'Features'
-      = item url: about_path, text: 'About'
+      //= item url: features_path, text: 'Features'
+      //= item url: about_path, text: 'About'
       = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
         = icon 'external alternate'
         | Careers
       = item
         = button class: 'red request demo fluid'
-          | Request Demo
+          | Investors
 
     .pusher
       = segment 'inverted vertical masthead center aligned segment clearing'
