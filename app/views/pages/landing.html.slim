@@ -1,11 +1,9 @@
-= @homepage.master_heading
-= @homepage.master_subheading
 - content_for :hero
   = fragment 'hero'
     video.video src=@homepage.overlay_video.url id='header_video' autoplay=true muted=true loop=true playsinline=true width='x' height='y'
     .overlay style="background-color: #{@homepage.overlay_color}"
-    .content-holder
-      = container 'text'
-        = h1 class: 'center aligned inverted', text: @homepage.master_heading
-        = h2 'inverted'
-          = @homepage.master_subheading
+    .content-holder.left.aligned
+      = segment 'basic'
+        = h2 class: 'inverted dividing', text: @homepage.master_heading
+        = text 
+          = @master_text.html_safe

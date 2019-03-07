@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   require 'net/http'
+  require 'rich_text_renderer'
 
   before_action :set_icon
 
@@ -8,9 +9,12 @@ class PagesController < ApplicationController
   end
 
   def landing
+    renderer = RichTextRenderer::Renderer.new
+
     @homepage = contentful.entry(ENV['CONTENTFUL_LANDING_ID'], include: 2)
     @page_title = @homepage.page_title
     @page_description = @homepage.page_description
+    @master_text = renderer.render(@homepage.master_text)
     set_meta_tags og: {title: @homepage.page_title }
     set_meta_tags icon: @homepage.fav_icon.url, type: 'image/png'
   end
