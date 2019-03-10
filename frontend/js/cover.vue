@@ -5,9 +5,9 @@
             Camera(type="arcRotate" :radius="1")
         HemisphericLight(:diffuse="hemispheric_light")
         Entity(:position="[0, 0, 5]")
-            Animation(property="rotation.x" :duration="15" :end="Math.PI * 2")
+            Animation(property="rotation.x" :duration="10" :end="Math.PI * 2")
             Animation(property="rotation.y" :duration="15" :end="Math.PI * 2")
-            Animation(property="rotation.z" :duration="15" :end="Math.PI * 2")
+            Animation(property="rotation.z" :duration="20" :end="Math.PI * 2")
             PointLight(:diffuse="point_light")
             template(v-for="x in squares")
                 template(v-for="y in squares")
@@ -31,32 +31,38 @@ export default {
             'orange', 'blue', 'purple', 'yellow',
             'orange', 'purple', 'blue', 'yellow'
         ]
+        first_color: '#655da6'
+        second_color: '#f8a61d'
+        third_color: '#fce608'
+        fourth_color: '#00b4d5'
+        fifth_color: '#ea176a'
+        sixth_color: '#0aa650'
     mounted: ->
         console.log "mounting complete"
     methods:
         pick_color: (x, y, z)->
 
             if x is 0 and y is 2
-                '#666'
+                @second_color
             else if x is 2 and y is 2
-                '#ccc'
+                @first_color
             else if x is -2 and y is 2
-                '#ddd'
+                @third_color
 
             else if x is 0 and y is 0
-                '#0aa650'
+                @fourth_color
             else if x is 2 and y is 0
-                '#fce608'
+                @first_color
             else if x is -2 and y is 0
-                '#0aa650'
+                @third_color
 
 
             else if x is 0 and y is -2
-                '#00b4d5'
+                @fifth_color
             else if x is 2 and y is -2
-                '#655da6'
+                @fourth_color
             else if x is -2 and y is -2
-                '#f8a61d'
+                @sixth_color
 
 }
 </script>
