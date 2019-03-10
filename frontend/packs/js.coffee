@@ -35,37 +35,30 @@ $ ->
         blurring: true
         closable: true
         onApprove: ->
-          $('.demo.modal').show()
+
+          $('.demo.modal')
+            .modal
+              blurring: true
+              onApprove: ->
+
+                form = $('.demo.modal form')[0]
+                form.reportValidity()
+
+                if form.checkValidity()
+                  analytics.track 'requested demo',
+                    email: $('.demo.modal form input[name="email"]').val()
+
+                  $.ajax {
+                      type: 'POST'
+                      headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
+                      url: '/demo/send_request/'
+                      data: $('.demo.modal form').serialize()
+                      dataType: 'json'
+                  }
+                else
+                  false
+
+            .modal('show')
         onDeny: ->
-          return false
-      .modal('show')
-
-  # Demo Request
-  $('.request.demo').on 'click', (e) ->
-    e.preventDefault()
-
-    analytics.track 'opened modal',
-      plan: $('.pricing .active span.plan').text()
-
-    $('.demo.modal')
-      .modal
-        closable: true
-        onApprove: ->
-
-          form = $('.demo.modal form')[0]
-          form.reportValidity()
-
-          if form.checkValidity()
-            analytics.track 'requested demo',
-              email: $('.demo.modal form input[name="email"]').val()
-
-            $.ajax
-              type: 'POST'
-              headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
-              url: '/demo/send_request/'
-              data: $('.demo.modal form').serialize()
-              dataType: 'json'
-          else
-            false
-
+          return true
       .modal('show')
