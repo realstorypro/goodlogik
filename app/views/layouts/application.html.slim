@@ -105,8 +105,6 @@ html
 
     = sidebar 'ui vertical inverted menu right'
       = item url: root_path, text: 'Home'
-      //= item url: features_path, text: 'Features'
-      //= item url: about_path, text: 'About'
       = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
         = icon 'external alternate'
         | Careers
@@ -115,7 +113,7 @@ html
           | Investors
 
     .pusher
-      = segment 'inverted vertical masthead center aligned segment clearing'
+      = segment 'vertical hero center aligned segment clearing '
         = menu ui: :on, class: 'secondary inverted large'
           = item url: root_path
             = image_tag 'logo.png', class: 'ui image small'
@@ -123,9 +121,6 @@ html
             = item 'hamburger'
               = icon 'large sidebar'
           = menu class: 'right', only: :desktop
-            /= item url: root_path, text: 'Home'
-            /= item url: features_path, text: 'Features'
-            /= item url: about_path, text: 'About'
             = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
               = icon 'external alternate'
               | Careers
@@ -135,23 +130,3 @@ html
 
         = yield :hero
       =yield
-      - unless current_page?(root_url)
-        = segment 'inverted black vertical footer'
-          = grid 'stackable inverted equal height stackable three column'
-            = row
-              = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
-                = list  'link list divided inverted copyright huge'
-                  = item 'social'
-                    = link_to 'https://medium.com/good-logik', target: '_blank'
-                      = icon 'medium large'
-                    = link_to 'https://twitter.com/good_logik', target: '_blank'
-                      = icon 'twitter large'
-                    = link_to 'https://www.linkedin.com/company/logikworks', target: '_blank'
-                      = icon 'linkedin large'
-                  = item
-                    = image_tag 'icon.png', class: 'ui image tiny'
-                  = item
-                    = text 
-                    | &copy; 2017 - 2018 Logik
-                    span.splitter |
-                    = link_to 'Terms of Service', tos_path
