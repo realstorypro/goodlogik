@@ -49,17 +49,6 @@ body
       .item
         padding-right: 0
 
-  // Video
-  .video
-    object-fit: cover
-    position: absolute
-    top: 0
-    left: 0
-    min-width: 100%
-    min-height: 100%
-    width: auto
-    height: auto
-
   .overlay
     position: absolute
     top: 0
@@ -75,15 +64,10 @@ body
     height: 100%
     display: flex
     align-items: center
+
     @include media("<tablet")
-      justify-content: center
-
-    &.left.aligned
-      text-align: left
-
-    .segment
-      @include media("<tablet")
-        padding: 2em inherit
+      display: block
+      margin-top: 100px
 
   h1.ui.header
     font-size: 3.0em
@@ -97,83 +81,19 @@ body
       content: ""
       display: block
       margin: 0 auto
-      width: 95%
+      width: 100%
       padding-top: 0.1em
       border-bottom: 2px solid #ffffff5c
 
-  h2.ui.header
-    font-size: 1.65em
-    padding-bottom: 0.3em
-    margin-top: 0.3em
-    font-weight: 500
-
-    @include media("<tablet")
-      font-size: 1.2em
-
-  .ctas
-    margin-top: 3em
-
-    .wistia_embed
-      margin-right: 0.75em
-
-      @include media("<tablet")
-        margin-right: 0
-        margin-bottom: 1em
-        display: block !important
-
-    .button
-      @include media("<tablet")
-        display: block !important
-
   p
     color: #fff
-    font-size: 1.4em
-    line-height: 1.5em
-    max-width: 60%
+    font-size: 1.6em
+    line-height: 1.75em
     @include media("<tablet")
       max-width: 100%
-      font-size: 1.1em
+      font-size: 1.4em
 
-// Footer Segment
-
-.footer.segment.black.inverted
-  padding: 1.5em 4em 2em
-  background: url('../images/noise_light.png') !important
-  @include media("<desktop")
-    padding: 1.5em 1em
-
-  .item
-    color: white !important
-    font-size: 0.8em
-    margin-bottom: 0.8em
-
-  .ui.inverted.list .item a, a
-    color: white !important
-    text-transform: uppercase
-    opacity: 1
-    transition: all 0.5s
-
-    &:hover
-      color: white !important
-      opacity: 0.9
-
-  .copyright
-    text-transform: uppercase
-
-    .item
-      padding-top: 1em
-
-    .social.item
-      a
-        margin-right: 1em
-
-        &:last-child
-          margin-right: 0
-
-    .ui.image.post
-      display: inline
-      height: 28px
-      width: 28px
-
-    span.splitter
-      margin: 0 0.5em
+  .content.column
+    @include media("<tablet")
+      padding-left: 0 !important
+      padding-right: 0 !important
