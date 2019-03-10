@@ -1,10 +1,10 @@
 - content_for :hero
   = fragment 'hero'
     .landing.page
-      canvas
-      .overlay
-      .content-holder.left.aligned
-        = segment 'basic'
-          = h2 class: 'inverted dividing', text: @homepage.master_heading
-          = text
-            = @master_text.html_safe
+    #cover
+    /.overlay
+    /.content-holder.left.aligned
+      = segment 'basic'
+        = h2 class: 'inverted dividing', text: @homepage.master_heading
+        = text
+          = @master_text.html_safe

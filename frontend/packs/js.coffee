@@ -1,14 +1,17 @@
-import Turbolinks from 'turbolinks'
-import HeaderVideo from '../js/header_video'
-import semantic_js from '../semantic_ui/dist/semantic.min'  
+import Vue from 'vue/dist/vue.esm'
+import vue_babylonjs from 'vue-babylonjs'
+import Cover from '../js/cover.vue'
+import semantic_js from '../semantic_ui/dist/semantic.min'
 
-Turbolinks.start()
+Vue.use(vue_babylonjs)
 
-header_video = new HeaderVideo
+$ ->
+  cover = new Vue
+    el: document.getElementById('cover'),
+    render: (h) ->
+      h(Cover)
 
-ready = ->
   analytics.page()
-  header_video.setup()
 
   # Dropdowns
   $('.ui.dropdown').dropdown()
@@ -50,10 +53,3 @@ ready = ->
             false
 
       .modal('show')
-
-# load on the initial page load
-$ ->
-  ready()
-
-# load on every other page
-document.addEventListener 'turbolinks:load', ready
