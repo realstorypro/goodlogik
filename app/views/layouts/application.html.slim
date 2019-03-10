@@ -104,7 +104,6 @@ html
     = render 'partials/demo_modal'
 
     = sidebar 'ui vertical inverted menu right'
-      = item url: root_path, text: 'Home'
       = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
         = icon 'external alternate'
         | Careers
@@ -124,6 +123,8 @@ html
             = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
               = icon 'external alternate'
               | Careers
+            = button class: 'red request check'
+              | Investors Check
             = item
               = button class: 'red request demo'
                 | Investors
