@@ -26,11 +26,6 @@ export default {
         point_light: '#000000'
         square_color: "#000"
         squares: [0, 2, -2 ]
-        colors: ['blue', 'orange', 'yellow', 'black',
-            'yellow', 'purple', 'blue', 'orange',
-            'orange', 'blue', 'purple', 'yellow',
-            'orange', 'purple', 'blue', 'yellow'
-        ]
         first_color: '#655da6'
         second_color: '#f8a61d'
         third_color: '#fce608'
