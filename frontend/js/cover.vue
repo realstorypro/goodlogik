@@ -39,6 +39,7 @@ export default {
         sixth_color: '#0fff7a'
     mounted: ->
         console.log "mounting complete"
+        console.log $('.overlay').css('opacity', 0.1)
     methods:
         pick_squeeze: (x, y, z) ->
             if x is 0 and y is 2
