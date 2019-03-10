@@ -24,6 +24,22 @@ $ ->
   # Pricing Segment
   $('.pricing.segment .menu .item').tab()
 
+  # Investors Check
+  $('.request.check').on 'click', (e) ->
+    e.preventDefault()
+
+    analytics.track 'opened investor check modal'
+
+    $('.modal.check')
+      .modal
+        blurring: true
+        closable: true
+        onApprove: ->
+          $('.demo.modal').show()
+        onDeny: ->
+          return false
+      .modal('show')
+
   # Demo Request
   $('.request.demo').on 'click', (e) ->
     e.preventDefault()
