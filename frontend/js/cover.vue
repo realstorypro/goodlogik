@@ -5,42 +5,64 @@
             Camera(type="arcRotate" :radius="1")
         HemisphericLight(:diffuse="hemispheric_light")
         Entity(:position="[0, 0, 5]")
-            Animation(property="rotation.x" :duration="10" :end="Math.PI * 2")
+            Animation(property="rotation.x" :duration="15" :end="Math.PI * 2")
             Animation(property="rotation.y" :duration="15" :end="Math.PI * 2")
-            Animation(property="rotation.z" :duration="20" :end="Math.PI * 2")
+            Animation(property="rotation.z" :duration="15" :end="Math.PI * 2")
             PointLight(:diffuse="point_light")
             template(v-for="x in squares")
                 template(v-for="y in squares")
                     Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
-                        Material(:diffuse="pick_color(x,y,z)" :metalic="50" :roughness="1")
-                        Animation(property="rotation.x" :duration="200" :end="Math.PI * 2")
-                        Animation(property="rotation.y" :duration="150" :end="Math.PI * 2")
-                        Animation(property="rotation.z" :duration="50" :end="Math.PI * 2")
+                        Material(:diffuse="pick_color(x,y,z)" :roughness="1")
+                        Animation(property="rotation.x" :duration="15" :end="Math.PI * 2")
+                        Animation(property="rotation.y" :duration="15" :end="Math.PI * 2")
+                        Animation(property="rotation.z" :duration="15" :end="Math.PI * 2")
+                        Animation(property="scaling.z" :duration="15")
+                            Key(frame="0%" :value="1")
+                            Key(frame="50%" :value="pick_squeeze(x,y)")
+                            Key(frame="100%" :value="1")
+
 </template>
 
 <script lang="coffee">
 export default {
     data: ->
-        background: '#fff'
-        hemispheric_light: '#eeeeee'
-        point_light: '#000000'
+        background: '#ccc'
+        hemispheric_light: '#fff'
+        point_light: '#fff'
         square_color: "#000"
         squares: [0, 2, -2 ]
-        colors: ['blue', 'orange', 'yellow', 'black',
-            'yellow', 'purple', 'blue', 'orange',
-            'orange', 'blue', 'purple', 'yellow',
-            'orange', 'purple', 'blue', 'yellow'
-        ]
-        first_color: '#655da6'
-        second_color: '#f8a61d'
-        third_color: '#fce608'
-        fourth_color: '#00b4d5'
-        fifth_color: '#ea176a'
-        sixth_color: '#0aa650'
+        first_color: '#9c91ff'
+        second_color: '#ffab1d'
+        third_color: '#ffe908'
+        fourth_color: '#00d8ff'
+        fifth_color: '#ff1873'
+        sixth_color: '#0fff7a'
     mounted: ->
         console.log "mounting complete"
     methods:
-        pick_color: (x, y, z)->
+        pick_squeeze: (x, y, z) ->
+            if x is 0 and y is 2
+                0.5
+            else if x is 2 and y is 2
+                1.1
+            else if x is -2 and y is 2
+                0.5
+
+            else if x is 0 and y is 0
+                1.3
+            else if x is 2 and y is 0
+                0.5
+            else if x is -2 and y is 0
+                1.3
+
+            else if x is 0 and y is -2
+                0.5
+            else if x is 2 and y is -2
+                1.1
+            else if x is -2 and y is -2
+                0.9
+
+        pick_color: (x, y, z) ->
 
             if x is 0 and y is 2
                 @second_color
@@ -52,7 +74,7 @@ export default {
             else if x is 0 and y is 0
                 @fourth_color
             else if x is 2 and y is 0
-                @first_color
+                @fifth_color
             else if x is -2 and y is 0
                 @third_color
 
