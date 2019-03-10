@@ -3,8 +3,10 @@
     .landing.page
       #cover
     .overlay
-    .content-holder.left.aligned
-      = segment 'basic'
-        = h2 class: 'inverted dividing', text: @homepage.master_heading
-        = text
-          = @master_text.html_safe
+    .content-holder
+      = container
+        = grid
+          = column size: 14, class: 'centered content'
+            = h1 class: 'inverted centered', text: @homepage.master_heading
+            = text
+              = @master_text.html_safe
