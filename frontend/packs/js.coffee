@@ -32,13 +32,15 @@ $ ->
 
     $('.modal.check')
       .modal
-        blurring: true
-        closable: true
+        closable: false
+        onShow: ->
+          $('.content-holder').css('opacity', 0)
         onApprove: ->
 
           $('.demo.modal')
             .modal
-              blurring: true
+              onHide: ->
+                $('.content-holder').css('opacity', 1)
               onApprove: ->
 
                 form = $('.demo.modal form')[0]
@@ -60,5 +62,6 @@ $ ->
 
             .modal('show')
         onDeny: ->
+          $('.content-holder').css('opacity', 1)
           return true
       .modal('show')

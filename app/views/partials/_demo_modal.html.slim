@@ -3,11 +3,12 @@
     = icon 'user secret'
     | Are you an accredited investor?
   = content
-    p At this point in time the platform is open only to the accredited investors.
+    = text
+      | At this point in time the platform is open only to the accredited investors.
   .actions
-    .button.ui.approve.large.red
+    = button 'approve large red'
       | Yes
-    .button.ui.deny.large.black
+    = button 'deny large black inverted'
       | No
 
 
@@ -30,9 +31,13 @@
           input type="email" name="email" required=""
 
         .field.required
-          label Phone Number
+          label Phone number
           input type="tel" name="phone" required=""
 
+        .field.required
+          label How did you hear about us?
+          input type="text" name="referral" required=""
+
   .actions
-    .button.ui.approve.large.black.fluid.right
+    = button 'approve large red fluid right'
       | Contact Me
