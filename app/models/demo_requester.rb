@@ -7,9 +7,7 @@ class DemoRequester
   attr_accessor :lname
   attr_accessor :phone
   attr_accessor :email
-  attr_accessor :company
-  attr_accessor :budget
-  attr_accessor :agency
+  attr_accessor :referral
 
   def initialize(attributes = {})
     attributes.each do |name, value|
