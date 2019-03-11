@@ -28,6 +28,7 @@ $ ->
   $('.request.check').on 'click', (e) ->
     e.preventDefault()
 
+    $('.ui.sidebar').sidebar('hide')
     analytics.track 'opened accredited investor modal'
 
     $('.modal.check')
@@ -57,6 +58,10 @@ $ ->
                       data: $('.demo.modal form').serialize()
                       dataType: 'json'
                   }
+
+                  $('.content-holder p:not(.text)').remove()
+                  $('.content-holder h1').text('Request Sent')
+                  $('.content-holder p.text').text('Thank you for your submission. We will be reaching out shortly.')
                 else
                   false
 
