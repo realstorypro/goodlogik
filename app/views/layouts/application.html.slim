@@ -124,8 +124,8 @@ html
               = icon 'external alternate'
               | Careers
             = item
-              = button class: 'red request check'
-                | Investors
+              = button class: "#{@cta_color} request check"
+                = @cta_text
 
         = yield :hero
       =yield

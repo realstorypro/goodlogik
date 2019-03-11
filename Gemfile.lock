@@ -55,6 +55,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
     bindex (0.5.0)
+    browser (2.5.3)
     builder (3.2.3)
     byebug (10.0.2)
     coffee-rails (4.2.2)
@@ -70,6 +71,7 @@ GEM
       multi_json (~> 1)
     crass (1.0.4)
     dalli (2.7.9)
+    distribution (0.7.3)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.5.0)
@@ -88,6 +90,11 @@ GEM
       loofah (>= 2.0)
       sax-machine (>= 1.0)
     ffi (1.9.25)
+    field_test (0.2.4)
+      activerecord
+      browser (~> 2.0)
+      distribution
+      railties
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashie (3.5.7)
@@ -249,6 +256,7 @@ DEPENDENCIES
   dc_ui!
   dotenv-rails
   feedjira
+  field_test
   heroku-deflater
   httparty
   jbuilder (~> 2.5)

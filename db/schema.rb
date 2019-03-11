@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_03_11_001649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "field_test_memberships", force: :cascade do |t|
+    t.string "participant"
+    t.string "experiment"
+    t.string "variant"
+    t.datetime "created_at"
+    t.boolean "converted", default: false
+    t.index ["experiment", "created_at"], name: "index_field_test_memberships_on_experiment_and_created_at"
+    t.index ["experiment", "participant"], name: "index_field_test_memberships_on_experiment_and_participant", unique: true
+    t.index ["participant"], name: "index_field_test_memberships_on_participant"
+  end
 
 end

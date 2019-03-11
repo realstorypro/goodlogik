@@ -12,9 +12,7 @@ module Zapier
         lname: resource.lname,
         phone: resource.phone,
         email: resource.email,
-        company: resource.company,
-        budget: resource.budget,
-        agency: resource.agency
+        referral: resource.referral
       }
     end
   end
