@@ -1,8 +1,7 @@
 <template lang="pug">
     Scene
         Property(name="clearColor" :color="background")
-        Entity
-            Camera(type="arcRotate" :radius="1")
+        Camera(type="arcRotate" :radius="1")
         HemisphericLight(:diffuse="hemispheric_light")
         Entity(:position="[0, 0, 5]")
             Animation(property="rotation.x" :duration="15" :end="Math.PI * 2")
@@ -16,17 +15,13 @@
                         Animation(property="rotation.x" :duration="15" :end="Math.PI * 2")
                         Animation(property="rotation.y" :duration="15" :end="Math.PI * 2")
                         Animation(property="rotation.z" :duration="15" :end="Math.PI * 2")
-                        Animation(property="scaling.z" :duration="15")
-                            Key(frame="0%" :value="1")
-                            Key(frame="50%" :value="pick_squeeze(x,y)")
-                            Key(frame="100%" :value="1")
 
 </template>
 
 <script lang="coffee">
 export default {
     data: ->
-        background: '#ccc'
+        background: '#bbbbbb'
         hemispheric_light: '#fff'
         point_light: '#fff'
         square_color: "#000"
