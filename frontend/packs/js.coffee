@@ -28,7 +28,7 @@ $ ->
   $('.request.check').on 'click', (e) ->
     e.preventDefault()
 
-    analytics.track 'opened investor check modal'
+    analytics.track 'opened accredited investor modal'
 
     $('.modal.check')
       .modal
@@ -47,7 +47,7 @@ $ ->
                 form.reportValidity()
 
                 if form.checkValidity()
-                  analytics.track 'requested demo',
+                  analytics.track 'requested investment info',
                     email: $('.demo.modal form input[name="email"]').val()
 
                   $.ajax {
