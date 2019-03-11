@@ -15,6 +15,8 @@ class PagesController < ApplicationController
     @page_title = @homepage.page_title
     @page_description = @homepage.page_description
     @master_text = renderer.render(@homepage.master_text)
+    @cta_color = field_test(:button_color)
+    @cta_text = field_test(:button_text)
     set_meta_tags og: {title: @homepage.page_title }
     set_meta_tags icon: @homepage.fav_icon.url, type: 'image/png'
   end
@@ -39,5 +41,6 @@ class PagesController < ApplicationController
   protected
   def set_icon
   end
+
 
 end

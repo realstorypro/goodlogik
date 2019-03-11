@@ -1,0 +1,13 @@
+experiments:
+  button_color:
+    variants:
+      - red
+      - black inverted
+  button_text:
+    variants:
+      - Investors
+      - Become an Investor
+
+
+exclude:
+  bots: true
