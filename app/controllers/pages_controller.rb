@@ -42,5 +42,4 @@ class PagesController < ApplicationController
   def set_icon
   end
 
-
 end
