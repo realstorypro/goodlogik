@@ -115,7 +115,10 @@ html
       = segment 'vertical hero segment clearing '
         = menu ui: :on, class: 'secondary inverted large'
           = item url: root_path
-            = image_tag 'logo.png', class: 'ui image small'
+            = image_tag 'logo-sm.png', class: 'ui image small logo'
+            .logo-text 
+              span Good
+              | Logik
           = menu class: 'right', only: :mobile
             = item 'hamburger'
               = icon 'large sidebar'
