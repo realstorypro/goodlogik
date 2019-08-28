@@ -33,7 +33,6 @@ $ ->
 
     $('.modal.check')
       .modal
-        closable: false
         onShow: ->
           $('.content-holder').css('opacity', 0)
         onApprove: ->
@@ -60,13 +59,16 @@ $ ->
                   }
 
                   $('.content-holder p:not(.text)').remove()
-                  $('.content-holder h1').text('Request Sent')
-                  $('.content-holder p.text').text('Thank you for your submission. We will be reaching out shortly.')
+                  $('.content-holder h1').text('Investment Request Sent')
+                  $('.content-holder p.text').text('Thank you for your interest. We will be reaching out shortly.')
                 else
                   false
 
             .modal('show')
         onDeny: ->
+          $('.content-holder').css('opacity', 1)
+          return true
+        onHide: ->
           $('.content-holder').css('opacity', 1)
           return true
       .modal('show')
