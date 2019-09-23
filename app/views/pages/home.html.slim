@@ -1,8 +1,0 @@
-- content_for :hero
-  .reveal
-    .slides
-      - @page.decks.each do |deck|
-        section
-          - deck.slides.each do |slide|
-            = render_slide(slide) do
-              = slide.heading

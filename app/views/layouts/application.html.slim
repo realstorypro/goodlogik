@@ -115,9 +115,6 @@ html
         = menu ui: :on, class: 'secondary inverted large'
           = item url: root_path
             = image_tag 'logo.png', class: 'ui image small logo'
-            /.logo-text 
-              span Good
-              | Logik
           = menu class: 'right', only: :mobile
             = item 'hamburger'
               = icon 'large sidebar'
@@ -126,8 +123,12 @@ html
               = icon 'external alternate'
               | Careers
             = item
-              = button class: "#{@cta_color} request check"
-                = @cta_text
+              = button 'sales inquiries'
+                | Sales Inquiries
+            = item
+              = button class: "#{@cta_color} investment request"
+                | Investment Requests
+
 
         = yield :hero
       =yield
