@@ -1,19 +1,4 @@
-.ui.basic.modal.check
-  = header 'icon'
-    = icon 'question circle outline'
-    br
-    | Are you an accredited investor?
-  /= content
-    /= text
-      | The exchange is currently open to select accredited investors.
-  .actions
-    = button 'approve large red'
-      | Yes
-    = button 'deny large black inverted'
-      | No
-
-
-.ui.tiny.modal.demo
+.ui.tiny.modal.investor
   = icon 'close'
   = content
     = description
@@ -36,8 +21,46 @@
           input type="tel" name="phone" required=""
 
         .field.required
-          label How did you hear about us?
+          label How did you find us?
           input type="text" name="referral" required=""
+
+  .actions
+    = button 'approve large red fluid right'
+      | Contact Me
+
+.ui.tiny.modal.sales
+  = icon 'close'
+  = content
+    = description
+      = form
+        .field.required
+          label Name
+          .two.fields
+            .field
+              input type="text" name="name[first]" placeholder="First" required=""
+
+            .field
+              input type="text" name="name[last]" placeholder="Last" required=""
+
+        .field.required
+          label Email
+          input type="email" name="email" required=""
+
+        .field.required
+          label Phone number
+          input type="tel" name="phone" required=""
+
+        .field
+          label Number of Social Media Followers
+          = dropdown ui: :on, class: 'selection'
+            input type="hidden" name="audience" required=""
+            = icon 'dropdown'
+            .text.default 
+            = menu ui: :off
+              = item data: {value: '<1m'}, text: 'Under 1 Million'
+              = item data: {value: '1m - 5m'}, text: '1 - 5 Million'
+              = item data: {value: '5m - 10m'}, text: '5 - 10 Million'
+              = item data: {value: '+10m'}, text: 'Over 10 Million'
 
   .actions
     = button 'approve large red fluid right'
