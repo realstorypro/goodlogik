@@ -36,18 +36,18 @@ $ ->
           $('.content-holder').css('opacity', 1)
         onApprove: ->
 
-          form = $('.demo.modal form')[0]
+          form = $('.investor.modal form')[0]
           form.reportValidity()
 
           if form.checkValidity()
             analytics.track 'requested investment info',
-              email: $('.demo.modal form input[name="email"]').val()
+              email: $('.investor.modal form input[name="email"]').val()
 
             $.ajax {
                 type: 'POST'
                 headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
                 url: '/demo/send_request/'
-                data: $('.demo.modal form').serialize()
+                data: $('.investor.modal form').serialize()
                 dataType: 'json'
             }
 
@@ -64,7 +64,7 @@ $ ->
     e.preventDefault()
 
     $('.ui.sidebar').sidebar('hide')
-    analytics.track 'opened accredited investor modal'
+    analytics.track 'opened sales modal'
 
     $('.sales.modal')
       .modal
@@ -78,7 +78,7 @@ $ ->
           form.reportValidity()
 
           if form.checkValidity()
-            analytics.track 'requested investment info',
+            analytics.track 'requested sales inquiry',
               email: $('.modal.sales form input[name="email"]').val()
 
             $.ajax {
