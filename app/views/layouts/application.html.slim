@@ -107,8 +107,11 @@ html
         = icon 'external alternate'
         | Careers
       = item
-        = button class: 'red request check'
-          | Investors
+        = button 'sales inquiries fluid'
+          | Sales Inquiries
+      = item
+        = button class: "#{@cta_color} investment request fluid"
+          | Investment Requests
 
     .pusher
       = segment 'vertical hero segment clearing '

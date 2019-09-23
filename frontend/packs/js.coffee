@@ -74,23 +74,23 @@ $ ->
           $('.content-holder').css('opacity', 1)
         onApprove: ->
 
-          form = $('.demo.modal form')[0]
+          form = $('.modal.sales form')[0]
           form.reportValidity()
 
           if form.checkValidity()
             analytics.track 'requested investment info',
-              email: $('.demo.modal form input[name="email"]').val()
+              email: $('.modal.sales form input[name="email"]').val()
 
             $.ajax {
                 type: 'POST'
                 headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
-                url: '/demo/send_request/'
-                data: $('.demo.modal form').serialize()
+                url: '/sales/send_request/'
+                data: $('.sales.modal form').serialize()
                 dataType: 'json'
             }
 
             $('.content-holder p:not(.text)').remove()
-            $('.content-holder h1').text('Investment Request Sent')
+            $('.content-holder h1').text('Sales Inquiry Sent')
             $('.content-holder p.text').text('Thank you for your interest. We will be reaching out shortly.')
           else
             false
