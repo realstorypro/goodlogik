@@ -57,11 +57,12 @@
             = icon 'dropdown'
             .text.default 
             = menu ui: :off
-              = item data: {value: '<1m'}, text: 'Under 1 Million'
-              = item data: {value: '1m - 5m'}, text: '1 - 5 Million'
-              = item data: {value: '5m - 10m'}, text: '5 - 10 Million'
-              = item data: {value: '+10m'}, text: 'Over 10 Million'
+              = item data: {value: '<1k'}, text: 'Under 1,000'
+              = item data: {value: '1k - 10k'}, text: '1,000 - 10,000'
+              = item data: {value: '10k - 100k'}, text: '10,000 - 100,000'
+              = item data: {value: '100k - 1m'}, text: '100,000 - 1,000,000'
+              = item data: {value: '+1m'}, text: '1+ Million'
 
   .actions
     = button 'approve large red fluid right'
-      | Contact Me
+      | Request Demo
