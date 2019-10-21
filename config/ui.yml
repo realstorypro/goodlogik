@@ -62,6 +62,10 @@ defaults:
     tag: table
     css_class: table
 
+  tab:
+    tag: div
+    css_class: 'tab'
+
   divider:
     tag: div
     css_class: 'divider'

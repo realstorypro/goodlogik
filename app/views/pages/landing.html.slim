@@ -10,3 +10,193 @@
             = h1 class: 'inverted', text: @homepage.master_heading
             = text
               = @master_text.html_safe
+
+br
+br
+br
+= container
+  = grid
+    = row
+      = column size: 14, class: 'centered'
+        = h3 'horizontal divider'
+          | Members, not followers.
+        = text 'lead'
+          | Our platform helps you reduce dependence on social media by slowly transferring your existing fan-base to a platform that you control.
+        br
+    = row
+      = column size: 16, class: 'centered'
+        = menu class: 'pointing secondary tabular blue massive', ui: :on
+          = item class: 'active', data: {tab: 'social-publishing'}
+            = icon 'paper plane'
+            | Captivating Content
+          = item data: {tab: 'social-network'}
+            = icon 'user outline'
+            | Built-in Social Network
+
+          = item data: {tab: 'analytics'}
+            = icon 'globe'
+            | Integrated Analytics
+
+          = item data: {tab: 'community'}
+            = icon 'child'
+            | Community Driven
+
+          = item data: {tab: 'community'}
+            = icon 'phone'
+            | Fully Supported
+    = row
+      = column size: 16, class: 'centered'
+        = tab class: 'active', data: {tab: 'social-publishing'}
+          = grid
+            = column size: 6
+              = menu class: 'vertical huge fluid tabular', ui: :on
+                = item class: 'active', data: {tab: 'beautiful-content'}
+                  = h4
+                    = icon 'video'
+                    | Create Engaging Content
+
+                  = text
+                    | Produce beautiful content with our easy-to-use publishing engine.
+
+                = item data: {tab: 'go-viral'}
+                  = h4
+                    .icons
+                      = icon 'twitter'
+                      = icon 'facebook'
+                      = icon 'reddit'
+                    | Make It Go Viral
+                  = text
+                    | Share the content you create through traditional social media channels and bring in your existing fan base.
+
+                = item data: {tab: 'long-term'}
+                  = h4
+                    .icons
+                      = icon 'microsoft'
+                      = icon 'yahoo'
+                      = icon 'google'
+                    | Build Long-Term Value
+                  = text
+                    | Attract organic search engine traffic with built-in SEO Automations.
+
+
+            = column size: 10
+              =tab class: 'active', data: {tab: 'beautiful-content'}
+                script async="" src="https://fast.wistia.com/embed/medias/xvw4kw0ty5.jsonp" 
+                script async="" src="https://fast.wistia.com/assets/external/E-v1.js" 
+                .wistia_responsive_padding style=("padding:62.5% 0 0 0;position:relative;") 
+                    .wistia_responsive_wrapper style="height:100%;left:0;position:absolute;top:0;width:100%;" 
+                          .wistia_embed.wistia_async_xvw4kw0ty5 class="videoFoam=true" style="height:100%;position:relative;width:100%" 
+                                  .wistia_swatch style=("height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;") 
+                                            img alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" src="https://fast.wistia.com/embed/medias/xvw4kw0ty5/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" /
+
+              =tab data: {tab: 'go-viral'}
+                =h4 text: 'Go Viral'
+              =tab data: {tab: 'long-term'}
+                =h4 text: 'Create Long Term Value'
+
+        = tab data: {tab: 'social-network'}
+          = grid
+            = column size: 6
+              = menu class: 'vertical huge fluid tabular', ui: :on
+                = item class: 'active', data: {tab: 'beautiful-content'}
+                  = h4
+                    = icon 'checkmark'
+                    | Signup Members
+                  = text
+                    | Built-in social features give visitors a reason to signup and become members.
+
+                = item
+                  = h4
+                    = icon 'beer'
+                    | Keep Them Engaged
+                  = text
+                    | Maximize your direct traffic and give your members a reason to come back.
+
+                = item
+                  = h4
+                    .icons
+                      = icon 'mail'
+                      = icon 'mobile'
+                      = icon 'desktop'
+                    | Stay in Touch
+                  = text
+                    | Reach out to your members directly by email, sms and push notifications*.
+
+                  small* sms and push notifications support is coming first quarter of 2020.
+
+          = column size: 10
+
+
+        br
+        br
+        br
+
+= container
+  = grid
+    = row
+      = column size: 16
+        = h2 text: "Affordable Packages", class: 'centered dividing'
+    = row 'three column'
+      = column 
+        = h4 'icon center aligned'
+          = icon 'bicycle'
+          | Starter
+          .sub.header
+            | $1,000/Mo
+        = text text: 'Branded version of the platform. Includes 10,000 users. Extra users cost 10 cents per user.'
+        = list 'bulleted'
+          = item text: '$2,500 On-boarding'
+          = item text: 'Up to 10,000 Users'
+          = item text: 'Extra Users Cost 10 Cents/User'
+      = column
+        = h4 'icon center aligned'
+          = icon 'car'
+          | Influencer
+          .sub.header
+            | $4,500/Mo
+        = text text: 'Unbranded version of the platform. Includes 35,000 users. Extra users cost 8 cents per user.'
+        = list 'bulleted'
+          = item text: 'Free On-boarding'
+          = item text: 'Up to 35,000 Users'
+          = item text: 'Extra Users Cost 8 Cents/User'
+          = item text: '1 Consulting Call Per Month'
+      = column
+        = h4 'icon center aligned'
+          = icon 'space shuttle'
+          | Star
+          .sub.header
+            | $7,500/Mo
+        = text text: 'Unbranded version of the platform. Includes 100,000 users. Extra users cost 5 cents per user.'
+        = list 'bulleted'
+          = item text: 'Free On-boarding'
+          = item text: 'Up to 100,000 Users'
+          = item text: 'Extra Users Cost 6 Cents/User'
+          = item text: '3 Consulting Calls Per Month'
+br
+br
+br
+br
+br
+
+= container
+  = row
+    = column size: 16
+      = h2 text: "Ready to Help", class: 'centered dividing'
+  = row
+    = column size: 8
+      = text 'lead'
+        | - Our team will help you succeed.
+br
+br
+
+= grid
+  = row 'secondary'
+    = column size: 16
+      = segment 'inverted basic center aligned padded'
+        = h2 text: "Start Your Journey", class: 'centered dividing'
+        = text text: 'Hello World'
+        = button 'sales inquiries red large'
+          | Schedule a Demo
+    = column size: 16
+      = segment 'secondary basic center aligned'
+        | &copy; 2019. ALL RIGHTS RESERVED.
