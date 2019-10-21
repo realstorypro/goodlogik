@@ -214,49 +214,53 @@ br
     = row
       = column size: 16
         = h2 text: "Affordable Packages", class: 'centered dividing'
-    = row 'three column'
-      = column 
-        = h4 'icon center aligned'
-          = icon 'bicycle'
-          | Starter
-          .sub.header
-            | $1,000/Mo
-        = text text: 'Branded version of the platform. Includes 10,000 users. Extra users cost 10 cents per user.'
-        = list 'relaxed divided'
-          = item text: 'Up to 10,000 Users'
-          = item text: 'Additional Users Billed at 10 Cents/User'
-          = item text: '$2,500 On-boarding'
-          = item 
-            | &nbsp
-          = item 
-            | &nbsp
-          = item 
-            | &nbsp
-      = column
-        = h4 'icon center aligned'
-          = icon 'car'
-          | Influencer
-          .sub.header
-            | $4,500/Mo
-        = text text: 'Unbranded version of the platform. Includes 35,000 users. Extra users cost 8 cents per user.'
-        = list 'relaxed divided'
-          = item text: 'Up to 35,000 Users'
-          = item text: 'Additional Users Billed at 8.5 Cents/User'
-          = item text: 'Free On-boarding'
-          = item text: '1 Free Consulting Call Per Month'
-      = column
-        = h4 'icon center aligned'
-          = icon 'space shuttle'
-          | Enterprise
-          .sub.header
-            | $8,500/Mo
-        = text text: 'Unbranded version of the platform. Includes 85,000 users. Extra users cost 5 cents per user.'
-        = list 'relaxed divided'
-          = item text: 'Up to 85,000 Users'
-          = item text: 'Additional Users Billed at 8 Cents/User'
-          = item text: 'Free On-boarding'
-          = item text: '3 Free Consulting Calls Per Month'
-          = item text: 'Segment.com Integration'
+    = row
+      = column size: 16
+
+        = cards 'three'
+          = card
+            = h4 'icon center aligned'
+              = icon 'bicycle'
+              | Starter
+              .sub.header
+                | $1,000/Mo
+            = text text: 'Branded version of the platform. Includes 10,000 users. Extra users cost 10 cents per user.'
+            = list 'relaxed divided'
+              = item text: 'Up to 10,000 Users'
+              = item text: 'Additional Users Billed at 10 Cents/User'
+              = item text: '$2,500 On-boarding'
+              = item 
+                | &nbsp
+              = item 
+                | &nbsp
+              = item 
+                | &nbsp
+          = card
+            = h4 'icon center aligned'
+              = icon 'car'
+              | Influencer
+              .sub.header
+                | $4,500/Mo
+            = text text: 'Unbranded version of the platform. Includes 35,000 users. Extra users cost 8 cents per user.'
+            = list 'relaxed divided'
+              = item text: 'Up to 35,000 Users'
+              = item text: 'Additional Users Billed at 8.5 Cents/User'
+              = item text: 'Free On-boarding'
+              = item text: '1 Free Consulting Call Per Month'
+
+          = card
+            = h4 'icon center aligned'
+              = icon 'space shuttle'
+              | Enterprise
+              .sub.header
+                | $8,500/Mo
+            = text text: 'Unbranded version of the platform. Includes 85,000 users. Extra users cost 5 cents per user.'
+            = list 'relaxed divided'
+              = item text: 'Up to 85,000 Users'
+              = item text: 'Additional Users Billed at 8 Cents/User'
+              = item text: 'Free On-boarding'
+              = item text: '3 Free Consulting Calls Per Month'
+              = item text: 'Segment.com Integration'
 br
 br
 br
@@ -264,13 +268,29 @@ br
 br
 
 = container
-  = row
-    = column size: 16
-      = h2 text: "Ready to Help", class: 'centered dividing'
-  = row
-    = column size: 8
-      = text 'lead'
-        | - Our team will help you succeed.
+  = grid
+    = row
+      = column size: 16
+        = h2 text: "FAQ", class: 'centered dividing'
+    = row
+      = column size: 8
+        = h4 text: "Is there a free trial?"
+        = text
+          | There is free trial or a money-back gurantee. We invest in our clients success.
+      = column size: 8
+        = h4 text: "How long does on-boarding take?"
+        = text
+          | Onboarding process can generally be completed within a one to two weeks.
+
+    = row
+      = column size: 8
+        = h4 text: "Can I cancel at any time?"
+        = text
+          | We have no long-term contracts or 
+      = column size: 8
+        = h4 text: "Can I export my data?"
+        = text
+          | We have no long-term contracts or 
 br
 br
 
