@@ -98,21 +98,21 @@ br
           = grid
             = column size: 6
               = menu class: 'vertical huge fluid tabular', ui: :on
-                = item class: 'active', data: {tab: 'beautiful-content'}
+                = item class: 'active', data: {tab: 'signup-members'}
                   = h4
                     = icon 'checkmark'
                     | Signup Members
                   = text
                     | Built-in social features give visitors a reason to signup and become members.
 
-                = item
+                = item data: {tab: 'keep-engaged'}
                   = h4
                     = icon 'beer'
                     | Keep Them Engaged
                   = text
                     | Maximize your direct traffic and give your members a reason to come back.
 
-                = item
+                = item data: {tab: 'stay-in-touch'}
                   = h4
                     .icons
                       = icon 'mail'
@@ -124,7 +124,14 @@ br
 
                   small* sms and push notifications support is coming first quarter of 2020.
 
-          = column size: 10
+            = column size: 10
+                =tab class: 'active', data: {tab: 'signup-members'}
+                  =h4 text: 'Signup Members'
+                =tab data: {tab: 'keep-engaged'}
+                  =h4 text: 'Keep Them Engaged'
+                =tab data: {tab: 'stay-in-touch'}
+                  =h4 text: 'Stay in Touch'
+
 
 
         br
