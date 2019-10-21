@@ -41,7 +41,7 @@ br
             = icon 'child'
             | Community Driven
 
-          = item data: {tab: 'community'}
+          = item data: {tab: 'supported'}
             = icon 'phone'
             | Fully Supported
     = row
@@ -133,6 +133,84 @@ br
                   =h4 text: 'Stay in Touch'
 
 
+        = tab data: {tab: 'analytics'}
+          = grid
+            = column size: 6
+              = menu class: 'vertical huge fluid tabular', ui: :on
+                = item class: 'active', data: {tab: 'helpful-metrics'}
+                  = h4
+                    = icon 'map outline'
+                    | Helpful Metrics
+                  = text
+
+                = item data: {tab: 'better-decisions'}
+                  = h4
+                    = icon 'map signs'
+                    | Better Decisions
+                  = text
+
+                = item data: {tab: 'enterprise-ready'}
+                  = h4
+                    .icons
+                      = icon 'amazon'
+                      = icon 'hubspot'
+                      = icon 'magento'
+                    | Integrate With Your Stack
+                  = text
+                    | Integrate the platform into your stack by sending your data to segment Segment&trade;
+
+            = column size: 10
+                =tab class: 'active', data: {tab: 'helpful-metrics'}
+                  =h4 text: 'Helpful Metrics'
+                =tab data: {tab: 'better-decisions'}
+                  =h4 text: 'Better Decisions'
+                =tab data: {tab: 'enterprise-ready'}
+                  =h4 text: 'Enterprise Ready'
+
+
+        = tab data: {tab: 'community'}
+          = grid
+            = column size: 6
+              = menu class: 'vertical huge fluid tabular', ui: :on
+                = item class: 'active', data: {tab: 'shape-the-development'}
+                  = h4
+                    = icon 'file code'
+                    | Shape The Development
+                  = text
+
+            = column size: 10
+                =tab class: 'active', data: {tab: 'shape-the-development'}
+                  =h4 text: 'Shape The Development'
+
+        = tab data: {tab: 'supported'}
+          = grid
+            = column size: 6
+              = menu class: 'vertical huge fluid tabular', ui: :on
+                = item class: 'active', data: {tab: 'onboarding'}
+                  = h4
+                    .icons
+                      = icon 'dolly'
+                      = icon 'shipping fast'
+                    | Easy Onboarding
+                  = text
+
+                = item data: {tab: 'onboarding'}
+                  = h4
+                    = icon 'taxi'
+                    | Help Available
+                  = text
+
+                = item data: {tab: 'onboarding'}
+                  = h4
+                    = icon 'file code'
+                    | Community Driven
+                  = text
+                    | Shape the functionality of the platform.
+
+
+            = column size: 10
+                =tab class: 'active', data: {tab: 'onboarding'}
+                  =h4 text: 'Onboarding'
 
         br
         br
