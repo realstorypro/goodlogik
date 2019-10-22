@@ -11,296 +11,334 @@
             = text
               = @master_text.html_safe
 
-br
-br
-br
-= container
+= fragment 'features'
+  = container
+    = grid
+      = row
+        = column size: 14, class: 'centered'
+          = h3 'horizontal divider'
+            | Members, not followers.
+          = text 'lead'
+            | Our platform helps you reduce dependence on social media by slowly transferring your existing fan-base to a platform that you control.
+          br
+      = row
+        = column size: 16, class: 'centered'
+          = menu class: 'pointing secondary tabular blue massive', ui: :on
+            = item class: 'active', data: {tab: 'social-publishing'}
+              = icon 'paper plane'
+              | Captivating Content
+            = item data: {tab: 'social-network'}
+              = icon 'user outline'
+              | Built-in Social Network
+
+            = item data: {tab: 'analytics'}
+              = icon 'globe'
+              | Integrated Analytics
+
+            = item data: {tab: 'community'}
+              = icon 'child'
+              | Community Driven
+
+            = item data: {tab: 'supported'}
+              = icon 'phone'
+              | Fully Supported
+      = row
+        = column size: 16, class: 'centered'
+          = tab class: 'active', data: {tab: 'social-publishing'}
+            = grid
+              = column size: 6
+                = menu class: 'vertical huge fluid tabular', ui: :on
+                  = item class: 'active', data: {tab: 'beautiful-content'}
+                    = h4
+                      = icon 'video'
+                      | Create Engaging Content
+
+                    = text
+                      | Produce beautiful content with our easy-to-use publishing engine.
+
+                  = item data: {tab: 'go-viral'}
+                    = h4
+                      .icons
+                        = icon 'twitter'
+                        = icon 'facebook'
+                        = icon 'reddit'
+                      | Make It Go Viral
+                    = text
+                      | Share the content you create through traditional social media channels and bring in your existing fan base.
+
+                  = item data: {tab: 'long-term'}
+                    = h4
+                      .icons
+                        = icon 'microsoft'
+                        = icon 'yahoo'
+                        = icon 'google'
+                      | Build Long-Term Value
+                    = text
+                      | Attract organic search engine traffic with built-in SEO Automations.
+
+
+              = column size: 10
+                =tab class: 'active', data: {tab: 'beautiful-content'}
+                  script async="" src="https://fast.wistia.com/embed/medias/xvw4kw0ty5.jsonp" 
+                  script async="" src="https://fast.wistia.com/assets/external/E-v1.js" 
+                  .wistia_responsive_padding style=("padding:62.5% 0 0 0;position:relative;") 
+                      .wistia_responsive_wrapper style="height:100%;left:0;position:absolute;top:0;width:100%;" 
+                            .wistia_embed.wistia_async_xvw4kw0ty5 class="videoFoam=true" style="height:100%;position:relative;width:100%" 
+                                    .wistia_swatch style=("height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;") 
+                                              img alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" src="https://fast.wistia.com/embed/medias/xvw4kw0ty5/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" /
+
+                =tab data: {tab: 'go-viral'}
+                  =h4 text: 'Go Viral'
+                =tab data: {tab: 'long-term'}
+                  =h4 text: 'Create Long Term Value'
+
+          = tab data: {tab: 'social-network'}
+            = grid
+              = column size: 6
+                = menu class: 'vertical huge fluid tabular', ui: :on
+                  = item class: 'active', data: {tab: 'signup-members'}
+                    = h4
+                      = icon 'checkmark'
+                      | Signup Members
+                    = text
+                      | Built-in social features give visitors a reason to signup and become members.
+
+                  = item data: {tab: 'keep-engaged'}
+                    = h4
+                      = icon 'beer'
+                      | Keep Them Engaged
+                    = text
+                      | Maximize your direct traffic and give your members a reason to come back.
+
+                  = item data: {tab: 'stay-in-touch'}
+                    = h4
+                      .icons
+                        = icon 'mail'
+                        = icon 'mobile'
+                        = icon 'desktop'
+                      | Stay in Touch
+                    = text
+                      | Reach out to your members directly by email, sms and push notifications*.
+
+                    small* sms and push notifications support is coming first quarter of 2020.
+
+              = column size: 10
+                  =tab class: 'active', data: {tab: 'signup-members'}
+                    =h4 text: 'Signup Members'
+                  =tab data: {tab: 'keep-engaged'}
+                    =h4 text: 'Keep Them Engaged'
+                  =tab data: {tab: 'stay-in-touch'}
+                    =h4 text: 'Stay in Touch'
+
+
+          = tab data: {tab: 'analytics'}
+            = grid
+              = column size: 6
+                = menu class: 'vertical huge fluid tabular', ui: :on
+                  = item class: 'active', data: {tab: 'helpful-metrics'}
+                    = h4
+                      = icon 'map outline'
+                      | Helpful Metrics
+                    = text
+
+                  = item data: {tab: 'better-decisions'}
+                    = h4
+                      = icon 'map signs'
+                      | Better Decisions
+                    = text
+
+                  = item data: {tab: 'enterprise-ready'}
+                    = h4
+                      .icons
+                        = icon 'amazon'
+                        = icon 'hubspot'
+                        = icon 'magento'
+                      | Integrate With Your Stack
+                    = text
+                      | Integrate the platform into your stack by sending your data to segment Segment&trade;
+
+              = column size: 10
+                  =tab class: 'active', data: {tab: 'helpful-metrics'}
+                    =h4 text: 'Helpful Metrics'
+                  =tab data: {tab: 'better-decisions'}
+                    =h4 text: 'Better Decisions'
+                  =tab data: {tab: 'enterprise-ready'}
+                    =h4 text: 'Enterprise Ready'
+
+
+          = tab data: {tab: 'community'}
+            = grid
+              = column size: 6
+                = menu class: 'vertical huge fluid tabular', ui: :on
+                  = item class: 'active', data: {tab: 'shape-the-development'}
+                    = h4
+                      = icon 'file code'
+                      | Shape The Development
+                    = text
+
+              = column size: 10
+                  =tab class: 'active', data: {tab: 'shape-the-development'}
+                    =h4 text: 'Shape The Development'
+
+          = tab data: {tab: 'supported'}
+            = grid
+              = column size: 6
+                = menu class: 'vertical huge fluid tabular', ui: :on
+                  = item class: 'active', data: {tab: 'onboarding'}
+                    = h4
+                      .icons
+                        = icon 'dolly'
+                        = icon 'shipping fast'
+                      | Easy Onboarding
+                    = text
+
+                  = item data: {tab: 'onboarding'}
+                    = h4
+                      = icon 'taxi'
+                      | Help Available
+                    = text
+
+
+              = column size: 10
+                  =tab class: 'active', data: {tab: 'onboarding'}
+                    =h4 text: 'Onboarding'
+
+= fragment 'pricing'
+  = container
+    = grid
+      = row
+        = column size: 16
+          = h2 text: "Affordable Packages", class: 'centered inverted dividing'
+      = row
+        = column size: 16
+
+          = cards 'three raised'
+            = card
+              = h4 'icon center aligned'
+                = icon 'bicycle'
+                | Startup
+                .sub.header
+                  | $1,250/Mo
+              = text text: 'Branded version of the platform. Includes 10,000 users. Extra users cost 10 cents per user.'
+              = list 'relaxed divided'
+                = item 
+                  = icon 'checkmark green'
+                  |Up to 10,000 Users
+                = item 
+                  = icon 'dollar green'
+                  |Extra Users Billed at $0.10/user
+                = item 
+                  = icon 'dollar green'
+                  |2,500 On-boarding
+                = item 
+                  = icon 'checkmark green'
+                  |1 Consulting Call Per Month
+                = item 
+                  = icon 'checkmark grey'
+                  |Branding Removed
+                = item 
+                  = icon 'checkmark green'
+                  |Zapier&trade; Integration
+                = item 
+                  = icon 'checkmark grey'
+                  |Segment&trade; Integration
+
+            = card
+              = h4 'icon center aligned'
+                = icon 'car'
+                | Influencer
+                .sub.header
+                  | $4,500/Mo
+              = text text: 'Unbranded version of the platform. Includes 35,000 users. Extra users cost 8 cents per user.'
+              = list 'relaxed divided'
+                = item 
+                  = icon 'checkmark green'
+                  |Up to 35,000 Users
+                = item 
+                  = icon 'dollar green'
+                  |Extra Users Billed at $0.085/user
+                = item 
+                  = icon 'dollar green'
+                  |FREE On-boarding
+                = item 
+                  = icon 'checkmark green'
+                  |2 Consulting Call Per Month
+                = item 
+                  = icon 'checkmark green'
+                  |Branding Removed
+                = item 
+                  = icon 'checkmark green'
+                  |Zapier&trade; Integration
+                = item 
+                  = icon 'checkmark grey'
+                  |Segment&trade; Integration
+
+            = card
+              = h4 'icon center aligned'
+                = icon 'space shuttle'
+                | Enterprise
+                .sub.header
+                  | $8,500/Mo
+              = text text: 'Unbranded version of the platform. Includes 85,000 users. Extra users cost 5 cents per user.'
+              = list 'relaxed divided'
+                = item 
+                  = icon 'checkmark green'
+                  |Up to 85,000 Users
+                = item 
+                  = icon 'dollar green'
+                  |Extra Users Billed at $0.08/user
+                = item 
+                  = icon 'dollar green'
+                  |FREE On-boarding
+                = item 
+                  = icon 'checkmark green'
+                  |2 Consulting Call Per Month
+                = item 
+                  = icon 'checkmark green'
+                  |Branding Removed
+                = item 
+                  = icon 'checkmark green'
+                  |Zapier&trade; Integration
+                = item 
+                  = icon 'checkmark green'
+                  |Segment&trade; Integration
+
+= fragment 'faq'
+  = container
+    = grid
+      = row
+        = column size: 16
+          = h2 text: "FAQ", class: 'inverted centered dividing'
+      = row
+        = column size: 8
+          = h4 text: "Is there a free trial?", class: 'inverted'
+          = text
+            | There is free trial or a money-back gurantee. We invest in our clients success.
+        = column size: 8
+          = h4 text: "How long does on-boarding take?", class: 'inverted'
+          = text
+            | Onboarding process can generally be completed within a one to two weeks.
+
+      = row
+        = column size: 8
+          = h4 text: "Can I cancel at any time?", class: 'inverted'
+          = text
+            | We have no long-term contracts or 
+        = column size: 8
+          = h4 text: "Can I export my data?", class: 'inverted'
+          = text
+            | We have no long-term contracts or 
+
+= fragment 'cta'
   = grid
-    = row
-      = column size: 14, class: 'centered'
-        = h3 'horizontal divider'
-          | Members, not followers.
-        = text 'lead'
-          | Our platform helps you reduce dependence on social media by slowly transferring your existing fan-base to a platform that you control.
-        br
-    = row
-      = column size: 16, class: 'centered'
-        = menu class: 'pointing secondary tabular blue massive', ui: :on
-          = item class: 'active', data: {tab: 'social-publishing'}
-            = icon 'paper plane'
-            | Captivating Content
-          = item data: {tab: 'social-network'}
-            = icon 'user outline'
-            | Built-in Social Network
-
-          = item data: {tab: 'analytics'}
-            = icon 'globe'
-            | Integrated Analytics
-
-          = item data: {tab: 'community'}
-            = icon 'child'
-            | Community Driven
-
-          = item data: {tab: 'supported'}
-            = icon 'phone'
-            | Fully Supported
-    = row
-      = column size: 16, class: 'centered'
-        = tab class: 'active', data: {tab: 'social-publishing'}
-          = grid
-            = column size: 6
-              = menu class: 'vertical huge fluid tabular', ui: :on
-                = item class: 'active', data: {tab: 'beautiful-content'}
-                  = h4
-                    = icon 'video'
-                    | Create Engaging Content
-
-                  = text
-                    | Produce beautiful content with our easy-to-use publishing engine.
-
-                = item data: {tab: 'go-viral'}
-                  = h4
-                    .icons
-                      = icon 'twitter'
-                      = icon 'facebook'
-                      = icon 'reddit'
-                    | Make It Go Viral
-                  = text
-                    | Share the content you create through traditional social media channels and bring in your existing fan base.
-
-                = item data: {tab: 'long-term'}
-                  = h4
-                    .icons
-                      = icon 'microsoft'
-                      = icon 'yahoo'
-                      = icon 'google'
-                    | Build Long-Term Value
-                  = text
-                    | Attract organic search engine traffic with built-in SEO Automations.
-
-
-            = column size: 10
-              =tab class: 'active', data: {tab: 'beautiful-content'}
-                script async="" src="https://fast.wistia.com/embed/medias/xvw4kw0ty5.jsonp" 
-                script async="" src="https://fast.wistia.com/assets/external/E-v1.js" 
-                .wistia_responsive_padding style=("padding:62.5% 0 0 0;position:relative;") 
-                    .wistia_responsive_wrapper style="height:100%;left:0;position:absolute;top:0;width:100%;" 
-                          .wistia_embed.wistia_async_xvw4kw0ty5 class="videoFoam=true" style="height:100%;position:relative;width:100%" 
-                                  .wistia_swatch style=("height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;") 
-                                            img alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" src="https://fast.wistia.com/embed/medias/xvw4kw0ty5/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" /
-
-              =tab data: {tab: 'go-viral'}
-                =h4 text: 'Go Viral'
-              =tab data: {tab: 'long-term'}
-                =h4 text: 'Create Long Term Value'
-
-        = tab data: {tab: 'social-network'}
-          = grid
-            = column size: 6
-              = menu class: 'vertical huge fluid tabular', ui: :on
-                = item class: 'active', data: {tab: 'signup-members'}
-                  = h4
-                    = icon 'checkmark'
-                    | Signup Members
-                  = text
-                    | Built-in social features give visitors a reason to signup and become members.
-
-                = item data: {tab: 'keep-engaged'}
-                  = h4
-                    = icon 'beer'
-                    | Keep Them Engaged
-                  = text
-                    | Maximize your direct traffic and give your members a reason to come back.
-
-                = item data: {tab: 'stay-in-touch'}
-                  = h4
-                    .icons
-                      = icon 'mail'
-                      = icon 'mobile'
-                      = icon 'desktop'
-                    | Stay in Touch
-                  = text
-                    | Reach out to your members directly by email, sms and push notifications*.
-
-                  small* sms and push notifications support is coming first quarter of 2020.
-
-            = column size: 10
-                =tab class: 'active', data: {tab: 'signup-members'}
-                  =h4 text: 'Signup Members'
-                =tab data: {tab: 'keep-engaged'}
-                  =h4 text: 'Keep Them Engaged'
-                =tab data: {tab: 'stay-in-touch'}
-                  =h4 text: 'Stay in Touch'
-
-
-        = tab data: {tab: 'analytics'}
-          = grid
-            = column size: 6
-              = menu class: 'vertical huge fluid tabular', ui: :on
-                = item class: 'active', data: {tab: 'helpful-metrics'}
-                  = h4
-                    = icon 'map outline'
-                    | Helpful Metrics
-                  = text
-
-                = item data: {tab: 'better-decisions'}
-                  = h4
-                    = icon 'map signs'
-                    | Better Decisions
-                  = text
-
-                = item data: {tab: 'enterprise-ready'}
-                  = h4
-                    .icons
-                      = icon 'amazon'
-                      = icon 'hubspot'
-                      = icon 'magento'
-                    | Integrate With Your Stack
-                  = text
-                    | Integrate the platform into your stack by sending your data to segment Segment&trade;
-
-            = column size: 10
-                =tab class: 'active', data: {tab: 'helpful-metrics'}
-                  =h4 text: 'Helpful Metrics'
-                =tab data: {tab: 'better-decisions'}
-                  =h4 text: 'Better Decisions'
-                =tab data: {tab: 'enterprise-ready'}
-                  =h4 text: 'Enterprise Ready'
-
-
-        = tab data: {tab: 'community'}
-          = grid
-            = column size: 6
-              = menu class: 'vertical huge fluid tabular', ui: :on
-                = item class: 'active', data: {tab: 'shape-the-development'}
-                  = h4
-                    = icon 'file code'
-                    | Shape The Development
-                  = text
-
-            = column size: 10
-                =tab class: 'active', data: {tab: 'shape-the-development'}
-                  =h4 text: 'Shape The Development'
-
-        = tab data: {tab: 'supported'}
-          = grid
-            = column size: 6
-              = menu class: 'vertical huge fluid tabular', ui: :on
-                = item class: 'active', data: {tab: 'onboarding'}
-                  = h4
-                    .icons
-                      = icon 'dolly'
-                      = icon 'shipping fast'
-                    | Easy Onboarding
-                  = text
-
-                = item data: {tab: 'onboarding'}
-                  = h4
-                    = icon 'taxi'
-                    | Help Available
-                  = text
-
-
-            = column size: 10
-                =tab class: 'active', data: {tab: 'onboarding'}
-                  =h4 text: 'Onboarding'
-
-        br
-        br
-        br
-
-= container
-  = grid
-    = row
+    = row 'secondary'
       = column size: 16
-        = h2 text: "Affordable Packages", class: 'centered dividing'
-    = row
+        = segment 'inverted black basic center aligned padded'
+          = h2 text: "Is working togther a mutual fit", class: 'centered dividing'
+          = text
+            | Sometimes it is and sometimes it isn't. Let's jump on a quick discovery call 
+          = button 'sales inquiries pink large'
+            | Schedule Discovery Call
       = column size: 16
-
-        = cards 'three'
-          = card
-            = h4 'icon center aligned'
-              = icon 'bicycle'
-              | Starter
-              .sub.header
-                | $1,000/Mo
-            = text text: 'Branded version of the platform. Includes 10,000 users. Extra users cost 10 cents per user.'
-            = list 'relaxed divided'
-              = item text: 'Up to 10,000 Users'
-              = item text: 'Additional Users Billed at 10 Cents/User'
-              = item text: '$2,500 On-boarding'
-              = item 
-                | &nbsp
-              = item 
-                | &nbsp
-              = item 
-                | &nbsp
-          = card
-            = h4 'icon center aligned'
-              = icon 'car'
-              | Influencer
-              .sub.header
-                | $4,500/Mo
-            = text text: 'Unbranded version of the platform. Includes 35,000 users. Extra users cost 8 cents per user.'
-            = list 'relaxed divided'
-              = item text: 'Up to 35,000 Users'
-              = item text: 'Additional Users Billed at 8.5 Cents/User'
-              = item text: 'Free On-boarding'
-              = item text: '1 Free Consulting Call Per Month'
-
-          = card
-            = h4 'icon center aligned'
-              = icon 'space shuttle'
-              | Enterprise
-              .sub.header
-                | $8,500/Mo
-            = text text: 'Unbranded version of the platform. Includes 85,000 users. Extra users cost 5 cents per user.'
-            = list 'relaxed divided'
-              = item text: 'Up to 85,000 Users'
-              = item text: 'Additional Users Billed at 8 Cents/User'
-              = item text: 'Free On-boarding'
-              = item text: '3 Free Consulting Calls Per Month'
-              = item text: 'Segment.com Integration'
-br
-br
-br
-br
-br
-
-= container
-  = grid
-    = row
-      = column size: 16
-        = h2 text: "FAQ", class: 'centered dividing'
-    = row
-      = column size: 8
-        = h4 text: "Is there a free trial?"
-        = text
-          | There is free trial or a money-back gurantee. We invest in our clients success.
-      = column size: 8
-        = h4 text: "How long does on-boarding take?"
-        = text
-          | Onboarding process can generally be completed within a one to two weeks.
-
-    = row
-      = column size: 8
-        = h4 text: "Can I cancel at any time?"
-        = text
-          | We have no long-term contracts or 
-      = column size: 8
-        = h4 text: "Can I export my data?"
-        = text
-          | We have no long-term contracts or 
-br
-
-= grid
-  = row 'secondary'
-    = column size: 16
-      = segment 'inverted basic center aligned padded'
-        = h2 text: "Start Your Journey", class: 'centered dividing'
-        = text text: 'Hello World'
-        = button 'sales inquiries red large'
-          | Schedule a Demo
-    = column size: 16
-      = segment 'secondary basic center aligned'
-        | &copy; 2019. ALL RIGHTS RESERVED.
+        = segment 'secondary basic center aligned'
+          | &copy; 2019. ALL RIGHTS RESERVED.
