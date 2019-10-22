@@ -17,6 +17,9 @@ $grey           : #A0A0A0;
 $black          : #000000;
 $white          : #FFFFFF;
 
+$frame-style: 3px solid lighten($black, 30)
+$frame-background: #efefef
+
 .overlay
   background: rgba(0,0,0,1)
   opacity: 1
@@ -39,12 +42,33 @@ $white          : #FFFFFF;
     font-weight: normal
 
     h4 
-      color: #2185D0 !important
+      color: lighten($black,20) !important
 
 
 
 .fragment.features
-  padding: 5em 0
+  padding: 6em 0
+
+  .lead
+    font-size: 1.5em
+    margin-bottom: 2em
+
+  .top.frame
+    border-top: $frame-style
+    border-left: $frame-style
+    border-right: $frame-style
+    background: $frame-background
+
+  .bottom.frame
+    border-left: $frame-style
+    border-right: $frame-style
+    border-bottom: $frame-style
+    background: $frame-background
+    padding-bottom: 3em
+    transition: height 1s
+
+  .vertical.menu
+    min-height: 440px
 
 .fragment.pricing
   background: lighten($blue,10)
@@ -52,6 +76,7 @@ $white          : #FFFFFF;
 
   .card
     padding: 1.5em 1em 1.8em
+    background: #eee
 
     i.icon
       margin-right: 5px !important

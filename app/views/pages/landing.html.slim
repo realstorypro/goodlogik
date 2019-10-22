@@ -16,14 +16,14 @@
     = grid
       = row
         = column size: 14, class: 'centered'
-          = h2 'horizontal divider'
+          = h1 'horizontal divider'
             | Members, not followers.
           = text 'lead'
-            | Our platform helps you reduce dependence on social media by slowly transferring your existing fan-base to a platform that you control.
+            | Reduce dependence on social media by slowly transferring your existing fan-base to a platform you control.
           br
-      = row
+      = row 'top frame'
         = column size: 16, class: 'centered'
-          = menu class: 'pointing secondary tabular blue massive', ui: :on
+          = menu class: 'pointing secondary tabular black massive feature', ui: :on
             = item class: 'active', data: {tab: 'social-publishing'}
               = icon 'paper plane'
               | Captivating Content
@@ -42,7 +42,7 @@
             = item data: {tab: 'supported'}
               = icon 'phone'
               | Fully Supported
-      = row
+      = row 'bottom frame'
         = column size: 16, class: 'centered'
           = tab class: 'active', data: {tab: 'social-publishing'}
             = grid
@@ -140,6 +140,7 @@
                       = icon 'map outline'
                       | Helpful Metrics
                     = text
+                      | Track things of actions that matter.
 
                   = item data: {tab: 'better-decisions'}
                     = h4
