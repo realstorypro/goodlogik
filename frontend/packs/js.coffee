@@ -19,6 +19,14 @@ $ ->
   # Tabs
   $('.tabular .item').tab()
 
+  # Shapes
+  $('.shape').shape
+    duration: 350
+
+  # Shapes Click
+  $('.shape .card').on 'click', (e) ->
+    $(@).parents('.shape').shape('flip left')
+
   # Menu
   $('.hamburger').on 'click', (e) ->
     e.preventDefault()

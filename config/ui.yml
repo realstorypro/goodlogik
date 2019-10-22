@@ -224,6 +224,20 @@ defaults:
     tag: div
     css_class: 'input'
 
+  shape:
+    tag: div
+    css_class: 'shape'
+
+  sides:
+    tag: div
+    css_class: 'sides'
+    ui: :off
+
+  side:
+    tag: div
+    css_class: 'side'
+    ui: :off
+
   dynamic:
     tag: div
     css_class: 'dynamic'

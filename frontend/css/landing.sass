@@ -47,7 +47,7 @@ $white          : #FFFFFF;
   padding: 5em 0
 
 .fragment.pricing
-  background: #2185D0
+  background: lighten($blue,10)
   padding: 5em 0
 
   .card
@@ -57,11 +57,18 @@ $white          : #FFFFFF;
       margin-right: 5px !important
 
 .fragment.faq
-  background: $yellow
+  background: lighten($yellow,5)
   padding: 5em 0
 
   .text
     color: #eee
+
+  .card
+    padding: 0
+    border: 0
+    height: 370px
+    cursor: pointer
+    margin-left: 2em
 
 
 .fragment.cta

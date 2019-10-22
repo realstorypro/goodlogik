@@ -15,18 +15,19 @@
                         Animation(property="rotation.x" :duration="8" :end="Math.PI * 2" :loop="false")
                         Animation(property="rotation.y" :duration="8" :end="Math.PI * 2" :loop="false")
                         Animation(property="rotation.z" :duration="8" :end="Math.PI * 2" :loop="false")
-                        Animation(property="scaling.x" :duration="15" :start="0.3" :end="2" :loop="false")
-                        Animation(property="scaling.y" :duration="15" :start="0.3" :end="2" :loop="false")
-                        Animation(property="scaling.z" :duration="15" :start="0.3" :end="2" :loop="false")
+                        Animation(property="scaling.x" :duration="15" :start="0.8" :end="1.5" :loop="false")
+                        Animation(property="scaling.y" :duration="15" :start="0.8" :end="1.5" :loop="false")
+                        Animation(property="scaling.z" :duration="15" :start="0.8" :end="1.5" :loop="false")
 
 </template>
 
 <script lang="coffee">
 export default {
     data: ->
-        background: '#bbbbbb'
+        background: '#fff'
         hemispheric_light: '#fff'
-        point_light: '#fff'
+        hemispheric_specular_light: '#000'
+        point_light: '#fffc00'
         square_color: "#000"
         squares: [0, 2, -2 ]
         first_color: '#9c91ff'

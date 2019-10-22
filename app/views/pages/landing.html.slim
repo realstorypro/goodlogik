@@ -16,7 +16,7 @@
     = grid
       = row
         = column size: 14, class: 'centered'
-          = h3 'horizontal divider'
+          = h2 'horizontal divider'
             | Members, not followers.
           = text 'lead'
             | Our platform helps you reduce dependence on social media by slowly transferring your existing fan-base to a platform that you control.
@@ -150,10 +150,10 @@
                   = item data: {tab: 'enterprise-ready'}
                     = h4
                       .icons
-                        = icon 'amazon'
                         = icon 'hubspot'
-                        = icon 'magento'
-                      | Integrate With Your Stack
+                        = icon 'wordpress'
+                        = icon 'drupal'
+                      | Works With Your Stack
                     = text
                       | Integrate the platform into your stack by sending your data to segment Segment&trade;
 
@@ -190,10 +190,16 @@
                       | Fast Onboarding
                     = text
 
+                  = item data: {tab: 'consulting-included'}
+                    = h4
+                      = icon 'fighter jet'
+                      | Consulting Included
+                    = text
+
                   = item data: {tab: 'onboarding'}
                     = h4
                       = icon 'taxi'
-                      | Consulting Included
+                      | Ready To Help
                     = text
 
 
@@ -306,26 +312,139 @@
     = grid
       = row
         = column size: 16
-          = h2 text: "FAQ", class: 'inverted centered dividing'
+          = h2 text: "Common Questions", class: 'inverted centered dividing'
       = row
-        = column size: 8
-          = h4 text: "Is there a free trial?", class: 'inverted'
-          = text
-            | There is free trial or a money-back gurantee. We invest in our clients success.
-        = column size: 8
-          = h4 text: "How long does on-boarding take?", class: 'inverted'
-          = text
-            | Onboarding process can generally be completed within a one to two weeks.
+        = column size: 16, class: 'center aligned'
+            = shape
+              = sides
+                = side 'active'
+                  = card 'raised'
+                    = image
+                      = image_tag "people/abdul.jpg"
+                    = content
+                      = header text: 'Samuel'
+                      = meta text: 'The CEO'
+                      = description
+                        | Do you offer discounts to non-profits and other socially concious ventures?
+                = side
+                  = card 'raised'
+                    = image
+                      = image_tag "people/ngo-2.jpg"
+                    = content
+                      = header
+                        | Yes, we do.
+                      = description
+                        | We offer discounts to non-profits
 
-      = row
-        = column size: 8
-          = h4 text: "Can I cancel at any time?", class: 'inverted'
-          = text
-            | We have no long-term contracts or 
-        = column size: 8
-          = h4 text: "Can I export my data?", class: 'inverted'
-          = text
-            | We have no long-term contracts or 
+            = shape
+              = sides
+                = side 'active'
+                  = card 'raised'
+                    = image
+                      = image_tag "people/jules.jpg"
+                    = content
+                      = header text: 'Jules'
+                      = meta text: 'The Analyst'
+                      = description
+                        | Do you offer discounts to non-profits and other socially concious ventures?
+                = side
+                  = card 'raised'
+                    = image
+                      = image_tag "people/ngo-2.jpg"
+                    = content
+                      = header
+                        | Yes, we do.
+                      = description
+                        | We offer discounts to non-profits
+
+
+            = shape
+              = sides
+                = side 'active'
+                  = card 'raised'
+                    = image
+                      = image_tag "people/content.jpg"
+                    = content
+                      = header text: 'Jennifer'
+                      = meta text: 'The Content Wizard'
+                      = description
+                        | Do you offer discounts to non-profits and other socially concious ventures?
+                = side
+                  = card 'raised'
+                    = image
+                      = image_tag "people/content-2.jpg"
+                    = content
+                      = header
+                        | Yes, we do.
+                      = description
+                        | We offer discounts to non-profits
+
+
+            = shape
+              = sides
+                = side 'active'
+                  = card 'raised'
+                    = image
+                      = image_tag "people/influencer.jpg"
+                    = content
+                      = header text: 'Kate'
+                      = meta text: 'The Fashion Influencer'
+                      = description
+                        | Do you offer discounts to non-profits and other socially concious ventures?
+                = side
+                  = card 'raised'
+                    = image
+                      = image_tag "people/ngo-2.jpg"
+                    = content
+                      = header
+                        | Yes, we do.
+                      = description
+                        | We offer discounts to non-profits
+
+
+            = shape
+              = sides
+                = side 'active'
+                  = card 'raised'
+                    = image
+                      = image_tag "people/creative.jpg"
+                    = content
+                      = header text: 'Ben'
+                      = meta text: 'The Creative Director'
+                      = description
+                        | I run a small interactive agency, how can this platform help me?
+                = side
+                  = card 'raised'
+                    = image
+                      = image_tag "people/creative-2.jpg"
+                    = content
+                      = header
+                        | Yes, we do.
+                      = description
+                        | We offer discounts to non-profits
+
+
+
+            = shape
+              = sides
+                = side 'active'
+                  = card 'raised'
+                    = image
+                      = image_tag "people/sally.jpg"
+                    = content
+                      = header text: 'Sally'
+                      = meta text: 'The Social Entrepreneur'
+                      = description
+                        | Do you offer discounts to non-profits and other socially concious ventures?
+                = side
+                  = card 'raised'
+                    = image
+                      = image_tag "people/sally-2.jpg"
+                    = content
+                      = header
+                        | Yes, we do.
+                      = description
+                        | We offer discounts to non-profits
 
 = fragment 'cta'
   = grid
@@ -334,11 +453,13 @@
         = segment 'inverted black basic center aligned padded'
           = h2 text: "Lets work together", class: 'centered dividing'
           = text
-            | Sometimes its a fit and sometimes it isn't. Let's get on the call and find out.
-          = button 'sales inquiries pink large'
+            | Let's talk on the phone and, discover if we should work together.
+          = button 'sales inquiries yellow inverted large'
             | Schedule 15-Minute Discovery Call
       = column size: 16
         = segment 'secondary basic center aligned'
-          |❤️😎🙏🌴
+          |🥥
+          |🌴
           |GOODLOGIK&nbsp;
-          |🌴🙏😎❤️
+          |🌴
+          |🥥
