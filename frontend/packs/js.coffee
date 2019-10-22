@@ -13,6 +13,29 @@ $ ->
 
   analytics.page()
 
+  # Visibility Animations
+  $('.features.fragment .main.feature').visibility
+    once: true
+    continuous: false
+    onTopVisible: ->
+      $(@).css 'opacity', 1
+
+  $('.features.fragment .top.frame').visibility
+    once: true
+    continuous: false
+    onTopVisible: ->
+      $(@).css 'opacity', 1
+      $('.features .bottom.frame').css 'opacity', 1
+
+  $('.pricing.fragment').visibility
+    once: true
+    continuous: false
+    onTopVisible: ->
+      $('.pricing.fragment .card').transition
+        animation: 'pulse'
+        interval: 250
+
+
   # Dropdowns
   $('.ui.dropdown').dropdown()
 

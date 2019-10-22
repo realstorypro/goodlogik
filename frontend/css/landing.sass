@@ -49,6 +49,10 @@ $frame-background: #efefef
 .fragment.features
   padding: 6em 0
 
+  .main.feature
+    opacity: 0
+    transition: 1s all
+
   .lead
     font-size: 1.5em
     margin-bottom: 2em
@@ -58,6 +62,8 @@ $frame-background: #efefef
     border-left: $frame-style
     border-right: $frame-style
     background: $frame-background
+    opacity: 0
+    transition: 1s all
 
   .bottom.frame
     border-left: $frame-style
@@ -66,6 +72,8 @@ $frame-background: #efefef
     background: $frame-background
     padding-bottom: 3em
     transition: height 1s
+    opacity: 0
+    transition: 1.5s all
 
   .vertical.menu
     min-height: 440px
