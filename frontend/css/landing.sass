@@ -82,12 +82,21 @@ $frame-background: #efefef
   background: lighten($blue,10)
   padding: 5em 0
 
-  .card
-    padding: 1.5em 1em 1.8em
-    background: #eee
+  .three.cards
 
-    i.icon
-      margin-right: 5px !important
+    .card
+      padding: 1.5em 1em 1.8em
+      background: #eee
+      width: 28%
+
+      &:first-child
+        margin-left: auto
+
+      &:last-child
+        margin-right: auto
+
+      i.icon
+        margin-right: 5px !important
 
 .fragment.faq
   background: lighten($yellow,5)
