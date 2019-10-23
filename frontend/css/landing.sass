@@ -1,3 +1,25 @@
+// ********************** //
+//      --* Colors *--    //
+// ********************** //
+
+$red            : #B03060;
+$orange         : #ff6d00;
+$yellow         : #ffbf00;
+$olive          : #32CD32;
+$green          : #21BA45;
+$teal           : #008080;
+$blue           : #2185D0;
+$violet         : #EE82EE;
+$purple         : #B413EC;
+$pink           : #FF1493;
+$brown          : #A52A2A;
+$grey           : #A0A0A0;
+$black          : #000000;
+$white          : #FFFFFF;
+
+$frame-style: 3px solid lighten($black, 30)
+$frame-background: #efefef
+
 .overlay
   background: rgba(0,0,0,1)
   opacity: 1
@@ -5,3 +27,99 @@
 
 .landing.page
   height: 100vh
+
+.ui.vertical.tabular.menu 
+  .icons
+    margin-bottom: 5px
+
+  .active.item
+    border-right: inherit !important
+    border-left: 1px solid transparent
+    border-top: 1px solid transparent
+    border-bottom: 1px solid transparent
+    border-right: 0px solid transparent
+
+    font-weight: normal
+
+    h4 
+      color: lighten($black,20) !important
+
+
+
+.fragment.features
+  padding: 6em 0
+
+  .main.feature
+    opacity: 0
+    transition: 1s all
+
+  .lead
+    font-size: 1.5em
+    margin-bottom: 2em
+
+  .top.frame
+    border-top: $frame-style
+    border-left: $frame-style
+    border-right: $frame-style
+    background: $frame-background
+    opacity: 0
+    transition: 1s all
+
+  .bottom.frame
+    border-left: $frame-style
+    border-right: $frame-style
+    border-bottom: $frame-style
+    background: $frame-background
+    padding-bottom: 3em
+    transition: height 1s
+    opacity: 0
+    transition: 1.5s all
+
+  .vertical.menu
+    min-height: 440px
+
+.fragment.pricing
+  background: lighten($blue,10)
+  padding: 5em 0
+
+  .three.cards
+
+    .card
+      padding: 1.5em 1em 1.8em
+      background: #eee
+      width: 28%
+
+      &:first-child
+        margin-left: auto
+
+      &:last-child
+        margin-right: auto
+
+      i.icon
+        margin-right: 5px !important
+
+.fragment.faq
+  background: lighten($yellow,5)
+  padding: 5em 0
+
+  .text
+    color: #eee
+
+  .card
+    padding: 0
+    border: 0
+    height: 370px
+    cursor: pointer
+    margin-left: 2em
+
+
+.fragment.cta
+  .inverted.segment
+    padding: 5em 0
+
+  .text
+    font-size: 1.5em
+
+  .row
+    margin-bottom: 0
+    padding-bottom: 0

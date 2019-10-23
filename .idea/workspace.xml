@@ -3,41 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0db3a7a4-11cb-4a7d-8ce1-23df65b7cd84" name="Default Changelist" comment="k">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/landing.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/landing.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/ui.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/ui.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/css/landing.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/landing.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/js/cover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/cover.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/packs/js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/packs/js.coffee" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>source</find>
-      <find>console</find>
-      <find>contet</find>
-      <find>mobile-h1</find>
-      <find>mobile-pa</find>
-      <find>content</find>
-      <find>conent</find>
-      <find>force_ssl</find>
-      <find>margin-right</find>
-      <find>ns</find>
-      <find>on</find>
-      <find>700</find>
-      <find>container</find>
-      <find>[0]</find>
-      <find>file</find>
-      <find>revealjk</find>
-      <find>reveal</find>
-      <find>turbolink</find>
-      <find>loader</find>
-      <find>mast</find>
-      <find>overlay</find>
-      <find>home</find>
-      <find>kkk</find>
-      <find>monting</find>
-      <find>current</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -240,6 +216,9 @@
       <workItem from="1552125492412" duration="949000" />
       <workItem from="1552128159255" duration="25590000" />
       <workItem from="1569029707042" duration="116000" />
+      <workItem from="1571549344050" duration="3399000" />
+      <workItem from="1571584998012" duration="11196000" />
+      <workItem from="1571713489942" duration="1731000" />
     </task>
     <servers />
   </component>
@@ -251,7 +230,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
