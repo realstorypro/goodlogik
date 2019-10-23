@@ -31,7 +31,6 @@ $ ->
   $('.ui.dropdown').dropdown()
 
   # Tabs
-  $('.horizontabular .item').tab
   $('.tabular .item').tab
     onVisible: ->
       console.log 'tab visible'
