@@ -112,6 +112,9 @@ $frame-background: #efefef
       background: #eee
       width: 28%
 
+      @include media("<tablet")
+        width: calc(100% - 2em)
+
       &:first-child
         margin-left: auto
 
