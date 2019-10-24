@@ -573,3 +573,13 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 
 // Utility Classes
 .hidden { display: none }
+
+// Horizontal Scroll On Mobile
+.scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+.scroll::-webkit-scrollbar {
+  display: none; }

@@ -23,7 +23,7 @@
           br
       = row 'top frame'
         = column size: 16, class: 'centered'
-          = menu class: 'pointing secondary tabular black massive feature', ui: :on
+          = menu class: 'pointing secondary tabular black massive feature scroll', ui: :on
             = item class: 'active', data: {tab: 'social-publishing'}
               = icon 'paper plane'
               | Captivating Content
@@ -75,23 +75,11 @@
 
               = column size: 10
                 =tab class: 'active', data: {tab: 'beautiful-content'}
-                  script async="" src="https://fast.wistia.com/embed/medias/xvw4kw0ty5.jsonp" 
-                  .wistia_responsive_padding style=("padding:62.5% 0 0 0;position:relative;") 
-                    .wistia_responsive_wrapper style="height:100%;left:0;position:absolute;top:0;width:100%;" 
-                      .wistia_embed.wistia_async_xvw4kw0ty5 class="videoFoam=true" style="height:100%;position:relative;width:100%" 
-                        .wistia_swatch style=("height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;") 
-                          img alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" src="https://fast.wistia.com/embed/medias/xvw4kw0ty5/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" /
-
+                  = h1 text: 'Beautiful Content'
                 =tab data: {tab: 'go-viral'}
-                  script async="" src="https://fast.wistia.com/embed/medias/gg1nb24ry7.jsonp" 
-                  .wistia_responsive_padding style=("padding:92.92% 0 0 0;position:relative;") 
-                    .wistia_responsive_wrapper style="height:100%;left:0;position:absolute;top:0;width:100%;" 
-                      .wistia_embed.wistia_async_gg1nb24ry7 class="videoFoam=true" style="height:100%;position:relative;width:100%" 
-                        .wistia_swatch style=("height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;") 
-                          img alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" src="https://fast.wistia.com/embed/medias/gg1nb24ry7/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" /
-
+                  = h1 text: 'Let It Go Viral'
                 =tab data: {tab: 'long-term'}
-                  = image_tag 'explainer/value.jpg', class: 'ui image'
+                  = h1 text: 'Long Term Value'
 
           = tab data: {tab: 'social-network'}
             = grid
