@@ -35,10 +35,6 @@
               = icon 'globe'
               | Integrated Analytics
 
-            = item data: {tab: 'community'}
-              = icon 'child'
-              | Community Driven
-
             = item data: {tab: 'supported'}
               = icon 'phone'
               | Fully Supported
@@ -46,7 +42,7 @@
         = column size: 16, class: 'centered'
           = tab class: 'active', data: {tab: 'social-publishing'}
             = grid
-              = column size: 6
+              = column computer: 6, tablet: 6, mobile: 16
                 = menu class: 'vertical huge fluid tabular', ui: :on
                   = item class: 'active', data: {tab: 'beautiful-content'}
                     = h4

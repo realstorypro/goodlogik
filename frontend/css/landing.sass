@@ -65,6 +65,29 @@ $frame-background: #efefef
     opacity: 0
     transition: 1s all
 
+
+    @include media("<tablet")
+      border-left: none
+      border-right: none
+      border-bottom: $frame-style
+
+    .feature.menu
+      @include media("<tablet")
+        overflow-x: auto
+        -webkit-overflow-scrolling: touch
+        -ms-overflow-style: -ms-autohiding-scrollbar
+
+        &::-webkit-scrollbar
+          display:none
+
+      .item
+        width: 25%
+        justify-content: center
+        @include media("<tablet")
+          width: auto
+
+
+
   .bottom.frame
     border-left: $frame-style
     border-right: $frame-style
