@@ -80,10 +80,10 @@ $frame-background: #efefef
       border-bottom: $frame-style
 
     .feature.menu
-      //@include media("<tablet")
-        overflow-x: auto
-        -webkit-overflow-x-scrolling: touch
-        -ms-overflow-style: -ms-autohiding-scrollbar
+      white-space: nowrap;
+      overflow-x: auto
+      -webkit-overflow-x-scrolling: touch
+      -ms-overflow-style: -ms-autohiding-scrollbar
 
 
       .item
@@ -92,8 +92,8 @@ $frame-background: #efefef
         @include media("<tablet")
           width: auto
 
-    //.feature.menu::-webkit-scrollbar
-        display:none
+    .ui.feature.menu::-webkit-scrollbar
+        display:none !important
 
 
   .bottom.frame
