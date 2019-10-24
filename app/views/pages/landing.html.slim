@@ -95,7 +95,7 @@
                                               img alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" src="https://fast.wistia.com/embed/medias/gg1nb24ry7/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" /
 
                 =tab data: {tab: 'long-term'}
-                  =h4 text: 'Create Long Term Value'
+                  = image_tag 'explainer/value.jpg', class: 'ui image'
 
           = tab data: {tab: 'social-network'}
             = grid
@@ -123,7 +123,7 @@
                         = icon 'desktop'
                       | Stay in Touch
                     = text
-                      | Reach out to your members directly by email, sms and push notifications*.
+                      | Reach out to your members directly with email and push notifications*.
 
                     small* sms and push notifications support is coming first quarter of 2020.
 
@@ -184,14 +184,14 @@
                         = icon 'html5'
                       | Make an Impact
                     = text
-                      | Our roadmap is shaped by our community needs and feedback.
+                      | Shape the direction of the platform with suggestions and feature requests.
 
                   = item data: {tab: 'support-open-source'}
                     = h4
                       = icon 'github'
                       | Support Open Source
                     = text
-                      | Our roadmap is shaped by our community needs and feedback.
+                      | GOODLOGIK supports and activley contributes to open source.
 
               = column size: 10
                   =tab class: 'active', data: {tab: 'shape-the-development'}
@@ -210,20 +210,23 @@
                   = item class: 'active', data: {tab: 'onboarding'}
                     = h4
                       = icon 'shipping fast'
-                      | Fast Onboarding
+                      | Quick Onboarding
                     = text
+                      | Onboarding includes platform customization, branding, training and strategy sessions.
 
                   = item data: {tab: 'consulting-included'}
                     = h4
-                      = icon 'fighter jet'
-                      | Free Consulting
+                      = icon 'ship'
+                      | Ongoing Consulting
                     = text
+                      | Optional monthly strategy sessions to help you get the most out of the platform.
 
                   = item data: {tab: 'onboarding'}
                     = h4
                       = icon 'taxi'
-                      | Ready To Help
+                      | Responsive Help
                     = text
+                      | With both phone and email support we're there when you need us.
 
 
               = column size: 10
@@ -259,7 +262,7 @@
                   |2,500 On-boarding
                 = item 
                   = icon 'checkmark green'
-                  |1 Consulting Call Per Month
+                  |1 Strategy Call
                 = item 
                   = icon 'checkmark grey disabled'
                   |Branding Removed
@@ -289,7 +292,7 @@
                   |FREE On-boarding
                 = item 
                   = icon 'checkmark green'
-                  |2 Consulting Call Per Month
+                  |1 Strategy Call
                 = item 
                   = icon 'checkmark green'
                   |Branding Removed
@@ -319,7 +322,7 @@
                   |FREE On-boarding
                 = item 
                   = icon 'checkmark green'
-                  |2 Consulting Call Per Month
+                  |1 Strategy Call
                 = item 
                   = icon 'checkmark green'
                   |Branding Removed
