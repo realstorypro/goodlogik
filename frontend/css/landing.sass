@@ -77,11 +77,12 @@ $frame-background: #efefef
     @include media("<tablet")
       border-left: none
       border-right: none
-      border-bottom: $frame-style
+      border-bottom: none
 
     .feature.menu
       white-space: nowrap;
       overflow-x: auto
+      overflow-y: hidden
       -webkit-overflow-x-scrolling: touch
       -ms-overflow-style: -ms-autohiding-scrollbar
 
@@ -105,6 +106,10 @@ $frame-background: #efefef
     transition: height 1s
     opacity: 0
     transition: 1.5s all
+
+    @include media("<tablet")
+      border-left: none
+      border-right: none
 
   .vertical.menu
     min-height: 550px
