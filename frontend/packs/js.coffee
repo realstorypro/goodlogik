@@ -42,15 +42,15 @@ $ ->
       $(@).find('.tabular').flickity('resize')
 
   # Flickable Tabs
-  if isMobileDevice()
-    $('.tabular').flickity
-      cellAlign: 'left'
-      freeScroll: false
-      prevNextButtons: false
-      pageDots: false
-      contain: true
-      selectedAttraction: 0.2
-      friction: 0.8
+  # if isMobileDevice()
+  #   $('.tabular').flickity
+  #     cellAlign: 'left'
+  #     freeScroll: false
+  #     prevNextButtons: false
+  #     pageDots: false
+  #     contain: true
+  #     selectedAttraction: 0.2
+  #     friction: 0.8
 
   # Shapes
   $('.shape').shape
