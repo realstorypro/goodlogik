@@ -113,6 +113,37 @@ $frame-background: #efefef
 
   .vertical.menu
     min-height: 550px
+    @include media("<tablet")
+      min-height: auto
+      white-space: nowrap;
+      overflow-x: auto
+      overflow-y: hidden
+      -webkit-overflow-x-scrolling: touch
+      -ms-overflow-style: -ms-autohiding-scrollbar
+
+
+      @include media("<tablet")
+        .item
+          width: auto
+          display: inline-block
+
+        .header, .text
+          white-space: initial
+
+        .header
+          height: 51px
+          aling-self: flex-end
+          display: table-cell;
+          vertical-align: middle
+
+        .text
+          min-height: 72px
+
+  .ui.vertical.tabular.menu
+    margin-top: -1.8em
+
+    &::-webkit-scrollbar
+      display:none !important
 
 .fragment.pricing
   background: lighten($blue,10)
