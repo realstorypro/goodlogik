@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-class DemoRequester
+class DiscoveryRequester
   include ActiveModel::Model
 
   attr_accessor :fname
   attr_accessor :lname
   attr_accessor :phone
   attr_accessor :email
-  attr_accessor :referral
+  attr_accessor :audience
 
   def initialize(attributes = {})
     attributes.each do |name, value|

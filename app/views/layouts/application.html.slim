@@ -101,8 +101,7 @@ html
       })();
 
 
-  body class="#{'presentation' if current_page?(root_url)}"
-    = render 'partials/demo_modal'
+  body
 
     = sidebar 'ui vertical inverted menu right'
       = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
@@ -131,3 +130,5 @@ html
 
         = yield :hero
       =yield
+      = render 'partials/demo_modal'
+      = render 'partials/discovery_modal'

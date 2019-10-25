@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0db3a7a4-11cb-4a7d-8ce1-23df65b7cd84" name="Default Changelist" comment="k">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/demo_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/zapier/demo_request.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pages/landing.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/landing.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/ui.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/ui.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/css/landing.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/landing.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/js/cover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/cover.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/css/demo_modal.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/demo_modal.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/packs/js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/packs/js.coffee" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,67 +25,21 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="logik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logik" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logik" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logik" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logik" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logik" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logik" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/models" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/services/zapier" />
+      <recent name="$PROJECT_DIR$/app/controllers" />
+      <recent name="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/elements" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/js" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/semantic_ui/src/themes/idealogic/elements" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -219,6 +176,7 @@
       <workItem from="1571549344050" duration="3399000" />
       <workItem from="1571584998012" duration="11196000" />
       <workItem from="1571713489942" duration="1731000" />
+      <workItem from="1572033778407" duration="1300000" />
     </task>
     <servers />
   </component>

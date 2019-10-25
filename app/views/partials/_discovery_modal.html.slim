@@ -1,0 +1,37 @@
+.ui.tiny.modal.discovery
+  = icon 'close'
+  = content
+    = description
+      = form
+        .field.required
+          label Name
+          .two.fields
+            .field
+              input type="text" name="name[first]" placeholder="First" required=""
+
+            .field
+              input type="text" name="name[last]" placeholder="Last" required=""
+
+        .field.required
+          label Email
+          input type="email" name="email" required=""
+
+        .field.required
+          label Phone number
+          input type="tel" name="phone" required=""
+
+        .field
+          label Number of Social Media Followers
+          = dropdown ui: :on, class: 'selection'
+            input type="hidden" name="audience" required=""
+            = icon 'dropdown'
+            .text.default 
+            = menu ui: :off
+              = item data: {value: '<1k'}, text: 'Under 1,000'
+              = item data: {value: '1k - 10k'}, text: '1,000 - 10,000'
+              = item data: {value: '10k - 100k'}, text: '10,000 - 100,000'
+              = item data: {value: '100k+'}, text: 'Over 100,000'
+
+  .actions
+    = button 'approve large purple fluid right'
+      | Schedule Discovery Call

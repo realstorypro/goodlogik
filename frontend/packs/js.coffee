@@ -3,6 +3,7 @@ import vue_babylonjs from 'vue-babylonjs'
 import Cover from '../js/cover.vue'
 import semantic_js from '../semantic_ui/dist/semantic.min'
 
+
 Vue.use(vue_babylonjs)
 
 $ ->
@@ -31,9 +32,7 @@ $ ->
   $('.ui.dropdown').dropdown()
 
   # Tabs
-  $('.tabular .item').tab
-    onVisible: ->
-      console.log 'tab visible'
+  $('.tabular .item').tab()
 
   # Shapes
   $('.shape').shape
@@ -42,6 +41,9 @@ $ ->
   # Shapes Click
   $('.shape .card').on 'click', (e) ->
     $(@).parents('.shape').shape('flip left')
+
+  # Setting Sidebar
+  $('.ui.sidebar').sidebar()
 
   # Menu
   $('.hamburger').on 'click', (e) ->
@@ -85,3 +87,36 @@ $ ->
             false
 
       .modal('show')
+
+
+  # Discovery Modal
+  $('.discovery.inquiries').on 'click', (e) ->
+    e.preventDefault()
+
+    $('.ui.sidebar').sidebar('hide')
+    analytics.track 'opened discovery modal'
+
+    $('.discovery.modal')
+      .modal
+        onApprove: ->
+
+          form = $('.modal.discovery form')[0]
+          form.reportValidity()
+
+          if form.checkValidity()
+            analytics.track 'requested discovery inquiry',
+              email: $('.modal.discovery form input[name="email"]').val()
+
+            $.ajax {
+              type: 'POST'
+              headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
+              url: '/discovery/send_request/'
+              data: $('.discovery.modal form').serialize()
+              dataType: 'json'
+            }
+          else
+            false
+
+      .modal('show')
+
+
