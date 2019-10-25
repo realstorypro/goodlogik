@@ -49,6 +49,8 @@ $ ->
       prevNextButtons: false
       pageDots: false
       contain: true
+      selectedAttraction: 0.2
+      friction: 0.8
 
   # Shapes
   $('.shape').shape
