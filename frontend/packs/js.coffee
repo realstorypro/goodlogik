@@ -42,6 +42,9 @@ $ ->
   $('.shape .card').on 'click', (e) ->
     $(@).parents('.shape').shape('flip left')
 
+  # Setting Sidebar
+  $('.ui.sidebar').sidebar()
+
   # Menu
   $('.hamburger').on 'click', (e) ->
     e.preventDefault()
