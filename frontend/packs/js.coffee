@@ -3,6 +3,12 @@ import vue_babylonjs from 'vue-babylonjs'
 import Cover from '../js/cover.vue'
 import semantic_js from '../semantic_ui/dist/semantic.min'
 
+import jQueryBridget from 'jquery-bridget'
+import Flickity from 'flickity'
+
+# make Flickity a jQuery plugin
+jQueryBridget( 'flickity', Flickity, $ )
+
 Vue.use(vue_babylonjs)
 
 $ ->
@@ -33,7 +39,16 @@ $ ->
   # Tabs
   $('.tabular .item').tab
     onVisible: ->
-      console.log 'tab visible'
+      $(@).find('.tabular').flickity('resize')
+
+  # Flickable Tabs
+  if isMobileDevice()
+    $('.tabular').flickity
+      cellAlign: 'left'
+      freeScroll: true
+      prevNextButtons: false
+      pageDots: false
+      contain: true
 
   # Shapes
   $('.shape').shape
@@ -85,3 +100,6 @@ $ ->
             false
 
       .modal('show')
+
+isMobileDevice = ->
+    typeof window.orientation != 'undefined' or navigator.userAgent.indexOf('IEMobile') != -1
