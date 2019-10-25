@@ -15,11 +15,11 @@
   = container
     = grid
       = row
-        = column size: 14, class: 'centered main feature'
+        = column computer: 13, tablet: 13, mobile: 16, class: 'centered main feature'
           = h1 'horizontal divider'
             | Members, not followers.
           = text 'lead'
-            | Reduce dependence on social media by transferring your fan-base to a platform you control.
+            | Reduce dependence on social media by transferring your fan base to a platform that you control.
           br
       = row 'top frame'
         = column size: 16, class: 'centered'
@@ -47,10 +47,10 @@
                   = item class: 'active', data: {tab: 'beautiful-content'}
                     = h4
                       = icon 'paint brush'
-                      | Make Engaging Content
+                      | Eye-catching Visuals
 
                     = text
-                      | Produce beautiful content with our easy-to-use publishing engine.
+                      | Create engaging visuals with our easy-to-use content publishing engine.
 
                   = item data: {tab: 'go-viral'}
                     = h4
@@ -58,9 +58,9 @@
                         = icon 'twitter'
                         = icon 'facebook'
                         = icon 'pinterest'
-                      | Let It Go Viral
+                      | Built for Virality
                     = text
-                      | Share the content you create through traditional social media channels and bring in your existing fan base.
+                      | All content is optimized for social media sharing, helping you bring in your exisitng fan base.
 
                   = item data: {tab: 'long-term'}
                     = h4
@@ -68,16 +68,15 @@
                         = icon 'microsoft'
                         = icon 'yahoo'
                         = icon 'google'
-                      | Build Long-Term Value
+                      | Long-Term Value
                     = text
-                      | Attract organic search engine traffic with built-in SEO Automations.
-
+                      |Deep SEO optimizations help increase organic search engine rankings.
 
               = column computer: 10, tablet: 16, mobile: 16, class: 'details'
                 =tab class: 'active', data: {tab: 'beautiful-content'}
                   = h1 text: 'Beautiful Content'
                 =tab data: {tab: 'go-viral'}
-                  = h1 text: 'Let It Go Viral'
+                  = h1 text: 'Built for Virality'
                 =tab data: {tab: 'long-term'}
                   = h1 text: 'Long Term Value'
 
@@ -87,17 +86,10 @@
                 = menu class: 'vertical huge fluid tabular', ui: :on
                   = item class: 'active', data: {tab: 'signup-members'}
                     = h4
-                      = icon 'checkmark'
-                      | Signup New Members
+                      = icon 'users'
+                      | Made to Engage
                     = text
-                      | Built-in social features give visitors a reason to signup and become members.
-
-                  = item data: {tab: 'keep-engaged'}
-                    = h4
-                      = icon 'beer'
-                      | Keep Them Engaged
-                    = text
-                      | Maximize your direct traffic and give your members a reason to come back.
+                      | Thoughtful commenting, gamification, and enchanced member profiles turn visitors into users, and give them a reason to come back.
 
                   = item data: {tab: 'stay-in-touch'}
                     = h4
@@ -107,7 +99,7 @@
                         = icon 'desktop'
                       | Stay in Touch
                     = text
-                      | Reach out to your members directly with email and upcoming push notifications*.
+                      | Reach out to your members directly with email and upcoming push notifications.
 
               = column computer: 10, tablet: 16, mobile: 16, class: 'details'
                   =tab class: 'active', data: {tab: 'signup-members'}
@@ -125,16 +117,9 @@
                   = item class: 'active', data: {tab: 'helpful-metrics'}
                     = h4
                       = icon 'map outline'
-                      | Helpful Metrics
-                    = text
-                      | Built in analytics help quickly gauge how well the platfom is performing.
-
-                  = item data: {tab: 'better-decisions'}
-                    = h4
-                      = icon 'map signs'
                       | Better Decisions
                     = text
-                      | Understand what turns visitors into users and focus on things that matter.
+                      | Gauge how well the platfom is performing, and see what content turns into user signups.
 
                   = item data: {tab: 'enterprise-ready'}
                     = h4
@@ -143,7 +128,8 @@
                         = icon 'hubspot'
                       | Works With Your Stack
                     = text
-                      | Integrate the platform into your stack by sending your data to segment Segment&trade;
+                      | Enterprise users can send their analytics data to Segment&trade; and integrate it with their existing marketing stack.
+
 
               = column size: 10
                   =tab class: 'active', data: {tab: 'helpful-metrics'}
@@ -170,14 +156,14 @@
                       = icon 'ship'
                       | Ongoing Support
                     = text
-                      | Learn the latest tricks, and get personalized advice from the experts with monthly strategy sessions.
+                      | Learn the latest tricks, and get personalized advice from experts with monthly strategy sessions.
 
                   = item data: {tab: 'support'}
                     = h4
                       = icon 'taxi'
                       | Responsive Help
                     = text
-                      | Phone, email, chat or pigeon mail. No matter the medium, our support staff is there when you need us.
+                      | Phone, email, chat or pigeon mail. We're there when you need us.
 
 
               = column size: 10
@@ -193,7 +179,7 @@
     = grid
       = row
         = column size: 16
-          = h2 text: "Affordable Packages", class: 'centered inverted dividing'
+          = h2 text: "Affordable Pricing", class: 'centered inverted dividing'
       = row
         = column size: 16
 
@@ -205,7 +191,7 @@
                 .sub.header
                   | $1,250/Mo
               = text
-                | Get started with a branded version of the platform and everything you need to build a successful online foundation.
+                | Get started with a branded version of the platform and everything you need to succeed.
               = list 'relaxed divided'
                 = item 
                   = icon 'checkmark green'
@@ -218,7 +204,7 @@
                   |2,500 On-boarding
                 = item 
                   = icon 'checkmark green'
-                  |1 Strategy Call
+                  |1 Strategy Session
                 = item 
                   = icon 'checkmark grey disabled'
                   |Branding Removed
@@ -236,20 +222,20 @@
                 .sub.header
                   | $4,500/Mo
               = text
-                | Reduce your per user cost and strenthen your image with an unbranded version of the platform.
+                | Reduce per user cost and strengthen your image with an unbranded version of the platform.
               = list 'relaxed divided'
                 = item 
                   = icon 'checkmark green'
                   |Up to 35,000 Users
                 = item 
                   = icon 'dollar green'
-                  |Extra Users Billed at $0.085/user
+                  |Extra Users Billed at $0.85/user
                 = item 
                   = icon 'dollar green'
                   |FREE On-boarding
                 = item 
                   = icon 'checkmark green'
-                  |1 Strategy Call
+                  |1 Strategy Session
                 = item 
                   = icon 'checkmark green'
                   |Branding Removed
@@ -265,22 +251,22 @@
                 = icon 'space shuttle'
                 | Enterprise
                 .sub.header
-                  | $8,500/Mo
+                  | Talk to Sales
               = text
-                | Integrate the platform with your existing marketing stack and fruther reduce the per user cost.
+                | Scale faster with Segment integration and custom on-boarding.
               = list 'relaxed divided'
                 = item 
                   = icon 'checkmark green'
-                  |Up to 85,000 Users
+                  | Over 100,000 Users
                 = item 
                   = icon 'dollar green'
-                  |Extra Users Billed at $0.08/user
+                  |Extra Users Billed at $0.85/user
                 = item 
                   = icon 'dollar green'
-                  |FREE On-boarding
+                  |Negotiable On-boarding
                 = item 
                   = icon 'checkmark green'
-                  |1 Strategy Call
+                  |1 Strategy Session
                 = item 
                   = icon 'checkmark green'
                   |Branding Removed
@@ -307,18 +293,18 @@
                       = image_tag "people/abdul.jpg"
                     = content
                       = header text: 'Samuel'
-                      = meta text: 'The CEO'
+                      = meta text: 'The Rogue CEO'
                       = description
-                        | Do you offer discounts to non-profits and other socially concious ventures?
+                        | Does my startup need this?
                 = side
                   = card 'raised'
                     = image
                       = image_tag "people/ngo-2.jpg"
                     = content
                       = header
-                        | Yes, we do.
+                        | Probably
                       = description
-                        | We offer discounts to non-profits
+                        | It's a much better move than just doing inbound
 
             = shape
               = sides
@@ -330,16 +316,16 @@
                       = header text: 'Jules'
                       = meta text: 'The Analyst'
                       = description
-                        | Do you offer discounts to non-profits and other socially concious ventures?
+                        | What user data can the platform track?
                 = side
                   = card 'raised'
                     = image
                       = image_tag "people/ngo-2.jpg"
                     = content
                       = header
-                        | Yes, we do.
+                        | Only what matters
                       = description
-                        | We offer discounts to non-profits
+                        | The platform can track user activity as it relates to visits, signups, and content views
 
 
             = shape
@@ -349,19 +335,19 @@
                     = image
                       = image_tag "people/content.jpg"
                     = content
-                      = header text: 'Jennifer'
+                      = header text: 'Kristina'
                       = meta text: 'The Content Wizard'
                       = description
-                        | Do you offer discounts to non-profits and other socially concious ventures?
+                        | How much training do I need to be effective on this platform?
                 = side
                   = card 'raised'
                     = image
-                      = image_tag "people/content-2.jpg"
+                      = image_tag "people/ngo-2.jpg"
                     = content
                       = header
-                        | Yes, we do.
+                        | Very little
                       = description
-                        | We offer discounts to non-profits
+                        | Most users can create a masterpiece in under 20 minutes
 
 
             = shape
@@ -374,16 +360,16 @@
                       = header text: 'Kate'
                       = meta text: 'The Fashion Influencer'
                       = description
-                        | Do you offer discounts to non-profits and other socially concious ventures?
+                        | Can this hurt my social media efforts?
                 = side
                   = card 'raised'
                     = image
                       = image_tag "people/ngo-2.jpg"
                     = content
                       = header
-                        | Yes, we do.
+                        | Unlikely
                       = description
-                        | We offer discounts to non-profits
+                        | Producing original content will only make your fans love you more
 
 
             = shape
@@ -394,18 +380,18 @@
                       = image_tag "people/creative.jpg"
                     = content
                       = header text: 'Ben'
-                      = meta text: 'The Creative Director'
+                      = meta text: 'Agency Owner'
                       = description
-                        | I run a small interactive agency, how can this platform help me?
+                        | I run an inbound agency. Can this platform help me?
                 = side
                   = card 'raised'
                     = image
-                      = image_tag "people/creative-2.jpg"
+                      = image_tag "people/ngo-2.jpg"
                     = content
                       = header
-                        | Yes, we do.
+                        | You betcha
                       = description
-                        | We offer discounts to non-profits
+                        | Better content and better data means better ROI on your marketing efforts
 
 
 
@@ -419,31 +405,29 @@
                       = header text: 'Sally'
                       = meta text: 'The Social Entrepreneur'
                       = description
-                        | Do you offer discounts to non-profits and other socially concious ventures?
+                        | Do you offer discounts to non-profits?
                 = side
                   = card 'raised'
                     = image
-                      = image_tag "people/sally-2.jpg"
+                      = image_tag "people/ngo-2.jpg"
                     = content
                       = header
                         | Yes, we do.
                       = description
-                        | We offer discounts to non-profits
+                        | We waive the startup fees and offer additional discounts for 501C3's
 
 = fragment 'cta'
   = grid
     = row 'secondary'
       = column size: 16
         = segment 'inverted black basic center aligned padded'
-          = h2 text: "Lets work together", class: 'centered dividing'
+          = h2 text: "Match made in heaven", class: 'centered dividing'
           = text
-            | Let's talk on the phone and, discover if we should work together.
+            | Let's talk on the phone and see if its meant to be.
           = button 'sales inquiries yellow inverted large'
             | Schedule Quick Discovery Call
       = column size: 16
         = segment 'secondary basic center aligned'
-          |🥥
-          |🌴
-          |GOODLOGIK&nbsp;
-          |🌴
-          |🥥
+          = icon 'angle double left' 
+          |/ GOODLOGIK&nbsp;
+          = icon 'angle double right'
