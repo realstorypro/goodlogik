@@ -19,7 +19,7 @@
           = h1 'horizontal divider'
             | Members, not followers.
           = text 'lead'
-            | Reduce dependence on social media by slowly transferring your existing fan-base to a platform you control.
+            | Reduce dependence on social media by transferring your fan-base to a platform you control.
           br
       = row 'top frame'
         = column size: 16, class: 'centered'
@@ -35,10 +35,6 @@
               = icon 'globe'
               | Integrated Analytics
 
-            = item data: {tab: 'community'}
-              = icon 'child'
-              | Community Driven
-
             = item data: {tab: 'supported'}
               = icon 'phone'
               | Fully Supported
@@ -46,12 +42,12 @@
         = column size: 16, class: 'centered'
           = tab class: 'active', data: {tab: 'social-publishing'}
             = grid
-              = column size: 6
+              = column computer: 6, tablet: 6, mobile: 16
                 = menu class: 'vertical huge fluid tabular', ui: :on
                   = item class: 'active', data: {tab: 'beautiful-content'}
                     = h4
-                      = icon 'video'
-                      | Create Engaging Content
+                      = icon 'paint brush'
+                      | Make Engaging Content
 
                     = text
                       | Produce beautiful content with our easy-to-use publishing engine.
@@ -77,34 +73,22 @@
                       | Attract organic search engine traffic with built-in SEO Automations.
 
 
-              = column size: 10
+              = column computer: 10, tablet: 16, mobile: 16, class: 'details'
                 =tab class: 'active', data: {tab: 'beautiful-content'}
-                  script async="" src="https://fast.wistia.com/embed/medias/xvw4kw0ty5.jsonp" 
-                  .wistia_responsive_padding style=("padding:62.5% 0 0 0;position:relative;") 
-                      .wistia_responsive_wrapper style="height:100%;left:0;position:absolute;top:0;width:100%;" 
-                            .wistia_embed.wistia_async_xvw4kw0ty5 class="videoFoam=true" style="height:100%;position:relative;width:100%" 
-                                    .wistia_swatch style=("height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;") 
-                                              img alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" src="https://fast.wistia.com/embed/medias/xvw4kw0ty5/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" /
-
+                  = h1 text: 'Beautiful Content'
                 =tab data: {tab: 'go-viral'}
-                  script async="" src="https://fast.wistia.com/embed/medias/gg1nb24ry7.jsonp" 
-                  .wistia_responsive_padding style=("padding:92.92% 0 0 0;position:relative;") 
-                      .wistia_responsive_wrapper style="height:100%;left:0;position:absolute;top:0;width:100%;" 
-                            .wistia_embed.wistia_async_gg1nb24ry7 class="videoFoam=true" style="height:100%;position:relative;width:100%" 
-                                    .wistia_swatch style=("height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;") 
-                                              img alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" src="https://fast.wistia.com/embed/medias/gg1nb24ry7/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" /
-
+                  = h1 text: 'Let It Go Viral'
                 =tab data: {tab: 'long-term'}
-                  =h4 text: 'Create Long Term Value'
+                  = h1 text: 'Long Term Value'
 
           = tab data: {tab: 'social-network'}
             = grid
-              = column size: 6
+              = column computer: 6, tablet: 6, mobile: 16
                 = menu class: 'vertical huge fluid tabular', ui: :on
                   = item class: 'active', data: {tab: 'signup-members'}
                     = h4
                       = icon 'checkmark'
-                      | Signup Members
+                      | Signup New Members
                     = text
                       | Built-in social features give visitors a reason to signup and become members.
 
@@ -123,11 +107,9 @@
                         = icon 'desktop'
                       | Stay in Touch
                     = text
-                      | Reach out to your members directly by email, sms and push notifications*.
+                      | Reach out to your members directly with email and upcoming push notifications*.
 
-                    small* sms and push notifications support is coming first quarter of 2020.
-
-              = column size: 10
+              = column computer: 10, tablet: 16, mobile: 16, class: 'details'
                   =tab class: 'active', data: {tab: 'signup-members'}
                     =h4 text: 'Signup Members'
                   =tab data: {tab: 'keep-engaged'}
@@ -138,7 +120,7 @@
 
           = tab data: {tab: 'analytics'}
             = grid
-              = column size: 6
+              = column computer: 6, tablet: 6, mobile: 16
                 = menu class: 'vertical huge fluid tabular', ui: :on
                   = item class: 'active', data: {tab: 'helpful-metrics'}
                     = h4
@@ -172,63 +154,39 @@
                     =h4 text: 'Enterprise Ready'
 
 
-          = tab data: {tab: 'community'}
-            = grid
-              = column size: 6
-                = menu class: 'vertical huge fluid tabular', ui: :on
-                  = item class: 'active', data: {tab: 'shape-the-development'}
-                    = h4
-                      .icons
-                        = icon 'code'
-                        = icon 'js square'
-                        = icon 'html5'
-                      | Make an Impact
-                    = text
-                      | Our roadmap is shaped by our community needs and feedback.
-
-                  = item data: {tab: 'support-open-source'}
-                    = h4
-                      = icon 'github'
-                      | Support Open Source
-                    = text
-                      | Our roadmap is shaped by our community needs and feedback.
-
-              = column size: 10
-                  =tab class: 'active', data: {tab: 'shape-the-development'}
-                    script async="" src="https://fast.wistia.com/embed/medias/ygz56wjjqb.jsonp" 
-                    .wistia_responsive_padding style=("padding:80.21% 0 0 0;position:relative;") 
-                      .wistia_responsive_wrapper style="height:100%;left:0;position:absolute;top:0;width:100%;" 
-                        .wistia_embed.wistia_async_ygz56wjjqb class="videoFoam=true" style="height:100%;position:relative;width:100%" 
-                          .wistia_swatch style=("height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;") 
-                            img alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" src="https://fast.wistia.com/embed/medias/ygz56wjjqb/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" /
-
-
           = tab data: {tab: 'supported'}
             = grid
-              = column size: 6
+              = column computer: 6, tablet: 6, mobile: 16
                 = menu class: 'vertical huge fluid tabular', ui: :on
                   = item class: 'active', data: {tab: 'onboarding'}
                     = h4
                       = icon 'shipping fast'
-                      | Fast Onboarding
+                      | Easy Onboarding
                     = text
+                      | Start with a custom platform, trained staff and content strategy tailored to the unique needs of your business.
 
                   = item data: {tab: 'consulting-included'}
                     = h4
-                      = icon 'fighter jet'
-                      | Free Consulting
+                      = icon 'ship'
+                      | Ongoing Support
                     = text
+                      | Learn the latest tricks, and get personalized advice from the experts with monthly strategy sessions.
 
-                  = item data: {tab: 'onboarding'}
+                  = item data: {tab: 'support'}
                     = h4
                       = icon 'taxi'
-                      | Ready To Help
+                      | Responsive Help
                     = text
+                      | Phone, email, chat or pigeon mail. No matter the medium, our support staff is there when you need us.
 
 
               = column size: 10
                   =tab class: 'active', data: {tab: 'onboarding'}
                     =h4 text: 'Onboarding'
+                  =tab data: {tab: 'consulting-included'}
+                    =h4 text: 'consulting-included'
+                  =tab data: {tab: 'support'}
+                    =h4 text: 'support'
 
 = fragment 'pricing'
   = container
@@ -246,7 +204,8 @@
                 | Startup
                 .sub.header
                   | $1,250/Mo
-              = text text: 'Branded version of the platform. Includes 10,000 users. Extra users cost 10 cents per user.'
+              = text
+                | Get started with a branded version of the platform and everything you need to build a successful online foundation.
               = list 'relaxed divided'
                 = item 
                   = icon 'checkmark green'
@@ -259,7 +218,7 @@
                   |2,500 On-boarding
                 = item 
                   = icon 'checkmark green'
-                  |1 Consulting Call Per Month
+                  |1 Strategy Call
                 = item 
                   = icon 'checkmark grey disabled'
                   |Branding Removed
@@ -276,7 +235,8 @@
                 | Influencer
                 .sub.header
                   | $4,500/Mo
-              = text text: 'Unbranded version of the platform. Includes 35,000 users. Extra users cost 8 cents per user.'
+              = text
+                | Reduce your per user cost and strenthen your image with an unbranded version of the platform.
               = list 'relaxed divided'
                 = item 
                   = icon 'checkmark green'
@@ -289,7 +249,7 @@
                   |FREE On-boarding
                 = item 
                   = icon 'checkmark green'
-                  |2 Consulting Call Per Month
+                  |1 Strategy Call
                 = item 
                   = icon 'checkmark green'
                   |Branding Removed
@@ -306,7 +266,8 @@
                 | Enterprise
                 .sub.header
                   | $8,500/Mo
-              = text text: 'Unbranded version of the platform. Includes 85,000 users. Extra users cost 5 cents per user.'
+              = text
+                | Integrate the platform with your existing marketing stack and fruther reduce the per user cost.
               = list 'relaxed divided'
                 = item 
                   = icon 'checkmark green'
@@ -319,7 +280,7 @@
                   |FREE On-boarding
                 = item 
                   = icon 'checkmark green'
-                  |2 Consulting Call Per Month
+                  |1 Strategy Call
                 = item 
                   = icon 'checkmark green'
                   |Branding Removed
@@ -478,7 +439,7 @@
           = text
             | Let's talk on the phone and, discover if we should work together.
           = button 'sales inquiries yellow inverted large'
-            | Schedule 15-Minute Discovery Call
+            | Schedule Quick Discovery Call
       = column size: 16
         = segment 'secondary basic center aligned'
           |🥥

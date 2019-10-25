@@ -53,6 +53,14 @@ $frame-background: #efefef
     opacity: 0
     transition: 1s all
 
+    h1.ui.header
+      @include media("<tablet")
+        text-align: left
+        white-space: inherit
+
+        &:before
+          display: none
+
   .lead
     font-size: 1.5em
     margin-bottom: 2em
@@ -65,6 +73,30 @@ $frame-background: #efefef
     opacity: 0
     transition: 1s all
 
+
+    @include media("<tablet")
+      border-left: none
+      border-right: none
+      border-bottom: none
+
+    .feature.menu
+      white-space: nowrap;
+      overflow-x: auto
+      overflow-y: hidden
+      -webkit-overflow-x-scrolling: touch
+      -ms-overflow-style: -ms-autohiding-scrollbar
+
+
+      .item
+        width: 25%
+        justify-content: center
+        @include media("<tablet")
+          width: auto
+
+    .ui.feature.menu::-webkit-scrollbar
+        display:none !important
+
+
   .bottom.frame
     border-left: $frame-style
     border-right: $frame-style
@@ -75,8 +107,47 @@ $frame-background: #efefef
     opacity: 0
     transition: 1.5s all
 
+    @include media("<tablet")
+      border-left: none
+      border-right: none
+
   .vertical.menu
     min-height: 550px
+    @include media("<tablet")
+      min-height: auto
+      white-space: nowrap;
+      overflow-x: auto
+      overflow-y: hidden
+      -webkit-overflow-x-scrolling: touch
+      -ms-overflow-style: -ms-autohiding-scrollbar
+      margin-top: -1.8em
+
+      &::-webkit-scrollbar
+        display:none !important
+
+
+      .item
+        width: auto
+        display: inline-block
+        margin-bottom: 2em
+
+      .header, .text
+        white-space: initial
+
+      .header
+        height: 51px
+        aling-self: flex-end
+        display: table-cell;
+        vertical-align: middle
+
+      .text
+        min-height: 72px
+
+
+  .details
+    @include media("<tablet")
+      border-top: $frame-style
+      padding-top: 2em !important
 
 .fragment.pricing
   background: lighten($blue,10)
@@ -88,6 +159,9 @@ $frame-background: #efefef
       padding: 1.5em 1em 1.8em
       background: #eee
       width: 28%
+
+      @include media("<tablet")
+        width: calc(100% - 2em)
 
       &:first-child
         margin-left: auto
@@ -111,6 +185,8 @@ $frame-background: #efefef
     height: 370px
     cursor: pointer
     margin-left: 2em
+    @include media("<tablet")
+      margin-left: auto
 
 
 .fragment.cta
