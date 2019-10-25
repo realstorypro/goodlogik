@@ -11,7 +11,7 @@
             = text
               = @master_text.html_safe
 
-/= fragment 'features'
+= fragment 'features'
   = container
     = grid
       = row
@@ -174,7 +174,7 @@
                   =tab data: {tab: 'support'}
                     =h4 text: 'support'
 
-/= fragment 'pricing'
+= fragment 'pricing'
   = container
     = grid
       = row
@@ -277,7 +277,7 @@
                   = icon 'checkmark green'
                   |Segment&trade; Integration
 
-/= fragment 'faq'
+= fragment 'faq'
   = container
     = grid
       = row
@@ -416,7 +416,7 @@
                       = description
                         | We waive the startup fees and offer additional discounts for 501C3's
 
-= fragment 'cta'
+/= fragment 'cta'
   = grid
     = row 'secondary'
       = column size: 16

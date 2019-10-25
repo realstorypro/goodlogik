@@ -45,7 +45,7 @@ $ ->
   if isMobileDevice()
     $('.tabular').flickity
       cellAlign: 'left'
-      freeScroll: true
+      freeScroll: false
       prevNextButtons: false
       pageDots: false
       contain: true
