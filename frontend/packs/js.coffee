@@ -87,3 +87,36 @@ $ ->
             false
 
       .modal('show')
+
+
+  # Discovery Modal
+  $('.discovery.inquiries').on 'click', (e) ->
+    e.preventDefault()
+
+    $('.ui.sidebar').sidebar('hide')
+    analytics.track 'opened discovery modal'
+
+    $('.discovery.modal')
+      .modal
+        onApprove: ->
+
+          form = $('.modal.discovery form')[0]
+          form.reportValidity()
+
+          if form.checkValidity()
+            analytics.track 'requested discovery inquiry',
+              email: $('.modal.discovery form input[name="email"]').val()
+
+            $.ajax {
+              type: 'POST'
+              headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
+              url: '/discovery/send_request/'
+              data: $('.discovery.modal form').serialize()
+              dataType: 'json'
+            }
+          else
+            false
+
+      .modal('show')
+
+
