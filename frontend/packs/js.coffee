@@ -32,9 +32,7 @@ $ ->
   $('.ui.dropdown').dropdown()
 
   # Tabs
-  $('.tabular .item').tab
-    onVisible: ->
-      $(@).find('.tabular').flickity('resize')
+  $('.tabular .item').tab()
 
   # Shapes
   $('.shape').shape
