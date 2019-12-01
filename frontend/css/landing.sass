@@ -189,14 +189,16 @@ $frame-background: $black
   background: lighten($black,10)
   padding: 5em 0
 
-  .three.cards
+  .two.cards
 
     .card
       padding: 1.5em 1em 1.8em
+      margin-right: 5em
       width: 28%
 
       @include media("<tablet")
         width: calc(100% - 2em)
+        margin-right: 1em
 
       &:first-child
         margin-left: auto
