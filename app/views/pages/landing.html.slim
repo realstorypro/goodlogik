@@ -385,7 +385,9 @@
     = row 'secondary'
       = column size: 16
         = segment 'inverted black basic center aligned padded'
-          = h1 text: "😇 A Match made in heaven 😇", class: 'centered dividing'
+          = h1 class: 'centered dividing'
+            span.mobile.none 😇
+            = " A Match made in heaven 😇"
           = text
             | Let's talk on the phone and see if its meant to be.
           = button 'discovery inquiries blue large'
@@ -400,5 +402,5 @@
         |2019&copy; GOODLOGIK
       = column size: 8, class: 'right aligned'
         = list 'horizontal divided'
-          = link_to "Privacy Policy", privacy_path, class: 'item', target: "_blank"
+          = link_to "Privacy <span class='mobile none'>Policy</span>".html_safe, privacy_path, class: 'item', target: "_blank"
           = link_to "TOS", tos_path, class: 'item', target: "_blank"
