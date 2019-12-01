@@ -386,8 +386,13 @@
             | Let's talk on the phone and see if its meant to be.
           = button 'discovery inquiries blue large'
             | Schedule Discovery Call
-      = column size: 16
-        = segment 'secondary basic center aligned'
-          = icon 'angle double left' 
-          |/ GOODLOGIK&nbsp;
-          = icon 'angle double right'
+
+= fragment 'footer'
+  = grid
+    = row
+      = column size: 8, class: 'left'
+        |2019&copy; GOODLOGIK
+      = column size: 8, class: 'right aligned'
+        = list 'horizontal divided'
+          = link_to "Privacy Policy", "#", class: 'item'
+          = link_to "Terms of Service", "#", class: 'item'
