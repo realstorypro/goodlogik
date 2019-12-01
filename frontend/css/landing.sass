@@ -33,6 +33,7 @@ $frame-background: $black
     margin-bottom: 5px
 
   .item
+    background: rgba(255, 255, 255, .15)
     h4
       color: $white
 
@@ -40,11 +41,12 @@ $frame-background: $black
       color: $white
 
     &:hover
+      background: rgba(255, 255, 255, .25)
       h4
-        color: $grey
+        color: $white
 
       .text
-        color: $grey
+        color: $white
 
   .active.item
     border-right: inherit !important
@@ -62,11 +64,13 @@ $frame-background: $black
       color: $black
 
     &:hover
+      background: $white
+
       h4
-        color: $white
+        color: $black
 
       .text
-        color: $white
+        color: $black
 
 
 
@@ -94,6 +98,7 @@ $frame-background: $black
     border-top: $frame-style
     border-left: $frame-style
     border-right: $frame-style
+    border-bottom: 3px solid $white
     background: $frame-background
     opacity: 0
     transition: 1s all
@@ -138,6 +143,8 @@ $frame-background: $black
 
   .vertical.menu
     min-height: 550px
+    border-right: 2px solid $white
+
     @include media("<tablet")
       min-height: auto
       white-space: nowrap;
