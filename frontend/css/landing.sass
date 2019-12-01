@@ -17,7 +17,7 @@ $grey           : #A0A0A0;
 $black          : #000000;
 $white          : #FFFFFF;
 
-$frame-style: 3px solid lighten($black, 30)
+$frame-style: 3px solid lighten($black, 90)
 $frame-background: $black
 
 .overlay
@@ -122,6 +122,10 @@ $frame-background: $black
         justify-content: center
         @include media("<tablet")
           width: auto
+
+        &.active
+          background: $white
+          color: $black !important
 
     .ui.feature.menu::-webkit-scrollbar
         display:none !important
