@@ -18,7 +18,7 @@ $black          : #000000;
 $white          : #FFFFFF;
 
 $frame-style: 3px solid lighten($black, 30)
-$frame-background: #efefef
+$frame-background: $black
 
 .overlay
   background: rgba(0,0,0,1)
@@ -32,6 +32,20 @@ $frame-background: #efefef
   .icons
     margin-bottom: 5px
 
+  .item
+    h4
+      color: $white
+
+    .text
+      color: $white
+
+    &:hover
+      h4
+        color: $grey
+
+      .text
+        color: $grey
+
   .active.item
     border-right: inherit !important
     border-left: 1px solid transparent
@@ -42,7 +56,18 @@ $frame-background: #efefef
     font-weight: normal
 
     h4 
-      color: lighten($black,20) !important
+      color: $black
+
+    .text
+      color: $black
+
+    &:hover
+      h4
+        color: $white
+
+      .text
+        color: $white
+
 
 
 
@@ -172,7 +197,6 @@ $frame-background: #efefef
         margin-right: 5px !important
 
 .fragment.faq
-  //background: lighten($yellow,5)
   padding: 5em 0
 
   .text
