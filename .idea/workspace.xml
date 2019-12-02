@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0db3a7a4-11cb-4a7d-8ce1-23df65b7cd84" name="Default Changelist" comment="k" />
+    <list default="true" id="0db3a7a4-11cb-4a7d-8ce1-23df65b7cd84" name="Default Changelist" comment="k">
+      <change beforePath="$PROJECT_DIR$/frontend/css/landing.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/landing.sass" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +174,7 @@
       <workItem from="1572033778407" duration="2481000" />
       <workItem from="1575077531272" duration="11723000" />
       <workItem from="1575290154771" duration="969000" />
-      <workItem from="1575302103878" duration="181000" />
+      <workItem from="1575302103878" duration="437000" />
     </task>
     <servers />
   </component>
