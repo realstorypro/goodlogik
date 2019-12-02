@@ -38,7 +38,7 @@
               = icon 'globe'
               | Integrated Analytics
 
-            = item data: {tab: 'supported'}
+            /= item data: {tab: 'supported'}
               = icon 'phone'
               | Fully Supported
       = row 'bottom frame'
@@ -146,39 +146,36 @@
                     = image_tag 'insights.jpg', class: 'image ui huge'
 
 
-          = tab data: {tab: 'supported'}
+          /= tab data: {tab: 'supported'}
             = grid
               = column computer: 6, tablet: 6, mobile: 16
                 = menu class: 'vertical huge fluid tabular', ui: :on
-                  = item class: 'active', data: {tab: 'onboarding'}
-                    = h4
-                      = icon 'shipping fast'
-                      | Easy Onboarding
-                    = text
-                      | Start with a custom platform, trained staff and content strategy tailored to the unique needs of your business.
-
-                  = item data: {tab: 'consulting-included'}
+                  = item class: 'active', data: {tab: 'consulting-included'}
                     = h4
                       = icon 'ship'
-                      | Ongoing Support
+                      | Continuous Upgrades
                     = text
-                      | Learn the latest tricks, and get personalized advice from experts with monthly strategy sessions.
+                      | The platform is always getting faster, easier to use and more feature rich.
 
                   = item data: {tab: 'support'}
                     = h4
                       = icon 'taxi'
                       | Responsive Help
                     = text
-                      | Phone, email, chat or pigeon mail. We're there when you need us.
+                      | With both phone and email support we're there when you need us.
 
 
               = column computer: 10, tablet: 16, mobile: 16, class: 'details'
-                  =tab class: 'active', data: {tab: 'onboarding'}
-                    =h4 text: 'Onboarding'
-                  =tab data: {tab: 'consulting-included'}
-                    =h4 text: 'consulting-included'
+                  =tab class: 'active', data: {tab: 'consulting-included'}
+                    script async="" src="https://fast.wistia.com/embed/medias/nd8x5cmn3h.jsonp" 
+                    .wistia_responsive_padding style=("padding:80.21% 0 0 0;position:relative;") 
+                        .wistia_responsive_wrapper style="height:100%;left:0;position:absolute;top:0;width:100%;" 
+                              .wistia_embed.wistia_async_nd8x5cmn3h class="videoFoam=true" style="height:100%;position:relative;width:100%" 
+                                      .wistia_swatch style=("height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;") 
+                                                img alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" src="https://fast.wistia.com/embed/medias/nd8x5cmn3h/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" /
+
                   =tab data: {tab: 'support'}
-                    =h4 text: 'support'
+                    = image_tag 'support.jpg', class: 'image ui huge'
 
 = fragment 'pricing'
   = container
