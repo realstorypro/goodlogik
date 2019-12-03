@@ -17,8 +17,8 @@ $grey           : #A0A0A0;
 $black          : #000000;
 $white          : #FFFFFF;
 
-$frame-style: 3px solid lighten($black, 30)
-$frame-background: #efefef
+$frame-style: 3px solid lighten($black, 90)
+$frame-background: $black
 
 .overlay
   background: rgba(0,0,0,1)
@@ -32,6 +32,22 @@ $frame-background: #efefef
   .icons
     margin-bottom: 5px
 
+  .item
+    background: rgba(255, 255, 255, .15)
+    h4
+      color: $white
+
+    .text
+      color: $white
+
+    &:hover
+      background: rgba(255, 255, 255, .25)
+      h4
+        color: $white
+
+      .text
+        color: $white
+
   .active.item
     border-right: inherit !important
     border-left: 1px solid transparent
@@ -42,7 +58,20 @@ $frame-background: #efefef
     font-weight: normal
 
     h4 
-      color: lighten($black,20) !important
+      color: $black
+
+    .text
+      color: $black
+
+    &:hover
+      background: $white
+
+      h4
+        color: $black
+
+      .text
+        color: $black
+
 
 
 
@@ -69,6 +98,7 @@ $frame-background: #efefef
     border-top: $frame-style
     border-left: $frame-style
     border-right: $frame-style
+    border-bottom: 3px solid $white
     background: $frame-background
     opacity: 0
     transition: 1s all
@@ -88,10 +118,14 @@ $frame-background: #efefef
 
 
       .item
-        width: 25%
+        width: 33.33%
         justify-content: center
         @include media("<tablet")
           width: auto
+
+        &.active
+          background: $white
+          color: $black !important
 
     .ui.feature.menu::-webkit-scrollbar
         display:none !important
@@ -112,7 +146,9 @@ $frame-background: #efefef
       border-right: none
 
   .vertical.menu
-    min-height: 550px
+    min-height: 650px
+    border-right: 2px solid $white
+
     @include media("<tablet")
       min-height: auto
       white-space: nowrap;
@@ -150,18 +186,19 @@ $frame-background: #efefef
       padding-top: 2em !important
 
 .fragment.pricing
-  background: lighten($blue,10)
+  background: lighten($black,10)
   padding: 5em 0
 
-  .three.cards
+  .two.cards
 
     .card
       padding: 1.5em 1em 1.8em
-      background: #eee
-      width: 28%
+      margin-right: 10em
+      width: 30%
 
       @include media("<tablet")
         width: calc(100% - 2em)
+        margin-right: 1em
 
       &:first-child
         margin-left: auto
@@ -172,8 +209,10 @@ $frame-background: #efefef
       i.icon
         margin-right: 5px !important
 
+      .button i.icon
+        margin-right: auto !important
+
 .fragment.faq
-  background: lighten($yellow,5)
   padding: 5em 0
 
   .text
@@ -191,11 +230,32 @@ $frame-background: #efefef
 
 .fragment.cta
   .inverted.segment
-    padding: 5em 0
+    padding: 8.5em 0
 
   .text
     font-size: 1.5em
 
   .row
     margin-bottom: 0
-    padding-bottom: 0
+    padding-bottom: 0.5em
+
+.fragment.footer
+  text-transform: uppercase
+
+  a
+    text-transform: uppercase
+    color: $black !important
+
+  .left
+    padding-left: 3.5em !important
+    @include media("<tablet")
+      padding-left: 1.0em !important
+
+  .right
+    padding-right: 3.5em !important
+    @include media("<tablet")
+      padding-right: 1.0em !important
+
+span.mobile.none
+  @include media("<tablet")
+    display: none

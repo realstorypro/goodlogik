@@ -2,6 +2,8 @@ class PagesController < ApplicationController
   require 'net/http'
   require 'rich_text_renderer'
 
+  layout 'popup', only: [:privacy, :tos]
+
   def home
     @page= contentful.entry(ENV['CONTENTFUL_PRESENTATION_ID'], include: 3)
   end

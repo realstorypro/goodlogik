@@ -22,6 +22,7 @@ Rails.application.config.content_security_policy do |policy|
   if Rails.env.development?
     policy.script_src :self, :http, :https, "http://cdn.segment.com", "wss://ws.inspectlet.com", :unsafe_eval, :unsafe_inline
   else
+    policy.img_src :self, :http, :https, :data
     policy.script_src :self, :http, :https, "http://cdn.segment.com", "wss://ws.inspectlet.com", :unsafe_eval, :unsafe_inline
     policy.font_src   :self, :https, :data
   end
