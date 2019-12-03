@@ -221,42 +221,42 @@
                 = side 'active'
                   = card 'raised'
                     = image
-                      = image_tag "people/abdul.jpg"
+                      = image_tag "people/abdul.jpg", class: "bw"
                     = content
-                      = header text: 'Samuel'
+                      = header text: 'Gary'
                       = meta text: 'The Rogue CEO'
                       = description
-                        | Does my startup need this?
+                        | How could my startup benefit from using this?
                 = side
                   = card 'raised'
                     = image
                       = image_tag "people/ngo-2.jpg"
                     = content
                       = header
-                        | Probably
+                        | Better Marketing ROI
                       = description
-                        | It's a much better move than just doing inbound
+                        | Use the built-in publishing engine to attract higher quality organic traffic.
 
             = shape
               = sides
                 = side 'active'
+                  = card 'raised'
+                    = image
+                      = image_tag "people/jules.jpg", class: "bw"
+                    = content
+                      = header text: 'Thomas'
+                      = meta text: 'The Data Analyst'
+                      = description
+                        | What degree of access do I have to the data stored on my platform?
+                = side
                   = card 'raised'
                     = image
                       = image_tag "people/jules.jpg"
                     = content
-                      = header text: 'Jules'
-                      = meta text: 'The Analyst'
-                      = description
-                        | What user data can the platform track?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/ngo-2.jpg"
-                    = content
                       = header
-                        | Only what matters
+                        | Very High
                       = description
-                        | The platform can track user activity as it relates to visits, signups, and content views
+                        | Our SQL powered reporting engine provides direct-access to the database.
 
 
             = shape
@@ -264,7 +264,7 @@
                 = side 'active'
                   = card 'raised'
                     = image
-                      = image_tag "people/content.jpg"
+                      = image_tag "people/content.jpg", class: "bw"
                     = content
                       = header text: 'Kristina'
                       = meta text: 'The Content Wizard'
@@ -273,34 +273,34 @@
                 = side
                   = card 'raised'
                     = image
-                      = image_tag "people/ngo-2.jpg"
+                      = image_tag "people/content.jpg"
                     = content
                       = header
                         | Very little
                       = description
-                        | Most users can create a masterpiece in under 20 minutes
+                        | No promises, but most new users can create a masterpiece in under 20 minutes
 
 
             = shape
               = sides
                 = side 'active'
+                  = card 'raised'
+                    = image
+                      = image_tag "people/influencer.jpg", class: "bw"
+                    = content
+                      = header text: 'Zoey'
+                      = meta text: 'The Fashion Influencer'
+                      = description
+                        | Can this help me grow my social media following?
+                = side
                   = card 'raised'
                     = image
                       = image_tag "people/influencer.jpg"
                     = content
-                      = header text: 'Kate'
-                      = meta text: 'The Fashion Influencer'
-                      = description
-                        | Can this hurt my social media efforts?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/ngo-2.jpg"
-                    = content
                       = header
-                        | Unlikely
+                        | Absolutely
                       = description
-                        | Producing original content will only make your fans love you more
+                        | The platform is designed to maximize your influence across all social media channels.
 
 
             = shape
@@ -308,21 +308,21 @@
                 = side 'active'
                   = card 'raised'
                     = image
-                      = image_tag "people/creative.jpg"
+                      = image_tag "people/creative.jpg", class: "bw"
                     = content
                       = header text: 'Ben'
                       = meta text: 'Agency Owner'
                       = description
-                        | I run an inbound agency. Can this platform help me?
+                        | I run a creative agency. How can this platform help my clients?
                 = side
                   = card 'raised'
                     = image
-                      = image_tag "people/ngo-2.jpg"
+                      = image_tag "people/creative.jpg"
                     = content
                       = header
-                        | You betcha
+                        | Spend Less. Create More.
                       = description
-                        | Better content and better data means better ROI on your marketing efforts
+                        | Produce better content faster and with less effort.
 
 
 
@@ -333,7 +333,7 @@
                     = image
                       = image_tag "people/sally.jpg"
                     = content
-                      = header text: 'Sally'
+                      = header text: 'Simone'
                       = meta text: 'The Social Entrepreneur'
                       = description
                         | Do you offer discounts to non-profits?
@@ -345,7 +345,7 @@
                       = header
                         | Yes, we do.
                       = description
-                        | We waive the startup fees and offer additional discounts for 501C3's
+                        | We waive the startup fees for 501(c)(3) nonprofits.
 
 = fragment 'cta'
   = grid
@@ -353,8 +353,7 @@
       = column size: 16
         = segment 'inverted black basic center aligned padded'
           = h1 class: 'centered dividing'
-            span.mobile.none 😇
-            = " A Match made in heaven 😇"
+            = "A Match made in heaven"
           = text
             | Let's talk on the phone and see if its meant to be.
           = button 'discovery inquiries blue large'
