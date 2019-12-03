@@ -365,7 +365,11 @@
   = grid
     = row
       = column size: 8, class: 'left'
-        |2019&copy; GOODLOGIK
+        = list 'horizontal divided'
+          = item
+            | &copy; 2019
+          = item
+            |GOODLOGIK
       = column size: 8, class: 'right aligned'
         = list 'horizontal divided'
           = link_to "Privacy <span class='mobile none'>Policy</span>".html_safe, privacy_path, class: 'item', target: "_blank"
