@@ -74,13 +74,13 @@
 
               = column computer: 10, tablet: 16, mobile: 16, class: 'details'
                 =tab class: 'active', data: {tab: 'beautiful-content'}
-                  = image_tag 'content.gif', class: 'image ui huge'
+                  = image_tag 'content-small.gif', class: 'image ui huge', alt: 'small content screenshot'
 
 
                 =tab data: {tab: 'go-viral'}
-                  = image_tag 'virality.jpg', class: 'image ui huge'
+                  = image_tag 'virality.jpg', class: 'image ui huge', alt: 'virality screeshot'
                 =tab data: {tab: 'long-term'}
-                  = image_tag 'long-term.png', class: 'image ui huge'
+                  = image_tag 'long-term.png', class: 'image ui huge', alt: 'long term value screenshot'
 
           = tab data: {tab: 'social-network'}
             = grid
@@ -105,11 +105,11 @@
 
               = column computer: 10, tablet: 16, mobile: 16, class: 'details'
                   =tab class: 'active', data: {tab: 'signup-members'}
-                    = image_tag 'gamification.jpg', class: 'image ui huge'
+                    = image_tag 'gamification.jpg', class: 'image ui huge', alt: 'gamification screenshot'
                   =tab data: {tab: 'keep-engaged'}
                     =h4 text: 'Keep Them Engaged'
                   =tab data: {tab: 'stay-in-touch'}
-                    = image_tag 'stay-in-touch.jpg', class: 'image ui huge'
+                    = image_tag 'stay-in-touch.jpg', class: 'image ui huge', alt: 'stay-in-tocuh integration screenshot', alt: 'stay-in-tocuh integration screenshot'
 
 
           = tab data: {tab: 'analytics'}
@@ -134,9 +134,9 @@
 
               = column computer: 10, tablet: 16, mobile: 16, class: 'details'
                   =tab class: 'active', data: {tab: 'helpful-metrics'}
-                    = image_tag 'dashboard.jpg', class: 'image ui huge'
+                    = image_tag 'dashboard.jpg', class: 'image ui huge', alt: 'dashboard screenshot'
                   =tab data: {tab: 'insights'}
-                    = image_tag 'insights.jpg', class: 'image ui huge'
+                    = image_tag 'insights.jpg', class: 'image ui huge', alt: 'report-builder screenshot'
 
 
 = fragment 'pricing'
@@ -221,7 +221,7 @@
                 = side 'active'
                   = card 'raised'
                     = image
-                      = image_tag "people/abdul.jpg", class: "bw"
+                      = image_tag "people/abdul.jpg", class: "bw", alt: 'picture of Gary'
                     = content
                       = header text: 'Gary'
                       = meta text: 'The Rogue CEO'
@@ -230,7 +230,7 @@
                 = side
                   = card 'raised'
                     = image
-                      = image_tag "people/ngo-2.jpg"
+                      = image_tag "people/ngo-2.jpg", alt: 'picture of Gary'
                     = content
                       = header
                         | Better Marketing ROI
@@ -242,7 +242,7 @@
                 = side 'active'
                   = card 'raised'
                     = image
-                      = image_tag "people/jules.jpg", class: "bw"
+                      = image_tag "people/jules.jpg", class: "bw", alt: 'picture of Thomas'
                     = content
                       = header text: 'Thomas'
                       = meta text: 'The Data Analyst'
@@ -251,7 +251,7 @@
                 = side
                   = card 'raised'
                     = image
-                      = image_tag "people/jules.jpg"
+                      = image_tag "people/jules.jpg", alt: 'picture of Thomas'
                     = content
                       = header
                         | Very High
@@ -264,7 +264,7 @@
                 = side 'active'
                   = card 'raised'
                     = image
-                      = image_tag "people/content.jpg", class: "bw"
+                      = image_tag "people/content.jpg", class: "bw", alt: 'picture of Kristina'
                     = content
                       = header text: 'Kristina'
                       = meta text: 'The Content Wizard'
@@ -273,7 +273,7 @@
                 = side
                   = card 'raised'
                     = image
-                      = image_tag "people/content.jpg"
+                      = image_tag "people/content.jpg", alt: 'picture of Kristina'
                     = content
                       = header
                         | Very little
@@ -286,7 +286,7 @@
                 = side 'active'
                   = card 'raised'
                     = image
-                      = image_tag "people/influencer.jpg", class: "bw"
+                      = image_tag "people/influencer.jpg", class: "bw", alt: 'picture of Zoey'
                     = content
                       = header text: 'Zoey'
                       = meta text: 'The Fashion Influencer'
@@ -295,7 +295,7 @@
                 = side
                   = card 'raised'
                     = image
-                      = image_tag "people/influencer.jpg"
+                      = image_tag "people/influencer.jpg", alt: 'picture of Zoey'
                     = content
                       = header
                         | Absolutely
@@ -308,7 +308,7 @@
                 = side 'active'
                   = card 'raised'
                     = image
-                      = image_tag "people/creative.jpg", class: "bw"
+                      = image_tag "people/creative.jpg", class: "bw", alt: 'picture of Ben'
                     = content
                       = header text: 'Ben'
                       = meta text: 'Agency Owner'
@@ -317,7 +317,7 @@
                 = side
                   = card 'raised'
                     = image
-                      = image_tag "people/creative.jpg"
+                      = image_tag "people/creative.jpg", alt: 'picture of Ben'
                     = content
                       = header
                         | Spend Less. Create More.
@@ -331,7 +331,7 @@
                 = side 'active'
                   = card 'raised'
                     = image
-                      = image_tag "people/sally.jpg"
+                      = image_tag "people/sally.jpg", alt: 'picture of Simone'
                     = content
                       = header text: 'Simone'
                       = meta text: 'The Social Entrepreneur'
@@ -340,7 +340,7 @@
                 = side
                   = card 'raised'
                     = image
-                      = image_tag "people/ngo-2.jpg"
+                      = image_tag "people/ngo-2.jpg", alt: 'picture of Simone'
                     = content
                       = header
                         | Yes, we do.

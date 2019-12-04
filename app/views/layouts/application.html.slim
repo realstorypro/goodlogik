@@ -1,5 +1,5 @@
 doctype html
-html
+html lang="en"
   head
     = display_meta_tags
     meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
@@ -8,7 +8,6 @@ html
     = javascript_pack_tag 'js', async: true
     = csrf_meta_tags
 
-    script async="" src="https://fast.wistia.com/assets/external/E-v1.js"
     script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="goodlogik"
     javascript:
       (function () {
@@ -157,7 +156,7 @@ html
       = segment 'vertical hero segment clearing '
         = menu ui: :on, class: 'secondary inverted large'
           = item url: root_path
-            = image_tag 'logo.png', class: 'ui image small logo'
+            = image_tag 'logo.png', class: 'ui image small logo', alt: 'goodlogik logo'
           = menu class: 'right', only: :mobile
             = item 'hamburger'
               = icon 'large sidebar'
