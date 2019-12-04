@@ -1,5 +1,5 @@
 doctype html
-html
+html lang="en"
   head
     = display_meta_tags
     meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
@@ -157,7 +157,7 @@ html
       = segment 'vertical hero segment clearing '
         = menu ui: :on, class: 'secondary inverted large'
           = item url: root_path
-            = image_tag 'logo.png', class: 'ui image small logo'
+            = image_tag 'logo.png', class: 'ui image small logo', alt: 'goodlogik logo'
           = menu class: 'right', only: :mobile
             = item 'hamburger'
               = icon 'large sidebar'
