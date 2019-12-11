@@ -4,20 +4,20 @@
         Camera(type="arcRotate" :radius="1")
         HemisphericLight(:diffuse="hemispheric_light")
         Entity(:position="[0, 0, 5]")
-            Animation(property="rotation.x" :duration="15" :end="Math.PI * 2")
-            Animation(property="rotation.y" :duration="15" :end="Math.PI * 2")
-            Animation(property="rotation.z" :duration="15" :end="Math.PI * 2")
+            Animation(property="rotation.x" :duration="15" :end="Math.PI * 1")
+            Animation(property="rotation.y" :duration="15" :end="Math.PI * 1")
+            Animation(property="rotation.z" :duration="15" :end="Math.PI * 1")
             PointLight(:diffuse="point_light")
             template(v-for="x in squares")
                 template(v-for="y in squares")
                     Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
-                        Material(:diffuse="pick_color(x,y,z)" :roughness="1")
+                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.72")
                         Animation(property="rotation.x" :duration="8" :end="Math.PI * 2" :loop="false")
                         Animation(property="rotation.y" :duration="8" :end="Math.PI * 2" :loop="false")
                         Animation(property="rotation.z" :duration="8" :end="Math.PI * 2" :loop="false")
-                        Animation(property="scaling.x" :duration="15" :start="0.8" :end="1.5" :loop="false")
-                        Animation(property="scaling.y" :duration="15" :start="0.8" :end="1.5" :loop="false")
-                        Animation(property="scaling.z" :duration="15" :start="0.8" :end="1.5" :loop="false")
+                        Animation(property="scaling.x" :duration="22" :start="0.8" :end="1.9" :loop="false")
+                        Animation(property="scaling.y" :duration="22" :start="0.8" :end="1.9" :loop="false")
+                        Animation(property="scaling.z" :duration="22" :start="0.8" :end="1.9" :loop="false")
 
 </template>
 
@@ -27,7 +27,7 @@ export default {
         background: '#fff'
         hemispheric_light: '#fff'
         hemispheric_specular_light: '#000'
-        point_light: '#fffc00'
+        point_light: '#fff'
         square_color: "#000"
         squares: [0, 2, -2 ]
         first_color: '#9c91ff'
