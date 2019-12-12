@@ -1,15 +1,14 @@
 - content_for :hero
   = fragment 'hero'
     .landing.page
-      #cover
+      #landing-cover
     .overlay
     .content-holder
       = container
         = grid
           = column size: 14, class: 'centered content'
-            = h1 class: 'inverted', text: @homepage.master_heading
-            = text
-              = @master_text.html_safe
+            = h1 class: 'inverted', text: 'Grow Your Influence'
+            = text text: 'Create a direct connection with your audience and reap a greater reward from your creative expression.'
 
 = fragment 'features'
   = container

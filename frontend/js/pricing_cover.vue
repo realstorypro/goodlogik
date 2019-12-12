@@ -26,7 +26,7 @@ export default {
         hemispheric_specular_light: '#000'
         point_light: '#fff'
         square_color: "#000"
-        squares: [0, 2, -2 ]
+        squares: [0, 2, -2, 4, -4 ]
         first_color: '#9c91ff'
         second_color: '#ffab1d'
         third_color: '#ffe908'
@@ -35,6 +35,9 @@ export default {
         sixth_color: '#0fff7a'
     mounted: ->
         $('.overlay').css('opacity', 0.1)
+
+    beforeDestroy: ->
+        $('.overlay').css('opacity', 1)
     methods:
         pick_color: (x, y, z) ->
 

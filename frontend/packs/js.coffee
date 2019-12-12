@@ -1,30 +1,42 @@
+import semantic_js from '../semantic_ui/dist/semantic.min'
+import Turbolinks from "turbolinks"
+
 import Vue from 'vue/dist/vue.esm'
 import vue_babylonjs from 'vue-babylonjs'
+import TurbolinksAdapter from 'vue-turbolinks';
 
-import semantic_js from '../semantic_ui/dist/semantic.min'
-
-import Cover from '../js/cover.vue'
+import LandingCover from '../js/landing_cover.vue'
 import PricingCover from '../js/pricing_cover.vue'
 import AboutCover from '../js/about_cover.vue'
 
 
 Vue.use(vue_babylonjs)
+Vue.use(TurbolinksAdapter)
 
-$ ->
-  cover = new Vue
-    el: document.getElementById('cover'),
-    render: (h) ->
-      h(Cover)
+Turbolinks.start()
 
-  cover = new Vue
-    el: document.getElementById('pricing-cover'),
-    render: (h) ->
-      h(PricingCover)
 
-  cover = new Vue
-    el: document.getElementById('about-cover'),
-    render: (h) ->
-      h(AboutCover)
+exec_javascript = ->
+  landing_cover_div = document.getElementById("landing-cover")
+  if landing_cover_div != null
+    landing_cover = new Vue
+      el: document.getElementById('landing-cover'),
+      render: (h) ->
+        h(LandingCover)
+
+  pricing_cover_div = document.getElementById("pricing-cover")
+  if pricing_cover_div != null
+    pricing_cover = new Vue
+      el: document.getElementById('pricing-cover'),
+      render: (h) ->
+        h(PricingCover)
+
+  about_cover_div = document.getElementById("about-cover")
+  if about_cover_div != null
+    about_cover = new Vue
+      el: document.getElementById('about-cover'),
+      render: (h) ->
+        h(AboutCover)
 
   analytics.page()
 
@@ -89,3 +101,10 @@ $ ->
       .modal('show')
 
 
+
+# Loading ExecJS 2x
+$ ->
+  exec_javascript()
+
+document.addEventListener "turbolinks:load", ->
+  exec_javascript()
