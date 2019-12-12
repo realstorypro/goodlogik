@@ -9,12 +9,12 @@
                 template(v-for="y in squares")
                     Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
                         Material(:diffuse="pick_color(x,y,z)" :roughness="0.50")
-                        Animation(property="rotation.x" :duration="8" :end="Math.PI * 1.9" :loop="true")
-                        Animation(property="rotation.y" :duration="8" :end="Math.PI * 1.9" :loop="true")
-                        Animation(property="rotation.z" :duration="8" :end="Math.PI * 1.9" :loop="true")
-                        Animation(property="scaling.x" :duration="1" :start="1.9" :end="2.1" :loop="false")
-                        Animation(property="scaling.y" :duration="1" :start="1.9" :end="2.1" :loop="false")
-                        Animation(property="scaling.z" :duration="1" :start="1.9" :end="2.1" :loop="false")
+                        Animation(property="rotation.x" :duration="4" :end="Math.PI * 1.9" :loop="true")
+                        Animation(property="rotation.y" :duration="4" :end="Math.PI * 1.9" :loop="true")
+                        Animation(property="rotation.z" :duration="4" :end="Math.PI * 1.9" :loop="true")
+                        Animation(property="scaling.x" :duration="50" :start="1.1" :end="Math.PI * 1.3" :loop="false")
+                        Animation(property="scaling.y" :duration="50" :start="1.1" :end="Math.PI * 1.3" :loop="false")
+                        Animation(property="scaling.z" :duration="50" :start="1.1" :end="Math.PI * 1.3" :loop="false")
 
 </template>
 
@@ -27,12 +27,12 @@ export default {
         point_light: '#fff'
         square_color: "#000"
         squares: [0, 2, -2 ]
-        first_color: '#00b7eb'
-        second_color: '#00b7eb'
-        third_color: '#00b7eb'
-        fourth_color: '#00b7eb'
-        fifth_color: '#00b7eb'
-        sixth_color: '#00b7eb'
+        first_color: '#A0A0A0'
+        second_color: '#A0A0A0'
+        third_color: '#A0A0A0'
+        fourth_color: '#A0A0A0'
+        fifth_color: '#A0A0A0'
+        sixth_color: '#A0A0A0'
     mounted: ->
         $('.overlay').css('transition', 'all 2.5s')
         $('.overlay').css('opacity', 0.1)
