@@ -8,7 +8,7 @@
             template(v-for="x in squares")
                 template(v-for="y in squares")
                     Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
-                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.55")
+                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.45" :glossiness="2")
                         Animation(property="rotation.x" :duration="40" :end="Math.PI * 3.1" :loop="true")
                         Animation(property="rotation.y" :duration="40" :end="Math.PI * 3.1" :loop="true")
                         Animation(property="rotation.z" :duration="40" :end="Math.PI * 3.1" :loop="true")
