@@ -3,6 +3,7 @@
 class Requester
   include ActiveModel::Model
 
+  attr_accessor :modal_name
   attr_accessor :fname
   attr_accessor :lname
   attr_accessor :phone

@@ -8,9 +8,8 @@ module Zapier
     attr_accessor :error_message, :response, :code, :body
     attr_reader :resource, :destination
 
-    def initialize(resource, destination)
+    def initialize(resource)
       @resource = resource
-      @destination = destination
     end
 
     def post_to_zapier
@@ -21,9 +20,6 @@ module Zapier
       success?
     end
 
-    def call_operation
-      HTTParty.post(destination, body: params)
-    end
 
     def success_status_codes
       [200]

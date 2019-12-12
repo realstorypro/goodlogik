@@ -52,11 +52,14 @@ $ ->
 
 
   # Requester
-  $('.requester').on 'click', (e) ->
+  $('.requester.trigger').on 'click', (e) ->
     e.preventDefault()
-    console.log $(@).data()
-
     modal_name =  $(@).data('name')
+    modal_action =  $(@).data('action')
+    modal_color =  $(@).data('color')
+
+    $('.modal.requester .approve').text(modal_action).addClass(modal_color)
+    $('.modal.requester .modal_name').val(modal_name)
 
     $('.ui.sidebar').sidebar('hide')
     analytics.track "opened #{modal_name} modal"
@@ -64,13 +67,14 @@ $ ->
     $('.requester.modal')
       .modal
         onApprove: ->
-
           form = $('.modal.requester form')[0]
           form.reportValidity()
 
           if form.checkValidity()
             analytics.track 'requested discovery inquiry',
               email: $('.modal.requester form input[name="email"]').val()
+
+            console.log $('.requester.modal form').serialize()
 
             $.ajax {
               type: 'POST'
