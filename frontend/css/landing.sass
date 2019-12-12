@@ -55,7 +55,6 @@ $frame-background: $black
 
 
 
-
 .fragment.features
   padding: 6em 0
 
@@ -165,76 +164,3 @@ $frame-background: $black
     @include media("<tablet")
       border-top: $frame-style
       padding-top: 2em !important
-
-.fragment.pricing
-  background: lighten($black,10)
-  padding: 5em 0
-
-  .lead
-    font-size: 1.5em
-    margin-bottom: 1.5em
-    color: $white
-
-  .three.cards
-
-    .card
-      padding: 2.0em 1.5em 1.4em
-      margin-right: 2em
-      width: 30%
-
-      @include media("<tablet")
-        width: calc(100% - 2em)
-        margin-right: 1em
-
-      &:first-child
-        margin-left: auto
-
-      &:last-child
-        margin-right: auto
-
-      .ui.button
-        padding-top: 0.8em
-        padding-bottom: 0.8em
-
-
-      i.icon
-        margin-right: 5px !important
-
-      .button i.icon
-        margin-right: auto !important
-
-      small
-        text-align: center
-        display: block
-        margin-top: 0.3em
-
-.fragment.faq
-  padding: 5em 0
-
-  .text
-    color: #eee
-
-  .card
-    padding: 0
-    border: 0
-    height: 370px
-    cursor: pointer
-    margin-left: 2em
-    @include media("<tablet")
-      margin-left: auto
-
-    .bw
-      filter: grayscale(100%)
-
-
-.fragment.cta
-  .inverted.segment
-    padding: 8.5em 0
-
-  .text
-    font-size: 1.5em
-
-  .row
-    margin-bottom: 0
-    padding-bottom: 0.5em
-
