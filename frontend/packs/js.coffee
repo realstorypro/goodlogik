@@ -75,7 +75,7 @@ $ ->
             $.ajax {
                 type: 'POST'
                 headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
-                url: '/sales/send_request/'
+                url: '/requests/demo/'
                 data: $('.sales.modal form').serialize()
                 dataType: 'json'
             }

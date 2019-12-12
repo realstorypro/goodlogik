@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class SalesRequester
+class Requester
   include ActiveModel::Model
 
   attr_accessor :fname

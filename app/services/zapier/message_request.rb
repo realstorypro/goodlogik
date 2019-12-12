@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 
 module Zapier
-  class SalesRequest < Zapier::Base
-    def call_operation
-      HTTParty.post(ENV['ZAPIER_SALES_WEBHOOK'], body: params)
-    end
+  class MessageRequest < Zapier::Base
 
     def params
       {
