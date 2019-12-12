@@ -5,33 +5,34 @@
         HemisphericLight(:diffuse="hemispheric_light")
         Entity(:position="[0, 0, 5]")
             PointLight(:diffuse="point_light")
+            HemisphericLight(:diffuse="hemispheric_light")
             template(v-for="x in squares")
                 template(v-for="y in squares")
                     Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
-                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.50")
-                        Animation(property="rotation.x" :duration="30" :end="Math.PI * 3.1" :loop="true")
-                        Animation(property="rotation.z" :duration="30" :end="Math.PI * 3.1" :loop="true")
-                        Animation(property="scaling.x" :duration="50" :start="1.9" :end="Math.PI * 1.3" :loop="false")
-                        Animation(property="scaling.y" :duration="50" :start="1.9" :end="Math.PI * 1.3" :loop="false")
-                        Animation(property="scaling.z" :duration="50" :start="1.9" :end="Math.PI * 1.3" :loop="false")
+                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.30" :glossiness="2")
+                        Animation(property="rotation.x" :duration="60" :end="Math.PI * 6.1" :loop="true")
+                        Animation(property="rotation.z" :duration="60" :end="Math.PI * 6.1" :loop="true")
+                        Animation(property="scaling.x" :duration="50" :start="2.2" :end="Math.PI * 2.3" :loop="true")
+                        Animation(property="scaling.y" :duration="50" :start="2.2" :end="Math.PI * 2.3" :loop="true")
+                        Animation(property="scaling.z" :duration="50" :start="2.2" :end="Math.PI * 2.3" :loop="true")
 
 </template>
 
 <script lang="coffee">
 export default {
     data: ->
-        background: '#fff'
+        background: '#111'
         hemispheric_light: '#fff'
         hemispheric_specular_light: '#000'
-        point_light: '#fff'
+        point_light: '#ccc'
         square_color: "#000"
         squares: [0, 2, -2 ]
-        first_color: '#0E6EB8'
-        second_color: '#0E6EB8'
-        third_color: '#0E6EB8'
-        fourth_color: '#0E6EB8'
-        fifth_color: '#0E6EB8'
-        sixth_color: '#0E6EB8'
+        first_color: '#008080'
+        second_color: '#008080'
+        third_color: '#008080'
+        fourth_color: '#008080'
+        fifth_color: '#008080'
+        sixth_color: '#008080'
     mounted: ->
         $('.overlay').css('transition', 'all 2.5s')
         $('.overlay').css('opacity', 0.1)
