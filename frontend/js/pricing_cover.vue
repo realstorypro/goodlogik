@@ -34,9 +34,11 @@ export default {
         fifth_color: '#ff1873'
         sixth_color: '#0fff7a'
     mounted: ->
+        $('.overlay').css('transition', 'all 2.5s')
         $('.overlay').css('opacity', 0.1)
 
     beforeDestroy: ->
+        $('.overlay').css('transition', 'none')
         $('.overlay').css('opacity', 1)
     methods:
         pick_color: (x, y, z) ->
