@@ -9,9 +9,21 @@
   .three.cards
 
     .card
-      padding: 2.0em 1.5em 1.4em
+      padding: 2.0em 1.0em 1.2em
       margin-right: 2em
       width: 30%
+      background: lighten($black, 98)
+
+      &.secondary
+        background: lighten($black, 95)
+
+      &.tertiary
+        background: lighten($black, 98)
+
+      span.starting
+        font-size: 0.8em
+      span.price
+        font-size: 1.4em
 
       @include media("<tablet")
         width: calc(100% - 2em)
@@ -24,8 +36,10 @@
         margin-right: auto
 
       .ui.button
+        font-size: 1.05em
         padding-top: 0.8em
         padding-bottom: 0.8em
+        margin-top: 0.5em
 
 
       i.icon

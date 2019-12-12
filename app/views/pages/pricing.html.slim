@@ -14,28 +14,24 @@
   = container
     = grid
       = row
-        = column computer: 13, tablet: 13, mobile: 16, class: 'centered main feature'
-          br
-          br
-      = row
         = column size: 16
-
-          = cards 'three raised'
+          br
+          = cards 'three'
             = card
-              = h4 'icon center aligned'
-                = icon 'bicycle'
+              = h3 'icon center aligned'
                 | Startup
+                = icon 'bicycle'
                 .sub.header
-                  | Starting at
+                  span.starting Starting at
                   br
-                  | $550/Mo
+                  span.price $550/Mo
               = list 'relaxed divided'
                 = item
                   = icon 'checkmark green'
                   |15,000 Members Included
                 = item
                   = icon 'dollar green'
-                  |Extra members cost $0.05/member
+                  |Extra members @ $0.05/member
 
                 = item
                   = icon 'close grey disabled'
@@ -104,25 +100,25 @@
                   br
                   a.ui.purple.large.fluid.right.labeled.icon.button href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="startup"
                     = icon 'chess pawn'
-                    | START FREE TRIAL
+                    | START TRIAL
                   small
-                    | 14-Day Trial. Valid Credit Card Required.
+                    | Free 14-Day Trial. Valid Credit Card Required.
 
-            = card
-              = h4 'icon center aligned'
-                = icon 'car'
+            = card 'secondary'
+              = h3 'icon center aligned'
                 | Small Business
+                = icon 'car'
                 .sub.header
-                  | Starting at
+                  span.starting Starting at
                   br
-                  | $1,250/Mo
+                  span.price $1,250/Mo
               = list 'relaxed divided'
                 = item
                   = icon 'checkmark green'
                   |30,000 Members Included
                 = item
                   = icon 'dollar green'
-                  |Extra members cost $0.05/member
+                  |Extra members @ $0.05/member
 
                 = item
                   = icon 'checkmark orange'
@@ -191,17 +187,18 @@
                   br
                   a.ui.purple.large.fluid.right.labeled.icon.button href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="startup"
                     = icon 'chess rook'
-                    | START FREE TRIAL
+                    | START TRIAL
                   small
-                    | 14-Day Trial. Valid Credit Card Required.
-            = card
-              = h4 'icon center aligned'
-                = icon 'space shuttle'
+                    | Free 14-Day Trial. Valid Credit Card Required.
+
+            = card 'tertiary'
+              = h3 'icon center aligned'
                 | Enterprise
+                = icon 'space shuttle'
                 .sub.header
-                  | Starting at
+                  span.starting Starting at
                   br
-                  | $7,500/Mo
+                  span.price $7,500/Mo
               = list 'relaxed divided'
                 = item
                   = icon 'checkmark green'
@@ -281,14 +278,13 @@
                   small
                     | Or call us at +1 (844) 979&ndash;1373.
           br
+          br
 
 = fragment 'faq'
   = container
     = grid
       = row
         = column size: 16
-          br
-          br
           = h2 text: "Common Questions", class: 'centered dividing'
       = row
         = column size: 16, class: 'center aligned'

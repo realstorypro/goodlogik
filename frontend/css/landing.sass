@@ -165,3 +165,9 @@ $frame-background: $black
 .fragment.feed
   padding: 4em 0
   background: lighten($black,20)
+
+  .three.cards
+    .card
+      @include media("<tablet")
+        width: calc(100% - 2em)
+        margin-right: 1em
