@@ -160,22 +160,17 @@ html lang="en"
             = item 'hamburger'
               = icon 'large sidebar'
           = menu class: 'right', only: :desktop
-            = link_to 'PLATFORM', '#', class: 'item'
+            = link_to 'FEATURES', '#', class: 'item'
             = link_to 'PRICING', '#', class: 'item'
             = link_to 'ABOUT', '#', class: 'item'
             = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
               = icon 'external alternate'
               | CAREERS
             = item
-              a.ui.button.red href="javascript:void(0)" data-cb-type="portal"
+              a.ui.button.purple href="javascript:void(0)" data-cb-type="portal"
                 = icon 'lock'
                 | ACCOUNT
-            /= item
-              = button 'sales inquiries red'
-                | Schedule a Demo
-
 
         = yield :hero
       =yield
-      = render 'partials/demo_modal'
-      = render 'partials/discovery_modal'
+      = render 'partials/requester_modal'

@@ -50,68 +50,33 @@ $ ->
     e.preventDefault()
     $('.ui.sidebar').sidebar('toggle')
 
-  # Sales Modal
-  $('.sales.inquiries').on 'click', (e) ->
+
+  # Requester
+  $('.requester').on 'click', (e) ->
     e.preventDefault()
+    console.log $(@).data()
+
+    modal_name =  $(@).data('name')
 
     $('.ui.sidebar').sidebar('hide')
-    analytics.track 'opened sales modal'
+    analytics.track "opened #{modal_name} modal"
 
-    $('.sales.modal')
-      .modal
-        onShow: ->
-          $('.content-holder').css('opacity', 0)
-        onHide: ->
-          $('.content-holder').css('opacity', 1)
-        onApprove: ->
-
-          form = $('.modal.sales form')[0]
-          form.reportValidity()
-
-          if form.checkValidity()
-            analytics.track 'requested sales inquiry',
-              email: $('.modal.sales form input[name="email"]').val()
-
-            $.ajax {
-                type: 'POST'
-                headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
-                url: '/requests/demo/'
-                data: $('.sales.modal form').serialize()
-                dataType: 'json'
-            }
-
-            $('.content-holder p:not(.text)').remove()
-            $('.content-holder h1').text('Demo Request Sent')
-            $('.content-holder p.text').text('Thank you for your interest. We will be reaching out shortly.')
-          else
-            false
-
-      .modal('show')
-
-
-  # Discovery Modal
-  $('.discovery.inquiries').on 'click', (e) ->
-    e.preventDefault()
-
-    $('.ui.sidebar').sidebar('hide')
-    analytics.track 'opened discovery modal'
-
-    $('.discovery.modal')
+    $('.requester.modal')
       .modal
         onApprove: ->
 
-          form = $('.modal.discovery form')[0]
+          form = $('.modal.requester form')[0]
           form.reportValidity()
 
           if form.checkValidity()
             analytics.track 'requested discovery inquiry',
-              email: $('.modal.discovery form input[name="email"]').val()
+              email: $('.modal.requester form input[name="email"]').val()
 
             $.ajax {
               type: 'POST'
               headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
-              url: '/discovery/send_request/'
-              data: $('.discovery.modal form').serialize()
+              url: '/requests/send/'
+              data: $('.requester.modal form').serialize()
               dataType: 'json'
             }
           else

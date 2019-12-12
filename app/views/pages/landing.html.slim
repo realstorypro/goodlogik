@@ -29,10 +29,10 @@
           = menu class: 'pointing secondary tabular black massive feature inverted', ui: :on
             = item class: 'active', data: {tab: 'social-publishing'}
               = icon 'paper plane'
-              | Captivating Content
+              | High-End Publishing
             = item data: {tab: 'social-network'}
               = icon 'user outline'
-              | Built-in Social Network
+              | Built-in Social
 
             = item data: {tab: 'analytics'}
               = icon 'globe'
@@ -88,8 +88,8 @@
                 = menu class: 'vertical huge fluid tabular', ui: :on
                   = item class: 'active', data: {tab: 'signup-members'}
                     = h4
-                      = icon 'users'
-                      | Made to Engage
+                      = icon 'blind'
+                      | Fun Environment
                     = text
                       | Rich comments, gamification, and sexy profiles turn visitors into users, and give them a reason to come back.
 
@@ -127,9 +127,10 @@
                     = h4
                       .icons
                         = icon 'code'
+                        = icon 'code branch'
                       | Gain Insights
                     = text
-                      | Use real SQL to slice into your data and see what turns visitors into members.
+                      | Use SQL to slice into your data and see what turns visitors into members.
 
 
               = column computer: 10, tablet: 16, mobile: 16, class: 'details'
@@ -563,7 +564,7 @@
             = "A Match made in heaven"
           = text
             | Let's talk on the phone and see if its meant to be.
-          = button 'discovery inquiries blue large'
+          = button class: 'requester inquiries blue large', data: {name: 'Discovery Call', action: 'Schedule Call', color: 'blue'}
             | Schedule 15-Minute Discovery Call
           br
           br
