@@ -4,27 +4,25 @@
         Camera(type="arcRotate" :radius="1")
         HemisphericLight(:diffuse="hemispheric_light")
         Entity(:position="[0, 0, 5]")
-            Animation(property="rotation.x" :duration="11" :end="Math.PI * 1.0")
-            Animation(property="rotation.y" :duration="11" :end="Math.PI * 1.0")
-            Animation(property="rotation.z" :duration="11" :end="Math.PI * 1.0")
+            Animation(property="rotation.x" :duration="35" :end="Math.PI * 4.0" :loop="true")
             PointLight(:diffuse="point_light")
             template(v-for="x in squares")
                 template(v-for="y in squares")
                     Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
-                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.72")
+                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.42")
                         Animation(property="rotation.x" :duration="8" :end="Math.PI * 2" :loop="false")
                         Animation(property="rotation.y" :duration="8" :end="Math.PI * 2" :loop="false")
                         Animation(property="rotation.z" :duration="8" :end="Math.PI * 2" :loop="false")
-                        Animation(property="scaling.x" :duration="22" :start="1.2" :end="1.9" :loop="false")
-                        Animation(property="scaling.y" :duration="22" :start="1.2" :end="1.9" :loop="false")
-                        Animation(property="scaling.z" :duration="22" :start="1.2" :end="1.9" :loop="false")
+                        Animation(property="scaling.x" :duration="10" :start="1.2" :end="Math.PI * 0.59" :loop="false")
+                        Animation(property="scaling.y" :duration="10" :start="1.2" :end="Math.PI * 0.59" :loop="false")
+                        Animation(property="scaling.z" :duration="10" :start="1.2" :end="Math.PI * 0.59" :loop="false")
 
 </template>
 
 <script lang="coffee">
 export default {
     data: ->
-        background: '#fff'
+        background: '#222'
         hemispheric_light: '#fff'
         hemispheric_specular_light: '#000'
         point_light: '#fff'
