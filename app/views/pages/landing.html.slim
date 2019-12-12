@@ -139,3 +139,31 @@
                   =tab data: {tab: 'insights'}
                     = image_tag 'insights.jpg', class: 'image ui huge', alt: 'report-builder screenshot'
 
+
+
+= fragment 'feed'
+  = container
+    = grid
+      = row
+        = column computer: 13, tablet: 13, mobile: 16, class: 'centered main feature'
+          br
+          = h2 'horizontal divider inverted'
+            | Latest from Logik.Works
+          br
+
+      = row
+        = column computer: 15, tablet: 13, mobile: 16, class: 'centered main feature'
+          = cards 'three'
+            - @works_feed.entries.each do |feed_item|
+              = card
+                = content
+                  = image_tag 'logo-sm', class: 'ui image mini'
+                  .right.floated.meta
+                    = time_ago_in_words(feed_item.published)
+                    | &nbsp; ago
+                = content
+                  = header
+                    = feed_item.title.truncate(40)
+                  = description
+                    = feed_item.summary
+              //= feed_item.url

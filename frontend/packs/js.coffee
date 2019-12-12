@@ -1,6 +1,7 @@
 import Vue from 'vue/dist/vue.esm'
 import vue_babylonjs from 'vue-babylonjs'
 import Cover from '../js/cover.vue'
+import PricingCover from '../js/pricing_cover.vue'
 import semantic_js from '../semantic_ui/dist/semantic.min'
 
 
@@ -12,21 +13,12 @@ $ ->
     render: (h) ->
       h(Cover)
 
+  cover = new Vue
+    el: document.getElementById('pricing-cover'),
+    render: (h) ->
+      h(PricingCover)
+
   analytics.page()
-
-  # Visibility Animations
-  $('.features.fragment .main.feature').visibility
-    once: true
-    continuous: false
-    onTopVisible: ->
-      $(@).css 'opacity', 1
-
-  $('.features.fragment .top.frame').visibility
-    once: true
-    continuous: false
-    onTopVisible: ->
-      $(@).css 'opacity', 1
-      $('.features .bottom.frame').css 'opacity', 1
 
   # Dropdowns
   $('.ui.dropdown').dropdown()
