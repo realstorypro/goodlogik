@@ -8,6 +8,7 @@ import TurbolinksAdapter from 'vue-turbolinks';
 import LandingCover from '../js/landing_cover.vue'
 import PricingCover from '../js/pricing_cover.vue'
 import AboutCover from '../js/about_cover.vue'
+import FeatureCover from '../js/feature_cover.vue'
 
 
 Vue.use(vue_babylonjs)
@@ -37,6 +38,13 @@ exec_javascript = ->
       el: document.getElementById('about-cover'),
       render: (h) ->
         h(AboutCover)
+
+  feature_cover_div = document.getElementById("feature-cover")
+  if feature_cover_div != null
+    feature_cover = new Vue
+      el: document.getElementById('feature-cover'),
+      render: (h) ->
+        h(FeatureCover)
 
   analytics.page()
 
