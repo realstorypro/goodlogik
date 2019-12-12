@@ -161,7 +161,7 @@ html lang="en"
               = icon 'large sidebar'
           = menu class: 'right', only: :desktop
             = link_to 'FEATURES', '#', class: 'item'
-            = link_to 'PRICING', '#', class: 'item'
+            = link_to 'PRICING', pricing_path, class: 'item'
             = link_to 'ABOUT', '#', class: 'item'
             = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
               = icon 'external alternate'
@@ -173,4 +173,17 @@ html lang="en"
 
         = yield :hero
       =yield
+      = fragment 'footer'
+        = grid
+          = row
+            = column size: 8, class: 'left'
+              = list 'horizontal divided'
+                = item
+                  | &copy; 2019
+                = item
+                  |GOODLOGIK
+            = column size: 8, class: 'right aligned'
+              = list 'horizontal divided'
+                = link_to "Privacy <span class='mobile none'>Policy</span>".html_safe, privacy_path, class: 'item', target: "_blank"
+                = link_to "TOS", tos_path, class: 'item', target: "_blank"
       = render 'partials/requester_modal'
