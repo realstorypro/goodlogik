@@ -1,8 +1,11 @@
 import Vue from 'vue/dist/vue.esm'
 import vue_babylonjs from 'vue-babylonjs'
+
+import semantic_js from '../semantic_ui/dist/semantic.min'
+
 import Cover from '../js/cover.vue'
 import PricingCover from '../js/pricing_cover.vue'
-import semantic_js from '../semantic_ui/dist/semantic.min'
+import AboutCover from '../js/about_cover.vue'
 
 
 Vue.use(vue_babylonjs)
@@ -17,6 +20,11 @@ $ ->
     el: document.getElementById('pricing-cover'),
     render: (h) ->
       h(PricingCover)
+
+  cover = new Vue
+    el: document.getElementById('about-cover'),
+    render: (h) ->
+      h(AboutCover)
 
   analytics.page()
 
