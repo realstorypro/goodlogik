@@ -7,45 +7,7 @@ html lang="en"
     = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Lato', media: 'none', onload: "if(media!='all')media='all'"
     = javascript_pack_tag 'js', async: true
     = csrf_meta_tags
-    script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="goodlogik"
-    javascript:
-      (function () {
-          var t = document.createElement("script");
-          t.type = "text/javascript", t.async = !0, t.src = 'https://cdn.firstpromoter.com/fprom.js', t.onload = t.onreadystatechange = function () {
-              var t = this.readyState;
-              if (!t || "complete" == t || "loaded" == t) try {
-                  $FPROM.init("xuq7h8x8", ".goodlogik.com")
-              } catch (t) {
-              }
-          };
-          var e = document.getElementsByTagName("script")[0];
-          e.parentNode.insertBefore(t, e)
-      })();
-
-      var chargebeeTrackFunc = function (fprom) {
-          var tid = fprom.data.tid;
-          var chargebeeInstance;
-          try {
-              chargebeeInstance = Chargebee.getInstance();
-          } catch (err) {
-          }
-          ;
-          if (tid && chargebeeInstance) {
-              var cart = chargebeeInstance.getCart();
-              cart.setCustomer({cf_tid: tid});
-          } else if (tid) {
-              document.addEventListener("DOMContentLoaded", function () {
-                  chargebeeTrackFunc(fprom)
-              });
-          }
-      };
-      if (window.$FPROM)
-          chargebeeTrackFunc($FPROM);
-      else {
-          _fprom = window.fprom || [];
-          window._fprom = _fprom;
-          _fprom.push(['_init', chargebeeTrackFunc]);
-      }
+    script src="https://js.chargebee.com/v2/chargebee.js?#{Time.now.strftime("%H:%M:%S")}" data-cb-site="goodlogik" data-turbolinks-track="reload"
 
     javascript:
 

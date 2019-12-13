@@ -18,6 +18,51 @@ Turbolinks.start()
 
 
 exec_javascript = ->
+
+  # first promoter
+  do ->
+    t = document.createElement('script')
+    t.type = 'text/javascript'
+    t.async = !0
+    t.src = 'https://cdn.firstpromoter.com/fprom.js'
+    t.onload =
+      t.onreadystatechange = ->
+        `var t`
+        t = @readyState
+        if !t or 'complete' == t or 'loaded' == t
+          try
+            $FPROM.init 'xuq7h8x8', '.goodlogik.com'
+          catch t
+
+    e = document.getElementsByTagName('script')[0]
+    e.parentNode.insertBefore t, e
+
+  # injected first promoter tid into chargebee instance
+  chargebeeTrackFunc = (fprom) ->
+    tid = fprom.data.tid
+    chargebeeInstance = undefined
+    try
+      chargebeeInstance = Chargebee.getInstance()
+    catch err
+    if tid and chargebeeInstance
+      cart = chargebeeInstance.getCart()
+      cart.setCustomer cf_tid: tid
+    else if tid
+      document.addEventListener 'DOMContentLoaded', ->
+        chargebeeTrackFunc fprom
+
+  if window.$FPROM
+    chargebeeTrackFunc $FPROM
+  else
+    _fprom = window.fprom or []
+    window._fprom = _fprom
+    _fprom.push [
+      '_init'
+      chargebeeTrackFunc
+    ]
+
+
+
   landing_cover_div = document.getElementById("landing-cover")
   if landing_cover_div != null
     landing_cover = new Vue
