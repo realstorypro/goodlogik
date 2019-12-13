@@ -12,8 +12,8 @@ import AboutCover from '../js/about_cover.vue'
 import FeatureCover from '../js/feature_cover.vue'
 
 Vue.use(vue_babylonjs)
-Vue.use(TurbolinksAdapter)
 
+#Vue.use(TurbolinksAdapter)
 #Turbolinks.start()
 
 
