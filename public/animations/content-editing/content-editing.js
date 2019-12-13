@@ -308,30 +308,6 @@ p.frameBounds = [rect, rect];
 
 	this.timeline.addTween(cjs.Tween.get(this.___camera___instance).wait(289));
 
-	// rich_text_movements_obj_
-	this.rich_text_movements = new lib.Scene_1_rich_text_movements();
-	this.rich_text_movements.name = "rich_text_movements";
-	this.rich_text_movements.depth = 0;
-	this.rich_text_movements.isAttachedToCamera = 0
-	this.rich_text_movements.isAttachedToMask = 0
-	this.rich_text_movements.layerDepth = 0
-	this.rich_text_movements.layerIndex = 0
-	this.rich_text_movements.maskLayerName = 0
-
-	this.timeline.addTween(cjs.Tween.get(this.rich_text_movements).wait(60).to({regX:509.7,regY:344.5,x:509.7,y:344.5},0).wait(19).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:509.7,regY:344.5,x:509.7,y:344.5},0).wait(4).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:509.7,regY:344.5,x:509.7,y:344.5},0).wait(19).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:509.7,regY:344.5,x:509.7,y:344.5},0).wait(184));
-
-	// rich_text_obj_
-	this.rich_text = new lib.Scene_1_rich_text();
-	this.rich_text.name = "rich_text";
-	this.rich_text.depth = 0;
-	this.rich_text.isAttachedToCamera = 0
-	this.rich_text.isAttachedToMask = 0
-	this.rich_text.layerDepth = 0
-	this.rich_text.layerIndex = 1
-	this.rich_text.maskLayerName = 0
-
-	this.timeline.addTween(cjs.Tween.get(this.rich_text).wait(289));
-
 	// heading_movements_obj_
 	this.heading_movements = new lib.Scene_1_heading_movements();
 	this.heading_movements.name = "heading_movements";
@@ -339,7 +315,7 @@ p.frameBounds = [rect, rect];
 	this.heading_movements.isAttachedToCamera = 0
 	this.heading_movements.isAttachedToMask = 0
 	this.heading_movements.layerDepth = 0
-	this.heading_movements.layerIndex = 2
+	this.heading_movements.layerIndex = 0
 	this.heading_movements.maskLayerName = 0
 
 	this.timeline.addTween(cjs.Tween.get(this.heading_movements).wait(60).to({regX:515.9,regY:344.1,x:515.9,y:344.1},0).wait(65).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:515.9,regY:344.1,x:515.9,y:344.1},0).wait(163));
@@ -352,10 +328,34 @@ p.frameBounds = [rect, rect];
 	this.heading.isAttachedToCamera = 0
 	this.heading.isAttachedToMask = 0
 	this.heading.layerDepth = 0
-	this.heading.layerIndex = 3
+	this.heading.layerIndex = 1
 	this.heading.maskLayerName = 0
 
 	this.timeline.addTween(cjs.Tween.get(this.heading).wait(289));
+
+	// rich_text_movements_obj_
+	this.rich_text_movements = new lib.Scene_1_rich_text_movements();
+	this.rich_text_movements.name = "rich_text_movements";
+	this.rich_text_movements.depth = 0;
+	this.rich_text_movements.isAttachedToCamera = 0
+	this.rich_text_movements.isAttachedToMask = 0
+	this.rich_text_movements.layerDepth = 0
+	this.rich_text_movements.layerIndex = 2
+	this.rich_text_movements.maskLayerName = 0
+
+	this.timeline.addTween(cjs.Tween.get(this.rich_text_movements).wait(60).to({regX:509.7,regY:344.5,x:509.7,y:344.5},0).wait(19).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:509.7,regY:344.5,x:509.7,y:344.5},0).wait(4).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:509.7,regY:344.5,x:509.7,y:344.5},0).wait(19).to({regX:0,regY:0,x:0,y:0},0).wait(1).to({regX:509.7,regY:344.5,x:509.7,y:344.5},0).wait(184));
+
+	// rich_text_obj_
+	this.rich_text = new lib.Scene_1_rich_text();
+	this.rich_text.name = "rich_text";
+	this.rich_text.depth = 0;
+	this.rich_text.isAttachedToCamera = 0
+	this.rich_text.isAttachedToMask = 0
+	this.rich_text.layerDepth = 0
+	this.rich_text.layerIndex = 3
+	this.rich_text.maskLayerName = 0
+
+	this.timeline.addTween(cjs.Tween.get(this.rich_text).wait(289));
 
 	// cb1_movements_obj_
 	this.cb1_movements = new lib.Scene_1_cb1_movements();

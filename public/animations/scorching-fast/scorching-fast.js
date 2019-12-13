@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"scorching_fast_atlas_", frames: [[0,129,1932,112],[1726,0,71,113],[1799,0,71,113],[0,243,1658,127],[0,630,1394,127],[0,372,1526,127],[0,0,1724,127],[0,501,1526,127]]}
+		{name:"scorching_fast_atlas_", frames: [[0,0,1932,112],[1396,501,71,113],[1396,616,71,113],[0,114,1658,127],[0,501,1394,127],[0,243,1526,127],[0,630,1394,127],[0,372,1526,127]]}
 ];
 
 
@@ -141,14 +141,14 @@ p.nominalBounds = new cjs.Rectangle(0,0,763,63.5);
 
 	// Layer_1
 	this.instance = new lib.CachedBmp_20();
-	this.instance.setTransform(304.35,16,0.5,0.5);
+	this.instance.setTransform(306.85,16,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(304.4,16,862.0000000000001,63.5);
+p.nominalBounds = new cjs.Rectangle(306.9,16,697,63.5);
 
 
 (lib.___Camera___ = function(mode,startPosition,loop) {
@@ -182,7 +182,7 @@ p.nominalBounds = new cjs.Rectangle(-547.5,-433,1095,866);
 	this.instance.setTransform(580.5,432,1,1,0,0,0,381.6,31.6);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(82).to({_off:false},0).wait(62).to({startPosition:0},0).to({y:352},5).wait(55).to({startPosition:0},0).to({y:274},5).wait(151));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(82).to({_off:false},0).wait(62).to({startPosition:0},0).to({y:352},5).wait(50).to({startPosition:0},0).to({y:274},5).wait(156));
 
 	this._renderFirstFrame();
 
@@ -197,7 +197,7 @@ p.nominalBounds = new cjs.Rectangle(-547.5,-433,1095,866);
 	this.instance.setTransform(597.05,431.85,1,1,0,0,0,735.5,47.6);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(209).to({_off:false},0).wait(151));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(204).to({_off:false},0).wait(156));
 
 	this._renderFirstFrame();
 
@@ -215,8 +215,8 @@ p.nominalBounds = new cjs.Rectangle(-547.5,-433,1095,866);
 	this.instance_1.setTransform(546.5,432,1,1,0,0,0,381.6,31.6);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},74).to({state:[{t:this.instance_1}]},5).to({state:[{t:this.instance_1}]},65).to({state:[{t:this.instance_1}]},5).to({state:[{t:this.instance_1}]},55).to({state:[{t:this.instance_1}]},5).wait(151));
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(74).to({_off:false},0).to({y:352},5).wait(65).to({startPosition:0},0).to({y:272},5).wait(55).to({startPosition:0},0).to({y:194},5).wait(151));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},74).to({state:[{t:this.instance_1}]},5).to({state:[{t:this.instance_1}]},65).to({state:[{t:this.instance_1}]},5).to({state:[{t:this.instance_1}]},50).to({state:[{t:this.instance_1}]},5).wait(156));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(74).to({_off:false},0).to({y:352},5).wait(65).to({startPosition:0},0).to({y:272},5).wait(50).to({startPosition:0},0).to({y:194},5).wait(156));
 
 	this._renderFirstFrame();
 
@@ -230,7 +230,7 @@ p.nominalBounds = new cjs.Rectangle(-547.5,-433,1095,866);
 	this.instance = new lib.typingbar("synched",0);
 	this.instance.setTransform(557.8,434.3,1,1,0,0,0,392.9,33.9);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(14).to({startPosition:4},0).to({x:807.8,startPosition:9},15).wait(5).to({startPosition:4},0).to({x:1187.8,startPosition:9},15).wait(5).to({startPosition:4},0).to({x:1337.8,startPosition:9},10).wait(10).to({startPosition:9},0).wait(3).to({startPosition:2},0).to({x:557.8,startPosition:0},5).wait(7).to({startPosition:7},0).to({x:717.8},10).wait(5).to({startPosition:2},0).to({x:1137.8,startPosition:7},15).wait(4).to({startPosition:1},0).to({x:1417.8,startPosition:7},11).wait(12).to({startPosition:9},0).to({x:557.8,startPosition:0},3).wait(5).to({startPosition:5},0).to({x:677.8,startPosition:0},5).wait(4).to({startPosition:4},0).to({x:1177.8,startPosition:0},16).wait(5).to({startPosition:5},0).to({x:1437.8,startPosition:0},10).wait(12).to({startPosition:0},0).to({x:557.8},3).wait(5).to({startPosition:5},0).to({x:757.8},7).wait(4).to({startPosition:9},0).to({x:1177.8,startPosition:5},11).wait(4).to({startPosition:8},0).to({x:1277.8,startPosition:7},9).wait(111));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(14).to({startPosition:4},0).to({x:807.8,startPosition:9},15).wait(5).to({startPosition:4},0).to({x:1187.8,startPosition:9},15).wait(5).to({startPosition:4},0).to({x:1337.8,startPosition:9},10).wait(10).to({startPosition:9},0).wait(3).to({startPosition:2},0).to({x:557.8,startPosition:0},5).wait(7).to({startPosition:7},0).to({x:717.8},10).wait(5).to({startPosition:2},0).to({x:1137.8,startPosition:7},15).wait(4).to({startPosition:1},0).to({x:1417.8,startPosition:7},11).wait(12).to({startPosition:9},0).to({x:557.8,startPosition:0},3).wait(5).to({startPosition:5},0).to({x:677.8,startPosition:0},5).wait(4).to({startPosition:4},0).to({x:1177.8,startPosition:0},16).wait(5).to({startPosition:5},0).to({x:1297.8,startPosition:0},5).wait(12).to({x:1437.8},0).to({x:557.8},3).wait(5).to({startPosition:5},0).to({x:757.8},7).wait(4).to({startPosition:9},0).to({x:1177.8,startPosition:5},11).wait(4).to({startPosition:8},0).to({x:1277.8,startPosition:7},9).wait(116));
 
 	this._renderFirstFrame();
 
@@ -245,7 +245,7 @@ p.nominalBounds = new cjs.Rectangle(-547.5,-433,1095,866);
 	this.instance.setTransform(243.9,413.9,1,1,0,0,0,381.6,31.6);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(149).to({_off:false},0).wait(55).to({startPosition:0},0).to({y:335.9},5).wait(151));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(149).to({_off:false},0).wait(50).to({startPosition:0},0).to({y:335.9},5).wait(156));
 
 	this._renderFirstFrame();
 
