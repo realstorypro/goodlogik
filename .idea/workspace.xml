@@ -4,9 +4,7 @@
     <list default="true" id="0db3a7a4-11cb-4a7d-8ce1-23df65b7cd84" name="Default Changelist" comment="k">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pages/about.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/about.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/features.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/features.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/pricing.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/pricing.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/js/about_cover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/about_cover.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/css/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/main.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,16 +26,16 @@
   <component name="PropertiesComponent">
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.slim" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/css" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/css" />
       <recent name="$PROJECT_DIR$/frontend/js" />
       <recent name="$PROJECT_DIR$/app/views/pages" />
-      <recent name="$PROJECT_DIR$/frontend/css" />
       <recent name="$PROJECT_DIR$/app/controllers" />
       <recent name="$PROJECT_DIR$/app/views/layouts" />
     </key>
@@ -189,7 +187,7 @@
       <workItem from="1575531687997" duration="93000" />
       <workItem from="1575534603654" duration="3000" />
       <workItem from="1576036091223" duration="4976000" />
-      <workItem from="1576094465155" duration="32751000" />
+      <workItem from="1576094465155" duration="35916000" />
     </task>
     <servers />
   </component>
@@ -226,10 +224,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="386" y="212" width="670" height="476" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1576187174153" />
-    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup" timestamp="1576212493147">
+    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup" timestamp="1576213017641">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1576212493147" />
+    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1576213017641" />
     <state x="385" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1575476953636" />
   </component>
 </project>

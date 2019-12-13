@@ -1,4 +1,4 @@
-= audio_tag("about.mp3", autoplay: true, controls: false)
+/= audio_tag("about.mp3", autoplay: true, controls: false)
 - content_for :hero
   = fragment 'hero'
     .landing.page
@@ -9,4 +9,23 @@
         = grid
           = column size: 14, class: 'centered content'
             = h1 class: 'inverted', text: "We do it because"
-            = text text: "We want to make Internet a better, more fun place for everyone to enjoy."
+            = text text: "We want to make Internet a better, more exciting and fun place for everyone to enjoy."
+
+= fragment 'story'
+  = container 'full'
+    = grid
+      = row
+        = column size: 16
+          = h1 text: 'Our Story'
+      = row
+        = column computer: 8, tablet: 16, mobile: 16
+          = text 'lead'
+            | GoodLogik was born in 2016, when the co-founders, Michael and Leonid were travelling through India.
+          = text 'lead'
+            | Kids of the 80s they thought that the internet became boring. Content production was tedious and the final product uninspiring.
+          = text 'lead'
+            | They wanted to shake things up, and the idea for the <b>PLATFORM</b> was born.
+          = text 'lead'
+            | What if you could build a platform that would allow its user to build their own home on the internet.
+        = column computer: 8, tablet: 16, mobile: 16, class: 'centered'
+          = image_tag 'cow-walking.gif', class: 'ui image fluid'
