@@ -1,6 +1,3 @@
-# import Turbolinks from "turbolinks"
-# import TurbolinksAdapter from 'vue-turbolinks';
-
 import semantic_js from '../semantic_ui/dist/semantic.min'
 
 import Vue from 'vue/dist/vue.esm'
@@ -12,10 +9,6 @@ import AboutCover from '../js/about_cover.vue'
 import FeatureCover from '../js/feature_cover.vue'
 
 Vue.use(vue_babylonjs)
-
-#Vue.use(TurbolinksAdapter)
-#Turbolinks.start()
-
 
 exec_javascript = ->
 
@@ -91,6 +84,7 @@ exec_javascript = ->
       render: (h) ->
         h(FeatureCover)
 
+  # Launching Analytics
   analytics.page()
 
   # Dropdowns
@@ -146,13 +140,6 @@ exec_javascript = ->
       .modal('show')
 
 
-
 # Loading ExecJS 2x
 $ ->
-  exec_javascript()
-
-document.addEventListener "turbolinks:load", ->
-  Chargebee.init({site: "goodlogik"})
-  Chargebee.registerAgain()
-
   exec_javascript()

@@ -9,3 +9,33 @@
           = column size: 14, class: 'centered content'
             = h1 class: 'inverted', text: "Innovative At The Core"
             = text text: "High-performance and intuitive design makes the platform easy to learn and easy to love."
+
+= fragment 'publishing'
+  = container 'full'
+    = grid
+      = row
+        = column size: 16
+          = h2 'horizontal divider'
+            = "Publishing Platform"
+
+      = row
+        = column computer: 8, tablet: 16, mobile: 16
+          = h3 text: 'High-Powered Front-End'
+        = column computer: 8, tablet: 16, mobile: 16
+          = image_tag 'performance.png', class: 'ui image fluid'
+      = row
+        = column computer: 8, tablet: 16, mobile: 16, class: 'right aligned'
+          = image_tag 'admin.png', class: 'ui image fluid'
+        = column computer: 8, tablet: 16, mobile: 16
+          = h3 text: 'Simple Back End'
+      /= row
+        = column size: 16
+          = h3 'horizontal divider'
+            = icon 'double angle down'
+            = 'A Social Platform'
+
+      /= row
+        = column size: 16
+          = h3 'horizontal divider'
+            = icon 'double angle down'
+            = 'A Data Driven Platform'
