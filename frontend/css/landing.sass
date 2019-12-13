@@ -97,6 +97,9 @@ $frame-background: lighten($black, 10)
         @include media("<tablet")
           width: auto
 
+        &:hover
+          background: lighten($black, 30)
+
         &.active
           background: $white
           color: $black !important
