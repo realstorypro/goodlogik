@@ -54,14 +54,6 @@ exec_javascript = ->
   # Tabs
   $('.tabular .item').tab()
 
-  # Shapes
-  $('.shape').shape
-    duration: 350
-
-  # Shapes Click
-  $('.shape .card').on 'click', (e) ->
-    $(@).parents('.shape').shape('flip left')
-
   # Setting Sidebar
   $('.ui.sidebar').sidebar()
 

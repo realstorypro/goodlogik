@@ -98,8 +98,7 @@
 
                 = item
                   br
-                  a.ui.purple.large.fluid.right.labeled.icon.button href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="startup"
-                    = icon 'chess pawn'
+                  a.ui.large.fluid.icon.button href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="startup"
                     | START TRIAL
                   small
                     | Free 14-Day Trial. Valid Credit Card Required.
@@ -185,8 +184,7 @@
 
                 = item
                   br
-                  a.ui.purple.large.fluid.right.labeled.icon.button href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="startup"
-                    = icon 'chess rook'
+                  a.ui.large.secondary.fluid.button href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="startup"
                     | START TRIAL
                   small
                     | Free 14-Day Trial. Valid Credit Card Required.
@@ -272,152 +270,12 @@
 
                 = item
                   br
-                  = button class: 'large requester trigger purple right labeled icon fluid', data: {name: 'enterprise sales call', action: 'Call Me', color: 'purple'}
-                    = icon 'chess queen'
+                  = button class: 'large requester trigger right labeled icon fluid', data: {name: 'enterprise sales call', action: 'Call Me', color: 'purple'}
                     | TALK TO SALES
                   small
                     | Or call us at +1 (844) 979&ndash;1373.
           br
           br
-
-= fragment 'faq'
-  = container
-    = grid
-      = row
-        = column size: 16
-          = h2 text: "Common Questions", class: 'centered dividing'
-      = row
-        = column size: 16, class: 'center aligned'
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/abdul.jpg", class: "bw", alt: 'picture of Gary'
-                    = content
-                      = header text: 'Gary'
-                      = meta text: 'The Rogue CEO'
-                      = description
-                        | How could my startup benefit from using this?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/ngo-2.jpg", alt: 'picture of Gary'
-                    = content
-                      = header
-                        | Better Marketing ROI
-                      = description
-                        | Use the built-in publishing engine to attract higher quality organic traffic.
-
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/jules.jpg", class: "bw", alt: 'picture of Thomas'
-                    = content
-                      = header text: 'Thomas'
-                      = meta text: 'The Data Analyst'
-                      = description
-                        | What degree of access do I have to the data stored on my platform?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/jules.jpg", alt: 'picture of Thomas'
-                    = content
-                      = header
-                        | Very High
-                      = description
-                        | Our SQL powered reporting engine provides direct-access to the database.
-
-
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/content.jpg", class: "bw", alt: 'picture of Kristina'
-                    = content
-                      = header text: 'Kristina'
-                      = meta text: 'The Content Wizard'
-                      = description
-                        | How much training do I need to be effective on this platform?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/content.jpg", alt: 'picture of Kristina'
-                    = content
-                      = header
-                        | Very little
-                      = description
-                        | No promises, but most new users can create a masterpiece in under 20 minutes
-
-
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/influencer.jpg", class: "bw", alt: 'picture of Zoey'
-                    = content
-                      = header text: 'Zoey'
-                      = meta text: 'The Fashion Influencer'
-                      = description
-                        | Can this help me grow my social media following?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/influencer.jpg", alt: 'picture of Zoey'
-                    = content
-                      = header
-                        | Absolutely
-                      = description
-                        | The platform is designed to maximize your influence across all social media channels.
-
-
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/creative.jpg", class: "bw", alt: 'picture of Ben'
-                    = content
-                      = header text: 'Ben'
-                      = meta text: 'Agency Owner'
-                      = description
-                        | I run a creative agency. How can this platform help my clients?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/creative.jpg", alt: 'picture of Ben'
-                    = content
-                      = header
-                        | Spend Less. Create More.
-                      = description
-                        | Produce better content faster and with less effort.
-
-
-
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/sally.jpg", alt: 'picture of Simone'
-                    = content
-                      = header text: 'Simone'
-                      = meta text: 'The Social Entrepreneur'
-                      = description
-                        | Do you offer discounts to non-profits?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/ngo-2.jpg", alt: 'picture of Simone'
-                    = content
-                      = header
-                        | Yes, we do.
-                      = description
-                        | We waive the startup fees for 501(c)(3) nonprofits.
 
 = fragment 'cta'
   = grid
@@ -425,10 +283,10 @@
       = column size: 16
         = segment 'inverted black basic center aligned padded'
           = h1 class: 'centered dividing'
-            = "Are we a Match made in heaven?"
+            = "Seeing is believing"
           = text
-            | Let's talk on the phone and see if its meant to be.
-          = button class: 'requester trigger purple large', data: {name: 'discovery call', action: 'Schedule a Call', color: 'purple'}
-            | Schedule 15-Minute Discovery Call
+            | Let us show you how the platform can help your business grow.
+          = button class: 'requester trigger purple large', data: {name: 'demo call', action: 'Schedule a Demo', color: 'purple'}
+            | Schedule a Demo
           br
           br
