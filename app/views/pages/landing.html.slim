@@ -1,15 +1,14 @@
 - content_for :hero
   = fragment 'hero'
     .landing.page
-      #cover
+      #landing-cover
     .overlay
     .content-holder
       = container
         = grid
           = column size: 14, class: 'centered content'
-            = h1 class: 'inverted', text: @homepage.master_heading
-            = text
-              = @master_text.html_safe
+            = h1 class: 'inverted', text: 'Grow Your Influence'
+            = text text: 'Create a direct connection with your audience and reap a greater reward from your creative expression.'
 
 = fragment 'features'
   = container
@@ -29,10 +28,10 @@
           = menu class: 'pointing secondary tabular black massive feature inverted', ui: :on
             = item class: 'active', data: {tab: 'social-publishing'}
               = icon 'paper plane'
-              | Captivating Content
+              | Easy Publishing
             = item data: {tab: 'social-network'}
-              = icon 'user outline'
-              | Built-in Social Network
+              = icon 'chess'
+              | Engaging Experience
 
             = item data: {tab: 'analytics'}
               = icon 'globe'
@@ -88,8 +87,8 @@
                 = menu class: 'vertical huge fluid tabular', ui: :on
                   = item class: 'active', data: {tab: 'signup-members'}
                     = h4
-                      = icon 'users'
-                      | Made to Engage
+                      = icon 'blind'
+                      | Fun Environment
                     = text
                       | Rich comments, gamification, and sexy profiles turn visitors into users, and give them a reason to come back.
 
@@ -127,9 +126,10 @@
                     = h4
                       .icons
                         = icon 'code'
+                        = icon 'code branch'
                       | Gain Insights
                     = text
-                      | Use real SQL to slice into your data and see what turns visitors into members.
+                      | Use SQL to slice into your data and see what turns visitors into members.
 
 
               = column computer: 10, tablet: 16, mobile: 16, class: 'details'
@@ -139,238 +139,30 @@
                     = image_tag 'insights.jpg', class: 'image ui huge', alt: 'report-builder screenshot'
 
 
-= fragment 'pricing'
+
+= fragment 'feed'
   = container
     = grid
       = row
-        = column size: 16
-          = h2 text: "Simple Pricing", class: 'centered inverted dividing'
+        = column computer: 15, tablet: 13, mobile: 16, class: 'centered main feature'
           br
+          = h2 'inverted'
+            | Latest From Logik.Works
           br
+
       = row
-        = column size: 16
-
-          = cards 'two raised'
-            = card
-              = h4 'icon center aligned'
-                = icon 'bicycle'
-                | Startup
-                .sub.header
-                  | $1,250/Mo
-              = text
-                | Get started with a branded version of the platform and everything you need to succeed.
-              = list 'relaxed divided'
-                = item 
-                  = icon 'checkmark green'
-                  |Up to 10,000 Users
-                = item 
-                  = icon 'dollar green'
-                  |Extra Users Billed at $0.15/user
-                = item
-                  = icon 'dollar green'
-                  |$1,000 Setup
-                = item
-                  = icon 'close grey disabled'
-                  |Branding Removed
-                = item
-                  br
-                  a.ui.red.large.fluid.right.labeled.icon.button href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="startup"
-                    | SUBSCRIBE
-                    = icon 'angle right'
-
-            = card
-              = h4 'icon center aligned'
-                = icon 'car'
-                | Influencer
-                .sub.header
-                  | $5,000/Mo
-              = text
-                | Get more users and strengthen your image with an unbranded version of the platform.
-              = list 'relaxed divided'
-                = item 
-                  = icon 'checkmark green'
-                  |Up to 50,000 Users
-                = item 
-                  = icon 'dollar green'
-                  |Extra Users Billed at $0.15/user
-                = item 
-                  = icon 'dollar green'
-                  |FREE Setup
-                = item
-                  = icon 'checkmark green'
-                  |Branding Removed
-                = item
-                  br
-                  a.ui.blue.large.fluid.right.labeled.icon.button href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="influencer"
-                    | SUBSCRIBE
-                    = icon 'angle double right'
-          br
-
-= fragment 'faq'
-  = container
-    = grid
-      = row
-        = column size: 16
-          br
-          br
-          = h2 text: "Common Questions", class: 'centered dividing'
-      = row
-        = column size: 16, class: 'center aligned'
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/abdul.jpg", class: "bw", alt: 'picture of Gary'
-                    = content
-                      = header text: 'Gary'
-                      = meta text: 'The Rogue CEO'
-                      = description
-                        | How could my startup benefit from using this?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/ngo-2.jpg", alt: 'picture of Gary'
-                    = content
-                      = header
-                        | Better Marketing ROI
-                      = description
-                        | Use the built-in publishing engine to attract higher quality organic traffic.
-
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/jules.jpg", class: "bw", alt: 'picture of Thomas'
-                    = content
-                      = header text: 'Thomas'
-                      = meta text: 'The Data Analyst'
-                      = description
-                        | What degree of access do I have to the data stored on my platform?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/jules.jpg", alt: 'picture of Thomas'
-                    = content
-                      = header
-                        | Very High
-                      = description
-                        | Our SQL powered reporting engine provides direct-access to the database.
-
-
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/content.jpg", class: "bw", alt: 'picture of Kristina'
-                    = content
-                      = header text: 'Kristina'
-                      = meta text: 'The Content Wizard'
-                      = description
-                        | How much training do I need to be effective on this platform?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/content.jpg", alt: 'picture of Kristina'
-                    = content
-                      = header
-                        | Very little
-                      = description
-                        | No promises, but most new users can create a masterpiece in under 20 minutes
-
-
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/influencer.jpg", class: "bw", alt: 'picture of Zoey'
-                    = content
-                      = header text: 'Zoey'
-                      = meta text: 'The Fashion Influencer'
-                      = description
-                        | Can this help me grow my social media following?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/influencer.jpg", alt: 'picture of Zoey'
-                    = content
-                      = header
-                        | Absolutely
-                      = description
-                        | The platform is designed to maximize your influence across all social media channels.
-
-
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/creative.jpg", class: "bw", alt: 'picture of Ben'
-                    = content
-                      = header text: 'Ben'
-                      = meta text: 'Agency Owner'
-                      = description
-                        | I run a creative agency. How can this platform help my clients?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/creative.jpg", alt: 'picture of Ben'
-                    = content
-                      = header
-                        | Spend Less. Create More.
-                      = description
-                        | Produce better content faster and with less effort.
-
-
-
-            = shape
-              = sides
-                = side 'active'
-                  = card 'raised'
-                    = image
-                      = image_tag "people/sally.jpg", alt: 'picture of Simone'
-                    = content
-                      = header text: 'Simone'
-                      = meta text: 'The Social Entrepreneur'
-                      = description
-                        | Do you offer discounts to non-profits?
-                = side
-                  = card 'raised'
-                    = image
-                      = image_tag "people/ngo-2.jpg", alt: 'picture of Simone'
-                    = content
-                      = header
-                        | Yes, we do.
-                      = description
-                        | We waive the startup fees for 501(c)(3) nonprofits.
-
-= fragment 'cta'
-  = grid
-    = row 'secondary'
-      = column size: 16
-        = segment 'inverted black basic center aligned padded'
-          = h1 class: 'centered dividing'
-            = "A Match made in heaven"
-          = text
-            | Let's talk on the phone and see if its meant to be.
-          = button 'discovery inquiries blue large'
-            | Schedule 15-Minute Discovery Call
-          br
-          br
-
-= fragment 'footer'
-  = grid
-    = row
-      = column size: 8, class: 'left'
-        = list 'horizontal divided'
-          = item
-            | &copy; 2019
-          = item
-            |GOODLOGIK
-      = column size: 8, class: 'right aligned'
-        = list 'horizontal divided'
-          = link_to "Privacy <span class='mobile none'>Policy</span>".html_safe, privacy_path, class: 'item', target: "_blank"
-          = link_to "TOS", tos_path, class: 'item', target: "_blank"
+        = column computer: 15, tablet: 13, mobile: 16, class: 'centered main feature'
+          = cards 'three'
+            - @works_feed.entries.each do |feed_item|
+              = card
+                = content
+                  = image_tag 'logo-sm', class: 'ui image mini'
+                  .right.floated.meta
+                    = time_ago_in_words(feed_item.published)
+                    | &nbsp; ago
+                = content
+                  = header
+                    = feed_item.title.truncate(40)
+                  = description
+                    = feed_item.summary
+              //= feed_item.url

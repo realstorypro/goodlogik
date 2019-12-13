@@ -8,44 +8,6 @@ html lang="en"
     = javascript_pack_tag 'js', async: true
     = csrf_meta_tags
     script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="goodlogik"
-    javascript:
-      (function () {
-          var t = document.createElement("script");
-          t.type = "text/javascript", t.async = !0, t.src = 'https://cdn.firstpromoter.com/fprom.js', t.onload = t.onreadystatechange = function () {
-              var t = this.readyState;
-              if (!t || "complete" == t || "loaded" == t) try {
-                  $FPROM.init("xuq7h8x8", ".goodlogik.com")
-              } catch (t) {
-              }
-          };
-          var e = document.getElementsByTagName("script")[0];
-          e.parentNode.insertBefore(t, e)
-      })();
-
-      var chargebeeTrackFunc = function (fprom) {
-          var tid = fprom.data.tid;
-          var chargebeeInstance;
-          try {
-              chargebeeInstance = Chargebee.getInstance();
-          } catch (err) {
-          }
-          ;
-          if (tid && chargebeeInstance) {
-              var cart = chargebeeInstance.getCart();
-              cart.setCustomer({cf_tid: tid});
-          } else if (tid) {
-              document.addEventListener("DOMContentLoaded", function () {
-                  chargebeeTrackFunc(fprom)
-              });
-          }
-      };
-      if (window.$FPROM)
-          chargebeeTrackFunc($FPROM);
-      else {
-          _fprom = window.fprom || [];
-          window._fprom = _fprom;
-          _fprom.push(['_init', chargebeeTrackFunc]);
-      }
 
     javascript:
 
@@ -149,7 +111,7 @@ html lang="en"
         | Account
       = item
         = button 'sales inquiries fluid red'
-          | Scheduel a Demo
+          | Schedule a Demo
 
     .pusher
       = segment 'vertical hero segment clearing '
@@ -160,18 +122,30 @@ html lang="en"
             = item 'hamburger'
               = icon 'large sidebar'
           = menu class: 'right', only: :desktop
+            = link_to "FEATURES", features_path, class: 'item'
+            = link_to 'PRICING', pricing_path, class: 'item'
+            = link_to 'ABOUT', about_path, class: 'item'
             = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
               = icon 'external alternate'
-              | Careers
-            a.item href="javascript:void(0)" data-cb-type="portal"
-              = icon 'lock'
-              | Account
+              | CAREERS
             = item
-              = button 'sales inquiries red'
-                | Schedule a Demo
-
+              a.ui.button.purple href="javascript:void(0)" data-cb-type="portal"
+                = icon 'lock'
+                | ACCOUNT
 
         = yield :hero
       =yield
-      = render 'partials/demo_modal'
-      = render 'partials/discovery_modal'
+      = fragment 'footer'
+        = grid
+          = row
+            = column size: 8, class: 'left'
+              = list 'horizontal divided'
+                = item
+                  | &copy; 2019
+                = item
+                  |GOODLOGIK
+            = column size: 8, class: 'right aligned'
+              = list 'horizontal divided'
+                = link_to "Privacy <span class='mobile none'>Policy</span>".html_safe, privacy_path, class: 'item', target: "_blank"
+                = link_to "TOS", tos_path, class: 'item', target: "_blank"
+      = render 'partials/requester_modal'

@@ -6,7 +6,7 @@ module Zapier
     include HTTParty
 
     attr_accessor :error_message, :response, :code, :body
-    attr_reader :resource
+    attr_reader :resource, :destination
 
     def initialize(resource)
       @resource = resource
@@ -19,6 +19,7 @@ module Zapier
       self.error_message = response.body
       success?
     end
+
 
     def success_status_codes
       [200]

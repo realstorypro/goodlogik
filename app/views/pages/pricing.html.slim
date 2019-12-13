@@ -1,0 +1,292 @@
+- content_for :hero
+  = fragment 'hero'
+    .landing.page
+      #pricing-cover
+    .overlay
+    .content-holder
+      = container
+        = grid
+          = column size: 14, class: 'centered content'
+            = h1 class: 'inverted', text: "Affordable Pricing"
+            = text text: 'With pricing plans for small entrepreneurs and large enterprises there is an option for every budget.'
+
+= fragment 'pricing'
+  = container
+    = grid
+      = row
+        = column size: 16
+          br
+          = cards 'three'
+            = card
+              = h3 'icon center aligned'
+                | Startup
+                = icon 'bicycle'
+                .sub.header
+                  span.starting Starting at
+                  br
+                  span.price $550/Mo
+              = list 'relaxed divided'
+                = item
+                  = icon 'checkmark green'
+                  |15,000 Members Included
+                = item
+                  = icon 'dollar green'
+                  |Extra members @ $0.05/member
+
+                = item
+                  = icon 'close grey disabled'
+                  |GoodLogik Branding Removed
+
+
+                = item
+                  br
+                  = h4 text: 'Features'
+
+                = item
+                  = icon 'checkmark green'
+                  |Webhooks
+
+                = item
+                  = icon 'checkmark green'
+                  |RSS Feed
+
+                = item
+                  = icon 'close grey disabled'
+                  |SQL Reporting
+
+                = item
+                  br
+                  = h4 text: 'On-boarding'
+
+                = item
+                  = icon 'dollar green'
+                  |Free On-boarding
+
+                = item
+                  = icon 'checkmark green'
+                  |1 hour of live training
+
+                = item
+                  = icon 'close grey disabled'
+                  |Dedicated Consultant
+
+                = item
+                  = icon 'close grey disabled'
+                  |Business Strategy Session
+
+                = item
+                  br
+                  = h4 text: 'Support'
+
+                = item
+                  = icon 'close grey disabled'
+                  |Dedicated Account Manager
+
+                = item
+                  = icon 'checkmark green'
+                  |Knowledge Base
+
+                = item
+                  = icon 'checkmark green'
+                  |Email
+
+                = item
+                  = icon 'close grey disabled'
+                  |Phone
+
+
+
+                = item
+                  br
+                  a.ui.large.fluid.icon.button href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="startup"
+                    | START TRIAL
+                  small
+                    | Free 14-Day Trial. Valid Credit Card Required.
+
+            = card 'secondary'
+              = h3 'icon center aligned'
+                | Small Business
+                = icon 'car'
+                .sub.header
+                  span.starting Starting at
+                  br
+                  span.price $1,250/Mo
+              = list 'relaxed divided'
+                = item
+                  = icon 'checkmark green'
+                  |30,000 Members Included
+                = item
+                  = icon 'dollar green'
+                  |Extra members @ $0.05/member
+
+                = item
+                  = icon 'checkmark orange'
+                  |GoodLogik Branding Removed
+
+
+                = item
+                  br
+                  = h4 text: 'Features'
+
+                = item
+                  = icon 'checkmark green'
+                  |Webhooks
+
+                = item
+                  = icon 'checkmark green'
+                  |RSS Feed
+
+                = item
+                  = icon 'close grey disabled'
+                  |SQL Reporting
+
+                = item
+                  br
+                  = h4 text: 'On-boarding'
+
+                = item
+                  = icon 'dollar green'
+                  |Free On-boarding
+
+                = item
+                  = icon 'checkmark green'
+                  |2 hours of live training
+
+                = item
+                  = icon 'close grey disabled'
+                  |Dedicated Consultant
+
+                = item
+                  = icon 'close grey disabled'
+                  |Business Strategy Session
+
+                = item
+                  br
+                  = h4 text: 'Support'
+
+                = item
+                  = icon 'close grey disabled'
+                  |Dedicated Account Manager
+
+                = item
+                  = icon 'checkmark green'
+                  |Knowledge Base
+
+                = item
+                  = icon 'checkmark green'
+                  |Email
+
+                = item
+                  = icon 'checkmark orange'
+                  |Phone
+
+
+
+                = item
+                  br
+                  a.ui.large.secondary.fluid.button href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="startup"
+                    | START TRIAL
+                  small
+                    | Free 14-Day Trial. Valid Credit Card Required.
+
+            = card 'tertiary'
+              = h3 'icon center aligned'
+                | Enterprise
+                = icon 'space shuttle'
+                .sub.header
+                  span.starting Starting at
+                  br
+                  span.price $7,500/Mo
+              = list 'relaxed divided'
+                = item
+                  = icon 'checkmark green'
+                  |50,000 Members Included
+                = item
+                  = icon 'dollar green'
+                  |Extra members @ $0.05/member
+
+                = item
+                  = icon 'checkmark orange'
+                  |GoodLogik Branding Removed
+
+
+                = item
+                  br
+                  = h4 text: 'Features'
+
+                = item
+                  = icon 'checkmark green'
+                  |Webhooks
+
+                = item
+                  = icon 'checkmark green'
+                  |RSS Feed
+
+                = item
+                  = icon 'checkmark orange'
+                  |SQL Reporting
+
+                = item
+                  br
+                  = h4 text: 'On-boarding'
+
+                = item
+                  = icon 'dollar green'
+                  |Free On-boarding
+
+                = item
+                  = icon 'checkmark green'
+                  |4 hours of live training
+
+                = item
+                  = icon 'checkmark orange'
+                  |Dedicated Consultant
+
+                = item
+                  = icon 'checkmark orange'
+                  |Business Strategy Session
+
+                = item
+                  br
+                  = h4 text: 'Support'
+
+                = item
+                  = icon 'checkmark orange'
+                  |Dedicated Account Manager
+
+                = item
+                  = icon 'checkmark green'
+                  |Knowledge Base
+
+                = item
+                  = icon 'checkmark green'
+                  |Email
+
+                = item
+                  = icon 'checkmark orange'
+                  |Phone
+
+
+
+                = item
+                  br
+                  = button class: 'large requester trigger right labeled icon fluid', data: {name: 'enterprise sales call', action: 'Call Me', color: 'purple'}
+                    | TALK TO SALES
+                  small
+                    | Or call us at +1 (844) 979&ndash;1373.
+          br
+          br
+
+= fragment 'cta'
+  = grid
+    = row 'secondary'
+      = column size: 16
+        = segment 'inverted black basic center aligned padded'
+          = h1 class: 'centered dividing'
+            = "Seeing is believing"
+          = text
+            | Let us show you how the platform can help your business grow.
+          = button class: 'requester trigger purple large', data: {name: 'demo call', action: 'Schedule a Demo', color: 'purple'}
+            | Schedule a Demo
+          br
+          br

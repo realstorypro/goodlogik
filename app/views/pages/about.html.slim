@@ -1,0 +1,12 @@
+= audio_tag("about.mp3", autoplay: true, controls: false)
+- content_for :hero
+  = fragment 'hero'
+    .landing.page
+      #about-cover
+    .overlay
+    .content-holder
+      = container
+        = grid
+          = column size: 14, class: 'centered content'
+            = h1 class: 'inverted', text: "Our Mission"
+            = text text: "We want to make the internet a better place. That's why we built GoodLogik."

@@ -1,3 +1,22 @@
+// ********************** //
+//      --* Colors *--    //
+// ********************** //
+
+$red            : #B03060
+$orange         : #ff6d00
+$yellow         : #ffbf00
+$olive          : #32CD32
+$green          : #21BA45
+$teal           : #008080
+$blue           : #2185D0
+$violet         : #EE82EE
+$purple         : #B413EC
+$pink           : #FF1493
+$brown          : #A52A2A
+$grey           : #A0A0A0
+$black          : #000000
+$white          : #FFFFFF
+
 @import 'utilities'
 /// Body ///
 // ensuring the body is normally overflowing
@@ -33,7 +52,6 @@ body
     padding-bottom: 5px !important
 
   .logo
-    //max-width: 45px
     width: 242px
 
   .logo-text
@@ -70,6 +88,9 @@ body
     left: 0
     width: 100%
     height: 100%
+    background: rgba(0,0,0,1)
+    opacity: 1
+    //transition: all 4.5s
 
   .content-holder
     z-index: 99
@@ -112,3 +133,29 @@ body
     @include media("<tablet")
       padding-left: 0 !important
       padding-right: 0 !important
+
+
+.fragment.footer
+  text-transform: uppercase
+  padding-top: 1.5em
+  padding-bottom: 1.0em
+  background: lighten($black, 92)
+  color: $black
+
+  a
+    text-transform: uppercase
+    color: $black !important
+
+  .left
+    padding-left: 3.5em !important
+    @include media("<tablet")
+      padding-left: 1.5em !important
+
+  .right
+    padding-right: 3.5em !important
+    @include media("<tablet")
+      padding-right: 1.5em !important
+
+  span.mobile.none
+    @include media("<tablet")
+      display: none
