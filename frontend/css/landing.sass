@@ -1,5 +1,5 @@
-$frame-style: 3px solid lighten($black, 90)
-$frame-background: $black
+$frame-style: 3px solid lighten($black, 20)
+$frame-background: lighten($black, 10)
 
 .landing.page
   height: 100vh
@@ -93,6 +93,7 @@ $frame-background: $black
       .item
         width: 33.33%
         justify-content: center
+        background: lighten($black, 40)
         @include media("<tablet")
           width: auto
 
@@ -116,6 +117,16 @@ $frame-background: $black
     @include media("<tablet")
       border-left: none
       border-right: none
+
+  .six.wide.computer.column
+    width: 35% !important
+    @include media("<tablet")
+      width: 100% !important
+
+  .ten.wide.computer.column
+    width: 65% !important
+    @include media("<tablet")
+      width: 100% !important
 
   .vertical.menu
     min-height: 650px
