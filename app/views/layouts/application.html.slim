@@ -7,7 +7,7 @@ html lang="en"
     = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Lato', media: 'none', onload: "if(media!='all')media='all'"
     = javascript_pack_tag 'js', async: true
     = csrf_meta_tags
-    script src="https://js.chargebee.com/v2/chargebee.js?#{Time.now.strftime("%H:%M:%S")}" data-cb-site="goodlogik" data-turbolinks-track="reload"
+    script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="goodlogik"
 
     javascript:
 

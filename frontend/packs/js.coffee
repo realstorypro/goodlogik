@@ -152,4 +152,6 @@ $ ->
   exec_javascript()
 
 document.addEventListener "turbolinks:load", ->
+  Chargebee.init({site: "goodlogik"})
+  Chargebee.registerAgain()
   exec_javascript()
