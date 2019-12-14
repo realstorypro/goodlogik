@@ -11,7 +11,7 @@
             = text text: "High-performance and intuitive design makes the platform easy to learn and easy to love."
 
 = fragment 'publishing'
-  = container 'full'
+  = container
     = grid
       = row
         = column size: 16
@@ -43,22 +43,40 @@
           = text 'lead'
             | Our editor thinks the way you do.
           = text 'lead'
-            | The content is organized in blocks, which are easy to add, edit and re-arrange.
+            | The content is organized in blocks, which are easy to edit and re-arrange.
           = text 'lead'
             | This new way of creating content makes coming up with new ideas both fast and easy.
         = column computer: 8, tablet: 16, mobile: 16
           iframe src="/animations/content-editing/content-editing.html" width="100%" height="350" frameBorder="0" scrolling="no"
 
+= fragment 'engagement'
+  = container
+    = grid
+      = row
+
       = row
         = column size: 16
           = h1 'horizontal divider'
-            = "Better Analytics"
+            = "Better Engagement"
+          br
+
+= fragment 'analytics'
+  = container
+    = grid
+      = row
+
+      = row
+        = column size: 16
+          = h1 'horizontal divider'
+            = "Powerful Analytics"
           br
 
       = row
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-          = h2 text: 'Easy Analytics'
+          = h2 text: 'The Dashboard'
           = text 'lead'
-            | Our editor thinks the way you do.
+            | One glance at the dashboard and you can tell how good your platform is doing.
+          = text 'lead'
+            | The metrics are compared to a previous time-frame, helping you see the direction of momentum.
         = column computer: 8, tablet: 16, mobile: 16
-          iframe src="/animations/analytics/analytics.html" width="100%" height="350" frameBorder="0" scrolling="no"
+          iframe src="/animations/analytics/analytics.html" width="100%" height="450" frameBorder="0" scrolling="no"

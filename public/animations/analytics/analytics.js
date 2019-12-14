@@ -12,7 +12,7 @@ lib.ssMetadata = [];
 (lib.Administration = function() {
 	this.initialize(img.Administration);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,2308,1496);
+p.nominalBounds = new cjs.Rectangle(0,0,2316,1528);
 
 
 (lib.dashboard = function(mode,startPosition,loop) {
@@ -27,7 +27,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,2308,1496);
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,1084.7,703.1);
+p.nominalBounds = new cjs.Rectangle(0,0,1088.5,718.1);
 
 
 (lib.___Camera___ = function(mode,startPosition,loop) {
@@ -60,7 +60,7 @@ p.nominalBounds = new cjs.Rectangle(-547.5,-433,1095,866);
 	this.instance = new lib.dashboard("synched",0);
 	this.instance.setTransform(550.4,405.6,1,1,0,0,0,542.4,351.6);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(120));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(240));
 
 	this._renderFirstFrame();
 
@@ -101,26 +101,26 @@ p.nominalBounds = new cjs.Rectangle(-547.5,-433,1095,866);
 	});
 
 	// timeline functions:
-	this.frame_119 = function() {
+	this.frame_239 = function() {
 		this.___loopingOver___ = true;
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(119).call(this.frame_119).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).wait(239).call(this.frame_239).wait(1));
 
 	// Camera
 	this.___camera___instance = new lib.___Camera___();
 	this.___camera___instance.name = "___camera___instance";
-	this.___camera___instance.setTransform(226.75,267.65,0.3215,0.3215,0,0,0,0.5,0.6);
+	this.___camera___instance.setTransform(117.55,571.25,0.3995,0.3995,29.9957,0,0,1.1,0.7);
 	this.___camera___instance.depth = 0;
 	this.___camera___instance.visible = false;
 
-	this.timeline.addTween(cjs.Tween.get(this.___camera___instance).to({x:726.75},59).to({x:226.75},60).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.___camera___instance).to({regX:1.3,scaleX:0.3994,scaleY:0.3994,rotation:29.996,x:565.9,y:564.25},44).wait(20).to({regX:1.1,scaleX:0.3995,scaleY:0.3995,rotation:29.9957,x:117.55,y:571.25},20).wait(156));
 
 	// Layer_1_obj_
 	this.Layer_1 = new lib.Scene_1_Layer_1();
 	this.Layer_1.name = "Layer_1";
-	this.Layer_1.setTransform(550.4,405.6,1,1,0,0,0,550.4,405.6);
+	this.Layer_1.setTransform(552.2,413.1,1,1,0,0,0,552.2,413.1);
 	this.Layer_1.depth = 0;
 	this.Layer_1.isAttachedToCamera = 0
 	this.Layer_1.isAttachedToMask = 0
@@ -128,12 +128,12 @@ p.nominalBounds = new cjs.Rectangle(-547.5,-433,1095,866);
 	this.Layer_1.layerIndex = 0
 	this.Layer_1.maskLayerName = 0
 
-	this.timeline.addTween(cjs.Tween.get(this.Layer_1).wait(120));
+	this.timeline.addTween(cjs.Tween.get(this.Layer_1).wait(240));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(554.5,486,538.2,271.1);
+p.nominalBounds = new cjs.Rectangle(388,486,708.5,344.29999999999995);
 // library properties:
 lib.properties = {
 	id: 'A80C4AC580A54B72BACF01FEEE37D8B6',
