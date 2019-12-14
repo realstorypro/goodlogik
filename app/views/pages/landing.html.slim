@@ -57,7 +57,7 @@
         = column computer: 15, tablet: 13, mobile: 16, class: 'centered main feature'
           = cards 'three'
             - @works_feed.entries.each do |feed_item|
-              = card
+              = link_to feed_item.url, class: "ui card", target: "_blank"
                 = content
                   = image_tag 'logo-sm.png', class: 'ui image mini'
                   .right.floated.meta
@@ -68,4 +68,3 @@
                     = feed_item.title.truncate(40)
                   = description
                     = feed_item.summary
-              //= feed_item.url
