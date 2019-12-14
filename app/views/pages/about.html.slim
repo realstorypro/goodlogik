@@ -15,13 +15,29 @@
   = container 'full'
     = grid
       = row
-        = column size: 16
+        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
           = h1 text: 'Our Story'
-      = row
-        = column computer: 8, tablet: 16, mobile: 16
           = text 'lead'
-            | GoodLogik was born in 2016, when the co-founders, Michael and Leonid were travelling through India.
+            | The idea for GoodLogik was born in 2016, while the co-founders were running an Interactive Agency.
           = text 'lead'
-            | They came up with an idea for a hybrid web platform that would serve as home on the internet.
+            | The co-founders wanted to build a platform that would elevate the bar for web and bring the high-end to the masses.
+          = text 'lead'
+            | 3 Years later GoodLogik operates as a distributed tech company with employees in United States, India and Thailand.
         = column computer: 8, tablet: 16, mobile: 16, class: 'centered'
-          = image_tag 'cow-walking.gif', class: 'ui image fluid'
+          = image_tag 'robot.png', class: 'ui image fluid'
+      = row
+        = column computer: 16, tablet: 16, mobile: 16
+          = divider
+      = row
+        = column computer: 16, tablet: 16, mobile: 16
+          = list 'horizontal large divided contacts'
+            = item
+              = content
+                = header text: 'Sales'
+                = mail_to 'sales@goodlogik.com', 'sales@goodlogik.com'
+                | +1(800) 234.1234
+            = item
+              = content
+                = header text: 'Support'
+                = mail_to 'support@goodlogik.com', 'support@goodlogik.com'
+                | +1(800) 234.1234

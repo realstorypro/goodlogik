@@ -69,13 +69,12 @@ $frame-background: lighten($black, 10)
     margin-bottom: 2em
 
   .top.frame
-    border-top: $frame-style
-    border-left: $frame-style
-    border-right: $frame-style
-    border-bottom: 3px solid $white
     background: $frame-background
     transition: 1s all
 
+    .centered.sixteen.wide.column
+      padding-left: 5px
+      padding-right: 5px
 
     @include media("<tablet")
       border-left: none
@@ -94,8 +93,13 @@ $frame-background: lighten($black, 10)
         width: 33.33%
         justify-content: center
         background: lighten($black, 40)
+        border-right: 4px solid $white
+        text-transform: uppercase
         @include media("<tablet")
           width: auto
+
+        &:last-child
+          border-right: none
 
         &:hover
           background: lighten($black, 30)
@@ -109,13 +113,15 @@ $frame-background: lighten($black, 10)
 
 
   .bottom.frame
-    border-left: $frame-style
-    border-right: $frame-style
-    border-bottom: $frame-style
-    background: $frame-background
-    padding-bottom: 3em
     transition: height 1s
     transition: 1.5s all
+    border-left: solid 3px $frame-background
+    border-right: solid 3px $frame-background
+    border-bottom: solid 3px $frame-background
+    padding-top: 0
+
+    .tab
+      width: 100%
 
     @include media("<tablet")
       border-left: none
