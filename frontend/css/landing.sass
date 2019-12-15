@@ -95,6 +95,7 @@ $frame-background: lighten($black, 10)
         background: lighten($black, 40)
         border-right: 4px solid $white
         text-transform: uppercase
+        cursor: pointer
         @include media("<tablet")
           width: auto
 
@@ -119,6 +120,8 @@ $frame-background: lighten($black, 10)
     border-right: solid 3px $frame-background
     border-bottom: solid 3px $frame-background
     padding-top: 0
+    max-height: 560px
+    overflow: hidden
 
     .tab
       width: 100%
