@@ -103,15 +103,17 @@ html lang="en"
   body
 
     = sidebar 'ui vertical inverted menu right'
+      = link_to "Features", features_path, class: "item #{is_active?(features_path)}"
+      = link_to 'Pricing', pricing_path, class: "item #{is_active?(pricing_path)}"
+      = link_to 'About', about_path, class: "item #{is_active?(about_path)}"
+
       = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
-        = icon 'external alternate'
-        | Careers
-      a.item href="javascript:void(0)" data-cb-type="portal"
-        = icon 'lock'
-        | Account
+          = icon 'external alternate'
+          | Careers
       = item
-        = button 'sales inquiries fluid red'
-          | Schedule a Demo
+        .ui.button.fluid.red data-cb-type="portal" href="javascript:void(0)"
+          = icon 'lock'
+          | Account
 
     .pusher
       = segment 'vertical hero segment clearing '
@@ -122,9 +124,9 @@ html lang="en"
             = item 'hamburger'
               = icon 'large sidebar'
           = menu class: 'right', only: :desktop
-            = link_to "FEATURES", features_path, class: 'item'
-            = link_to 'PRICING', pricing_path, class: 'item'
-            = link_to 'ABOUT', about_path, class: 'item'
+            = link_to "FEATURES", features_path, class: "item #{is_active?(features_path)}"
+            = link_to 'PRICING', pricing_path, class: "item #{is_active?(pricing_path)}"
+            = link_to 'ABOUT', about_path, class: "item #{is_active?(about_path)}"
             = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
               = icon 'external alternate'
               | CAREERS

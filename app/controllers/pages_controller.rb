@@ -24,15 +24,17 @@ class PagesController < ApplicationController
   end
 
   def features
+    @page_title = 'Platform Features | GoodLogik'
 
   end
 
   def pricing
+    @page_title = 'Platform Pricing | GoodLogik'
 
   end
 
   def about
-
+    @page_title = 'About | GoodLogik'
   end
 
 end
