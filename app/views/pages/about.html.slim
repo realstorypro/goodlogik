@@ -1,4 +1,4 @@
-= audio_tag("about.mp3", autoplay: true, controls: false)
+/= audio_tag("about.mp3", autoplay: true, controls: false)
 - content_for :hero
   = fragment 'hero'
     .landing.page
@@ -8,5 +8,38 @@
       = container
         = grid
           = column size: 14, class: 'centered content'
-            = h1 class: 'inverted', text: "Our Mission"
-            = text text: "We want to make the internet a better place. That's why we built GoodLogik."
+            = h1 class: 'inverted', text: "We do it because"
+            = text text: "We want to make Internet a better, more exciting and fun place for everyone to enjoy."
+
+= fragment 'story'
+  = container 'full'
+    = grid
+      = row
+        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
+          = h1 text: 'Our Story'
+          = text 'lead'
+            | The idea for GoodLogik was born in 2016.
+          = text 'lead'
+            | We wanted to build a platform that would elevate the bar for web and bring the high-end to the masses.
+          = text 'lead'
+            | Today, GoodLogik operates as a Distributed Tech Company with employees in United States, India and Thailand.
+        = column computer: 8, tablet: 16, mobile: 16, class: 'centered'
+          = image_tag 'robot.png', class: 'ui image fluid'
+      = row
+        = column computer: 16, tablet: 16, mobile: 16
+          = divider
+      = row
+        = column computer: 16, tablet: 16, mobile: 16
+          = list 'horizontal large divided contacts'
+            = item
+              = content
+                = header text: 'Sales'
+                = mail_to 'sales@goodlogik.com', 'sales@goodlogik.com'
+                i.flag.us
+                | (800) 234.1234
+            = item
+              = content
+                = header text: 'Support'
+                = mail_to 'support@goodlogik.com', 'support@goodlogik.com'
+                i.flag.us
+                | (800) 234.1234

@@ -7,8 +7,8 @@
       = container
         = grid
           = column size: 14, class: 'centered content'
-            = h1 class: 'inverted', text: 'Grow Your Influence'
-            = text text: 'Create a direct connection with your audience and reap a greater reward from your creative expression.'
+            = h1 class: 'inverted', text: 'Build Your Brand Equity Fast'
+            = text text: 'An easy to use web platform to help you scale your brand.'
 
 = fragment 'features'
   = container
@@ -22,125 +22,46 @@
             | Reduce dependence on social media by transferring your fan base to a platform that you control.
           br
           br
-          br
+
+
       = row 'top frame'
         = column size: 16, class: 'centered'
           = menu class: 'pointing secondary tabular black massive feature inverted', ui: :on
             = item class: 'active', data: {tab: 'social-publishing'}
-              = icon 'paper plane'
-              | Easy Publishing
+              | Captivating
             = item data: {tab: 'social-network'}
-              = icon 'chess'
-              | Engaging Experience
+              | Viral
 
             = item data: {tab: 'analytics'}
-              = icon 'globe'
-              | Integrated Analytics
+              | Data Driven
 
       = row 'bottom frame'
         = column size: 16, class: 'centered'
           = tab class: 'active', data: {tab: 'social-publishing'}
-            = grid
-              = column computer: 6, tablet: 6, mobile: 16
-                = menu class: 'vertical huge fluid tabular inverted', ui: :on
-                  = item class: 'active', data: {tab: 'beautiful-content'}
-                    = h4 'inverted'
-                      = icon 'paint brush'
-                      | Eye-catching Visuals
-
-                    = text
-                      | Create engaging content with our easy-to-use publishing engine.
-
-                  = item data: {tab: 'go-viral'}
-                    = h4 'inverted'
-                      .icons
-                        = icon 'twitter'
-                        = icon 'facebook'
-                        = icon 'pinterest'
-                      | Built for Virality
-                    = text
-                      | All content is optimized for social media sharing, helping you bring in your exisitng fan base.
-
-                  = item data: {tab: 'long-term'}
-                    = h4 'inverted'
-                      .icons
-                        = icon 'microsoft'
-                        = icon 'yahoo'
-                        = icon 'google'
-                      | Long-Term Value
-                    = text
-                      |Deep SEO optimizations help increase organic search engine rankings.
-
-              = column computer: 10, tablet: 16, mobile: 16, class: 'details'
-                =tab class: 'active', data: {tab: 'beautiful-content'}
-                  = image_tag 'content-small.gif', class: 'image ui huge', alt: 'small content screenshot'
-
-
-                =tab data: {tab: 'go-viral'}
-                  = image_tag 'virality.jpg', class: 'image ui huge', alt: 'virality screeshot'
-                =tab data: {tab: 'long-term'}
-                  = image_tag 'long-term.png', class: 'image ui huge', alt: 'long term value screenshot'
-
+            = image_tag 'content-small.gif', class: 'ui fluid image', alt: 'small content screenshot'
           = tab data: {tab: 'social-network'}
-            = grid
-              = column computer: 6, tablet: 6, mobile: 16
-                = menu class: 'vertical huge fluid tabular', ui: :on
-                  = item class: 'active', data: {tab: 'signup-members'}
-                    = h4
-                      = icon 'blind'
-                      | Fun Environment
-                    = text
-                      | Rich comments, gamification, and sexy profiles turn visitors into users, and give them a reason to come back.
-
-                  = item data: {tab: 'stay-in-touch'}
-                    = h4
-                      .icons
-                        = icon 'mail'
-                        = icon 'mobile'
-                        = icon 'desktop'
-                      | Stay in Touch
-                    = text
-                      | Reach out to your members directly with email and upcoming push notifications.
-
-              = column computer: 10, tablet: 16, mobile: 16, class: 'details'
-                  =tab class: 'active', data: {tab: 'signup-members'}
-                    = image_tag 'gamification.jpg', class: 'image ui huge', alt: 'gamification screenshot'
-                  =tab data: {tab: 'keep-engaged'}
-                    =h4 text: 'Keep Them Engaged'
-                  =tab data: {tab: 'stay-in-touch'}
-                    = image_tag 'stay-in-touch.jpg', class: 'image ui huge', alt: 'stay-in-tocuh integration screenshot', alt: 'stay-in-tocuh integration screenshot'
+            iframe src="/animations/virality-and-beyond/virality-and-beyond.html" width="100%" height="550" frameBorder="0" scrolling="no"
 
 
           = tab data: {tab: 'analytics'}
-            = grid
-              = column computer: 6, tablet: 6, mobile: 16
-                = menu class: 'vertical huge fluid tabular', ui: :on
-                  = item class: 'active', data: {tab: 'helpful-metrics'}
-                    = h4
-                      = icon 'map outline'
-                      | Better Decisions
-                    = text
-                      | Use build in dashboard to quickly gauge how well the platfom is performing, and spot areas for improvement.
+            iframe src="/animations/better-decisions/better-decisions.html" width="100%" height="550" frameBorder="0" scrolling="no"
 
-                  = item data: {tab: 'insights'}
-                    = h4
-                      .icons
-                        = icon 'code'
-                        = icon 'code branch'
-                      | Gain Insights
-                    = text
-                      | Use SQL to slice into your data and see what turns visitors into members.
+= fragment 'cta'
+  = grid
+    = row 'secondary'
+      = column size: 16
+        = segment 'inverted black basic center aligned padded'
+          = h1 class: 'centered dividing'
+            = "Seeing is believing"
+          = text
+            | Let us show you how the platform can help your business grow.
+          = button class: 'requester trigger purple large', data: {name: 'demo call', action: 'Schedule a Demo', color: 'purple'}
+            | Schedule a Demo
+          br
+          br
 
 
-              = column computer: 10, tablet: 16, mobile: 16, class: 'details'
-                  =tab class: 'active', data: {tab: 'helpful-metrics'}
-                    = image_tag 'dashboard.jpg', class: 'image ui huge', alt: 'dashboard screenshot'
-                  =tab data: {tab: 'insights'}
-                    = image_tag 'insights.jpg', class: 'image ui huge', alt: 'report-builder screenshot'
-
-
-
-= fragment 'feed'
+/= fragment 'feed'
   = container
     = grid
       = row
@@ -154,9 +75,9 @@
         = column computer: 15, tablet: 13, mobile: 16, class: 'centered main feature'
           = cards 'three'
             - @works_feed.entries.each do |feed_item|
-              = card
+              = link_to feed_item.url, class: "ui card", target: "_blank"
                 = content
-                  = image_tag 'logo-sm', class: 'ui image mini'
+                  = image_tag 'logo-sm.png', class: 'ui image mini'
                   .right.floated.meta
                     = time_ago_in_words(feed_item.published)
                     | &nbsp; ago
@@ -165,4 +86,3 @@
                     = feed_item.title.truncate(40)
                   = description
                     = feed_item.summary
-              //= feed_item.url

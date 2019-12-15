@@ -27,12 +27,12 @@ export default {
         point_light: '#fff'
         square_color: "#000"
         squares: [0, 2, -2 ]
-        first_color: '#A0A0A0'
-        second_color: '#A0A0A0'
-        third_color: '#A0A0A0'
-        fourth_color: '#A0A0A0'
-        fifth_color: '#A0A0A0'
-        sixth_color: '#A0A0A0'
+        first_color: '#9c91ff'
+        second_color: '#ffab1d'
+        third_color: '#ffe908'
+        fourth_color: '#00d8ff'
+        fifth_color: '#ff1873'
+        sixth_color: '#0fff7a'
     mounted: ->
         $('.overlay').css('transition', 'all 2.5s')
         $('.overlay').css('opacity', 0.1)
