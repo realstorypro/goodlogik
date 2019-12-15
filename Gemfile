@@ -33,8 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'heroku-deflater', :group => :production
 
-gem 'feedjira'
 gem "field_test"
+gem 'sitemap_generator'
 
 group :development, :test do
   gem 'rb-readline'

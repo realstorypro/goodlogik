@@ -19,8 +19,6 @@ class PagesController < ApplicationController
     @cta_text = field_test(:button_text)
     set_meta_tags og: {title: @homepage.page_title }
     set_meta_tags icon: @homepage.fav_icon.url, type: 'image/png'
-
-    @works_feed = Feedjira::Feed.fetch_and_parse('https://www.logik.works/feed.rss')
   end
 
   def features
