@@ -46,9 +46,22 @@
           = tab data: {tab: 'analytics'}
             iframe src="/animations/better-decisions/better-decisions.html" width="100%" height="550" frameBorder="0" scrolling="no"
 
+= fragment 'cta'
+  = grid
+    = row 'secondary'
+      = column size: 16
+        = segment 'inverted black basic center aligned padded'
+          = h1 class: 'centered dividing'
+            = "Seeing is believing"
+          = text
+            | Let us show you how the platform can help your business grow.
+          = button class: 'requester trigger purple large', data: {name: 'demo call', action: 'Schedule a Demo', color: 'purple'}
+            | Schedule a Demo
+          br
+          br
 
 
-= fragment 'feed'
+/= fragment 'feed'
   = container
     = grid
       = row
