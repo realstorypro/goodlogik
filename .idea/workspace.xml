@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0db3a7a4-11cb-4a7d-8ce1-23df65b7cd84" name="Default Changelist" comment="k">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.slim" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,15 +30,15 @@
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/frontend/css" />
       <recent name="$PROJECT_DIR$/frontend/js" />
       <recent name="$PROJECT_DIR$/app/views/pages" />
       <recent name="$PROJECT_DIR$/app/controllers" />
-      <recent name="$PROJECT_DIR$/app/views/layouts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/js" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: ideaLogic">
@@ -187,7 +186,7 @@
       <workItem from="1575534603654" duration="3000" />
       <workItem from="1576036091223" duration="4976000" />
       <workItem from="1576094465155" duration="54177000" />
-      <workItem from="1576424534701" duration="805000" />
+      <workItem from="1576424534701" duration="1292000" />
     </task>
     <servers />
   </component>
@@ -224,10 +223,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="386" y="212" width="670" height="476" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1576245456878" />
-    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup" timestamp="1576426147990">
+    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup" timestamp="1576427039947">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1576426147990" />
+    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1576427039947" />
     <state x="385" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1575476953636" />
   </component>
 </project>
