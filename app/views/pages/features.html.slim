@@ -49,16 +49,6 @@
         = column computer: 8, tablet: 16, mobile: 16
           iframe src="/animations/content-editing/content-editing.html" width="100%" height="350" frameBorder="0" scrolling="no"
 
-= fragment 'engagement'
-  = container
-    = grid
-      = row
-
-      = row
-        = column size: 16
-          = h1 'horizontal divider'
-            = "Better Engagement"
-          br
 
 = fragment 'analytics'
   = container
@@ -80,3 +70,35 @@
             | The metrics are compared to a previous time-frame, helping you see the direction of momentum.
         = column computer: 8, tablet: 16, mobile: 16
           iframe src="/animations/analytics/analytics.html" width="100%" height="450" frameBorder="0" scrolling="no"
+
+= fragment 'it'
+  = container
+    = grid
+      = row
+        = column size: 16
+          = h1 'horizontal divider'
+            = "Secure IT"
+            br
+      = row
+        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
+          = h2 text: 'Dedicated Resources'
+          = text 'lead'
+            | The platform itself
+
+        = column computer: 8, tablet: 16, mobile: 16
+          iframe src="/animations/it/it.html" width="100%" height="450" frameBorder="0" scrolling="no"
+
+
+= fragment 'cta'
+  = grid
+    = row 'secondary'
+      = column size: 16
+        = segment 'inverted black basic center aligned padded'
+          = h1 class: 'centered dividing'
+            = "Seeing is believing"
+          = text
+            | Let us show you how the platform can help your business grow.
+          = button class: 'requester trigger purple large', data: {name: 'demo call', action: 'Schedule a Demo', color: 'purple'}
+            | Schedule a Demo
+          br
+          br
