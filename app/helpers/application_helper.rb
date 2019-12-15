@@ -18,4 +18,8 @@ module ApplicationHelper
 
     markdown.render(text).html_safe
   end
+
+  def is_active?(test_path)
+    'active' if request.path == test_path
+  end
 end

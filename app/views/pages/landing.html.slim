@@ -59,30 +59,3 @@
             | Schedule a Demo
           br
           br
-
-
-/= fragment 'feed'
-  = container
-    = grid
-      = row
-        = column computer: 15, tablet: 13, mobile: 16, class: 'centered main feature'
-          br
-          = h2 'inverted'
-            | Latest From Logik.Works
-          br
-
-      = row
-        = column computer: 15, tablet: 13, mobile: 16, class: 'centered main feature'
-          = cards 'three'
-            - @works_feed.entries.each do |feed_item|
-              = link_to feed_item.url, class: "ui card", target: "_blank"
-                = content
-                  = image_tag 'logo-sm.png', class: 'ui image mini'
-                  .right.floated.meta
-                    = time_ago_in_words(feed_item.published)
-                    | &nbsp; ago
-                = content
-                  = header
-                    = feed_item.title.truncate(40)
-                  = description
-                    = feed_item.summary
