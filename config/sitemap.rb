@@ -3,9 +3,9 @@ SitemapGenerator::Sitemap.default_host = "https://www.goodlogik.com"
 
 SitemapGenerator::Sitemap.create do
   add root_path, :priority => 0.7, :changefreq => 'daily'
-  add features_path, :priority => 0.7, :changefreq => 'daily'
-  add pricing_path, :priority => 0.7, :changefreq => 'daily'
-  add about_path, :priority => 0.7, :changefreq => 'daily'
+  add features_path, :priority => 0.5, :changefreq => 'daily'
+  add pricing_path, :priority => 0.5, :changefreq => 'daily'
+  add about_path, :priority => 0.6, :changefreq => 'daily'
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.
