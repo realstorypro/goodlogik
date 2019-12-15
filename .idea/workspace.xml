@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0db3a7a4-11cb-4a7d-8ce1-23df65b7cd84" name="Default Changelist" comment="k">
-      <change beforePath="$PROJECT_DIR$/app/views/pages/landing.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/landing.html.slim" afterDir="false" />
-    </list>
+    <list default="true" id="0db3a7a4-11cb-4a7d-8ce1-23df65b7cd84" name="Default Changelist" comment="k" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +183,7 @@
       <workItem from="1575531687997" duration="93000" />
       <workItem from="1575534603654" duration="3000" />
       <workItem from="1576036091223" duration="4976000" />
-      <workItem from="1576094465155" duration="53438000" />
+      <workItem from="1576094465155" duration="53623000" />
     </task>
     <servers />
   </component>
@@ -222,10 +220,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="386" y="212" width="670" height="476" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1576245456878" />
-    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup" timestamp="1576304628100">
+    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup" timestamp="1576399688236">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1576304628100" />
+    <state x="385" y="205" width="670" height="694" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1576399688236" />
     <state x="385" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1575476953636" />
   </component>
 </project>
