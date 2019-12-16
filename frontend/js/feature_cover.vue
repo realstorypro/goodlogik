@@ -30,7 +30,7 @@ export default {
         second_color: '#0E6EB8'
         third_color: '#0E6EB8'
         fourth_color: '#0E6EB8'
-        fifth_color: '#0E6EB8
+        fifth_color: '#0E6EB8'
         sixth_color: '#0E6EB8'
     mounted: ->
         $('.overlay').css('transition', 'all 2.5s')
