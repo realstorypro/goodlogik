@@ -1,4 +1,3 @@
-/= audio_tag("about.mp3", autoplay: true, controls: false)
 - content_for :hero
   = fragment 'hero'
     .landing.page
@@ -8,8 +7,8 @@
       = container
         = grid
           = column size: 14, class: 'centered content'
-            = h1 class: 'inverted', text: "We do it because"
-            = text text: "We want to make Internet a better, more exciting and fun place for everyone to enjoy."
+            = h1 class: 'inverted', text: "One Vision"
+            = text text: "Make the Internet fun."
 
 = fragment 'story'
   = container 'full'
@@ -18,11 +17,9 @@
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
           = h1 text: 'Our Story'
           = text 'lead'
-            | The idea for GoodLogik was born in 2016.
+            | GoodLogik was first thought of in 2016, when the co-founders Michael and Leo entertaining an idea of building a tech start up.
           = text 'lead'
-            | We wanted to build a platform that would elevate the bar for web and bring the high-end to the masses.
-          = text 'lead'
-            | Today, GoodLogik operates as a Distributed Tech Company with employees in United States, India and Thailand.
+            | Today, we operate as a fully distributed company with no physical office.
         = column computer: 8, tablet: 16, mobile: 16, class: 'centered'
           = image_tag 'robot.png', class: 'ui image fluid'
       = row

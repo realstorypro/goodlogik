@@ -7,14 +7,10 @@
             PointLight(:diffuse="point_light")
             template(v-for="x in squares")
                 template(v-for="y in squares")
-                    Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
-                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.50" :glossiness="1")
-                        Animation(property="rotation.x" :duration="4" :end="Math.PI * 1.9" :loop="true")
-                        Animation(property="rotation.y" :duration="4" :end="Math.PI * 1.9" :loop="true")
-                        Animation(property="rotation.z" :duration="4" :end="Math.PI * 1.9" :loop="true")
-                        Animation(property="scaling.x" :duration="50" :start="1.1" :end="Math.PI * 1.3" :loop="false")
-                        Animation(property="scaling.y" :duration="50" :start="1.1" :end="Math.PI * 1.3" :loop="false")
-                        Animation(property="scaling.z" :duration="50" :start="1.1" :end="Math.PI * 1.3" :loop="false")
+                    template(v-if="x != 0 && y == 0")
+                        Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
+                            Material(:diffuse="pick_color(x,y,z)" :roughness="0.50" :glossiness="1")
+                            Animation(property="scaling.z" :duration="60" :start="1.2" :end="Math.PI * 1.3" :loop="false")
 
 </template>
 
@@ -27,18 +23,18 @@ export default {
         point_light: '#fff'
         square_color: "#000"
         squares: [0, 2, -2 ]
-        first_color: '#9c91ff'
-        second_color: '#ffab1d'
-        third_color: '#ffe908'
-        fourth_color: '#00d8ff'
-        fifth_color: '#ff1873'
-        sixth_color: '#0fff7a'
+        first_color: '#fff'
+        second_color: '#fff'
+        third_color: '#fff'
+        fourth_color: '#fff'
+        fifth_color: '#fff'
+        sixth_color: '#fff'
     mounted: ->
         $('.overlay').css('transition', 'all 2.5s')
-        $('.overlay').css('opacity', 0.1)
+        $('.overlay').css('opacity', 0.4)
     beforeDestroy: ->
         $('.overlay').css('transition', 'none')
-        $('.overlay').css('opacity', 1)
+        $('.overlay').css('opacity', 0.4)
     methods:
         pick_color: (x, y, z) ->
 

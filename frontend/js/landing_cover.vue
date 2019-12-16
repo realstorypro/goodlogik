@@ -22,7 +22,7 @@
 <script lang="coffee">
 export default {
     data: ->
-        background: '#222'
+        background: '#111'
         hemispheric_light: '#fff'
         hemispheric_specular_light: '#000'
         point_light: '#fff'
