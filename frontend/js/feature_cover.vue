@@ -5,7 +5,6 @@
         HemisphericLight(:diffuse="hemispheric_light")
         Entity(:position="[0, 0, 5]")
             PointLight(:diffuse="point_light")
-            HemisphericLight(:diffuse="hemispheric_light")
             template(v-for="x in squares")
                 template(v-for="y in squares")
                     Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
@@ -21,18 +20,18 @@
 <script lang="coffee">
 export default {
     data: ->
-        background: '#111'
+        background: '#fff'
         hemispheric_light: '#fff'
         hemispheric_specular_light: '#000'
-        point_light: '#ccc'
+        point_light: '#000'
         square_color: "#000"
         squares: [0, 2, -2 ]
-        first_color: '#008080'
-        second_color: '#008080'
-        third_color: '#008080'
-        fourth_color: '#008080'
-        fifth_color: '#008080'
-        sixth_color: '#008080'
+        first_color: '#0E6EB8'
+        second_color: '#0E6EB8'
+        third_color: '#0E6EB8'
+        fourth_color: '#0E6EB8'
+        fifth_color: '#0E6EB8
+        sixth_color: '#0E6EB8'
     mounted: ->
         $('.overlay').css('transition', 'all 2.5s')
         $('.overlay').css('opacity', 0.1)
