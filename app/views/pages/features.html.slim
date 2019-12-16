@@ -6,9 +6,9 @@
     .content-holder
       = container
         = grid
-          = column size: 14, class: 'centered content'
-            = h1 class: 'inverted', text: "Innovative To The Core"
-            = text text: "High-performance and intuitive design makes the platform easy to learn and easy to love."
+          = column size: 12, class: 'centered content'
+            = h1 class: 'inverted', text: "Platform for the new web"
+            = text text: "High-Performance and Intuitive. Easy to Learn and Easy to Love."
 
 = fragment 'publishing'
   = container
@@ -25,11 +25,11 @@
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
           = h2 text: 'Scorching Fast'
           = text 'lead'
-            | The platform is heavily optimized for both speed and performance.
+            | Optimized for both speed and performance.
           = text 'lead'
-            | The pages scroll smoothly, and the entire site loads in under 1.5 seconds.
+            | The pages scroll smoothly, and everything loads in under 1.5 seconds.
           = text 'lead'
-            | Up to 10x faster then the industry average.
+            | 10x - 20x faster then an average website.
         = column computer: 8, tablet: 16, mobile: 16
           iframe src="/animations/scorching-fast/scorching-fast.html" width="100%" height="350" frameBorder="0" scrolling="no"
 
@@ -43,9 +43,9 @@
           = text 'lead'
             | Our editor thinks the way you do.
           = text 'lead'
-            | The content is organized in blocks, which are easy to edit and re-arrange.
+            | The content is organized in blocks and is easy to edit and re-arrange.
           = text 'lead'
-            | This new way of creating content makes coming up with new ideas both fast and easy.
+            | A new way of creating content that's fun, fast and easy.
         = column computer: 8, tablet: 16, mobile: 16
           iframe src="/animations/content-editing/content-editing.html" width="100%" height="350" frameBorder="0" scrolling="no"
 
@@ -65,9 +65,9 @@
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
           = h2 text: 'Simple Dashboard'
           = text 'lead'
-            | One glance at the dashboard and you can tell how good your platform is doing.
+            | One glance at the dashboard and you can tell how things are going.
           = text 'lead'
-            | The metrics are compared to a previous time-frame, helping you see the direction of momentum.
+            | Visitor statistics and conversion rates are available at a glance.
         = column computer: 8, tablet: 16, mobile: 16
           iframe src="/animations/analytics/analytics.html" width="100%" height="450" frameBorder="0" scrolling="no"
 
@@ -79,9 +79,11 @@
 
       = row
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-          = h2 text: 'Use Your Data'
+          = h2 text: 'Enterprise Ready'
           = text 'lead'
-            | Use the power of SQL to query gain a deeper insight in how the platform is being used.
+            | Use SQL to gain deeper insights into your data.
+          = text 'lead'
+            | Create custom reports and dashboards to share with your team.
         = column computer: 8, tablet: 16, mobile: 16
           iframe src="/animations/sql-power/sql-power.html" width="100%" height="450" frameBorder="0" scrolling="no"
 
@@ -96,7 +98,7 @@
       = row
         = column computer: 12, tablet: 16, mobile: 16, class: 'middle aligned centered'
           = text 'lead'
-            | Each web platform is hosted in isolation from other platforms in a private scalable virtual container.
+            | Each platform is privately hosted in a scalable virtual container.
 
       = row
         = column computer: 16, tablet: 16, mobile: 16
@@ -111,10 +113,9 @@
       = column size: 16
         = segment 'inverted black basic center aligned padded'
           = h1 class: 'centered dividing'
-            = "Seeing is believing"
+            = "Ready to grow?"
           = text
-            | Let us show you how the platform can help your business grow.
-          = button class: 'requester trigger purple large', data: {name: 'demo call', action: 'Schedule a Demo', color: 'purple'}
-            | Schedule a Demo
+            | Get a feel for the platform with a free 14-day trial.
+          = link_to "Start a Free Trial", pricing_path, class: 'ui button purple big'
           br
           br
