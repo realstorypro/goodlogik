@@ -25,4 +25,5 @@
 /public/packs-test
 /node_modules
 
-.idea/workspace.xml
+# Ignore all rubymine files
+/.idea/*
