@@ -108,10 +108,6 @@ html lang="en"
       = link_to "Features", features_path, class: "item #{is_active?(features_path)}"
       = link_to 'Pricing', pricing_path, class: "item #{is_active?(pricing_path)}"
       = link_to 'About', about_path, class: "item #{is_active?(about_path)}"
-
-      = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
-          = icon 'external alternate'
-          | Careers
       = item
         .ui.button.fluid.red data-cb-type="portal" href="javascript:void(0)"
           = icon 'lock'
@@ -129,9 +125,6 @@ html lang="en"
             = link_to "FEATURES", features_path, class: "item #{is_active?(features_path)}"
             = link_to 'PRICING', pricing_path, class: "item #{is_active?(pricing_path)}"
             = link_to 'ABOUT', about_path, class: "item #{is_active?(about_path)}"
-            = link_to 'https://angel.co/logikal/jobs', target: '_blank', class: 'item'
-              = icon 'external alternate'
-              | CAREERS
             = item
               a.ui.button.purple href="javascript:void(0)" data-cb-type="portal"
                 = icon 'lock'

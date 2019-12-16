@@ -7,8 +7,8 @@
       = container
         = grid
           = column size: 14, class: 'centered content'
-            = h1 class: 'inverted', text: "One Vision"
-            = text text: "Make the Internet fun."
+            = h1 class: 'inverted', text: "One Mission"
+            = text text: "Evolve the Web"
 
 = fragment 'story'
   = container 'full'
@@ -17,9 +17,14 @@
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
           = h1 text: 'Our Story'
           = text 'lead'
-            | GoodLogik was first thought of in 2016, when the co-founders Michael and Leo entertaining an idea of building a tech start up.
+            | GoodLogik is a fast-paced product company with a culture of creativity driven by a passion for technology.
           = text 'lead'
-            | Today, we operate as a fully distributed company with no physical office.
+            | We are a cross-functional team comprised of different backgrounds and skill sets working toward a common goal.
+          = text 'lead'
+            | To evolve the web with technology that people love.
+          = text 'lead'
+            | Want to help us build the future?
+            = " #{link_to 'View available Job Openings','https://angel.co/logikal/jobs'}.".html_safe
         = column computer: 8, tablet: 16, mobile: 16, class: 'centered'
           = image_tag 'robot.png', class: 'ui image fluid'
       = row
