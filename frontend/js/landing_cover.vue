@@ -10,19 +10,19 @@
                 template(v-for="y in squares")
                     Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
                         Material(:diffuse="pick_color(x,y,z)" :roughness="0.42")
-                        Animation(property="rotation.x" :duration="8" :end="Math.PI * 2" :loop="false")
-                        Animation(property="rotation.y" :duration="8" :end="Math.PI * 2" :loop="false")
-                        Animation(property="rotation.z" :duration="8" :end="Math.PI * 2" :loop="false")
-                        Animation(property="scaling.x" :duration="10" :start="1.2" :end="Math.PI * 0.59" :loop="false")
-                        Animation(property="scaling.y" :duration="10" :start="1.2" :end="Math.PI * 0.59" :loop="false")
-                        Animation(property="scaling.z" :duration="10" :start="1.2" :end="Math.PI * 0.59" :loop="false")
+                        Animation(property="rotation.x" :from="50" :duration="9" :end="-Math.PI * 2" :loop="false")
+                        Animation(property="rotation.y" :from="100" :duration="5" :end="-Math.PI * 2" :loop="false")
+                        Animation(property="rotation.z" :from="150" :duration="6" :end="Math.PI * 2" :loop="false")
+                        Animation(property="scaling.x" :duration="10" :start="0.5" :end="Math.PI * 0.59" :loop="false")
+                        Animation(property="scaling.y" :duration="10" :start="0.5" :end="Math.PI * 0.59" :loop="false")
+                        Animation(property="scaling.z" :duration="10" :start="0.5" :end="Math.PI * 0.59" :loop="false")
 
 </template>
 
 <script lang="coffee">
 export default {
     data: ->
-        background: '#111'
+        background: '#999'
         hemispheric_light: '#fff'
         hemispheric_specular_light: '#000'
         point_light: '#fff'
