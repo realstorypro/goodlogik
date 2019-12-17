@@ -1,6 +1,8 @@
 .publishing.fragment, .analytics.fragment, .it.fragment
 
   padding: 6em 0
+  @include media("<tablet")
+    padding: 4.5em 0
 
 
   h2.ui.header
@@ -22,3 +24,7 @@
   .lead
     color: $white
     text-align: center
+
+  iframe
+    @include media("<tablet")
+      height: 210px

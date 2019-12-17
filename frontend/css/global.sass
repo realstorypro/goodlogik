@@ -27,6 +27,16 @@ body
   overflow: hidden
   overflow-y: auto
 
+/// Mobile Horizontal Divider Headers
+.ui.horizontal.divider
+  @include media("<tablet")
+    display: block
+    border-bottom: 2px solid rgb(226, 226, 226) !important
+    border-top: 2px solid rgb(226, 226, 226) !important
+    padding-bottom: 0.5em
+    padding-top: 0.5em
+    white-space: normal
+
 
 /// Hero ///
 .segment.hero

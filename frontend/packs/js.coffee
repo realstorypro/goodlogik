@@ -87,6 +87,9 @@ exec_javascript = ->
   # Launching Analytics
   analytics.page()
 
+  # Padding Style Adjustments for the Features page
+  $('.extra.padding iframe').css('padding-top', '6em')
+
   # Dropdowns
   $('.ui.dropdown').dropdown()
 
