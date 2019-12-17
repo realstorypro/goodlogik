@@ -4,35 +4,32 @@ class PagesController < ApplicationController
 
   layout 'popup', only: [:privacy, :tos]
 
-  def home
-    @page= contentful.entry(ENV['CONTENTFUL_PRESENTATION_ID'], include: 3)
-  end
-
   def landing
     renderer = RichTextRenderer::Renderer.new
 
     @homepage = contentful.entry(ENV['CONTENTFUL_LANDING_ID'], include: 2)
-    @page_title = @homepage.page_title
-    @page_description = @homepage.page_description
-    @master_text = renderer.render(@homepage.master_text)
-    @cta_color = field_test(:button_color)
-    @cta_text = field_test(:button_text)
-    set_meta_tags og: {title: @homepage.page_title }
     set_meta_tags icon: @homepage.fav_icon.url, type: 'image/png'
+
+    @page_title = 'GoodLogik | Web Platform for Entrepreneurs, Brands and Influencers.'
+    @page_description = 'Strengthen your brand, grow your fan-base, and promote your business with a platform that puts in the center.'
+    set_meta_tags og: {title: @page_title }
   end
 
   def features
-    @page_title = 'Platform Features | GoodLogik'
+    @page_title = 'Product | GoodLogik'
+    @page_description = 'High-performance web platform with advanced publishing capabilities, integrated social features, and built-in analytics.'
 
   end
 
   def pricing
-    @page_title = 'Platform Pricing | GoodLogik'
+    @page_title = 'Pricing | GoodLogik'
+    @page_description = "See the price for GoodLogik's web platform, kick-off your 14-day free trial of and start growing your business today."
 
   end
 
   def about
     @page_title = 'About | GoodLogik'
+    @page_description = 'Learn about GoodLogik, the company behind the platform transforming the web.'
   end
 
 end

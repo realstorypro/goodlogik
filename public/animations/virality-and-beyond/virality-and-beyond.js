@@ -5,7 +5,7 @@ var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"virality_and_beyond_atlas_", frames: [[0,0,1800,1800]]},
 		{name:"virality_and_beyond_atlas_2", frames: [[0,0,1800,1800]]},
-		{name:"virality_and_beyond_atlas_3", frames: [[0,0,1684,1122]]},
+		{name:"virality_and_beyond_atlas_3", frames: [[0,0,1620,1108]]},
 		{name:"virality_and_beyond_atlas_4", frames: [[0,0,1200,1200]]},
 		{name:"virality_and_beyond_atlas_5", frames: [[1141,616,72,72],[1002,616,137,137],[0,1002,686,686],[1002,0,356,356],[1002,358,256,256],[0,0,1000,1000],[688,1002,536,522]]}
 ];
@@ -15,58 +15,58 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_12 = function() {
+(lib.CachedBmp_8 = function() {
 	this.initialize(ss["virality_and_beyond_atlas_5"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_10 = function() {
-	this.initialize(ss["virality_and_beyond_atlas_5"]);
-	this.gotoAndStop(1);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.CachedBmp_9 = function() {
-	this.initialize(ss["virality_and_beyond_atlas_5"]);
-	this.gotoAndStop(2);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.CachedBmp_8 = function() {
-	this.initialize(ss["virality_and_beyond_atlas_4"]);
+(lib.CachedBmp_11 = function() {
+	this.initialize(ss["virality_and_beyond_atlas_3"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_7 = function() {
+	this.initialize(ss["virality_and_beyond_atlas_5"]);
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedBmp_6 = function() {
+	this.initialize(ss["virality_and_beyond_atlas_5"]);
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedBmp_5 = function() {
+	this.initialize(ss["virality_and_beyond_atlas_4"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedBmp_4 = function() {
 	this.initialize(ss["virality_and_beyond_atlas_"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_6 = function() {
+(lib.CachedBmp_3 = function() {
 	this.initialize(ss["virality_and_beyond_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_5 = function() {
+(lib.CachedBmp_2 = function() {
 	this.initialize(ss["virality_and_beyond_atlas_5"]);
 	this.gotoAndStop(3);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.CachedBmp_4 = function() {
-	this.initialize(ss["virality_and_beyond_atlas_3"]);
-	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
@@ -146,7 +146,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,177,177);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_12();
+	this.instance = new lib.CachedBmp_8();
 	this.instance.setTransform(4.9,4.9,0.4167,0.4167);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -155,6 +155,20 @@ p.nominalBounds = new cjs.Rectangle(0,0,177,177);
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(4.9,4.9,30,30);
+
+
+(lib.pipes = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Layer_1
+	this.instance = new lib.CachedBmp_11();
+	this.instance.setTransform(-2,-2,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.pipes, new cjs.Rectangle(-2,-2,810,554), null);
 
 
 (lib.GoogleLogo = function(mode,startPosition,loop) {
@@ -176,19 +190,19 @@ p.nominalBounds = new cjs.Rectangle(0,0,110,110);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_10();
+	this.instance = new lib.CachedBmp_7();
 	this.instance.setTransform(587.1,244.3,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_9();
+	this.instance_1 = new lib.CachedBmp_6();
 	this.instance_1.setTransform(278.55,278.6,0.5,0.5);
 
-	this.instance_2 = new lib.CachedBmp_8();
+	this.instance_2 = new lib.CachedBmp_5();
 	this.instance_2.setTransform(150,150,0.5,0.5);
 
-	this.instance_3 = new lib.CachedBmp_7();
+	this.instance_3 = new lib.CachedBmp_4();
 	this.instance_3.setTransform(0,0,0.5,0.5);
 
-	this.instance_4 = new lib.CachedBmp_6();
+	this.instance_4 = new lib.CachedBmp_3();
 	this.instance_4.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
@@ -265,7 +279,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,147.6,147.6);
 	this.instance = new lib.GoogleLogo("synched",0);
 	this.instance.setTransform(70,69.95,1,1,0,0,0,55,55);
 
-	this.instance_1 = new lib.CachedBmp_5();
+	this.instance_1 = new lib.CachedBmp_2();
 	this.instance_1.setTransform(-0.45,-0.45,0.4,0.4);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
@@ -351,7 +365,7 @@ p.nominalBounds = new cjs.Rectangle(-18.2,-18.2,178,178);
 
 
 // stage content:
-(lib.viralityandbeyond4 = function(mode,startPosition,loop) {
+(lib.viralityandbeyond7 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// logos
@@ -647,8 +661,8 @@ p.nominalBounds = new cjs.Rectangle(-18.2,-18.2,178,178);
 	this.timeline.addTween(cjs.Tween.get(this.instance_37).wait(8).to({_off:false},0).to({x:154.05,y:482.05},15).to({y:222.05},8).to({_off:true},1).wait(71));
 
 	// pipes
-	this.instance_38 = new lib.CachedBmp_4();
-	this.instance_38.setTransform(148.55,136.55,0.5,0.5);
+	this.instance_38 = new lib.pipes();
+	this.instance_38.setTransform(557.15,417.15,1,1,0,0,0,403.1,275.1);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_38).wait(103));
 
