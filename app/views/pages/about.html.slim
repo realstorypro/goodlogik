@@ -6,9 +6,9 @@
     .content-holder
       = container
         = grid
-          = column size: 14, class: 'centered content'
-            = h1 class: 'inverted', text: "One Mission"
-            = text text: "Evolve the Web"
+          = column size: 10, class: 'centered content'
+            = h1 class: 'inverted', text: "Our Mission"
+            = text text: "Change the Web"
 
 = fragment 'story'
   = container 'full'
@@ -17,11 +17,11 @@
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
           = h1 text: 'Our Story'
           = text 'lead'
-            | GoodLogik is a fast-paced product company with a culture of creativity driven by a passion for technology.
+            | We are a product company with a culture of creativity driven by a passion for technology.
           = text 'lead'
             | We are a cross-functional team comprised of different backgrounds and skill sets working toward a common goal.
           = text 'lead'
-            | To evolve the web with technology that people love.
+            | To change the web with tech that people love.
           = text 'lead'
             | Want to help us build the future?
             = " #{link_to 'View available Job Openings','https://angel.co/logikal/jobs'}.".html_safe
@@ -33,7 +33,7 @@
       = row
         = column computer: 16, tablet: 16, mobile: 16
           = list 'horizontal large divided contacts'
-            = item
+            /= item
               = content
                 = header text: 'Sales'
                 = mail_to 'sales@goodlogik.com', 'sales@goodlogik.com'
@@ -44,4 +44,4 @@
                 = header text: 'Support'
                 = mail_to 'support@goodlogik.com', 'support@goodlogik.com'
                 i.flag.us
-                | (800) 234.1234
+                | (844) 979-1373

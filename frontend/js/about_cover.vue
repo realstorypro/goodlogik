@@ -7,10 +7,9 @@
             PointLight(:diffuse="point_light")
             template(v-for="x in squares")
                 template(v-for="y in squares")
-                    template(v-if="x != 0 && y == 0")
-                        Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
-                            Material(:diffuse="pick_color(x,y,z)" :roughness="0.50" :glossiness="1")
-                            Animation(property="scaling.z" :duration="60" :start="1.2" :end="Math.PI * 1.3" :loop="false")
+                    Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
+                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.30" :glossiness="1")
+                        Animation(property="scaling.z" :duration="5" :start="0.1" :end="0.2" :loop="false")
 
 </template>
 
@@ -18,17 +17,17 @@
 export default {
     data: ->
         background: '#fff'
-        hemispheric_light: '#fff'
-        hemispheric_specular_light: '#000'
-        point_light: '#fff'
+        hemispheric_light: '#016936'
+        hemispheric_specular_light: '#016936'
+        point_light: '#016936'
         square_color: "#000"
-        squares: [0, 2, -2 ]
-        first_color: '#fff'
-        second_color: '#fff'
-        third_color: '#fff'
-        fourth_color: '#fff'
-        fifth_color: '#fff'
-        sixth_color: '#fff'
+        squares: [0, 1.5, -1.5, 3.0, -3.0 ]
+        first_color: '#016936'
+        second_color: '#016936'
+        third_color: '#016936'
+        fourth_color: '#000'
+        fifth_color: '#016936'
+        sixth_color: '#016936'
     mounted: ->
         $('.overlay').css('transition', 'all 2.5s')
         $('.overlay').css('opacity', 0.4)
