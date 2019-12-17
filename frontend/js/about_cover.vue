@@ -25,7 +25,7 @@ export default {
         first_color: '#016936'
         second_color: '#016936'
         third_color: '#016936'
-        fourth_color: '#000'
+        fourth_color: '#EE82EE'
         fifth_color: '#016936'
         sixth_color: '#016936'
     mounted: ->
