@@ -29,6 +29,7 @@ class PagesController < ApplicationController
 
   def about
     @page_title = 'About | GoodLogik'
+    @page_description = 'Learn about GoodLogik, the company behind the platform transforming the web.'
   end
 
 end

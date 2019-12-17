@@ -105,7 +105,7 @@ html lang="en"
   body
 
     = sidebar 'ui vertical inverted menu right'
-      = link_to "Features", features_path, class: "item #{is_active?(features_path)}"
+      = link_to "Product", product_path, class: "item #{is_active?(product_path)}"
       = link_to 'Pricing', pricing_path, class: "item #{is_active?(pricing_path)}"
       = link_to 'About', about_path, class: "item #{is_active?(about_path)}"
       = item
@@ -122,7 +122,7 @@ html lang="en"
             = item 'hamburger'
               = icon 'large sidebar'
           = menu class: 'right', only: :desktop
-            = link_to "FEATURES", features_path, class: "item #{is_active?(features_path)}"
+            = link_to "PRODUCT", product_path, class: "item #{is_active?(product_path)}"
             = link_to 'PRICING', pricing_path, class: "item #{is_active?(pricing_path)}"
             = link_to 'ABOUT', about_path, class: "item #{is_active?(about_path)}"
             = item
