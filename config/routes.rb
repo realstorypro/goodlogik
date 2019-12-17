@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#landing'
-  get 'features', to: 'pages#features'
+  get 'product', to: 'pages#features'
   get 'pricing', to: 'pages#pricing'
   get 'about', to: 'pages#about'
 

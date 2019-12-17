@@ -11,7 +11,7 @@
                     Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
                         Material(:diffuse="pick_color(x,y,z)" :roughness="0.42")
                         Animation(property="rotation.x" :from="50" :duration="9" :end="-Math.PI * 2" :loop="false")
-                        Animation(property="rotation.y" :from="100" :duration="5" :end="-Math.PI * 2" :loop="false")
+                        Animation(property="rotation.y" :from="100" :duration="5" :end="Math.PI * 2" :loop="false")
                         Animation(property="rotation.z" :from="150" :duration="6" :end="Math.PI * 2" :loop="false")
                         Animation(property="scaling.x" :duration="10" :start="0.5" :end="Math.PI * 0.59" :loop="false")
                         Animation(property="scaling.y" :duration="10" :start="0.5" :end="Math.PI * 0.59" :loop="false")

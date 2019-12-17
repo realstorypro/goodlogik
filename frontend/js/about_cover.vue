@@ -9,7 +9,7 @@
                 template(v-for="y in squares")
                     Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
                         Material(:diffuse="pick_color(x,y,z)" :roughness="0.30" :glossiness="1")
-                        Animation(property="scaling.z" :duration="5" :start="0.1" :end="0.2" :loop="false")
+                        Animation(property="scaling.z" :duration="5" :start="0.1" :end="0.15" :loop="false")
 
 </template>
 
