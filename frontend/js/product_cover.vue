@@ -1,74 +1,60 @@
 <template lang="pug">
-    Scene
-        Property(name="clearColor" :color="background")
-        Camera(type="arcRotate" :radius="1")
-        HemisphericLight(:diffuse="hemispheric_light")
-        Entity(:position="[0, 0, 5]")
-            PointLight(:diffuse="point_light")
-            template(v-for="x in squares")
-                template(v-for="y in squares")
-                    Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
-                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.30" :glossiness="2")
-                        Animation(property="rotation.x" :duration="60" :end="Math.PI * 6.1" :loop="true")
-                        Animation(property="rotation.z" :duration="60" :end="Math.PI * 6.1" :loop="true")
-                        Animation(property="scaling.x" :duration="50" :start="2.2" :end="Math.PI * 2.3" :loop="true")
-                        Animation(property="scaling.y" :duration="50" :start="2.2" :end="Math.PI * 2.3" :loop="true")
-                        Animation(property="scaling.z" :duration="50" :start="2.2" :end="Math.PI * 2.3" :loop="true")
-
+    canvas.canvas(ref="canvas")
 </template>
 
 <script lang="coffee">
+import * as BABYLON from 'babylonjs'
 export default {
-    data: ->
-        background: '#fff'
-        hemispheric_light: '#fff'
-        hemispheric_specular_light: '#000'
-        point_light: '#000'
-        square_color: "#000"
-        squares: [0, 2, -2 ]
-        first_color: '#0E6EB8'
-        second_color: '#0E6EB8'
-        third_color: '#0E6EB8'
-        fourth_color: '#0E6EB8'
-        fifth_color: '#0E6EB8'
-        sixth_color: '#0E6EB8'
     mounted: ->
         $('.overlay').css('transition', 'all 2.5s')
         $('.overlay').css('opacity', 0.1)
-    beforeDestroy: ->
-        $('.overlay').css('transition', 'none')
-        $('.overlay').css('opacity', 1)
-    methods:
-        pick_color: (x, y, z) ->
+
+        canvas = @.$refs["canvas"]
+
+        # Load the 3D engine
+        engine = new (BABYLON.Engine)(canvas, true,
+            preserveDrawingBuffer: true
+            stencil: true)
 
 
+        createScene = ->
+            # Create a basic BJS Scene object
+            scene = new (BABYLON.Scene)(engine)
 
-            if x is -2 and y is 2
-                @sixth_color
-            else if x is 0 and y is 2
-                @first_color
-            else if x is 2 and y is 2
-                @sixth_color
+            # Create a FreeCamera, and set its position to {x: 0, y: 5, z: -10}
+            camera = new (BABYLON.FreeCamera)('camera1', new (BABYLON.Vector3)(0, 5, -10), scene)
 
-            else if x is -2 and y is 0
-                @fifth_color
-            else if x is 0 and y is 0
-                @fourth_color
-            else if x is 2 and y is 0
-                @fifth_color
+            # Target the camera to scene origin
+            camera.setTarget BABYLON.Vector3.Zero()
 
+            # Attach the camera to the canvas
+            camera.attachControl canvas, false
 
-            else if x is 2 and y is -2
-                @fourth_color
-            else if x is 0 and y is -2
-                @third_color
-            else if x is -2 and y is -2
-                @fourth_color
+            # Create a basic light, aiming 0, 1, 0 - meaning, to the sky
+            light = new (BABYLON.HemisphericLight)('light1', new (BABYLON.Vector3)(0, 1, 0), scene)
+
+            # Create a built-in "sphere" shape; its constructor takes 6 params: name, segment, diameter, scene, updatable, sideOrientation
+            sphere = BABYLON.Mesh.CreateSphere('sphere1', 16, 2, scene, false, BABYLON.Mesh.FRONTSIDE)
+
+            # Move the sphere upward 1/2 of its height
+            sphere.position.y = 1
+
+            # Create a built-in "ground" shape; its constructor takes 6 params : name, width, height, subdivision, scene, updatable
+            ground = BABYLON.Mesh.CreateGround('ground1', 6, 6, 2, scene, false)
+
+            # Return the created scene
+            scene
+
+        # call the createScene function
+        scene = createScene()
+
+        # run the render loop
+        engine.runRenderLoop ->
+            scene.render()
+
 
 }
 </script>
 
 <style lang="sass">
-    canvas
-        height: 100vh
 </style>
