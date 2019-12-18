@@ -39,7 +39,7 @@ export default {
 
             # Scene Settings
             box_positions = [0, 1.5, -1.5]
-            frameRate = 30
+            frameRate = 25
 
             # Boxes Array
             boxes = []
@@ -51,8 +51,14 @@ export default {
                         box = BABYLON.MeshBuilder.CreateBox("box_#{x}#{y}#{z}", {}, scene)
                         box.position = new BABYLON.Vector3(x, y, z)
 
-                        animation = buildAnimation(x,y,z, frameRate)
-                        scene.beginDirectAnimation(box, [animation], 0, 2 * frameRate, true)
+                        x_animation = buildAnimation(x, "x","#{x}#{y}#{z}", frameRate)
+                        scene.beginDirectAnimation(box, [x_animation], 0, 2 * frameRate, true)
+
+                        y_animation = buildAnimation(y, "y","#{x}#{y}#{z}", frameRate)
+                        scene.beginDirectAnimation(box, [y_animation], 0, 2 * frameRate, true)
+
+                        z_animation = buildAnimation(z, "z","#{x}#{y}#{z}", frameRate)
+                        scene.beginDirectAnimation(box, [z_animation], 0, 2 * frameRate, true)
 
                         boxes << box
 
@@ -60,21 +66,21 @@ export default {
             # Return the created scene
             scene
 
-        buildAnimation = (x,y,z, frameRate) ->
-            console.log "x :#{x}, y: #{y}, z: #{z}"
+        buildAnimation = (position, axis, identifier,frameRate) ->
+            animation = new BABYLON.Animation("box_position_#{axis}_#{identifier}_#{position}", "position.#{axis}", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE)
 
-            animation = new BABYLON.Animation("box_position_#{x}#{y}#{z}", "position.x", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE)
+            range = Math.random() * (1.2 - 1.1) + 1.1
 
             keyFrames = []
             keyFrames.push
                 frame: 0
-                value: x
+                value: position
             keyFrames.push
                 frame: frameRate
-                value: x * 3.5
+                value: position * range
             keyFrames.push
                 frame: 2 * frameRate
-                value: x
+                value: position
 
             animation.setKeys(keyFrames)
             animation
