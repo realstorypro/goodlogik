@@ -7,7 +7,7 @@ import * as BABYLON from 'babylonjs'
 export default {
     mounted: ->
         $('.overlay').css('transition', 'all 2.5s')
-        $('.overlay').css('opacity', 0.1)
+        $('.overlay').css('opacity', 0.8)
 
         canvas = @.$refs["canvas"]
 
@@ -21,6 +21,9 @@ export default {
             # Create a basic BJS Scene object
             scene = new (BABYLON.Scene)(engine)
 
+            # Set Stage to White
+            scene.clearColor = new BABYLON.Color3.Blue()
+
             # Create a FreeCamera, and set its position to {x: 0, y: 5, z: -10}
             camera = new (BABYLON.FreeCamera)('camera1', new (BABYLON.Vector3)(0, 5, -10), scene)
 
@@ -33,17 +36,48 @@ export default {
             # Create a basic light, aiming 0, 1, 0 - meaning, to the sky
             light = new (BABYLON.HemisphericLight)('light1', new (BABYLON.Vector3)(0, 1, 0), scene)
 
-            # Create a built-in "sphere" shape; its constructor takes 6 params: name, segment, diameter, scene, updatable, sideOrientation
-            sphere = BABYLON.Mesh.CreateSphere('sphere1', 16, 2, scene, false, BABYLON.Mesh.FRONTSIDE)
 
-            # Move the sphere upward 1/2 of its height
-            sphere.position.y = 1
+            # Scene Settings
+            box_positions = [0, 1.5, -1.5]
+            frameRate = 30
 
-            # Create a built-in "ground" shape; its constructor takes 6 params : name, width, height, subdivision, scene, updatable
-            ground = BABYLON.Mesh.CreateGround('ground1', 6, 6, 2, scene, false)
+            # Boxes Array
+            boxes = []
+
+            for x in box_positions
+                for y in box_positions
+                    for z in box_positions
+
+                        box = BABYLON.MeshBuilder.CreateBox("box_#{x}#{y}#{z}", {}, scene)
+                        box.position = new BABYLON.Vector3(x, y, z)
+
+                        animation = buildAnimation(x,y,z, frameRate)
+                        scene.beginDirectAnimation(box, [animation], 0, 2 * frameRate, true)
+
+                        boxes << box
+
 
             # Return the created scene
             scene
+
+        buildAnimation = (x,y,z, frameRate) ->
+            console.log "x :#{x}, y: #{y}, z: #{z}"
+
+            animation = new BABYLON.Animation("box_position_#{x}#{y}#{z}", "position.x", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE)
+
+            keyFrames = []
+            keyFrames.push
+                frame: 0
+                value: x
+            keyFrames.push
+                frame: frameRate
+                value: x * 3.5
+            keyFrames.push
+                frame: 2 * frameRate
+                value: x
+
+            animation.setKeys(keyFrames)
+            animation
 
         # call the createScene function
         scene = createScene()
@@ -51,6 +85,10 @@ export default {
         # run the render loop
         engine.runRenderLoop ->
             scene.render()
+
+        # the canvas/window resize event handler
+        window.addEventListener 'resize', ->
+            engine.resize()
 
 
 }

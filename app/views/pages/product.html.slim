@@ -1,14 +1,13 @@
 - content_for :hero
-  = fragment 'hero'
-    .landing.page
+  = fragment 'hero product'
+    .product.page
       #product-cover
     .overlay
     .content-holder
       = container
         = grid
           = column size: 12, class: 'centered content'
-            = h1 class: 'inverted', text: "Platform for the new web"
-            = text text: "Sexy, easy to learn, and even easier to love."
+            = h1 class: 'inverted', text: "Build Better Web"
 
 = fragment 'publishing'
   = container
