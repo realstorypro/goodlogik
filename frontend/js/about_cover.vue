@@ -63,6 +63,9 @@
                             scene.beginDirectAnimation(box, [z_animation], 0, animation_time * frameRate, true)
 
                             scale_animation = buildScaleAnimation(x, "z","#{x}#{y}#{z}", frameRate)
+                            #scene.beginDirectAnimation(box, [scale_animation], 0, animation_time * frameRate, true)
+
+                            scale_animation = buildScaleAnimation(y, "z","#{x}#{y}#{z}", frameRate)
                             scene.beginDirectAnimation(box, [scale_animation], 0, animation_time * frameRate, true)
 
                             boxes << box
