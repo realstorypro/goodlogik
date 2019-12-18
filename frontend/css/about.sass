@@ -1,9 +1,14 @@
 .fragment.about.hero
   h1.ui.header
-    font-size: 3.5em
+    font-size: 4.5em
+    text-align: right
 
-  //&:after
-    border-bottom: none
+    @include media("<tablet")
+      text-align: left
+      font-size: 3.5em
+
+    &:after
+      border-bottom: none
 
   .overlay
     background: $blue

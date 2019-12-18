@@ -7,7 +7,7 @@
     export default {
         mounted: ->
             $('.overlay').css('transition', 'all 2.5s')
-            $('.overlay').css('opacity', 0.9)
+            $('.overlay').css('opacity', 0.7)
 
             canvas = @.$refs["canvas"]
 
@@ -22,7 +22,7 @@
                 scene = new (BABYLON.Scene)(engine)
 
                 # Set Stage to White
-                scene.clearColor = new BABYLON.Color3.Blue()
+                scene.clearColor = new BABYLON.Color3.White()
 
                 # Create a FreeCamera, and set its position to {x: 0, y: 5, z: -10}
                 camera = new (BABYLON.FreeCamera)('camera1', new (BABYLON.Vector3)(-5, 5, -10), scene)
@@ -46,6 +46,14 @@
                 # Boxes Array
                 boxes = []
 
+                # Colors Array
+                colors = []
+                colors.push new BABYLON.Color3.FromHexString('#00bcf2')
+                colors.push new BABYLON.Color3.FromHexString('#f5c647')
+                colors.push new BABYLON.Color3.FromHexString('#9578b6')
+                colors.push new BABYLON.Color3.FromHexString('#f06160')
+                colors.push new BABYLON.Color3.FromHexString('#f06160')
+
                 for x in box_positions
                     for y in box_positions
                         for z in box_positions
@@ -66,13 +74,36 @@
                             #scene.beginDirectAnimation(box, [scale_animation], 0, animation_time * frameRate, true)
 
                             scale_animation = buildScaleAnimation(y, "z","#{x}#{y}#{z}", frameRate)
-                            scene.beginDirectAnimation(box, [scale_animation], 0, animation_time * frameRate, true)
+                            #scene.beginDirectAnimation(box, [scale_animation], 0, animation_time * frameRate, true)
+
+                            material = new BABYLON.StandardMaterial("material_#{x}#{y}#{z}", scene)
+                            material.alpha = 0.85
+
+
+                            # shuffling and picking a random color
+                            shuffled_colors = shuffle(colors)
+                            [...,picked_color] = shuffled_colors
+
+                            material.diffuseColor = picked_color
+
+                            box.material = material
 
                             boxes << box
 
 
                 # Return the created scene
                 scene
+
+
+            # shuffles an array
+            shuffle = (a) ->
+                i = a.length
+                while --i > 0
+                    j = ~~(Math.random() * (i + 1)) # ~~ is a common optimization for Math.floor
+                    t = a[j]
+                    a[j] = a[i]
+                    a[i] = t
+                a
 
             buildAnimation = (position, axis, identifier,frameRate) ->
                 animation = new BABYLON.Animation("box_position_#{axis}_#{identifier}_#{position}", "position.#{axis}", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT)
