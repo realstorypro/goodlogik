@@ -41,7 +41,7 @@
                 # Scene Settings
                 box_positions = [0, 1.5, -1.5]
                 frameRate = 25
-                animation_time = 14
+                animation_time = 6
 
                 # Boxes Array
                 boxes = []
@@ -64,16 +64,16 @@
                             box.position = new BABYLON.Vector3(x, y, z)
 
                             x_animation = buildAnimation(x, "x","#{x}#{y}#{z}", frameRate, animation_time)
-                            scene.beginDirectAnimation(box, [x_animation], 0, animation_time * frameRate, true)
+                            scene.beginDirectAnimation(box, [x_animation], 0, animation_time * frameRate, false)
 
                             y_animation = buildAnimation(y, "y","#{x}#{y}#{z}", frameRate, animation_time)
-                            scene.beginDirectAnimation(box, [y_animation], 0, animation_time * frameRate, true)
+                            scene.beginDirectAnimation(box, [y_animation], 0, animation_time * frameRate, false)
 
                             z_animation = buildAnimation(z, "z","#{x}#{y}#{z}", frameRate, animation_time)
-                            scene.beginDirectAnimation(box, [z_animation], 0, animation_time * frameRate, true)
+                            scene.beginDirectAnimation(box, [z_animation], 0, animation_time * frameRate, false)
 
                             material = new BABYLON.StandardMaterial("material_#{x}#{y}#{z}", scene)
-                            material.alpha = 0.8
+                            material.alpha = 0.85
 
 
                             # shuffling and picking a random color
@@ -103,20 +103,17 @@
                 a
             # builds an animation
             buildAnimation = (position, axis, identifier,frameRate, animation_time) ->
-                animation = new BABYLON.Animation("box_position_#{axis}_#{identifier}_#{position}", "position.#{axis}", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE)
+                animation = new BABYLON.Animation("box_position_#{axis}_#{identifier}_#{position}", "position.#{axis}", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT)
 
-                range = Math.random() * (3.40 - 1.10) + 1.10
+                range = Math.random() * (3.60 - 1.10) + 1.10
 
                 keyFrames = []
                 keyFrames.push
                     frame: 0
                     value: position
                 keyFrames.push
-                    frame: frameRate * (animation_time / 2)
+                    frame: frameRate * animation_time
                     value: position * range
-                keyFrames.push
-                    frame: animation_time * frameRate
-                    value: position
 
                 animation.setKeys(keyFrames)
 
