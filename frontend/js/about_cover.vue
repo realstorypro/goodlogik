@@ -1,70 +1,125 @@
 <template lang="pug">
-    Scene
-        Property(name="clearColor" :color="background")
-        Camera(type="arcRotate" :radius="1")
-        HemisphericLight(:diffuse="hemispheric_light")
-        Entity(:position="[0, 0, 5]")
-            PointLight(:diffuse="point_light")
-            template(v-for="x in squares")
-                template(v-for="y in squares")
-                    Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
-                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.30" :glossiness="1")
-                        Animation(property="scaling.z" :duration="5" :start="0.1" :end="0.15" :loop="false")
-
+    canvas.canvas(ref="canvas")
 </template>
 
 <script lang="coffee">
-export default {
-    data: ->
-        background: '#fff'
-        hemispheric_light: '#016936'
-        hemispheric_specular_light: '#016936'
-        point_light: '#016936'
-        square_color: "#000"
-        squares: [0, 1.5, -1.5, 3.0, -3.0 ]
-        first_color: '#016936'
-        second_color: '#016936'
-        third_color: '#016936'
-        fourth_color: '#EE82EE'
-        fifth_color: '#016936'
-        sixth_color: '#016936'
-    mounted: ->
-        $('.overlay').css('transition', 'all 2.5s')
-        $('.overlay').css('opacity', 0.4)
-    beforeDestroy: ->
-        $('.overlay').css('transition', 'none')
-        $('.overlay').css('opacity', 0.4)
-    methods:
-        pick_color: (x, y, z) ->
+    import * as BABYLON from 'babylonjs'
+    export default {
+        mounted: ->
+            $('.overlay').css('transition', 'all 2.5s')
+            $('.overlay').css('opacity', 0.9)
+
+            canvas = @.$refs["canvas"]
+
+            # Load the 3D engine
+            engine = new (BABYLON.Engine)(canvas, true,
+                preserveDrawingBuffer: true
+                stencil: true)
 
 
+            createScene = ->
+# Create a basic BJS Scene object
+                scene = new (BABYLON.Scene)(engine)
 
-            if x is -2 and y is 2
-                @sixth_color
-            else if x is 0 and y is 2
-                @first_color
-            else if x is 2 and y is 2
-                @sixth_color
+                # Set Stage to White
+                scene.clearColor = new BABYLON.Color3.Blue()
 
-            else if x is -2 and y is 0
-                @fifth_color
-            else if x is 0 and y is 0
-                @fourth_color
-            else if x is 2 and y is 0
-                @fifth_color
+                # Create a FreeCamera, and set its position to {x: 0, y: 5, z: -10}
+                camera = new (BABYLON.FreeCamera)('camera1', new (BABYLON.Vector3)(-5, 5, -10), scene)
+
+                # Target the camera to scene origin
+                camera.setTarget BABYLON.Vector3.Zero()
+
+                # Attach the camera to the canvas
+                camera.attachControl canvas, false
+
+                # Create a basic light, aiming 0, 1, 0 - meaning, to the sky
+                light = new (BABYLON.HemisphericLight)('light1', new (BABYLON.Vector3)(0, 1, 0), scene)
+                light2 = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(0, -1, 0), scene)
 
 
-            else if x is 2 and y is -2
-                @fourth_color
-            else if x is 0 and y is -2
-                @third_color
-            else if x is -2 and y is -2
-                @fourth_color
+                # Scene Settings
+                box_positions = [0, 1.5, -1.5, 3, -3, 4.5, -4.5, 6, -6, 7.5, -7.5]
+                frameRate = 25
+                animation_time = 30
 
-}
+                # Boxes Array
+                boxes = []
+
+                for x in box_positions
+                    for y in box_positions
+                        for z in box_positions
+
+                            box = BABYLON.MeshBuilder.CreateBox("box_#{x}#{y}#{z}", {}, scene)
+                            box.position = new BABYLON.Vector3(x, y, z)
+
+                            x_animation = buildAnimation(x, "x","#{x}#{y}#{z}", frameRate)
+                            scene.beginDirectAnimation(box, [x_animation], 0, animation_time * frameRate, true)
+
+                            y_animation = buildAnimation(y, "y","#{x}#{y}#{z}", frameRate)
+                            scene.beginDirectAnimation(box, [y_animation], 0, animation_time * frameRate, true)
+
+                            z_animation = buildAnimation(z, "z","#{x}#{y}#{z}", frameRate)
+                            scene.beginDirectAnimation(box, [z_animation], 0, animation_time * frameRate, true)
+
+                            scale_animation = buildScaleAnimation(x, "z","#{x}#{y}#{z}", frameRate)
+                            scene.beginDirectAnimation(box, [scale_animation], 0, animation_time * frameRate, true)
+
+                            boxes << box
+
+
+                # Return the created scene
+                scene
+
+            buildAnimation = (position, axis, identifier,frameRate) ->
+                animation = new BABYLON.Animation("box_position_#{axis}_#{identifier}_#{position}", "position.#{axis}", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT)
+
+                range = Math.random() * (21.5 - 1.1) + 1.1
+
+                keyFrames = []
+                keyFrames.push
+                    frame: 0
+                    value: position * range / 2
+                keyFrames.push
+                    frame: frameRate  * 30
+                    value: position * range
+
+                animation.setKeys(keyFrames)
+                animation
+
+            buildScaleAnimation = (position, axis, identifier,frameRate) ->
+                animation = new BABYLON.Animation("box_position_#{axis}_#{identifier}_#{position}", "scaling.#{axis}", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT)
+
+                range = Math.random() * (21.5 - 1.1) + 1.1
+
+                keyFrames = []
+                keyFrames.push
+                    frame: 0
+                    value: position * range / 2
+                keyFrames.push
+                    frame: frameRate  * 30
+                    value: position * range
+                keyFrames.push
+                    frame: 0
+                    value: position * range / 2
+
+                animation.setKeys(keyFrames)
+                animation
+
+            # call the createScene function
+            scene = createScene()
+
+            # run the render loop
+            engine.runRenderLoop ->
+                scene.render()
+
+            # the canvas/window resize event handler
+            window.addEventListener 'resize', ->
+                engine.resize()
+
+
+    }
 </script>
 
 <style lang="sass">
-    canvas
-        height: 100vh
 </style>
