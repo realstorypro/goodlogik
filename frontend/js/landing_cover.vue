@@ -41,7 +41,7 @@
                 # Scene Settings
                 box_positions = [0, 1.5, -1.5]
                 frameRate = 25
-                animation_time = 6
+                animation_time = 14
 
                 # Boxes Array
                 boxes = []
@@ -105,7 +105,7 @@
             buildAnimation = (position, axis, identifier,frameRate, animation_time) ->
                 animation = new BABYLON.Animation("box_position_#{axis}_#{identifier}_#{position}", "position.#{axis}", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE)
 
-                range = Math.random() * (2.40 - 1.10) + 1.10
+                range = Math.random() * (3.40 - 1.10) + 1.10
 
                 keyFrames = []
                 keyFrames.push
@@ -120,7 +120,8 @@
 
                 animation.setKeys(keyFrames)
 
-                easingFunction = new BABYLON.CircleEase()
+                #easingFunction = new BABYLON.BackEase(0.7)
+                easingFunction = new BABYLON.ElasticEase(10, 9.5)
                 easingFunction.setEasingMode(BABYLON.EasingFunction.EASINGMODE_EASEINOUT)
                 animation.setEasingFunction(easingFunction)
 
