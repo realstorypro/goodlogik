@@ -21,7 +21,7 @@
                 scene = new (BABYLON.Scene)(engine)
 
                 # Set Stage to White
-                scene.clearColor = new BABYLON.Color3.White()
+                scene.clearColor = new BABYLON.Color3.FromHexString("#2185D0")
 
                 # Create a Rotating Camera
                 camera = new BABYLON.ArcRotateCamera("Camera", 1.8, 1.9, -6.3, new BABYLON.Vector3(0, 0, 0), scene);
