@@ -22,7 +22,7 @@
                 scene = new (BABYLON.Scene)(engine)
 
                 # Set Stage to White
-                scene.clearColor = new BABYLON.Color3.White()
+                scene.clearColor = new BABYLON.Color3.FromHexString("#21BA45")
 
                 # Create a FreeCamera, and set its position to {x: 0, y: 5, z: -10}
                 camera = new (BABYLON.FreeCamera)('camera1', new (BABYLON.Vector3)(-5, 5, -10), scene)

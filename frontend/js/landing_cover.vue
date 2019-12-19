@@ -118,7 +118,7 @@
                 animation.setKeys(keyFrames)
 
                 #easingFunction = new BABYLON.BackEase(0.7)
-                easingFunction = new BABYLON.ElasticEase(10, 9.5)
+                easingFunction = new BABYLON.ElasticEase(11, 19.5)
                 easingFunction.setEasingMode(BABYLON.EasingFunction.EASINGMODE_EASEINOUT)
                 animation.setEasingFunction(easingFunction)
 
