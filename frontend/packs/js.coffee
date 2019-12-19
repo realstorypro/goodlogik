@@ -1,14 +1,12 @@
 import semantic_js from '../semantic_ui/dist/semantic.min'
 
 import Vue from 'vue/dist/vue.esm'
-import vue_babylonjs from 'vue-babylonjs'
 
 import LandingCover from '../js/landing_cover.vue'
 import PricingCover from '../js/pricing_cover.vue'
 import AboutCover from '../js/about_cover.vue'
 import ProductCover from '../js/product_cover.vue'
 
-Vue.use(vue_babylonjs)
 
 exec_javascript = ->
 
