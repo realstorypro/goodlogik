@@ -1,14 +1,13 @@
 - content_for :hero
-  = fragment 'hero'
-    .landing.page
-      #feature-cover
+  = fragment 'hero product'
+    .product.page
+      #product-cover
     .overlay
     .content-holder
       = container
         = grid
           = column size: 12, class: 'centered content'
-            = h1 class: 'inverted', text: "Platform for the new web"
-            = text text: "Sexy, easy to learn, and even easier to love."
+            = h1 class: 'inverted', text: "Simply Better"
 
 = fragment 'publishing'
   = container
@@ -23,7 +22,7 @@
 
       = row
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-          = h2 text: 'Scorching Fast'
+          = h2 text: 'Instant Fast'
           = text 'lead'
             | Optimized for both speed and performance.
           = text 'lead'
@@ -58,7 +57,7 @@
       = row
         = column size: 16
           = h1 'horizontal divider'
-            = "Powerful Analytics"
+            = "Better Analytics"
           br
 
       = row
@@ -93,7 +92,7 @@
       = row
         = column size: 16
           = h2 'horizontal divider inverted'
-            = "Scalable Performance"
+            = "Better Performance"
             br
       = row
         = column computer: 12, tablet: 16, mobile: 16, class: 'middle aligned centered'

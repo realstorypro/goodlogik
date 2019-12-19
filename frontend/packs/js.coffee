@@ -6,7 +6,7 @@ import vue_babylonjs from 'vue-babylonjs'
 import LandingCover from '../js/landing_cover.vue'
 import PricingCover from '../js/pricing_cover.vue'
 import AboutCover from '../js/about_cover.vue'
-import FeatureCover from '../js/feature_cover.vue'
+import ProductCover from '../js/product_cover.vue'
 
 Vue.use(vue_babylonjs)
 
@@ -77,17 +77,17 @@ exec_javascript = ->
       render: (h) ->
         h(AboutCover)
 
-  feature_cover_div = document.getElementById("feature-cover")
+  feature_cover_div = document.getElementById("product-cover")
   if feature_cover_div != null
     feature_cover = new Vue
-      el: document.getElementById('feature-cover'),
+      el: document.getElementById('product-cover'),
       render: (h) ->
-        h(FeatureCover)
+        h(ProductCover)
 
   # Launching Analytics
   analytics.page()
 
-  # Padding Style Adjustments for the Features page
+  # Padding Style Adjustments for the Product page
   $('.extra.padding iframe').css('padding-top', '6em')
 
   # Dropdowns

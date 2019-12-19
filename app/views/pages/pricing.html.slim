@@ -1,16 +1,18 @@
 - content_for :hero
-  = fragment 'hero'
+  = fragment 'hero pricing'
     .landing.page
       #pricing-cover
     .overlay
     .content-holder
       = container
         = grid
-          = column size: 13, class: 'centered content'
-            = h1 class: 'inverted', text: "Affordable Pricing"
-            = text text: 'An option for every budget, from small entrepreneurs to large enterprises.'
+          = column size: 14, class: 'centered content'
+            = h1 class: 'inverted'
+              | life is better
+              br
+              | when everything fits
 
-= fragment 'pricing'
+= fragment 'cost'
   = container
     = grid
       = row

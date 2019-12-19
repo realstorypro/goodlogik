@@ -15,7 +15,7 @@ class PagesController < ApplicationController
     set_meta_tags og: {title: @page_title }
   end
 
-  def features
+  def product
     @page_title = 'Product | GoodLogik'
     @page_description = 'High-performance web platform with advanced publishing capabilities, integrated social features, and built-in analytics.'
 

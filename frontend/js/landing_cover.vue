@@ -1,78 +1,143 @@
 <template lang="pug">
-    Scene
-        Property(name="clearColor" :color="background")
-        Camera(type="arcRotate" :radius="1")
-        HemisphericLight(:diffuse="hemispheric_light")
-        Entity(:position="[0, 0, 5]")
-            Animation(property="rotation.x" :duration="35" :end="Math.PI * 4.0" :loop="true")
-            PointLight(:diffuse="point_light")
-            template(v-for="x in squares")
-                template(v-for="y in squares")
-                    Box(v-for="z in squares" :position="[x, y, z]" :key="`${x},${y},${z}`")
-                        Material(:diffuse="pick_color(x,y,z)" :roughness="0.42")
-                        Animation(property="rotation.x" :from="50" :duration="9" :end="-Math.PI * 2" :loop="false")
-                        Animation(property="rotation.y" :from="100" :duration="5" :end="Math.PI * 2" :loop="false")
-                        Animation(property="rotation.z" :from="150" :duration="6" :end="Math.PI * 2" :loop="false")
-                        Animation(property="scaling.x" :duration="10" :start="0.5" :end="Math.PI * 0.59" :loop="false")
-                        Animation(property="scaling.y" :duration="10" :start="0.5" :end="Math.PI * 0.59" :loop="false")
-                        Animation(property="scaling.z" :duration="10" :start="0.5" :end="Math.PI * 0.59" :loop="false")
-
+    canvas.canvas(ref="canvas")
 </template>
 
 <script lang="coffee">
-export default {
-    data: ->
-        background: '#999'
-        hemispheric_light: '#fff'
-        hemispheric_specular_light: '#000'
-        point_light: '#fff'
-        square_color: "#000"
-        squares: [0, 2, -2 ]
-        first_color: '#9c91ff'
-        second_color: '#ffab1d'
-        third_color: '#ffe908'
-        fourth_color: '#00d8ff'
-        fifth_color: '#ff1873'
-        sixth_color: '#0fff7a'
-    mounted: ->
-        $('.overlay').css('transition', 'all 2.5s')
-        $('.overlay').css('opacity', 0.1)
+    import * as BABYLON from 'babylonjs'
+    export default {
+        mounted: ->
+            $('.overlay').css('transition', 'all 2.5s')
+            $('.overlay').css('opacity', 0.29)
 
-    beforeDestroy: ->
-        $('.overlay').css('transition', 'none')
-        $('.overlay').css('opacity', 1)
+            canvas = @.$refs["canvas"]
 
-    methods:
-        pick_color: (x, y, z) ->
+            # Load the 3D engine
+            engine = new (BABYLON.Engine)(canvas, true,
+                preserveDrawingBuffer: true
+                stencil: true)
 
 
+            createScene = ->
+                scene = new (BABYLON.Scene)(engine)
 
-            if x is -2 and y is 2
-                @sixth_color
-            else if x is 0 and y is 2
-                @first_color
-            else if x is 2 and y is 2
-                @sixth_color
+                # Set Stage to White
+                scene.clearColor = new BABYLON.Color3.White()
 
-            else if x is -2 and y is 0
-                @fifth_color
-            else if x is 0 and y is 0
-                @fourth_color
-            else if x is 2 and y is 0
-                @fifth_color
+                # Create a Rotating Camera
+                camera = new BABYLON.ArcRotateCamera("Camera", 1.8, 1.9, -6.3, new BABYLON.Vector3(0, 0, 0), scene);
+                camera.useAutoRotationBehavior = true
+                camera.useBouncingBehavior = true
+
+                # Target the camera to scene origin
+                camera.setTarget BABYLON.Vector3.Zero()
+
+                # Attach the camera to the canvas
+                camera.attachControl canvas, false
+
+                # Create a basic light, aiming 0, 1, 0 - meaning, to the sky
+                light = new (BABYLON.HemisphericLight)('light1', new (BABYLON.Vector3)(0, 1, 0), scene)
 
 
-            else if x is 2 and y is -2
-                @fourth_color
-            else if x is 0 and y is -2
-                @third_color
-            else if x is -2 and y is -2
-                @fourth_color
+                # Scene Settings
+                box_positions = [0, 1.5, -1.5]
+                frameRate = 25
+                animation_time = 6
 
-}
+                # Boxes Array
+                boxes = []
+
+                # Colors Array
+                colors = []
+                colors.push new BABYLON.Color3.FromHexString('#00bcf2')
+                colors.push new BABYLON.Color3.FromHexString('#f5c647')
+                colors.push new BABYLON.Color3.FromHexString('#9578b6')
+                colors.push new BABYLON.Color3.FromHexString('#f06160')
+                colors.push new BABYLON.Color3.FromHexString('#f06160')
+
+                for x in box_positions
+                    for y in box_positions
+                        for z in box_positions
+
+
+
+                            box = BABYLON.MeshBuilder.CreateBox("box_#{x}#{y}#{z}", {}, scene)
+                            box.position = new BABYLON.Vector3(x, y, z)
+
+                            x_animation = buildAnimation(x, "x","#{x}#{y}#{z}", frameRate, animation_time)
+                            scene.beginDirectAnimation(box, [x_animation], 0, animation_time * frameRate, false)
+
+                            y_animation = buildAnimation(y, "y","#{x}#{y}#{z}", frameRate, animation_time)
+                            scene.beginDirectAnimation(box, [y_animation], 0, animation_time * frameRate, false)
+
+                            z_animation = buildAnimation(z, "z","#{x}#{y}#{z}", frameRate, animation_time)
+                            scene.beginDirectAnimation(box, [z_animation], 0, animation_time * frameRate, false)
+
+                            material = new BABYLON.StandardMaterial("material_#{x}#{y}#{z}", scene)
+                            material.alpha = 0.85
+
+
+                            # shuffling and picking a random color
+                            shuffled_colors = shuffle(colors)
+                            [...,picked_color] = shuffled_colors
+
+                            material.diffuseColor = picked_color
+
+                            box.material = material
+
+
+                            boxes << box
+
+
+
+                # Return the created scene
+                scene
+
+            # shuffles an array
+            shuffle = (a) ->
+                i = a.length
+                while --i > 0
+                    j = ~~(Math.random() * (i + 1)) # ~~ is a common optimization for Math.floor
+                    t = a[j]
+                    a[j] = a[i]
+                    a[i] = t
+                a
+            # builds an animation
+            buildAnimation = (position, axis, identifier,frameRate, animation_time) ->
+                animation = new BABYLON.Animation("box_position_#{axis}_#{identifier}_#{position}", "position.#{axis}", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT)
+
+                range = Math.random() * (3.60 - 1.10) + 1.10
+
+                keyFrames = []
+                keyFrames.push
+                    frame: 0
+                    value: position
+                keyFrames.push
+                    frame: frameRate * animation_time
+                    value: position * range
+
+                animation.setKeys(keyFrames)
+
+                #easingFunction = new BABYLON.BackEase(0.7)
+                easingFunction = new BABYLON.ElasticEase(11, 19.5)
+                easingFunction.setEasingMode(BABYLON.EasingFunction.EASINGMODE_EASEINOUT)
+                animation.setEasingFunction(easingFunction)
+
+                animation
+
+            # call the createScene function
+            scene = createScene()
+
+            # run the render loop
+            engine.runRenderLoop ->
+                scene.render()
+
+            # the canvas/window resize event handler
+            window.addEventListener 'resize', ->
+                engine.resize()
+
+
+    }
 </script>
 
 <style lang="sass">
-    canvas
-        height: 100vh
 </style>

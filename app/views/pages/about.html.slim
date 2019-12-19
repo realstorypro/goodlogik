@@ -1,5 +1,5 @@
 - content_for :hero
-  = fragment 'hero'
+  = fragment 'hero about'
     .landing.page
       #about-cover
     .overlay
@@ -7,8 +7,10 @@
       = container
         = grid
           = column size: 10, class: 'centered content'
-            = h1 class: 'inverted', text: "Our Mission"
-            = text text: "To Upgrade Web"
+            = h1 class: 'inverted'
+              | Let's Make
+              br
+              | A Better Internet
 
 = fragment 'story'
   = container 'full'

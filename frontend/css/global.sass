@@ -64,19 +64,6 @@ body
   .logo
     width: 242px
 
-  .logo-text
-    padding-left: 10px
-    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif
-    color: white
-    text-transform: uppercase
-    font-size: 2.4em
-    font-weight: normal
-
-    span
-      font-weight: bold
-    @include media("<desktop")
-      font-size: 1.9em
-
   @include media("<desktop")
     .desktop.only
       display: none !important
@@ -92,6 +79,10 @@ body
       .item
         padding-right: 0
 
+  canvas
+    height: 100vh
+    width: 100%
+
   .overlay
     position: absolute
     top: 0
@@ -100,7 +91,6 @@ body
     height: 100%
     background: rgba(0,0,0,1)
     opacity: 1
-    //transition: all 4.5s
 
   .content-holder
     z-index: 99

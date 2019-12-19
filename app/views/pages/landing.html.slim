@@ -1,5 +1,5 @@
 - content_for :hero
-  = fragment 'hero'
+  = fragment 'hero landing'
     .landing.page
       #landing-cover
     .overlay
@@ -7,9 +7,10 @@
       = container
         = grid
           = column size: 10, class: 'centered content'
-            = h1 class: 'inverted', text: 'Grow Your Business'
-            = text text: 'On the platform that can grow with you.'
-
+            = h1 class: 'inverted'
+              | Grow Your Business
+            = text
+              | On a platform that grows with you
 = fragment 'features'
   = container
     = grid
