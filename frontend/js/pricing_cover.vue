@@ -7,7 +7,7 @@
     export default {
         mounted: ->
             $('.overlay').css('transition', 'all 2.5s')
-            $('.overlay').css('opacity', 0.39)
+            $('.overlay').css('opacity', 0.29)
 
             canvas = @.$refs["canvas"]
 
@@ -22,10 +22,10 @@
                 scene = new (BABYLON.Scene)(engine)
 
                 # Set Stage to White
-                scene.clearColor = new BABYLON.Color3.Black()
+                scene.clearColor = new BABYLON.Color3.FromHexString("#FF1493")
 
-                # Create a FreeCamera, and set its position to {x: 0, y: 5, z: -10}
-                camera = new BABYLON.ArcRotateCamera("Camera", 1.0, 2.0, -3.3, new BABYLON.Vector3(0, 0, 0), scene);
+                # Create a FreeCamera, and set its position to {x: 0, y: 5, z: -88}
+                camera = new BABYLON.ArcRotateCamera("Camera", 1.0, 2.0, -8.3, new BABYLON.Vector3(0, 0, 0), scene);
                 camera.useBouncingBehavior = true
                 camera.useAutoRotationBehavior = true
 
@@ -73,7 +73,6 @@
 
                             material = new BABYLON.StandardMaterial("material_#{x}#{y}#{z}", scene)
                             material.alpha = 0.85
-                            material.wireframe = true
 
                             # shuffling and picking a random color
                             shuffled_colors = shuffle(colors)
