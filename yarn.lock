@@ -1130,11 +1130,6 @@ babylon@^6.18.0:
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
   integrity sha512-q/UEjfGJ2Cm3oKV71DJz9d25TPnq5rhBVL2Q4fA5wcC3jcrdn7+SssEybFIxwAvvP+YCsCYNKughoF33GxgycQ==
 
-babylonjs@^3.2.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/babylonjs/-/babylonjs-3.3.0.tgz#f7636c3761cc3260dac8adf26767bc6323e74181"
-  integrity sha512-3Gn9kAEPejJN4+HMKGAKbhsCsrysvaORqi07Bdr9Xmy3KRt/BxyGwepzfcqFIe8+94SWszPDeJC9peICfHdCKw==
-
 babylonjs@^4.0.3:
   version "4.0.3"
   resolved "https://registry.npmjs.org/babylonjs/-/babylonjs-4.0.3.tgz#5dba9a96a7cb70634338e8dd7a17081e9f902cf6"
@@ -9690,13 +9685,6 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
   integrity sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
-
-vue-babylonjs@^1.0.0-beta.6:
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/vue-babylonjs/-/vue-babylonjs-1.0.0-beta.6.tgz#163ff17d9b1fbf55e87d8bd1ecafdc6eb543f402"
-  integrity sha512-iNBK41vEhmsXBz9TH3CwKGAmR5+gdRkkzTKhT7idwf14dgPrB7eftPc8mt1XTi1dO2FDU8Dlr56UiwcbAeJbWQ==
-  dependencies:
-    babylonjs "^3.2.0"
 
 vue-hot-reload-api@^2.2.0:
   version "2.3.1"
