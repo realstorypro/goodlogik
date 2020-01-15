@@ -12,21 +12,26 @@ class PagesController < ApplicationController
     set_meta_tags og: {title: @page_title }
   end
 
+  def brands
+
+  end
+
   def platform
     @page_title = 'Platform | GoodLogik'
     @page_description = 'High-performance web platform with advanced publishing capabilities, integrated social features, and built-in analytics.'
-
+    set_meta_tags og: {title: @page_title }
   end
 
   def pricing
     @page_title = 'Pricing | GoodLogik'
     @page_description = "See the price for GoodLogik's web platform, kick-off your 14-day free trial of and start growing your business today."
-
+    set_meta_tags og: {title: @page_title }
   end
 
   def about
     @page_title = 'About | GoodLogik'
     @page_description = 'Learn about GoodLogik, the company behind the platform transforming the web.'
+    set_meta_tags og: {title: @page_title }
   end
 
 end

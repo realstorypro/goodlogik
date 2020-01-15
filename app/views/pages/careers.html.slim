@@ -24,6 +24,9 @@
             | We are a cross-functional team comprised of different backgrounds and skill sets working toward a common goal.
           = text 'lead'
             | To change the web with tech that people love.
+          = text 'lead'
+            | Want to help us build the future?
+            = " #{link_to 'View available Job Openings','https://angel.co/logikal/jobs'}.".html_safe
         = column computer: 8, tablet: 16, mobile: 16, class: 'centered'
           = image_tag 'robot.png', class: 'ui image fluid'
       = row
@@ -32,7 +35,7 @@
       = row
         = column computer: 16, tablet: 16, mobile: 16
           = list 'horizontal large divided contacts'
-            = item
+            /= item
               = content
                 = header text: 'Sales'
                 = mail_to 'sales@goodlogik.com', 'sales@goodlogik.com'
