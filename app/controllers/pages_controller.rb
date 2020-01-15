@@ -7,16 +7,13 @@ class PagesController < ApplicationController
   def landing
     renderer = RichTextRenderer::Renderer.new
 
-    @homepage = contentful.entry(ENV['CONTENTFUL_LANDING_ID'], include: 2)
-    set_meta_tags icon: @homepage.fav_icon.url, type: 'image/png'
-
-    @page_title = 'GoodLogik | Web Platform for Entrepreneurs, Brands and Influencers.'
+    @page_title = 'GoodLogik | Publishing Platform for Brands, Entrepreneurs and Thought-Leaders.'
     @page_description = 'Strengthen your brand, grow your fan-base, and promote your business with a platform that puts in the center.'
     set_meta_tags og: {title: @page_title }
   end
 
-  def product
-    @page_title = 'Product | GoodLogik'
+  def platform
+    @page_title = 'Platform | GoodLogik'
     @page_description = 'High-performance web platform with advanced publishing capabilities, integrated social features, and built-in analytics.'
 
   end
