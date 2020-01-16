@@ -28,12 +28,12 @@
             | Remote
           = h4 text: 'Job Type'
           = text
-            | Full-time
+            = @job.job_type
           = h4 text: 'Visa Sponsorshop'
           = text
             | Not Available
           = h4 text: 'Experience'
           = text
-            | 10+ Years
+            = @job.experience
           = button 'orange large'
             | APPLY NOW
