@@ -16,6 +16,14 @@ class PagesController < ApplicationController
 
   end
 
+  def careers
+    @jobs = contentful.entries(content_type: 'job', order: 'fields.sortOrder')
+  end
+
+  def career
+
+  end
+
   def platform
     @page_title = 'Platform | GoodLogik'
     @page_description = 'High-performance web platform with advanced publishing capabilities, integrated social features, and built-in analytics.'

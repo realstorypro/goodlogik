@@ -1,0 +1,9 @@
+- content_for :hero
+  = fragment 'career hero'
+    .overlay
+    .content-holder
+        = container
+          = grid
+            = column computer: 16, tablet: 16, mobile: 16
+              = h1 class: 'inverted', text: @job.name
+              = text text: @job.short_description
