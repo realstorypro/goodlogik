@@ -6,4 +6,11 @@
           = grid
             = column computer: 16, tablet: 16, mobile: 16
               = h1 class: 'inverted', text: @job.name
-              = text text: @job.short_description
+              = text text: @job.long_description
+
+= container
+  = grid
+    = row
+      = column computer: 16, tablet: 16, mobile: 16
+        = h1 text: 'Responsibilties'
+        = @renderer.render(@job.responsibilities).html_safe

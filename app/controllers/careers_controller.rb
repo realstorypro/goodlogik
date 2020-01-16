@@ -7,6 +7,7 @@ class CareersController < ApplicationController
   end
 
   def show
+    @renderer = RichTextRenderer::Renderer.new
     @job = contentful.entry(params[:id])
   end
 end
