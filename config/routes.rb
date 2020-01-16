@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   get 'pricing', to: 'pages#pricing'
   get 'about', to: 'pages#about'
 
-  # get 'careers', to: 'careers#index'
-  # get 'careers/:id', to: 'careers#show'
   resources :careers, only: [:index, :show]
 
   get 'privacy', to: 'pages#privacy'

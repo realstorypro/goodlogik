@@ -6,11 +6,34 @@
           = grid
             = column computer: 16, tablet: 16, mobile: 16
               = h1 class: 'inverted', text: @job.name
-              = text text: @job.long_description
+              = @renderer.render(@job.long_description).html_safe
 
-= container
-  = grid
-    = row
-      = column computer: 16, tablet: 16, mobile: 16
-        = h1 text: 'Responsibilties'
-        = @renderer.render(@job.responsibilities).html_safe
+= fragment 'career details'
+  = container 'full'
+    = grid 'divided'
+      = row
+        = column computer: 10, tablet: 16, mobile: 16
+          = h3 text: 'Responsibilties'
+          = @renderer.render(@job.responsibilities).html_safe
+          = h3 text: 'Qualifications'
+          = @renderer.render(@job.qualifications).html_safe
+        = column computer: 6, tablet: 16, mobile: 16
+          = h4 text: 'Equity'
+          = @job.equity_low
+          | &ndash;
+          = @job.equity_high
+          |%
+          = h4 text: 'Location'
+          = text
+            | Remote
+          = h4 text: 'Job Type'
+          = text
+            | Full-time
+          = h4 text: 'Visa Sponsorshop'
+          = text
+            | Not Available
+          = h4 text: 'Experience'
+          = text
+            | 10+ Years
+          = button 'orange large'
+            | APPLY NOW
