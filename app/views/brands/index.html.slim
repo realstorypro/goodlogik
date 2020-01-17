@@ -18,13 +18,14 @@
       = row
         - @brands.each do |brand|
           = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-            = segment 'piled'
+            = segment 'stacked'
               = grid
-                = column computer: 6
-                  = image_tag brand.logo.url, class: 'ui image fluid bordered'
-
-                = column computer: 10
-                  = header
-                    = brand.title
+                = column computer: 6, tablet: 7, mobile: 7
+                  = link_to brand_path(brand.id)
+                    = image_tag brand.logo.url, class: 'ui image fluid bordered'
+                = column computer: 10, tablet: 9, mobile: 9
+                  = link_to brand_path(brand.id)
+                    = header
+                      = brand.title
                   = text
                     = @renderer.render(brand.short_description).html_safe
