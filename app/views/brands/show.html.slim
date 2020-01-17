@@ -1,0 +1,39 @@
+- content_for :hero
+  = fragment 'career hero'
+    .overlay
+    .content-holder
+        = container
+          = grid
+            = column computer: 16, tablet: 16, mobile: 16
+              = h1 class: 'inverted', text: @job.name
+              = @renderer.render(@job.long_description).html_safe
+
+= fragment 'career details'
+  = container 'full'
+    = grid 'divided'
+      = row
+        = column computer: 10, tablet: 16, mobile: 16
+          = h3 text: 'Responsibilties'
+          = @renderer.render(@job.responsibilities).html_safe
+          = h3 text: 'Qualifications'
+          = @renderer.render(@job.qualifications).html_safe
+        = column computer: 6, tablet: 16, mobile: 16
+          = h4 text: 'Equity'
+          = @job.equity_low
+          | &ndash;
+          = @job.equity_high
+          |%
+          = h4 text: 'Location'
+          = text
+            | Remote
+          = h4 text: 'Job Type'
+          = text
+            = @job.job_type
+          = h4 text: 'Visa Sponsorshop'
+          = text
+            | Not Available
+          = h4 text: 'Experience'
+          = text
+            = @job.experience
+          = button 'orange large'
+            | APPLY NOW
