@@ -1,0 +1,31 @@
+- content_for :hero
+  = fragment 'hero brands'
+    .landing.page
+      #brands-cover
+    .overlay
+    .content-holder
+      = container
+        = grid
+          = column computer: 10, tablet: 16, mobile: 14, class: 'centered content'
+            = h1 class: 'inverted'
+              | Let's Make
+              br
+              | A Better Internet
+
+= fragment 'brand list'
+  = container 'full'
+    = grid
+      = row
+        - @brands.each do |brand|
+          = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
+            = segment 'stacked'
+              = grid
+                = column computer: 6, tablet: 7, mobile: 7
+                  = link_to brand_path(brand.id)
+                    = image_tag brand.logo.url, class: 'ui image fluid bordered'
+                = column computer: 10, tablet: 9, mobile: 9
+                  = link_to brand_path(brand.id)
+                    = header
+                      = brand.title
+                  = text
+                    = @renderer.render(brand.short_description).html_safe

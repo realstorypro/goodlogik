@@ -20,6 +20,6 @@ module ApplicationHelper
   end
 
   def is_active?(test_path)
-    'active' if request.path == test_path
+    'active' if request.path.include?(test_path)
   end
 end

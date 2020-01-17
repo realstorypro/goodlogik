@@ -1,0 +1,29 @@
+.fragment.brands.hero
+  h1.ui.header
+    font-size: 4.5em
+    text-align: right
+
+    @include media("<tablet")
+      text-align: left
+      font-size: 3.5em
+
+    &:after
+      border-bottom: none
+
+  .overlay
+    background: $yellow
+
+.fragment.brand.list
+  padding: 6em 0
+
+  .segment
+    margin-bottom: 2.5em
+    padding: 2em 1.5em
+    display: block
+
+    p
+      font-size: 1.1em
+      color: $black
+
+    a .header
+      color: $blue

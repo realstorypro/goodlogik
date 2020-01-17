@@ -5,7 +5,7 @@ import Vue from 'vue/dist/vue.esm'
 import LandingCover from '../js/landing_cover.vue'
 import PricingCover from '../js/pricing_cover.vue'
 import AboutCover from '../js/about_cover.vue'
-import ProductCover from '../js/product_cover.vue'
+import PlatformCover from '../js/platform_cover.vue'
 
 
 exec_javascript = ->
@@ -75,12 +75,12 @@ exec_javascript = ->
       render: (h) ->
         h(AboutCover)
 
-  feature_cover_div = document.getElementById("product-cover")
+  feature_cover_div = document.getElementById("platform-cover")
   if feature_cover_div != null
     feature_cover = new Vue
-      el: document.getElementById('product-cover'),
+      el: document.getElementById('platform-cover'),
       render: (h) ->
-        h(ProductCover)
+        h(PlatformCover)
 
   # Launching Analytics
   analytics.page()

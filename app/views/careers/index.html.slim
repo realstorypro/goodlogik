@@ -1,0 +1,26 @@
+- content_for :hero
+  .overlay
+  .content-holder
+    = container
+      = grid
+        = column computer: 10, tablet: 16, mobile: 14, class: 'centered content'
+          = h1 class: 'inverted'
+            | Disrupt Online Media
+          = text
+            | Join our team, and be on the forefront of digital revolution.
+
+= fragment 'story'
+  = container 'full'
+    = grid
+      = row
+        = column computer: 16, tablet: 16, mobile: 16, class: 'middle aligned'
+          = h2 text: 'Technology'
+          = list 'relaxed divided'
+            - @jobs.each do |job|
+              = item
+                = content
+                  = header
+                    = link_to career_path(job.id)
+                      = job.name
+                  = description
+                    = job.short_description

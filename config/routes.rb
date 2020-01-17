@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   root 'pages#landing'
-  get 'product', to: 'pages#product'
+  get 'platform', to: 'pages#platform'
   get 'pricing', to: 'pages#pricing'
   get 'about', to: 'pages#about'
+
+  resources :brands, only: [:index, :show]
+  resources :careers, only: [:index, :show]
 
   get 'privacy', to: 'pages#privacy'
   get 'tos', to: 'pages#tos'
