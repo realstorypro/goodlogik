@@ -16,23 +16,15 @@
   = container 'full'
     = grid
       = row
-        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-          = segment 'raised'
-            = grid
-              = column computer: 5
-                | Hello
+        - @brands.each do |brand|
+          = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
+            = segment 'piled'
+              = grid
+                = column computer: 6
+                  = image_tag brand.logo.url, class: 'ui image fluid bordered'
 
-              = column computer: 11
-                = header
-                  | Logik
-                  = header 'sub'
-                    | .Works
-                = text
-                  | Hello World
-
-        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-          = segment 'raised'
-            = header
-              | Warriorhood
-              = header 'sub'
-                | .com
+                = column computer: 10
+                  = header
+                    = brand.title
+                  = text
+                    = @renderer.render(brand.short_description).html_safe
