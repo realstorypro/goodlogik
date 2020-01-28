@@ -1,0 +1,22 @@
+- content_for :hero
+  = fragment 'hero about'
+    .landing.page
+      #coin-cover
+    .overlay
+    .content-holder
+      = container
+        = grid
+          = column computer: 10, tablet: 16, mobile: 14, class: 'centered content'
+            = h1 class: 'inverted'
+              | A Revolution in Digital Currency
+
+= fragment 'coin'
+  = container 'full'
+    = grid
+      = row
+        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
+          h1 Backed by Company Profits
+          h1 Economically Stable
+          h1 Energy Efficent
+          h1 World Class Engineering
+          h1 Vertically Integrated Exchange

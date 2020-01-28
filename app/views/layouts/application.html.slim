@@ -105,8 +105,13 @@ html lang="en"
   body
 
     = sidebar 'ui vertical inverted menu right'
+
+      = link_to "Home", root_path, class: "item #{is_active?(root_path)}"
+      = link_to "Brands", brands_path, class: "item #{is_active?(brands_path)}"
       = link_to "Platform", platform_path, class: "item #{is_active?(platform_path)}"
       = link_to 'Pricing', pricing_path, class: "item #{is_active?(pricing_path)}"
+      = link_to 'Coin', coin_path, class: "item #{is_active?(coin_path)}"
+      = link_to 'Careers', careers_path, class: "item #{is_active?(careers_path)}"
       = link_to 'About', about_path, class: "item #{is_active?(about_path)}"
       = item
         .ui.button.fluid.red data-cb-type="portal" href="javascript:void(0)"
@@ -125,6 +130,7 @@ html lang="en"
             = link_to 'BRANDS', brands_path, class: "item #{is_active?(brands_path)}"
             = link_to "PLATFORM", platform_path, class: "item #{is_active?(platform_path)}"
             = link_to 'PRICING', pricing_path, class: "item #{is_active?(pricing_path)}"
+            = link_to 'COIN', coin_path, class: "item #{is_active?(coin_path)}"
             = link_to 'CAREERS', careers_path, class: "item #{is_active?(careers_path)}"
             = link_to 'ABOUT', about_path, class: "item #{is_active?(about_path)}"
             = item
