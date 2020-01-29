@@ -1,5 +1,5 @@
 - content_for :hero
-  = fragment 'hero about'
+  = fragment 'hero coin'
     .landing.page
       #coin-cover
     .overlay
@@ -8,15 +8,42 @@
         = grid
           = column computer: 10, tablet: 16, mobile: 14, class: 'centered content'
             = h1 class: 'inverted'
-              | A Revolution in Digital Currency
+              | Introducing GoodCoin
+            = text
+              | A revolutionary value-earning digital currency.
 
-= fragment 'coin'
+= fragment 'coin details'
   = container 'full'
     = grid
       = row
+        = column computer: 16, tablet: 16, mobile: 16, class: 'middle aligned'
+          = h1 'horizontal divider'
+            = "Powering New Economy"
+          br
+          br
+      = row
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-          h1 Backed by Company Profits
-          h1 Economically Stable
-          h1 Energy Efficent
-          h1 World Class Engineering
-          h1 Vertically Integrated Exchange
+          = h2 text: 'Smart Money Supply'
+          = text 'lead'
+            | Imagine a monetary supply that's linked to performance of the company and fluctuates with performance of the company changes.
+
+          = text 'lead'
+            | As the value of the company grows, the monetary supply grows and newly created money get proportionally distributed across the current currency owners.
+
+          = text 'lead'
+            | No mining, no wasted electricity, just high-performance digital currency that works for you.
+
+      = row
+        = column computer: 16, tablet: 16, mobile: 16
+          = divider
+
+
+      = row
+        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
+          = h2 text: 'Crypto made easy'
+          = text 'lead'
+            | Our integrated web-wallet allows coin-holders to easily transfer funds between wallets.
+
+          = text 'lead'
+            | The upcoming payment-processing will allow coin-holders to use GoodCoin as payment for both physical and digital goods.
+

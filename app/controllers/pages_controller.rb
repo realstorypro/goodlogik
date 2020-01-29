@@ -25,7 +25,9 @@ class PagesController < ApplicationController
   end
 
   def coin
-
+    @page_title = 'Coin | GoodLogik'
+    @page_description = "Learn about the GoodCoin, a revolutionary digital currency"
+    set_meta_tags og: {title: @page_title }
   end
 
   def about
