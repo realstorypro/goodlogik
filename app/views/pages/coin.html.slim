@@ -1,0 +1,63 @@
+- content_for :hero
+  = fragment 'hero coin'
+    .landing.page
+      #coin-cover
+    .overlay
+    .content-holder
+      = container
+        = grid
+          = column computer: 10, tablet: 16, mobile: 14, class: 'centered content'
+            = h1 class: 'inverted'
+              | Introducing GoodCoin
+            = text
+              | A revolutionary value-earning digital currency.
+
+= fragment 'coin details'
+  = container 'full'
+    = grid
+      = row
+        = column computer: 16, tablet: 16, mobile: 16, class: 'middle aligned'
+          = h1 'horizontal divider'
+            = "Powering New Economy"
+          br
+          br
+      = row
+        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
+          = h2 text: 'Smart Money Supply'
+          = text 'lead'
+            | Imagine a monetary supply that's linked to performance of the company and fluctuates as the performance of the company changes.
+
+          = text 'lead'
+            | As the value of the company increases, the monetary supply grows and newly created money get proportionally distributed across the current currency owners.
+
+          = text 'lead'
+            | No mining, no wasted electricity, just high-performance digital currency that works for you.
+
+      = row
+        = column computer: 16, tablet: 16, mobile: 16
+          = divider
+
+
+      = row
+        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
+          = h2 text: 'Crypto For Everyone'
+          = text 'lead'
+            | You shouldn't need a PHD to use cryptocurrency.
+
+          = text 'lead'
+            | Our coin marketplace is tightly integrated with web-wallet allowing for easy purchase and easily transfer of coins.
+
+= fragment 'coin roadmap'
+  = container 'full'
+    = grid
+      = row
+        = column computer: 16, tablet: 16, mobile: 16, class: 'middle aligned'
+          = h1 'horizontal divider'
+            = "2020 Roadmap"
+          br
+          br
+      = row
+        = column computer: 8, tablet: 16, mobile: 16, class: 'left aligned'
+          = h2 text: 'Payment Processing'
+          = text 'lead'
+            | Our upcoming payment processing integration will allow developers to accept GoodCoin as a form of payment for both physical and digital goods.

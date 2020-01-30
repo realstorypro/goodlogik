@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'platform', to: 'pages#platform'
   get 'pricing', to: 'pages#pricing'
   get 'about', to: 'pages#about'
+  get 'coin', to: 'pages#coin'
 
   resources :brands, only: [:index, :show]
   resources :careers, only: [:index, :show]

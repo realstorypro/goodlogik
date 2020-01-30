@@ -12,18 +12,6 @@ class PagesController < ApplicationController
     set_meta_tags og: {title: @page_title }
   end
 
-  def brands
-
-  end
-
-  def careers
-    @jobs = contentful.entries(content_type: 'job', order: 'fields.sortOrder')
-  end
-
-  def career
-
-  end
-
   def platform
     @page_title = 'Platform | GoodLogik'
     @page_description = 'High-performance web platform with advanced publishing capabilities, integrated social features, and built-in analytics.'
@@ -33,6 +21,12 @@ class PagesController < ApplicationController
   def pricing
     @page_title = 'Pricing | GoodLogik'
     @page_description = "See the price for GoodLogik's web platform, kick-off your 14-day free trial of and start growing your business today."
+    set_meta_tags og: {title: @page_title }
+  end
+
+  def coin
+    @page_title = 'Coin | GoodLogik'
+    @page_description = "Learn about the GoodCoin, a revolutionary digital currency"
     set_meta_tags og: {title: @page_title }
   end
 
