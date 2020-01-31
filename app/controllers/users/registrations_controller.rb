@@ -44,7 +44,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
 
   def check_for_verified_session
-    redirect_to root_path unless session[:verified]
+    # redirect_to root_path unless session[:verified]
   end
 
   def configure_permitted_parameters
