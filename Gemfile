@@ -35,6 +35,12 @@ gem 'turbolinks', '~> 5'
 gem 'devise'
 gem 'simple_form'
 
+# Phone Tools
+gem 'countries'
+gem 'iso_country_codes'
+gem 'phonelib'
+gem 'twilio-ruby'
+
 gem 'heroku-deflater', group: :production
 
 gem 'field_test'
