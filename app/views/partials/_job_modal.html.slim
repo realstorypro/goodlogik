@@ -1,0 +1,35 @@
+.ui.tiny.job.modal
+  = icon 'close'
+  = content
+    = description
+      = form
+        input type="hidden" name="modal_name" class="modal_name" required=""
+        .field.required
+          label Name
+          .two.fields
+            .field
+              input type="text" name="name[first]" placeholder="First" required=""
+
+            .field
+              input type="text" name="name[last]" placeholder="Last" required=""
+
+        .field.required
+          label Email
+          input type="email" name="email" required=""
+
+        .field.required
+          label Phone number
+          input type="tel" name="phone" required=""
+
+        .field
+          label Number of Social Media Followers
+          = dropdown ui: :on, class: 'selection'
+            input type="hidden" name="audience" required=""
+            = icon 'dropdown'
+            .text.default 
+            = menu ui: :off
+              = item data: {value: '< 100k'}, text: 'Under 100k'
+              = item data: {value: '100k - 1 million'}, text: '100k - 1 million'
+              = item data: {value: '1mil+'}, text: '1 million+'
+  .actions
+    = button 'approve large fluid right'
