@@ -13,10 +13,12 @@
   = container 'full'
     = grid
       = row
-        = column computer: 16, tablet: 16, mobile: 16, class: 'middle aligned'
-          = h2 text: 'Technology'
+        = column computer: 14, tablet: 16, mobile: 16, class: 'middle aligned'
           = list 'relaxed divided'
-            - @jobs.each do |job|
+            - @jobs.each_with_index do |job, index|
+              - if @job_category != job.category
+                = h2 text: job.category
+                - @job_category = job.category
               = item
                 = content
                   = header
@@ -24,3 +26,6 @@
                       = job.name
                   = description
                     = job.short_description
+              - unless index+1 == @jobs.count
+                - if @job_category && @jobs[index + 1].category != @job_category
+                  br
