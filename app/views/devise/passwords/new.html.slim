@@ -1,0 +1,15 @@
+- content_for :hero
+  = fragment 'hero auth'
+    .overlay
+    .content-holder
+      = container
+        = grid
+          = column computer: 7, tablet: 16, mobile: 14, class: 'centered content'
+            = segment 'auth box raised'
+              = segment 'basic'
+                = header tag: :h5, class: 'dividing', text: 'Password Reset'
+                = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+                  = f.error_notification
+                  = f.input :email, placeholder: 'Email', label: false, required: true, autofocus: true, as: :left_icon, input_html: {icon: 'user'}
+                  = f.button :submit, 'Continue', class: 'fluid large purple'
+                = render 'devise/shared/links'
