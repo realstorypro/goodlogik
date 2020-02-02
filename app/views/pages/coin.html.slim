@@ -50,17 +50,15 @@
           = text 'lead'
             | No complex lingo, no wallets, no keys to manage and no hackers to worry about.
 
-= fragment 'coin roadmap'
-  = container 'full'
-    = grid
-      = row
-        = column computer: 16, tablet: 16, mobile: 16, class: 'middle aligned'
-          = h1 'horizontal divider'
-            = "2020 Roadmap"
+= fragment 'cta'
+  = grid
+    = row 'secondary'
+      = column computer: 16, tablet: 16, mobile: 16
+        = segment 'inverted black basic center aligned padded'
+          = h1 class: 'centered dividing'
+            = "Get Notified"
+          = text
+            | Subscribe to our newsletter and get notified once the currency is for sale.
+          = link_to "Subscribe to Newsletter", pricing_path, class: 'ui button purple big'
           br
           br
-      = row
-        = column computer: 8, tablet: 16, mobile: 16, class: 'left aligned'
-          = h2 text: 'Payment Processing'
-          = text 'lead'
-            | Our upcoming payment processing integration will allow developers to accept GoodCoin as a form of payment for both physical and digital goods.
