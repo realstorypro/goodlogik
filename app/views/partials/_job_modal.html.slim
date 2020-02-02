@@ -22,14 +22,18 @@
           input type="tel" name="phone" required=""
 
         .field
-          label Number of Social Media Followers
+          label LinkedIn
+          input type="url" name="linkedin" required=""
+
+        .field.required
+          label Do you have authorization to work in the United States without restriction?
           = dropdown ui: :on, class: 'selection'
-            input type="hidden" name="audience" required=""
+            input type="hidden" name="restrictions" required=""
             = icon 'dropdown'
             .text.default 
             = menu ui: :off
-              = item data: {value: '< 100k'}, text: 'Under 100k'
-              = item data: {value: '100k - 1 million'}, text: '100k - 1 million'
-              = item data: {value: '1mil+'}, text: '1 million+'
+              = item data: {value: 'yes'}, text: 'Yes'
+              = item data: {value: 'no'}, text: 'No'
   .actions
-    = button 'approve large fluid right'
+    = button 'approve large fluid right purple'
+      | Apply
