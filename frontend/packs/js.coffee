@@ -161,7 +161,7 @@ exec_javascript = ->
             $.ajax {
               type: 'POST'
               headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
-              url: '/requests/send/'
+              url: '/jobs/send/'
               data: $('.job.modal form').serialize()
               dataType: 'json'
             }

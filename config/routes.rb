@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get 'tos', to: 'pages#tos'
 
   post 'requests/send', to: 'zapier#send_request'
+  post 'jobs/send', to: 'zapier#send_job_app'
 
   get 'exchange', to: 'exchange#index'
 
