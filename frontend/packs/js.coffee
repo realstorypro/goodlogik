@@ -53,7 +53,6 @@ exec_javascript = ->
     ]
 
 
-
   landing_cover_div = document.getElementById("landing-cover")
   if landing_cover_div != null
     landing_cover = new Vue
@@ -133,6 +132,37 @@ exec_javascript = ->
               headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
               url: '/requests/send/'
               data: $('.requester.modal form').serialize()
+              dataType: 'json'
+            }
+          else
+            false
+
+      .modal('show')
+
+  # Job Modal
+  $('.apply.for.job').on 'click', (e) ->
+    e.preventDefault()
+
+    $('.ui.sidebar').sidebar('hide')
+    analytics.track "opened job application modal"
+
+    $('.job.modal')
+      .modal
+        onApprove: ->
+          form = $('.job.modal form')[0]
+          form.reportValidity()
+
+          if form.checkValidity()
+            analytics.track 'applied for a job',
+              email: $('.modal.job form input[name="email"]').val()
+
+            console.log $('.job.modal form').serialize()
+
+            $.ajax {
+              type: 'POST'
+              headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
+              url: '/jobs/send/'
+              data: $('.job.modal form').serialize()
               dataType: 'json'
             }
           else
