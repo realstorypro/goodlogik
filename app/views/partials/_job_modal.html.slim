@@ -1,6 +1,6 @@
-.ui.tiny.job.modal
+.ui.small.job.modal
   = icon 'close'
-  = content
+  = content 'scrolling'
     = description
       = form
         input type="hidden" name="modal_name" class="modal_name" required=""
@@ -22,8 +22,8 @@
           input type="tel" name="phone" required=""
 
         .field
-          label LinkedIn
-          input type="url" name="linkedin" required=""
+          label LinkedIn Profile
+          input type="text" name="linkedin"
 
         .field.required
           label Do you have authorization to work in the United States without restriction?
@@ -34,6 +34,15 @@
             = menu ui: :off
               = item data: {value: 'yes'}, text: 'Yes'
               = item data: {value: 'no'}, text: 'No'
+
+
+        .field.required
+          label Cover Letter (paste)
+          textarea name="cover" required=""
+
+        .field.required
+          label Resume (paste)
+          textarea name="resume" required=""
   .actions
     = button 'approve large fluid right purple'
       | Apply

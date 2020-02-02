@@ -17,7 +17,7 @@
           = @renderer.render(@job.responsibilities).html_safe
           = h3 text: 'Qualifications'
           = @renderer.render(@job.qualifications).html_safe
-        = column computer: 6, tablet: 16, mobile: 16
+        = column computer: 6, tablet: 16, mobile: 16, class: 'meta'
           = h4 text: 'Equity'
           = @job.equity_low
           | &ndash;

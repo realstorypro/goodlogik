@@ -149,7 +149,7 @@ exec_javascript = ->
     $('.job.modal')
       .modal
         onApprove: ->
-          form = $('.modal.requester form')[0]
+          form = $('.job.modal form')[0]
           form.reportValidity()
 
           if form.checkValidity()
