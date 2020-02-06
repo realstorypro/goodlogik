@@ -7,7 +7,7 @@
     export default {
         mounted: ->
             $('.overlay').css('transition', 'all 2.5s')
-            $('.overlay').css('opacity', 0.2)
+            $('.overlay').css('opacity', 0.1)
 
             canvas = @.$refs["canvas"]
 
@@ -34,10 +34,10 @@
                 camera.attachControl canvas, false
 
                 # Create a basic light, aiming 0, 1, 0 - meaning, to the sky
-                #light = new (BABYLON.HemisphericLight)('light1', new (BABYLON.Vector3)(0, 1, 0), scene)
-                #light2 = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(0, -1, 0), scene)
+                #light = new (BABYLON.HemisphericLight)('light1', new (BABYLON.Vector3)(5, 1, 0), scene)
+                light2 = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(190, -15, -1), scene)
 
-                # BABYLON.ParticleHelper.BaseAssetsUrl = 'http://localhost:3000'
+                BABYLON.ParticleHelper.BaseAssetsUrl = window.location.origin
 
                 BABYLON.ParticleHelper.CreateAsync('sun', scene ).then (set) ->
                     set.start()

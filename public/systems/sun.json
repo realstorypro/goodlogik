@@ -3,11 +3,11 @@
     "kind": "Sphere",
     "options": {
       "diameter": 2.01,
-      "segments": 32,
+      "segments": 10,
       "color": [
-        0.3773,
-        0.0930,
-        0.0266]
+        0.255,
+        0.255,
+        0.255]
     },
     "renderingGroupId": 3
   },
