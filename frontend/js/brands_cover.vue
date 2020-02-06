@@ -25,7 +25,7 @@
                 scene.clearColor = new BABYLON.Color3.FromHexString("#000")
 
                 # Create a FreeCamera, and set its position to {x: 0, y: 5, z: -10}
-                camera = new (BABYLON.FreeCamera)('camera1', new (BABYLON.Vector3)(-5, 5, -10), scene)
+                camera = new (BABYLON.FreeCamera)('camera1', new (BABYLON.Vector3)(-2, 2, -1), scene)
 
                 # Target the camera to scene origin
                 camera.setTarget BABYLON.Vector3.Zero()
