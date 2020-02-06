@@ -3,6 +3,7 @@ import semantic_js from '../semantic_ui/dist/semantic.min'
 import Vue from 'vue/dist/vue.esm'
 
 import LandingCover from '../js/landing_cover.vue'
+import BrandsCover from '../js/brands_cover.vue'
 import PricingCover from '../js/pricing_cover.vue'
 import AboutCover from '../js/about_cover.vue'
 import PlatformCover from '../js/platform_cover.vue'
@@ -59,6 +60,14 @@ exec_javascript = ->
   #     el: document.getElementById('landing-cover'),
   #     render: (h) ->
   #       h(LandingCover)
+
+
+  brands_cover_div = document.getElementById("brands-cover")
+  if brands_cover_div != null
+    brands_cover = new Vue
+      el: document.getElementById('brands-cover'),
+      render: (h) ->
+        h(BrandsCover)
 
   # pricing_cover_div = document.getElementById("pricing-cover")
   # if pricing_cover_div != null
