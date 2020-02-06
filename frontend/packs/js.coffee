@@ -54,12 +54,12 @@ exec_javascript = ->
     ]
 
 
-  # landing_cover_div = document.getElementById("landing-cover")
-  # if landing_cover_div != null
-  #   landing_cover = new Vue
-  #     el: document.getElementById('landing-cover'),
-  #     render: (h) ->
-  #       h(LandingCover)
+  landing_cover_div = document.getElementById("landing-cover")
+  if landing_cover_div != null
+    landing_cover = new Vue
+      el: document.getElementById('landing-cover'),
+      render: (h) ->
+        h(LandingCover)
 
 
   brands_cover_div = document.getElementById("brands-cover")
