@@ -18,7 +18,7 @@
       = row
         - @brands.each do |brand|
           = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-            = segment 'stacked'
+            = segment 'stacked secondary'
               = grid
                 = column computer: 6, tablet: 7, mobile: 7
                   = link_to brand_path(brand.id)
