@@ -53,33 +53,33 @@ exec_javascript = ->
     ]
 
 
-  landing_cover_div = document.getElementById("landing-cover")
-  if landing_cover_div != null
-    landing_cover = new Vue
-      el: document.getElementById('landing-cover'),
-      render: (h) ->
-        h(LandingCover)
+  # landing_cover_div = document.getElementById("landing-cover")
+  # if landing_cover_div != null
+  #   landing_cover = new Vue
+  #     el: document.getElementById('landing-cover'),
+  #     render: (h) ->
+  #       h(LandingCover)
 
-  pricing_cover_div = document.getElementById("pricing-cover")
-  if pricing_cover_div != null
-    pricing_cover = new Vue
-      el: document.getElementById('pricing-cover'),
-      render: (h) ->
-        h(PricingCover)
+  # pricing_cover_div = document.getElementById("pricing-cover")
+  # if pricing_cover_div != null
+  #   pricing_cover = new Vue
+  #     el: document.getElementById('pricing-cover'),
+  #     render: (h) ->
+  #       h(PricingCover)
 
-  about_cover_div = document.getElementById("about-cover")
-  if about_cover_div != null
-    about_cover = new Vue
-      el: document.getElementById('about-cover'),
-      render: (h) ->
-        h(AboutCover)
+  # about_cover_div = document.getElementById("about-cover")
+  # if about_cover_div != null
+  #   about_cover = new Vue
+  #     el: document.getElementById('about-cover'),
+  #     render: (h) ->
+  #       h(AboutCover)
 
-  feature_cover_div = document.getElementById("platform-cover")
-  if feature_cover_div != null
-    feature_cover = new Vue
-      el: document.getElementById('platform-cover'),
-      render: (h) ->
-        h(PlatformCover)
+  # feature_cover_div = document.getElementById("platform-cover")
+  # if feature_cover_div != null
+  #   feature_cover = new Vue
+  #     el: document.getElementById('platform-cover'),
+  #     render: (h) ->
+  #       h(PlatformCover)
 
   # Launching Analytics
   analytics.page()
