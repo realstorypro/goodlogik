@@ -3,6 +3,7 @@ import semantic_js from '../semantic_ui/dist/semantic.min'
 import Vue from 'vue/dist/vue.esm'
 
 import LandingCover from '../js/landing_cover.vue'
+import BrandsCover from '../js/brands_cover.vue'
 import PricingCover from '../js/pricing_cover.vue'
 import AboutCover from '../js/about_cover.vue'
 import PlatformCover from '../js/platform_cover.vue'
@@ -53,33 +54,41 @@ exec_javascript = ->
     ]
 
 
-  landing_cover_div = document.getElementById("landing-cover")
-  if landing_cover_div != null
-    landing_cover = new Vue
-      el: document.getElementById('landing-cover'),
-      render: (h) ->
-        h(LandingCover)
+  # landing_cover_div = document.getElementById("landing-cover")
+  # if landing_cover_div != null
+  #   landing_cover = new Vue
+  #     el: document.getElementById('landing-cover'),
+  #     render: (h) ->
+  #       h(LandingCover)
 
-  pricing_cover_div = document.getElementById("pricing-cover")
-  if pricing_cover_div != null
-    pricing_cover = new Vue
-      el: document.getElementById('pricing-cover'),
-      render: (h) ->
-        h(PricingCover)
 
-  about_cover_div = document.getElementById("about-cover")
-  if about_cover_div != null
-    about_cover = new Vue
-      el: document.getElementById('about-cover'),
+  brands_cover_div = document.getElementById("brands-cover")
+  if brands_cover_div != null
+    brands_cover = new Vue
+      el: document.getElementById('brands-cover'),
       render: (h) ->
-        h(AboutCover)
+        h(BrandsCover)
 
-  feature_cover_div = document.getElementById("platform-cover")
-  if feature_cover_div != null
-    feature_cover = new Vue
-      el: document.getElementById('platform-cover'),
-      render: (h) ->
-        h(PlatformCover)
+  # pricing_cover_div = document.getElementById("pricing-cover")
+  # if pricing_cover_div != null
+  #   pricing_cover = new Vue
+  #     el: document.getElementById('pricing-cover'),
+  #     render: (h) ->
+  #       h(PricingCover)
+
+  # about_cover_div = document.getElementById("about-cover")
+  # if about_cover_div != null
+  #   about_cover = new Vue
+  #     el: document.getElementById('about-cover'),
+  #     render: (h) ->
+  #       h(AboutCover)
+
+  # feature_cover_div = document.getElementById("platform-cover")
+  # if feature_cover_div != null
+  #   feature_cover = new Vue
+  #     el: document.getElementById('platform-cover'),
+  #     render: (h) ->
+  #       h(PlatformCover)
 
   # Launching Analytics
   analytics.page()

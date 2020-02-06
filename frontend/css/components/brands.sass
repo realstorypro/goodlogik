@@ -1,7 +1,8 @@
 .fragment.brands.hero
   h1.ui.header
     font-size: 4.5em
-    text-align: right
+    text-align: center
+    text-shadow: 1px 1px 1px #0d0d0d
 
     @include media("<tablet")
       text-align: left
@@ -11,7 +12,7 @@
       border-bottom: none
 
   .overlay
-    background: $green
+    background: $black
 
 .fragment.brand.list
   padding: 6em 0
@@ -28,5 +29,13 @@
     a .header
       color: $blue
 
+
+.fragment.brand.hero
+  .overlay
+    background: $green
+
 .fragment.brand.details
   padding: 6em 0
+
+  p
+    line-height: 2.0em

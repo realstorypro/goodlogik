@@ -6,11 +6,11 @@
     .content-holder
       = container
         = grid
-          = column computer: 10, tablet: 16, mobile: 14, class: 'centered content'
+          = column computer: 12, tablet: 16, mobile: 14, class: 'centered content'
             = h1 class: 'inverted'
-              | Let's Make
+              | Inspiring
               br
-              | A Better Internet
+              | Change from Within
 
 = fragment 'brand list'
   = container 'full'
@@ -18,7 +18,7 @@
       = row
         - @brands.each do |brand|
           = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-            = segment 'stacked'
+            = segment 'stacked secondary'
               = grid
                 = column computer: 6, tablet: 7, mobile: 7
                   = link_to brand_path(brand.id)
