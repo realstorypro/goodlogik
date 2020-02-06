@@ -39,7 +39,7 @@
 
                 # BABYLON.ParticleHelper.BaseAssetsUrl = 'http://localhost:3000'
 
-                BABYLON.ParticleHelper.CreateAsync('sun', scene, true).then (set) ->
+                BABYLON.ParticleHelper.CreateAsync('sun', scene ).then (set) ->
                     set.start()
 
                 # Return the created scene
