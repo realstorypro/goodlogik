@@ -3,7 +3,7 @@
     "kind": "Sphere",
     "options": {
       "diameter": 2.01,
-      "segments": 10,
+      "segments": 8,
       "color": [
         0.255,
         0.255,

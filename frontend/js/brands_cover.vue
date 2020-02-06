@@ -33,13 +33,13 @@
                 # Attach the camera to the canvas
                 camera.attachControl canvas, false
 
-                # Create a basic light, aiming 0, 1, 0 - meaning, to the sky
-                #light = new (BABYLON.HemisphericLight)('light1', new (BABYLON.Vector3)(5, 1, 0), scene)
-                light2 = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(190, -15, -1), scene)
+                # Create a directional light
+                light = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(190, -15, -1), scene)
 
                 BABYLON.ParticleHelper.BaseAssetsUrl = window.location.origin
+                console.log 'gpu supported',
 
-                BABYLON.ParticleHelper.CreateAsync('sun', scene ).then (set) ->
+                BABYLON.ParticleHelper.CreateAsync('sun', scene, BABYLON.GPUParticleSystem.IsSupported).then (set) ->
                     set.start()
 
                 # Return the created scene
