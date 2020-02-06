@@ -7,7 +7,7 @@
     export default {
         mounted: ->
             $('.overlay').css('transition', 'all 2.5s')
-            $('.overlay').css('opacity', 0.3)
+            $('.overlay').css('opacity', 0.2)
 
             canvas = @.$refs["canvas"]
 
@@ -22,10 +22,10 @@
                 scene = new (BABYLON.Scene)(engine)
 
                 # Set Stage to Black
-                scene.clearColor = new BABYLON.Color3.FromHexString("#000")
+                scene.clearColor = new BABYLON.Color3.FromHexString("#79cbff")
 
                 # Create a FreeCamera, and set its position to {x: 0, y: 5, z: -10}
-                camera = new (BABYLON.FreeCamera)('camera1', new (BABYLON.Vector3)(-2, 2, -1), scene)
+                camera = new (BABYLON.FreeCamera)('camera1', new (BABYLON.Vector3)(-1.7, 1.7, -1.7), scene)
 
                 # Target the camera to scene origin
                 camera.setTarget BABYLON.Vector3.Zero()
@@ -37,9 +37,9 @@
                 #light = new (BABYLON.HemisphericLight)('light1', new (BABYLON.Vector3)(0, 1, 0), scene)
                 #light2 = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(0, -1, 0), scene)
 
-                BABYLON.ParticleHelper.BaseAssetsUrl = 'http://localhost:3000'
+                # BABYLON.ParticleHelper.BaseAssetsUrl = 'http://localhost:3000'
 
-                BABYLON.ParticleHelper.CreateAsync('internal', scene).then (set) ->
+                BABYLON.ParticleHelper.CreateAsync('sun', scene, true).then (set) ->
                     set.start()
 
                 # Return the created scene
