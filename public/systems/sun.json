@@ -15,7 +15,7 @@
     {
       "name": "sunSystem",
       "id": "sunSystem",
-      "capacity": 1600,
+      "capacity": 500,
       "renderingGroupId": 3,
       "isBillboardBased": false,
       "particleEmitterType": {
@@ -241,7 +241,7 @@
       "capacity": 600,
       "particleEmitterType": {
         "type": "SphereParticleEmitter",
-        "radius": 1,
+        "radius": 2,
         "radiusRange": 0,
         "directionRandomizer": 0
       },
