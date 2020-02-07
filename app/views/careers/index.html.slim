@@ -1,13 +1,14 @@
 - content_for :hero
-  .overlay
-  .content-holder
-    = container
-      = grid
-        = column computer: 10, tablet: 16, mobile: 14, class: 'centered content'
-          = h1 class: 'inverted'
-            | Lets make a better internet
-          = text
-            | Join our team, and be on the forefront of digital revolution.
+  = fragment 'careers hero'
+    .landing.page
+      #careers-cover
+    .overlay
+    .content-holder
+      = container
+        = grid
+          = column computer: 14, tablet: 16, mobile: 14, class: 'centered content'
+            = h1 class: 'inverted'
+              | Join The Media Revolution
 
 = fragment 'story'
   = container 'full'
