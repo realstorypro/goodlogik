@@ -76,12 +76,12 @@ exec_javascript = ->
   #     render: (h) ->
   #       h(PricingCover)
 
-  # about_cover_div = document.getElementById("about-cover")
-  # if about_cover_div != null
-  #   about_cover = new Vue
-  #     el: document.getElementById('about-cover'),
-  #     render: (h) ->
-  #       h(AboutCover)
+  about_cover_div = document.getElementById("about-cover")
+  if about_cover_div != null
+    about_cover = new Vue
+      el: document.getElementById('about-cover'),
+      render: (h) ->
+        h(AboutCover)
 
   # feature_cover_div = document.getElementById("platform-cover")
   # if feature_cover_div != null

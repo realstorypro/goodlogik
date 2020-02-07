@@ -7,7 +7,7 @@
     export default {
         mounted: ->
             $('.overlay').css('transition', 'all 2.5s')
-            $('.overlay').css('opacity', 0.7)
+            $('.overlay').css('opacity', 0.29)
 
             canvas = @.$refs["canvas"]
 
@@ -18,14 +18,15 @@
 
 
             createScene = ->
-# Create a basic BJS Scene object
                 scene = new (BABYLON.Scene)(engine)
 
                 # Set Stage to White
-                scene.clearColor = new BABYLON.Color3.FromHexString("#ffbf00")
+                scene.clearColor = new BABYLON.Color3.FromHexString("#ff6d00")
 
-                # Create a FreeCamera, and set its position to {x: 0, y: 5, z: -10}
-                camera = new (BABYLON.FreeCamera)('camera1', new (BABYLON.Vector3)(-5, 5, -10), scene)
+                # Create a Rotating Camera
+                camera = new BABYLON.ArcRotateCamera("Camera", 1.8, 1.9, -6.3, new BABYLON.Vector3(0, 0, 0), scene);
+                camera.useAutoRotationBehavior = true
+                camera.useBouncingBehavior = true
 
                 # Target the camera to scene origin
                 camera.setTarget BABYLON.Vector3.Zero()
@@ -35,13 +36,12 @@
 
                 # Create a basic light, aiming 0, 1, 0 - meaning, to the sky
                 light = new (BABYLON.HemisphericLight)('light1', new (BABYLON.Vector3)(0, 1, 0), scene)
-                light2 = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(0, -1, 0), scene)
 
 
                 # Scene Settings
-                box_positions = [0, 1.5, -1.5, 3, -3, 4.5, -4.5, 6, -6, 7.5, -7.5]
+                box_positions = [0, 1.5, -1.5]
                 frameRate = 25
-                animation_time = 30
+                animation_time = 6
 
                 # Boxes Array
                 boxes = []
@@ -58,23 +58,19 @@
                     for y in box_positions
                         for z in box_positions
 
+
+
                             box = BABYLON.MeshBuilder.CreateBox("box_#{x}#{y}#{z}", {}, scene)
                             box.position = new BABYLON.Vector3(x, y, z)
 
-                            x_animation = buildAnimation(x, "x","#{x}#{y}#{z}", frameRate)
-                            scene.beginDirectAnimation(box, [x_animation], 0, animation_time * frameRate, true)
+                            x_animation = buildAnimation(x, "x","#{x}#{y}#{z}", frameRate, animation_time)
+                            scene.beginDirectAnimation(box, [x_animation], 0, animation_time * frameRate, false)
 
-                            y_animation = buildAnimation(y, "y","#{x}#{y}#{z}", frameRate)
-                            scene.beginDirectAnimation(box, [y_animation], 0, animation_time * frameRate, true)
+                            y_animation = buildAnimation(y, "y","#{x}#{y}#{z}", frameRate, animation_time)
+                            scene.beginDirectAnimation(box, [y_animation], 0, animation_time * frameRate, false)
 
-                            z_animation = buildAnimation(z, "z","#{x}#{y}#{z}", frameRate)
-                            scene.beginDirectAnimation(box, [z_animation], 0, animation_time * frameRate, true)
-
-                            scale_animation = buildScaleAnimation(x, "z","#{x}#{y}#{z}", frameRate)
-                            #scene.beginDirectAnimation(box, [scale_animation], 0, animation_time * frameRate, true)
-
-                            scale_animation = buildScaleAnimation(y, "z","#{x}#{y}#{z}", frameRate)
-                            #scene.beginDirectAnimation(box, [scale_animation], 0, animation_time * frameRate, true)
+                            z_animation = buildAnimation(z, "z","#{x}#{y}#{z}", frameRate, animation_time)
+                            scene.beginDirectAnimation(box, [z_animation], 0, animation_time * frameRate, false)
 
                             material = new BABYLON.StandardMaterial("material_#{x}#{y}#{z}", scene)
                             material.alpha = 0.85
@@ -88,12 +84,13 @@
 
                             box.material = material
 
+
                             boxes << box
+
 
 
                 # Return the created scene
                 scene
-
 
             # shuffles an array
             shuffle = (a) ->
@@ -104,40 +101,27 @@
                     a[j] = a[i]
                     a[i] = t
                 a
-
-            buildAnimation = (position, axis, identifier,frameRate) ->
+            # builds an animation
+            buildAnimation = (position, axis, identifier,frameRate, animation_time) ->
                 animation = new BABYLON.Animation("box_position_#{axis}_#{identifier}_#{position}", "position.#{axis}", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT)
 
-                range = Math.random() * (21.5 - 1.1) + 1.1
+                range = Math.random() * (3.60 - 1.10) + 1.10
 
                 keyFrames = []
                 keyFrames.push
                     frame: 0
-                    value: position * range / 2
+                    value: position
                 keyFrames.push
-                    frame: frameRate  * 30
+                    frame: frameRate * animation_time
                     value: position * range
 
                 animation.setKeys(keyFrames)
-                animation
 
-            buildScaleAnimation = (position, axis, identifier,frameRate) ->
-                animation = new BABYLON.Animation("box_position_#{axis}_#{identifier}_#{position}", "scaling.#{axis}", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT)
+                #easingFunction = new BABYLON.BackEase(0.7)
+                easingFunction = new BABYLON.ElasticEase(11, 19.5)
+                easingFunction.setEasingMode(BABYLON.EasingFunction.EASINGMODE_EASEINOUT)
+                animation.setEasingFunction(easingFunction)
 
-                range = Math.random() * (21.5 - 1.1) + 1.1
-
-                keyFrames = []
-                keyFrames.push
-                    frame: 0
-                    value: position * range / 2
-                keyFrames.push
-                    frame: frameRate  * 30
-                    value: position * range
-                keyFrames.push
-                    frame: 0
-                    value: position * range / 2
-
-                animation.setKeys(keyFrames)
                 animation
 
             # call the createScene function
