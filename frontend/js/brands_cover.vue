@@ -37,7 +37,6 @@
                 light = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(190, -15, -1), scene)
 
                 BABYLON.ParticleHelper.BaseAssetsUrl = window.location.origin
-                console.log 'gpu supported',
 
                 BABYLON.ParticleHelper.CreateAsync('sun', scene, BABYLON.GPUParticleSystem.IsSupported).then (set) ->
                     set.start()
