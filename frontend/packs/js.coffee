@@ -4,7 +4,7 @@ import Vue from 'vue/dist/vue.esm'
 
 import LandingCover from '../js/landing_cover.vue'
 import BrandsCover from '../js/brands_cover.vue'
-import PricingCover from '../js/pricing_cover.vue'
+import CareersCover from '../js/careers_cover.vue'
 import AboutCover from '../js/about_cover.vue'
 import PlatformCover from '../js/platform_cover.vue'
 
@@ -69,12 +69,12 @@ exec_javascript = ->
       render: (h) ->
         h(BrandsCover)
 
-  # pricing_cover_div = document.getElementById("pricing-cover")
-  # if pricing_cover_div != null
-  #   pricing_cover = new Vue
-  #     el: document.getElementById('pricing-cover'),
-  #     render: (h) ->
-  #       h(PricingCover)
+  careers_cover_div = document.getElementById("careers-cover")
+  if careers_cover_div != null
+    careers_cover = new Vue
+      el: document.getElementById('careers-cover'),
+      render: (h) ->
+        h(CareersCover)
 
   about_cover_div = document.getElementById("about-cover")
   if about_cover_div != null
