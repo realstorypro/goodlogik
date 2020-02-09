@@ -5,6 +5,7 @@ import Vue from 'vue/dist/vue.esm'
 import LandingCover from '../js/landing_cover.vue'
 import BrandsCover from '../js/brands_cover.vue'
 import CareersCover from '../js/careers_cover.vue'
+import CoinCover from '../js/coin_cover.vue'
 import AboutCover from '../js/about_cover.vue'
 import PlatformCover from '../js/platform_cover.vue'
 
@@ -75,6 +76,13 @@ exec_javascript = ->
       el: document.getElementById('careers-cover'),
       render: (h) ->
         h(CareersCover)
+
+  coin_cover_div = document.getElementById("coin-cover")
+  if coin_cover_div != null
+    coin_cover = new Vue
+      el: document.getElementById('coin-cover'),
+      render: (h) ->
+        h(CoinCover)
 
   about_cover_div = document.getElementById("about-cover")
   if about_cover_div != null
