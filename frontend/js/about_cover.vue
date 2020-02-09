@@ -7,7 +7,7 @@
     export default {
         mounted: ->
             $('.overlay').css('transition', 'all 2.5s')
-            $('.overlay').css('opacity', 0.29)
+            $('.overlay').css('opacity', 0.79)
 
             canvas = @.$refs["canvas"]
 
@@ -21,7 +21,7 @@
                 scene = new (BABYLON.Scene)(engine)
 
                 # Set Stage to White
-                scene.clearColor = new BABYLON.Color3.FromHexString("#ff6d00")
+                scene.clearColor = new BABYLON.Color3.FromHexString("#ffffff")
 
                 # Create a Rotating Camera
                 camera = new BABYLON.ArcRotateCamera("Camera", 1.8, 1.9, -6.3, new BABYLON.Vector3(0, 0, 0), scene);
