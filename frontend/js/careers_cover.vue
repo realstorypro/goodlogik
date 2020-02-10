@@ -22,7 +22,7 @@
                 scene = new (BABYLON.Scene)(engine)
 
                 # Set Stage to White
-                scene.clearColor = new BABYLON.Color3.FromHexString("#FF1493")
+                scene.clearColor = new BABYLON.Color3.FromHexString("#ff6d00")
 
                 # Create a FreeCamera, and set its position to {x: 0, y: 5, z: -88}
                 camera = new BABYLON.ArcRotateCamera("Camera", 1.0, 2.0, -8.3, new BABYLON.Vector3(0, 0, 0), scene);

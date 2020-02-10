@@ -1,3 +1,18 @@
+.fragment.careers.hero
+  .overlay
+    background: $orange
+
+  h1.ui.header
+    font-size: 7.0em
+    text-align: center
+
+    @include media("<tablet")
+      text-align: left
+      font-size: 3.5em
+
+    &:after
+      border-bottom: none
+
 .fragment.career.hero
   h1.ui.header
     font-size: 3.0em
@@ -11,7 +26,7 @@
       border-bottom: none
 
   .overlay
-    background: $yellow
+    background: $orange
 
 
 .fragment.career.details
