@@ -48,14 +48,22 @@
           = h3 class: 'horizontal divider', text: 'The Leadership Team'
           br
 
-    = grid 'three column stackable'
+    = grid 'four column stackable'
       = row 'center aligned'
+        = column
+          = image_tag 'luke.jpg', class: 'ui image circular small centered bordered'
+          = h4 
+            | Luke Skywalker
+            = header 'sub'
+            | CEO
+
         = column
           = image_tag 'leonid.jpg', class: 'ui image circular small centered bordered'
           = h4 
             |Leonid Medovyy
             = header 'sub'
-            | CEO
+            | CTO
+
         = column
           = image_tag 'michael.jpg', class: 'ui image circular small centered bordered'
           = h4 
