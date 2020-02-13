@@ -14,26 +14,70 @@
   = container 'full'
     = grid
       = row
-        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-          = h1 text: 'A New Kind of Media Company'
+        = column computer: 16, tablet: 16, mobile: 16
+          = h1 class: 'horizontal divider', text: 'A New Kind of Media Company'
+      = row
+        = column computer: 14, tablet: 16, mobile: 16, class: 'centered'
           = text 'big lead'
-            | We are a tech company first and foremost, driven by a need to transform media and help it become independent once more.
+            | First and foremost, we are an open-source tech company, driven by a need to transform media and help it become free of corporate influence, and restore investigative journalistm.
+
+      = row
+        = column computer: 16, tablet: 16, mobile: 16
+          = divider
+          br
+          br
+
+      = row
+        = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
+          = h2 text: 'Why Open-Source'
+          = text 'lead'
+            /| The enterprise level technology must always be available to indepdent content producers, without their content will either never gett seen or end up under the umbrella of a congolmerate, regardless of their vision and mission.
+            | If you dont have enterprise level technology you will always end up under the umbrella of a congolmerate, regardless of your vision and mission.
+          = h2 text: 'Why Blockchain'
+          = text 'lead'
+            | Unless you have a decentralized form of payment you are never free.
         = column computer: 8, tablet: 16, mobile: 16, class: 'centered'
           = image_tag 'robot.png', class: 'ui image fluid'
       = row
         = column computer: 16, tablet: 16, mobile: 16
           br
+          br
           /= divider
+      = row
+        = column computer: 16, tablet: 16, mobile: 16
+          = h3 class: 'horizontal divider', text: 'The Leadership Team'
+          br
+
+    = grid 'three column stackable'
+      = row 'center aligned'
+        = column
+          = image_tag 'leonid.jpg', class: 'ui image circular small centered bordered'
+          = h4 
+            |Leonid Medovyy
+            = header 'sub'
+            | CEO
+        = column
+          = image_tag 'michael.jpg', class: 'ui image circular small centered bordered'
+          = h4 
+            |Michael Few
+            = header 'sub'
+            | COO
+
+        = column
+          = image_tag 'christopher.jpg', class: 'ui image circular small centered bordered'
+          = h4
+            |Christopher Hillman
+            = header 'sub'
+            | CMO
 
 
       = row
         = column computer: 16, tablet: 16, mobile: 16
-          = h2 'horizontal divider'
-            | The Power of Tech
-      = row
-        = column computer: 14, tablet: 16, mobile: 16, class: 'centered'
-          = text 'lead'
-            | Unless enterprise level technology is available to indepdent content producers, their content will always end up under the umbrella of a congolmerate, regardless of your vision and mission.
+          br
+          br
+          = divider
+          br
+          br
 
       /= row
         = column computer: 4, tablet: 16, mobile: 16
@@ -50,10 +94,9 @@
 
       = row
         = column computer: 16, tablet: 16, mobile: 16
-          = divider
 
       = row
-        = column computer: 16, tablet: 16, mobile: 16
+        = column computer: 16, tablet: 16, mobile: 16, class: 'center aligned'
           = list 'horizontal large divided contacts'
             = item
               = content
