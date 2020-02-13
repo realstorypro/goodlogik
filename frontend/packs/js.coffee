@@ -91,12 +91,12 @@ exec_javascript = ->
       render: (h) ->
         h(AboutCover)
 
-  # feature_cover_div = document.getElementById("platform-cover")
-  # if feature_cover_div != null
-  #   feature_cover = new Vue
-  #     el: document.getElementById('platform-cover'),
-  #     render: (h) ->
-  #       h(PlatformCover)
+  platform_cover_id = document.getElementById("platform-cover")
+  if platform_cover_id != null
+    feature_cover = new Vue
+      el: document.getElementById('platform-cover'),
+      render: (h) ->
+        h(PlatformCover)
 
   # Launching Analytics
   analytics.page()
