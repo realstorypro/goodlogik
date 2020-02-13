@@ -108,13 +108,15 @@ html lang="en"
 
       = link_to "Home", root_path, class: "item #{is_active?(root_path)}"
       = link_to "Brands", brands_path, class: "item #{is_active?(brands_path)}"
-      = link_to 'Coin', coin_path, class: "item #{is_active?(coin_path)}"
+      = link_to "Platform", platform_path, class: "item #{is_active?(platform_path)}"
       = link_to 'Careers', careers_path, class: "item #{is_active?(careers_path)}"
       = link_to 'About', about_path, class: "item #{is_active?(about_path)}"
+
       = item
-        .ui.button.fluid.red data-cb-type="portal" href="javascript:void(0)"
-          = icon 'lock'
-          | Account
+        = link_to coin_path, class: "ui button fluid purple #{is_active?(coin_path)}"
+          = icon 'dollar sign'
+          | Currency
+
 
     .pusher
       = segment 'vertical hero segment clearing '
@@ -126,13 +128,14 @@ html lang="en"
               = icon 'large sidebar'
           = menu class: 'right', only: :desktop
             = link_to 'BRANDS', brands_path, class: "item #{is_active?(brands_path)}"
-            = link_to 'COIN', coin_path, class: "item #{is_active?(coin_path)}"
+            = link_to 'PLATFORM', platform_path, class: "item #{is_active?(platform_path)}"
             = link_to 'CAREERS', careers_path, class: "item #{is_active?(careers_path)}"
             = link_to 'ABOUT', about_path, class: "item #{is_active?(about_path)}"
+
             = item
-              a.ui.button.purple href="javascript:void(0)" data-cb-type="portal"
-                = icon 'lock'
-                | ACCOUNT
+              = link_to coin_path, class: "ui button purple #{is_active?(coin_path)}"
+                = icon 'dollar sign'
+                | CURRENCY
 
         = yield :hero
       =yield
