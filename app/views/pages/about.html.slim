@@ -48,17 +48,6 @@
 
     = grid 'three column stackable people'
       = row 'center aligned'
-        = column
-          = image_tag 'luke.jpg', class: 'ui image circular small centered bordered'
-          = h4 
-            | Lucas Skywalker
-            = header 'sub'
-            | CEO
-          = text
-            | Lucas is a royal sheppard, a natural Alpha and a fearless pack leader. 
-            | His strongest assets are his intellect, cleverness, situational awareness and a 230 pound bite.
-          = text
-            | He enjoys protecting his pack, running, swimming in ice cold water, and playing with various rocks.
 
 
         = column
@@ -66,13 +55,11 @@
           = h4 
             |Leonid Medovyy
             = header 'sub'
-            | CTO
+            | CEO
           = text
             | Leonid started learning how to program when he was 5 years old, build his first web applications at 14, and started his first business when he was 18 years old.
           = text
             | In addition to his mastery of business and computer skills, he is a polyglot, photographer, digital artist, musician, and a martial artist.
-            br
-            br
 
         = column
           = image_tag 'michael.jpg', class: 'ui image circular small centered bordered'
@@ -81,7 +68,6 @@
             = header 'sub'
             | COO
 
-      = row 'center aligned'
         = column
           = image_tag 'christopher.jpg', class: 'ui image circular small centered bordered'
           = h4
@@ -89,6 +75,19 @@
             = header 'sub'
             | CMO
 
+      = row 'center aligned margined'
+
+        = column
+          = image_tag 'luke.jpg', class: 'ui image circular small centered bordered'
+          = h4 
+            | Lucas Skywalker
+            = header 'sub'
+            | CAO
+          = text
+            | Lucas is a royal sheppard, a natural Alpha and a fearless pack leader. 
+            | His strongest assets are his intellect, cleverness, situational awareness and a 230 pound bite.
+          /= text
+            | He enjoys protecting his pack, running, swimming in ice cold water, and playing with rocks.
 
       = row
         = column computer: 16, tablet: 16, mobile: 16
