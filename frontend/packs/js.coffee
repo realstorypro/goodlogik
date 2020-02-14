@@ -187,6 +187,18 @@ exec_javascript = ->
 
       .modal('show')
 
+  # Bios Toggle
+  $('.toggle.biography').click ->
+    $('.bio').slideToggle()
+    icon = $(@).find('.icon')
+    if icon.hasClass('down')
+      icon.removeClass('down')
+      icon.addClass('up')
+    else
+      icon.removeClass('up')
+      icon.addClass('down')
+
+
 
 # Loading ExecJS 2x
 $ ->

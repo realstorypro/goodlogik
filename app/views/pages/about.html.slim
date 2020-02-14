@@ -56,10 +56,11 @@
             |Leonid Medovyy
             = header 'sub'
             | CEO
-          = text
-            | Leonid started learning how to program when he was 5 years old, build his first web applications at 14, and started his first business when he was 18 years old.
-          = text
-            | In addition to his mastery of business and computer skills, he is a polyglot, photographer, digital artist, musician, and a martial artist.
+          .bio
+            = text
+              | Leonid started learning how to program when he was 5 years old, build his first web applications at 14, and started his first business when he was 18 years old.
+            = text
+              | In addition to his mastery of business and computer skills, he is a polyglot, photographer, digital artist, musician, and a martial artist.
 
         = column
           = image_tag 'michael.jpg', class: 'ui image circular small centered bordered'
@@ -74,20 +75,12 @@
             |Christopher Hillman
             = header 'sub'
             | CMO
-
-      = row 'center aligned margined'
-
-        = column
-          = image_tag 'luke.jpg', class: 'ui image circular small centered bordered'
-          = h4 
-            | Lucas Skywalker
-            = header 'sub'
-            | CAO
-          = text
-            | Lucas is a royal sheppard, a natural Alpha and a fearless pack leader. 
-            | His strongest assets are his intellect, cleverness, situational awareness and a 230 pound bite.
-          /= text
-            | He enjoys protecting his pack, running, swimming in ice cold water, and playing with rocks.
+      = row
+        = column computer: 16, tablet: 16, mobile: 16
+          = segment 'basic centered inverted tiny biography holder'
+            = h4 'centered toggle biography'
+              = icon 'chevron down'
+              | Toggle Bios
 
       = row
         = column computer: 16, tablet: 16, mobile: 16
