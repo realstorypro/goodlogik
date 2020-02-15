@@ -15,7 +15,7 @@
       = row
         = column size: 16
           = h1 'horizontal divider'
-            = "Better Web"
+            = "Better Platform"
           br
 
 
@@ -78,7 +78,7 @@
 
       = row
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-          = h2 text: 'Enterprise Ready'
+          = h2 text: 'Growth-Hacker Ready'
           = text 'lead'
             | Use SQL to gain deeper insights into your data.
           = text 'lead'
@@ -86,7 +86,7 @@
         = column computer: 8, tablet: 16, mobile: 16, class: 'extra padding'
           iframe src="/animations/sql-power/sql-power.html" width="100%" height="450" frameBorder="0" scrolling="no"
 
-= fragment 'it'
+/= fragment 'it'
   = container
     = grid
       = row
@@ -112,9 +112,11 @@
       = column size: 16
         = segment 'inverted black basic center aligned padded'
           = h1 class: 'centered dividing'
-            = "Ready to grow?"
-          = text
+            = "Join the Media Revolution"
+          /= text
             | Get a feel for the platform with a free 14-day trial.
-          = link_to "Start a Free Trial", pricing_path, class: 'ui button purple big'
+          = link_to 'https://github.com/goodlogik/amiga', target: '_blank', class: 'ui button github big'
+            = icon 'github'
+            | GitHub
           br
           br
