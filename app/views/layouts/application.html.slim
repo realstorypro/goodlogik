@@ -113,9 +113,9 @@ html lang="en"
       = link_to 'About', about_path, class: "item #{is_active?(about_path)}"
 
       = item
-        = link_to coin_path, class: "ui button fluid purple #{is_active?(coin_path)}"
+        = link_to blockchain_path, class: "ui button fluid purple #{is_active?(blockchain_path)}"
           = icon 'dollar sign'
-          | Currency
+          | Blockchain
 
 
     .pusher
@@ -133,9 +133,9 @@ html lang="en"
             = link_to 'ABOUT', about_path, class: "item #{is_active?(about_path)}"
 
             = item
-              = link_to coin_path, class: "ui button purple #{is_active?(coin_path)}"
-                = icon 'dollar sign'
-                | CURRENCY
+              = link_to blockchain_path, class: "ui button purple #{is_active?(blockchain_path)}"
+                /= icon 'dollar sign'
+                | BLOCKCHAIN
 
         = yield :hero
       =yield
