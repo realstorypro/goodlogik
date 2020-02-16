@@ -8,13 +8,27 @@
         = grid
           = column computer: 14, tablet: 16, mobile: 14, class: 'centered content'
             = h1 class: 'inverted'
-              | Become Part of a Revolution
+              | Become A Part of the Revolution
 
 = fragment 'story'
   = container 'full'
     = grid
+
+
       = row
-        = column computer: 14, tablet: 16, mobile: 16, class: 'middle aligned'
+        = column computer: 13, tablet: 13, mobile: 16, class: 'centered main feature'
+
+          = h1 'horizontal divider'
+            = "Working at GoodLogik"
+          = text 'lead'
+            | We are a U.S. based distributed company with a culture rooted in friendship, innovation and hard work.
+            br
+            | Our company is always looking for creative people from all walks of life who are passionate about what they do, and want to make the world a better place.
+            br
+            br
+
+      = row
+        = column computer: 13, tablet: 16, mobile: 16, class: 'centered'
           = list 'relaxed divided'
             - @jobs.each_with_index do |job, index|
               - if @job_category != job.category
