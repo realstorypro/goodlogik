@@ -7,7 +7,8 @@
       = container
         = grid
         = column computer: 12, tablet: 16, mobile: 14, class: 'centered content'
-          = h1 class: 'inverted', text: "Engine for digital storytelling"
+          = h1 class: 'inverted', text: "Introducing RobinGood"
+          = h2 class: 'inverted', text: "The Independent Media Platform"
 
 = fragment 'publishing'
   = container
@@ -15,7 +16,7 @@
       = row
         = column size: 16
           = h1 'horizontal divider'
-            = "Better Web"
+            = "Built for Speed"
           br
 
 
@@ -24,11 +25,11 @@
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
           = h2 text: 'Instant Fast'
           = text 'lead'
-            | Optimized for both speed and performance.
+            | RobinGood was built with performance in mind.
           = text 'lead'
             | The pages scroll smoothly, and everything loads in under 1.5 seconds.
           = text 'lead'
-            | 10x - 20x faster then an average website.
+            | That's 10x - 20x faster then your average website.
         = column computer: 8, tablet: 16, mobile: 16
           iframe src="/animations/scorching-fast/scorching-fast.html" width="100%" height="350" frameBorder="0" scrolling="no"
 
@@ -57,12 +58,12 @@
       = row
         = column size: 16
           = h1 'horizontal divider'
-            = "Better Analytics"
+            = "Built-in Analytics"
           br
 
       = row
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-          = h2 text: 'Simple Dashboard'
+          = h2 text: 'Powerful Dashboard'
           = text 'lead'
             | One glance at the dashboard and you can tell how things are going.
           = text 'lead'
@@ -78,11 +79,11 @@
 
       = row
         = column computer: 8, tablet: 16, mobile: 16, class: 'middle aligned'
-          = h2 text: 'Enterprise Ready'
+          = h2 text: 'Explore Your Data'
           = text 'lead'
-            | Use SQL to gain deeper insights into your data.
+            | Use regular SQL to gain a deeper understanding about what's happenign on your platform.
           = text 'lead'
-            | Create custom reports and dashboards to share with your team.
+            | Create custom reports, charts and dashboards to share with your team.
         = column computer: 8, tablet: 16, mobile: 16, class: 'extra padding'
           iframe src="/animations/sql-power/sql-power.html" width="100%" height="450" frameBorder="0" scrolling="no"
 
@@ -92,12 +93,12 @@
       = row
         = column size: 16
           = h2 'horizontal divider inverted'
-            = "Better Performance"
+            = "Secure by Design"
             br
       = row
         = column computer: 12, tablet: 16, mobile: 16, class: 'middle aligned centered'
           = text 'lead'
-            | Each platform is privately hosted in a scalable virtual container.
+            | Sensitive user data is encrypted and each platform is hosted in its own virtual container.
 
       = row
         = column computer: 16, tablet: 16, mobile: 16
@@ -112,9 +113,11 @@
       = column size: 16
         = segment 'inverted black basic center aligned padded'
           = h1 class: 'centered dividing'
-            = "Ready to grow?"
-          = text
+            = "Join the Media Revolution"
+          /= text
             | Get a feel for the platform with a free 14-day trial.
-          = link_to "Start a Free Trial", pricing_path, class: 'ui button purple big'
+          = link_to 'https://github.com/goodlogik/robingood', target: '_blank', class: 'ui button github big'
+            = icon 'github'
+            | GitHub
           br
           br

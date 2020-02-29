@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get 'platform', to: 'pages#platform'
   get 'pricing', to: 'pages#pricing'
   get 'about', to: 'pages#about'
-  get 'coin', to: 'pages#coin'
+  get 'blockchain', to: 'pages#coin'
 
   resources :brands, only: %i[index show]
   resources :careers, only: %i[index show]
